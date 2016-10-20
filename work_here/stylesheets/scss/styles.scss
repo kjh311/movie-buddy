@@ -1,3 +1,8 @@
+*{
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  -moz-user-select: none;
+}
 .logo{
   width: 50px;
   float: left !important;
@@ -6,7 +11,13 @@ body{
   // background-color: lightblue;
   // background-color: red;
   text-align: center;
+  background-color: black;
+  color: white;
 }
+#searchBar{
+  text-align: center;
+}
+
 .categories li{
   display: inline;
   padding-left: 20px;
