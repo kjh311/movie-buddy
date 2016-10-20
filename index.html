@@ -18,6 +18,12 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>-->
 
+<!-- Animate.css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css">
+
+<!-- Font-Awesome -->
+<link rel="stylesheet" href="https://opensource.keycdn.com/fontawesome/4.6.3/font-awesome.min.css" >
+
 <!-- Materialize -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
@@ -28,10 +34,37 @@
 
 <body ng-app="myApp" ng-controller="myCtrl">
 
-<div >
-{{5+5}}
-{{name}}
-</div>
+
+ <nav>
+    <div class="nav-wrapper #90caf9 blue lighten-3
+">
+      <img class="logo" src="http://downloadicons.net/sites/default/files/movie-icon-14032.png" alt="">
+      <a href="#!" class="brand-logo center">Movie Buddy!</a>
+    </div>
+  </nav>
+
+  <div class="row ">
+    <div class="col s12 #283593 indigo darken-3">
+    <ul class="categories">
+        <li><a href="sass.html">MOVIES</a></li>
+        <li><a href="badges.html">TV-SHOWS</a></li>
+        <li class="active"><a href="collapsible.html">ACTORS</a></li>
+      </ul>
+      </div>
+  </div>
+
+  <!-- <div class="container"> -->
+       <div class="row">
+      <div class="col s1">
+        <i class="fa fa-search fa-2x" aria-hidden="true"></i>
+      </div>
+      <div class="col s11">
+                <input id="searchBar" type="text" placeholder="Search Movies, TV-Shows, or Actors">
+        </div>
+    <!-- </div> -->
+
+
+  </div>
 
 </body>
 </html>
