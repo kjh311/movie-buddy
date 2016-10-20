@@ -1,1 +1,1 @@
-$(document).ready(function(){});
+var app=angular.module("myApp",[]);app.controller("myCtrl",["$scope",function(n){n.name="Kevin"}]),$(document).ready(function(){});
