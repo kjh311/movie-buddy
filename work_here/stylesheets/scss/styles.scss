@@ -35,10 +35,28 @@ body{
 }
 #searchBar{
   background-color: rgba(0,0,0,0.3);
-  margin-top: -13px;
+  margin-top: -20px;
 }
 .dark-blue{
   max-height: 50px;
+}
+.title{
+  bottom: 0px;
+  position: absolute;
+  color: white;
+  text-transform: uppercase;
+  text-shadow: 3px 3px black;
+  background-color: rgba(0,0,0,0.4);
+  padding: 5px;
+}
+.responsive-img{
+  border: 4px solid rgba(0,0,0,0.3);
+}
+.responsive-img:hover{
+  // border: 4px solid rgba(255,255,255,0.3);
+}
+.title-background{
+
 }
 
 

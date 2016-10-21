@@ -103,11 +103,24 @@
     <div class="col s12">
       <div class="carousel">
         <h4>Popular Movies:</h4>
-        <a class="carousel-item" href=""><div class="waves-effect"><img class="responsive-img" src="{{imgPath}}{{popularMovies.results[0].backdrop_path}}" alt=""></div></a>
-        <a class="carousel-item" href=""><div class="waves-effect"><img class="responsive-img" src="{{imgPath}}{{popularMovies.results[1].backdrop_path}}" alt=""></div></a>
-        <a class="carousel-item" href=""><div class="waves-effect"><img class="responsive-img" src="{{imgPath}}{{popularMovies.results[2].backdrop_path}}" alt=""></div></a>
-        <a class="carousel-item" href=""><div class="waves-effect"><img class="responsive-img" src="{{imgPath}}{{popularMovies.results[3].backdrop_path}}" alt=""></div></a>
-        <a class="carousel-item" href=""><div class="waves-effect"><img class="responsive-img" src="{{imgPath}}{{popularMovies.results[4].backdrop_path}}" alt=""></div></a>
+        <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{popularMovies.results[0].backdrop_path}}" alt="">
+        <div class="col s12 title-background"><h5 class="title">{{popularMovies.results[0].original_title}}</h5></div>
+        </div></a>
+        <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{popularMovies.results[1].backdrop_path}}" alt="">
+        <div class="col s12 title-background"><h5 class="title">{{popularMovies.results[1].original_title}}</h5></div>
+        </div></a>
+        <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{popularMovies.results[2].backdrop_path}}" alt="">
+        <div class="col s12 title-background"><h5 class="title">{{popularMovies.results[2].original_title}}</h5></div>
+        </div></a>
+        <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{popularMovies.results[3].backdrop_path}}" alt="">
+        <div class="col s12 title-background"><h5 class="title">{{popularMovies.results[3].original_title}}</h5></div>
+        </div></a>
+        <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{popularMovies.results[4].backdrop_path}}" alt="">
+        <div class="col s12 title-background"><h5 class="title">{{popularMovies.results[4].original_title}}</h5></div>
+        </div></a>
+        <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{popularMovies.results[5].backdrop_path}}" alt="">
+        <div class="col s12 title-background"><h5 class="title">{{popularMovies.results[5].original_title}}</h5></div>
+        </div></a>
       </div>
   </div>
   </div>
@@ -118,11 +131,25 @@
     <div class="col s12">
       <div class="carousel">
         <h4>Popular TV:</h4>
-        <a class="carousel-item" href=""><img class="responsive-img" src="{{imgPath}}{{popularTv.results[0].backdrop_path}}" alt=""></a>
-        <a class="carousel-item" href=""><img class="responsive-img" src="{{imgPath}}{{popularTv.results[1].backdrop_path}}" alt=""></a>
-        <a class="carousel-item" href=""><img class="responsive-img" src="{{imgPath}}{{popularTv.results[2].backdrop_path}}" alt=""></a>
-        <a class="carousel-item" href=""><img class="responsive-img" src="{{imgPath}}{{popularTv.results[3].backdrop_path}}" alt=""></a>
-        <a class="carousel-item" href=""><img class="responsive-img" src="{{imgPath}}{{popularTv.results[4].backdrop_path}}" alt=""></a>
+
+        <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{popularTv.results[0].backdrop_path}}" alt="">
+        <div class="col s12 title-background"><h5 class="title">{{popularTv.results[0].name}}</h5></div>
+        </div></a>
+        <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{popularTv.results[1].backdrop_path}}" alt="">
+        <div class="col s12 title-background"><h5 class="title">{{popularTv.results[1].name}}</h5></div>
+        </div></a>
+        <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{popularTv.results[2].backdrop_path}}" alt="">
+        <div class="col s12 title-background"><h5 class="title">{{popularTv.results[2].name}}</h5></div>
+        </div></a>
+        <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{popularTv.results[3].backdrop_path}}" alt="">
+        <div class="col s12 title-background"><h5 class="title">{{popularTv.results[3].name}}</h5></div>
+        </div></a>
+        <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{popularTv.results[4].backdrop_path}}" alt="">
+        <div class="col s12 title-background"><h5 class="title">{{popularTv.results[4].name}}</h5></div>
+        </div></a>
+        <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{popularTv.results[5].backdrop_path}}" alt="">
+        <div class="col s12 title-background"><h5 class="title">{{popularTv.results[5].name}}</h5></div>
+        </div></a>
       </div>
   </div>
   </div>
@@ -133,11 +160,29 @@
       <div class="col s12">
       <div class="carousel">
         <h4>Popular Stars:</h4>
-        <a class="carousel-item" href=""><img class="responsive-img" src="{{imgPath}}{{popularPeople.results[0].profile_path}}" alt=""></a>
-        <a class="carousel-item" href=""><img class="responsive-img" src="{{imgPath}}{{popularPeople.results[1].profile_path}}" alt=""></a>
-        <a class="carousel-item" href=""><img class="responsive-img" src="{{imgPath}}{{popularPeople.results[2].profile_path}}" alt=""></a>
-        <a class="carousel-item" href=""><img class="responsive-img" src="{{imgPath}}{{popularPeople.results[3].profile_path}}" alt=""></a>
-        <a class="carousel-item" href=""><img class="responsive-img" src="{{imgPath}}{{popularPeople.results[4].profile_path}}" alt=""></a>
+
+        <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{popularPeople.results[0].profile_path}}" alt="">
+        <div class="col s12 title-background"><h5 class="title">{{popularPeople.results[0].name}}</h5></div>
+        </div></a>
+
+        <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{popularPeople.results[1].profile_path}}" alt="">
+        <div class="col s12 title-background"><h5 class="title">{{popularPeople.results[1].name}}</h5></div>
+        </div></a>
+        <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{popularPeople.results[2].profile_path}}" alt="">
+        <div class="col s12 title-background"><h5 class="title">{{popularPeople.results[2].name}}</h5></div>
+        </div></a>
+        <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{popularPeople.results[3].profile_path}}" alt="">
+        <div class="col s12 title-background"><h5 class="title">{{popularPeople.results[3].name}}</h5></div>
+        </div></a>
+        <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{popularPeople.results[4].profile_path}}" alt="">
+        <div class="col s12 title-background"><h5 class="title">{{popularPeople.results[4].name}}</h5></div>
+        </div></a>
+        <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{popularPeople.results[5].profile_path}}" alt="">
+        <div class="col s12 title-background"><h5 class="title">{{popularPeople.results[5].name}}</h5></div>
+        </div></a>
+        <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{popularPeople.results[6].profile_path}}" alt="">
+        <div class="col s12 title-background"><h5 class="title">{{popularPeople.results[6].name}}</h5></div>
+        </div></a>
       </div>
   </div>
   </div>
