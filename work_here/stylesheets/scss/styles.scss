@@ -12,17 +12,35 @@ body{
   // background-color: red;
   text-align: center;
   background-color: black;
+  background: -webkit-radial-gradient(rgba(0,0,0,0.6), black);
   color: white;
+  font-family: 'Anton', sans-serif;
 }
 #searchBar{
   text-align: center;
 }
+.main{
 
+}
+.nav-main-wrapper{
+  position: fixed;
+  width: 100%;
+  z-index: 200;
+  // border: 2px solid black;
+}
 .categories li{
   display: inline;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 0px;
+  padding-right: 0px;
 }
+#searchBar{
+  background-color: rgba(0,0,0,0.3);
+  margin-top: -13px;
+}
+.dark-blue{
+  max-height: 50px;
+}
+
 
 
 

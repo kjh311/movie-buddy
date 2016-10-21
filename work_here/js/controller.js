@@ -20,6 +20,12 @@ $scope.movieId = "https://api.themoviedb.org/3/movie/188927?api_key="+userServic
     $scope.popularTv = data;
   });
 
+// Popular Stars:
+
+  $http.get(root_url+"person/popular?api_key="+userService.key+"&language=en-US&page=1"+userService.key+"").success(function(data) {
+    $scope.popularPeople = data;
+  });
+
 // image path
   $scope.imgPath = "https://image.tmdb.org/t/p/w300_and_h450_bestv2";
 
