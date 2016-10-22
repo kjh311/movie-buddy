@@ -34,58 +34,27 @@
 
 <!-- Browser Tab Icon: -->
   <link rel="icon" href="http://downloadicons.net/sites/default/files/movie-icon-14032.png">
+
+<!-- Slick Carousel -->
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
+
+<!-- Flikity Carousel -->
+<!--   <link rel="stylesheet" href="https://unpkg.com/flickity@2.0/dist/flickity.css" media="screen">
+  <script src="https://unpkg.com/flickity@2.0/dist/flickity.pkgd.min.js"></script>
+ -->
 </head>
 
 <body ng-app="myApp" ng-controller="myCtrl">
 
-<div class="nav-main-wrapper">
- <nav>
-    <div class="nav-wrapper #90caf9 blue lighten-3
-">
-<div class="row">
-  <div class="col s12">
-      <img class="logo" src="http://downloadicons.net/sites/default/files/movie-icon-14032.png" alt="">
-      <a href="#!" class="brand-logo center">Movie Buddy!</a>
-      </div>
-      </div>
-    </div>
-  </nav>
-
-
-<!-- NAV LINKS -->
-  <div class="row ">
-    <div class="col s12 #283593 indigo darken-3 dark-blue">
-    <div class="row">
-
-    <ul class="categories">
-      <div class="col s2"><li><a href="sass.html">MOVIES</a></li></div>
-      <div class="col s3"><li ><a  href="sass.html">TV-SHOWS</a></li></div>
-      <div class="col s2"><li><a href="sass.html">ACTORS</a></li></div>
-      <!-- <div class="col m1"><li><i class="fa fa-search fa-2x" aria-hidden="true"></i></li></div> -->
-
-      <div class="col s5 hide-on-small-only"><li><input id="searchBar" type="text" placeholder="Search Movies, TV-Shows, or Actors"></li></div>
-      <div class="col s5 hide-on-med-and-up"><li><input id="searchBar" type="text" placeholder="Search"></li></div>
 
 
 
-      </ul>
-      </div>
-      </div>
-  </div>
 
 
-<!-- SEARCH -->
-  <div class="container">
-   <!--     <div class="row">
-      <div class="col s1">
-        <i class="fa fa-search fa-2x" aria-hidden="true"></i>
-      </div>
-      <div class="col s11">
-                <input id="searchBar" type="text" placeholder="Search Movies, TV-Shows, or Actors">
-        </div>
-    </div> -->
-    </div>
-    </div>
+
+<div id="nav-partial" ng-include src="'work_here/views/navPartial.html'"></div>
+
+
 
 
 </br>
@@ -257,23 +226,57 @@
 <a href="{{movieStuff.homepage}}" target="_blank">{{movieStuff.homepage}}</a>
  -->
   </div>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
 
-          <footer class="page-footer card-panel #1a237e indigo darken-4">
-          <div class="container">
-            <div class="row">
-              <div class="col l12 s12">
-                <h5 class="white-text">Footer Content</h5>
-                <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
-              </div>
-            </div>
-          </div>
-          <div class="footer-copyright">
-            <div class="container">
-            © 2016 Copyright Text
-            <!-- <a class="grey-text text-lighten-4 right" href="#!">More Links</a> -->
-            </div>
-          </div>
-        </footer>
 
+<!-- <div class="row">
+  <div class="col s12"> -->
+
+
+<!--   <div class="carousel" data-flickity>
+
+  <div class="carousel-cell">
+    <img class="flikity" src="{{imgPath}}{{popularPeople.results[0].profile_path}}" alt="">
+  </div>
+
+
+  <div class="carousel-cell">
+    <img class="flikity" src="{{imgPath}}{{popularPeople.results[1].profile_path}}" alt="">
+  </div>
+
+  <div class="carousel-cell">
+    <img class="flikity" src="{{imgPath}}{{popularPeople.results[2].profile_path}}" alt="">
+  </div>
+
+  <div class="carousel-cell">
+    <img class="flikity" src="{{imgPath}}{{popularPeople.results[3].profile_path}}" alt="">
+  </div>
+  ...
+</div> -->
+
+
+
+<!-- Slick Carousel -->
+<!--  <div class="my-slick-slider">
+     <div><img class="responsive-img" src="http://7606-presscdn-0-74.pagely.netdna-cdn.com/wp-content/uploads/2016/03/Dubai-Photos-Images-Oicture-Dubai-Landmarks-800x600.jpg" alt=""></div>
+     <div><h2>dfasdf</h2></div>
+     <div><h2>dfasdf</h2></div>
+   </div> -->
+
+<!--   </div>
+</div> -->
+
+
+
+<div id="footer-partial" ng-include src="'work_here/views/footerPartial.html'"></div>
+
+
+
+<script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
 </body>
 </html>
