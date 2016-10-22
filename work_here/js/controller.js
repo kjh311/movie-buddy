@@ -95,11 +95,10 @@ app.config(['$locationProvider', '$routeProvider',
   // alert($location.path);
     $routeProvider
         .when('/', {
-            templateUrl : "work_here/views/index.html"
+            templateUrl : "/work_here/views/index.html"
         })
         .when("/movies", {
-        templateUrl : "/work_here/views/movies.html",
-        controller: 'myCtrl'
+          templateUrl : "/work_here/views/movies.html"
     })
 }]);
 

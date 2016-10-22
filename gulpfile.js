@@ -97,7 +97,7 @@ gulp.task('image', function() {
  .pipe(imagemin({
   progressive: true
 }))
- .pipe(gulp.dest('public/images'))
+ .pipe(gulp.dest('public/images'));
 });
 
 // BROWSERSYNC:
