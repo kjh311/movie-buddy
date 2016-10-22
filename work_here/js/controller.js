@@ -14,27 +14,37 @@ $scope.movieId = "https://api.themoviedb.org/3/movie/188927?api_key="+userServic
   });
 
 // Latest movies
-$http.get(root_url+"movie/now_playing?api_key="+userService.key+"&language=en-US&page=1"+userService.key+"").success(function(data) {
+$http.get(root_url+"movie/now_playing?api_key="+userService.key+"&language=en-US&page=1").success(function(data) {
     $scope.nowPlayingMovies = data;
   });
 
 // Top Rated movies
-  $http.get(root_url+"movie/top_rated?api_key="+userService.key+"&language=en-US&page=1"+userService.key+"").success(function(data) {
+  $http.get(root_url+"movie/top_rated?api_key="+userService.key+"&language=en-US&page=1").success(function(data) {
     $scope.topMovies = data;
   });
 
+// Coming Attractions:
+  $http.get(root_url+"movie/upcoming?api_key="+userService.key+"&language=en-US&page=1").success(function(data) {
+    $scope.comingMovies = data;
+  });
+
+// Action movieStuff
+  $http.get(root_url+"genre/28/movies?api_key="+userService.key+"&language=en-US&sort_by=created_at.asc").success(function(data) {
+    $scope.actionMovies = data;
+  });
+
 // Popular Movies:
-  $http.get(root_url+"movie/popular?api_key="+userService.key+"&language=en-US&page=1"+userService.key+"").success(function(data) {
+  $http.get(root_url+"movie/popular?api_key="+userService.key+"&language=en-US&page=1").success(function(data) {
     $scope.popularMovies = data;
   });
 
 // Popular TV:
-  $http.get(root_url+"tv/popular?api_key="+userService.key+"&language=en-US&page=1"+userService.key+"").success(function(data) {
+  $http.get(root_url+"tv/popular?api_key="+userService.key+"&language=en-US&page=1").success(function(data) {
     $scope.popularTv = data;
   });
 
 // Popular Stars:
-  $http.get(root_url+"person/popular?api_key="+userService.key+"&language=en-US&page=1"+userService.key+"").success(function(data) {
+  $http.get(root_url+"person/popular?api_key="+userService.key+"&language=en-US&page=1").success(function(data) {
     $scope.popularPeople = data;
   });
 
