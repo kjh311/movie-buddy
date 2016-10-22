@@ -46,6 +46,8 @@ app.controller('myCtrl', ['$scope', '$http', 'userService', function($scope, $ht
 
 
 
+
+
 var root_url = "https://api.themoviedb.org/3/";
 $scope.movieId = "https://api.themoviedb.org/3/movie/188927?api_key="+userService.key;
 
@@ -101,22 +103,7 @@ app.config(['$locationProvider', '$routeProvider',
     })
 }]);
 
-// app.config(function($routeProvider, $locationProvider) {
-//   $routeProvider
 
-//   .when('/', {
-//     templateUrl : "/work_here/views/index.html"
-//         })
-//   .when("/movies", {
-//     templateUrl : "/work_here/views/movies.html",
-//     controller   : 'myCtrl'
-//   })
-
-
-
-//   // $locationProvider.html5Mode(true);
-
-// })
 
 app.factory('userService', [function(){
 
