@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "angular-route": "^1.5.8",
     "browser-sync": "^2.14.3",
     "gulp": "^3.9.1",
     "gulp-clean-css": "^2.0.12",

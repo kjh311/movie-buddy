@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="public/css/styles.css">
 
 <!-- GOOGLE FONTS: -->
-<link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
 <!-- JQUERY: -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <!-- ANGULAR: -->
@@ -26,7 +26,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css">
 
 <!-- Font-Awesome -->
-<link rel="stylesheet" href="https://opensource.keycdn.com/fontawesome/4.6.3/font-awesome.min.css" >
+  <link rel="stylesheet" href="https://opensource.keycdn.com/fontawesome/4.6.3/font-awesome.min.css" >
 
 <!-- Materialize -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
@@ -35,27 +35,21 @@
 <!-- Browser Tab Icon: -->
   <link rel="icon" href="http://downloadicons.net/sites/default/files/movie-icon-14032.png">
 
-<!-- Slick Carousel -->
-<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
+  <!-- Slick Carousel -->
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
 
-<!-- Flikity Carousel -->
+  <!-- Flikity Carousel -->
 <!--   <link rel="stylesheet" href="https://unpkg.com/flickity@2.0/dist/flickity.css" media="screen">
   <script src="https://unpkg.com/flickity@2.0/dist/flickity.pkgd.min.js"></script>
- -->
+-->
 </head>
+<base href="" />
 
 <body ng-app="myApp" ng-controller="myCtrl">
 
 
-
-
-
-
-
-<div id="nav-partial" ng-include src="'work_here/views/navPartial.html'"></div>
-
-
-
+<!-- Nav Partial -->
+  <div id="nav-partial" ng-include src="'work_here/views/navPartial.html'"></div>
 
 </br>
 </br>
@@ -63,169 +57,144 @@
 </br>
 </br>
 
+
+<!-- Main Page -->
 <div class="main">
   <div class="row">
     <div class="col s12">
       <div class="carousel">
+        <!-- Popular Movies -->
         <h4>Popular Movies:</h4>
         <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{popularMovies.results[0].backdrop_path}}" alt="">
-        <h5 class="vote">{{popularMovies.results[0].vote_average}}</h5>
-        <div class="col s12 title-background"><h5 class="title">{{popularMovies.results[0].original_title}}</h5></div>
+          <h5 class="vote">{{popularMovies.results[0].vote_average}}</h5>
+          <div class="col s12 title-background"><h5 class="title">{{popularMovies.results[0].original_title}}</h5></div>
         </div></a>
         <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{popularMovies.results[1].backdrop_path}}" alt="">
           <h5 class="vote">{{popularMovies.results[1].vote_average}}</h5>
-        <div class="col s12 title-background"><h5 class="title">{{popularMovies.results[1].original_title}}</h5></div>
+          <div class="col s12 title-background"><h5 class="title">{{popularMovies.results[1].original_title}}</h5></div>
         </div></a>
         <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{popularMovies.results[2].backdrop_path}}" alt="">
           <h5 class="vote">{{popularMovies.results[2].vote_average}}</h5>
-        <div class="col s12 title-background"><h5 class="title">{{popularMovies.results[2].original_title}}</h5></div>
+          <div class="col s12 title-background"><h5 class="title">{{popularMovies.results[2].original_title}}</h5></div>
         </div></a>
         <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{popularMovies.results[3].backdrop_path}}" alt="">
           <h5 class="vote">{{popularMovies.results[3].vote_average}}</h5>
-        <div class="col s12 title-background"><h5 class="title">{{popularMovies.results[3].original_title}}</h5></div>
+          <div class="col s12 title-background"><h5 class="title">{{popularMovies.results[3].original_title}}</h5></div>
         </div></a>
         <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{popularMovies.results[4].backdrop_path}}" alt="">
           <h5 class="vote">{{popularMovies.results[4].vote_average}}</h5>
-        <div class="col s12 title-background"><h5 class="title">{{popularMovies.results[4].original_title}}</h5></div>
+          <div class="col s12 title-background"><h5 class="title">{{popularMovies.results[4].original_title}}</h5></div>
         </div></a>
         <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{popularMovies.results[5].backdrop_path}}" alt="">
           <h5 class="vote">{{popularMovies.results[5].vote_average}}</h5>
-        <div class="col s12 title-background"><h5 class="title">{{popularMovies.results[5].original_title}}</h5></div>
+          <div class="col s12 title-background"><h5 class="title">{{popularMovies.results[5].original_title}}</h5></div>
         </div></a>
         <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{popularMovies.results[6].backdrop_path}}" alt="">
           <h5 class="vote">{{popularMovies.results[6].vote_average}}</h5>
-        <div class="col s12 title-background"><h5 class="title">{{popularMovies.results[6].original_title}}</h5></div>
+          <div class="col s12 title-background"><h5 class="title">{{popularMovies.results[6].original_title}}</h5></div>
         </div></a>
         <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{popularMovies.results[7].backdrop_path}}" alt="">
           <h5 class="vote">{{popularMovies.results[7].vote_average}}</h5>
-        <div class="col s12 title-background"><h5 class="title">{{popularMovies.results[7].original_title}}</h5></div>
+          <div class="col s12 title-background"><h5 class="title">{{popularMovies.results[7].original_title}}</h5></div>
         </div></a>
         <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{popularMovies.results[8].backdrop_path}}" alt="">
           <h5 class="vote">{{popularMovies.results[8].vote_average}}</h5>
-        <div class="col s12 title-background"><h5 class="title">{{popularMovies.results[8].original_title}}</h5></div>
+          <div class="col s12 title-background"><h5 class="title">{{popularMovies.results[8].original_title}}</h5></div>
         </div></a>
         <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{popularMovies.results[9].backdrop_path}}" alt="">
           <h5 class="vote">{{popularMovies.results[9].vote_average}}</h5>
-        <div class="col s12 title-background"><h5 class="title">{{popularMovies.results[9].original_title}}</h5></div>
+          <div class="col s12 title-background"><h5 class="title">{{popularMovies.results[9].original_title}}</h5></div>
         </div></a>
         <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{popularMovies.results[10].backdrop_path}}" alt="">
           <h5 class="vote">{{popularMovies.results[10].vote_average}}</h5>
-        <div class="col s12 title-background"><h5 class="title">{{popularMovies.results[10].original_title}}</h5></div>
+          <div class="col s12 title-background"><h5 class="title">{{popularMovies.results[10].original_title}}</h5></div>
         </div></a>
       </div>
-  </div>
+    </div>
   </div>
 </br>
 <HR>
 </br>
-<div class="row">
-    <div class="col s12">
-      <div class="carousel">
-        <h4>Popular TV:</h4>
+<div ng-view></div>
 
-        <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{popularTv.results[0].backdrop_path}}" alt="">
-          <h5 class="vote">{{popularTv.results[0].vote_average}}</h5>
+<!-- Popular TV -->
+<div class="row">
+  <div class="col s12">
+    <div class="carousel">
+      <h4>Popular TV:</h4>
+      <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{popularTv.results[0].backdrop_path}}" alt="">
+        <h5 class="vote">{{popularTv.results[0].vote_average}}</h5>
         <div class="col s12 title-background"><h5 class="title">{{popularTv.results[0].name}}</h5></div>
-        </div></a>
-        <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{popularTv.results[1].backdrop_path}}" alt="">
-          <h5 class="vote">{{popularTv.results[1].vote_average}}</h5>
+      </div></a>
+      <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{popularTv.results[1].backdrop_path}}" alt="">
+        <h5 class="vote">{{popularTv.results[1].vote_average}}</h5>
         <div class="col s12 title-background"><h5 class="title">{{popularTv.results[1].name}}</h5></div>
-        </div></a>
-        <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{popularTv.results[2].backdrop_path}}" alt="">
-          <h5 class="vote">{{popularTv.results[2].vote_average}}</h5>
+      </div></a>
+      <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{popularTv.results[2].backdrop_path}}" alt="">
+        <h5 class="vote">{{popularTv.results[2].vote_average}}</h5>
         <div class="col s12 title-background"><h5 class="title">{{popularTv.results[2].name}}</h5></div>
-        </div></a>
-        <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{popularTv.results[3].backdrop_path}}" alt="">
-          <h5 class="vote">{{popularTv.results[3].vote_average}}</h5>
+      </div></a>
+      <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{popularTv.results[3].backdrop_path}}" alt="">
+        <h5 class="vote">{{popularTv.results[3].vote_average}}</h5>
         <div class="col s12 title-background"><h5 class="title">{{popularTv.results[3].name}}</h5></div>
-        </div></a>
-        <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{popularTv.results[4].backdrop_path}}" alt="">
-          <h5 class="vote">{{popularTv.results[4].vote_average}}</h5>
+      </div></a>
+      <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{popularTv.results[4].backdrop_path}}" alt="">
+        <h5 class="vote">{{popularTv.results[4].vote_average}}</h5>
         <div class="col s12 title-background"><h5 class="title">{{popularTv.results[4].name}}</h5></div>
-        </div></a>
-        <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{popularTv.results[5].backdrop_path}}" alt="">
-          <h5 class="vote">{{popularTv.results[5].vote_average}}</h5>
+      </div></a>
+      <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{popularTv.results[5].backdrop_path}}" alt="">
+        <h5 class="vote">{{popularTv.results[5].vote_average}}</h5>
         <div class="col s12 title-background"><h5 class="title">{{popularTv.results[5].name}}</h5></div>
-        </div></a>
-      </div>
+      </div></a>
+    </div>
   </div>
-  </div>
+</div>
 </br>
 <HR>
 </br>
-<div class="row">
-      <div class="col s12">
-      <div class="carousel">
-        <h4>Popular Stars:</h4>
 
-        <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{popularPeople.results[0].profile_path}}" alt="">
+<!-- Popular Stars -->
+<div class="row">
+  <div class="col s12">
+    <div class="carousel">
+      <h4>Popular Stars:</h4>
+      <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{popularPeople.results[0].profile_path}}" alt="">
         <!-- <h5 class="vote">{{popularPeople.results[0].popularity | number: '1'}}</h5> -->
         <div class="col s12 title-background"><h5 class="title">{{popularPeople.results[0].name}}</h5></div>
-        </div></a>
+      </div></a>
 
-        <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{popularPeople.results[1].profile_path}}" alt="">
+      <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{popularPeople.results[1].profile_path}}" alt="">
         <!-- <h5 class="vote">{{popularPeople.results[1].popularity | number: '1'}}</h5> -->
         <div class="col s12 title-background"><h5 class="title">{{popularPeople.results[1].name}}</h5></div>
-        </div></a>
-        <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{popularPeople.results[2].profile_path}}" alt="">
-          <!-- <h5 class="vote">{{popularPeople.results[2].popularity | number: '1'}}</h5> -->
+      </div></a>
+      <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{popularPeople.results[2].profile_path}}" alt="">
+        <!-- <h5 class="vote">{{popularPeople.results[2].popularity | number: '1'}}</h5> -->
         <div class="col s12 title-background"><h5 class="title">{{popularPeople.results[2].name}}</h5></div>
-        </div></a>
-        <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{popularPeople.results[3].profile_path}}" alt="">
-          <!-- <h5 class="vote">{{popularPeople.results[3].popularity | number: '1'}}</h5> -->
+      </div></a>
+      <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{popularPeople.results[3].profile_path}}" alt="">
+        <!-- <h5 class="vote">{{popularPeople.results[3].popularity | number: '1'}}</h5> -->
         <div class="col s12 title-background"><h5 class="title">{{popularPeople.results[3].name}}</h5></div>
-        </div></a>
-        <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{popularPeople.results[4].profile_path}}" alt="">
-          <!-- <h5 class="vote">{{popularPeople.results[4].popularity | number: '1'}}</h5> -->
+      </div></a>
+      <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{popularPeople.results[4].profile_path}}" alt="">
+        <!-- <h5 class="vote">{{popularPeople.results[4].popularity | number: '1'}}</h5> -->
         <div class="col s12 title-background"><h5 class="title">{{popularPeople.results[4].name}}</h5></div>
-        </div></a>
-        <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{popularPeople.results[5].profile_path}}" alt="">
-          <!-- <h5 class="vote">{{popularPeople.results[5].popularity | number: '1'}}</h5> -->
+      </div></a>
+      <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{popularPeople.results[5].profile_path}}" alt="">
+        <!-- <h5 class="vote">{{popularPeople.results[5].popularity | number: '1'}}</h5> -->
         <div class="col s12 title-background"><h5 class="title">{{popularPeople.results[5].name}}</h5></div>
-        </div></a>
-        <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{popularPeople.results[6].profile_path}}" alt="">
-          <!-- <h5 class="vote">{{popularPeople.results[6].popularity | number: '1'}}</h5> -->
+      </div></a>
+      <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{popularPeople.results[6].profile_path}}" alt="">
+        <!-- <h5 class="vote">{{popularPeople.results[6].popularity | number: '1'}}</h5> -->
         <div class="col s12 title-background"><h5 class="title">{{popularPeople.results[6].name}}</h5></div>
-        </div></a>
-      </div>
+      </div></a>
+    </div>
   </div>
-  </div>
+</div>
 </br>
-
 </div>
 </div>
 </div>
-
-<!-- <h2>Popular Movies:</h2>
-<ul>
-  <li ng-repeat="x in popularMovies.results">
-    {{x.original_title}}
-    <img src="{{imgPath}}{{x.backdrop_path}}" alt="">
-  </li>
-</ul> -->
-
-
-<!-- <h1>{{movieStuff.original_title}}</h1>
-<h2>{{movieStuff.overview}}</h2>
-<div class="animated fadeIn">
-<img src="{{imgPath}}{{movieStuff.poster_path}}" alt="">
-<img src="{{imgPath}}{{movieStuff.backdrop_path}}" alt="">
-<img src="{{imgPath}}{{movieStuff.belongs_to_collection.backdrop_path}}" alt="">
-<img src="{{imgPath}}{{movieStuff.belongs_to_collection.poster_path}}" alt="">
 </div>
-
-<h2>Genres:</h2>
-<ul>
-  <li ng-repeat="x in movieStuff.genres">
-    {{x.name}}
-  </li>
-</ul>
-
-<h2>Homepage:</h2>
-
-<a href="{{movieStuff.homepage}}" target="_blank">{{movieStuff.homepage}}</a>
- -->
-  </div>
 </br>
 </br>
 </br>
@@ -233,50 +202,16 @@
 </br>
 </br>
 
-
-<!-- <div class="row">
-  <div class="col s12"> -->
+<!-- <a href="#/movies">movies</a> -->
 
 
-<!--   <div class="carousel" data-flickity>
-
-  <div class="carousel-cell">
-    <img class="flikity" src="{{imgPath}}{{popularPeople.results[0].profile_path}}" alt="">
-  </div>
-
-
-  <div class="carousel-cell">
-    <img class="flikity" src="{{imgPath}}{{popularPeople.results[1].profile_path}}" alt="">
-  </div>
-
-  <div class="carousel-cell">
-    <img class="flikity" src="{{imgPath}}{{popularPeople.results[2].profile_path}}" alt="">
-  </div>
-
-  <div class="carousel-cell">
-    <img class="flikity" src="{{imgPath}}{{popularPeople.results[3].profile_path}}" alt="">
-  </div>
-  ...
-</div> -->
-
-
-
-<!-- Slick Carousel -->
-<!--  <div class="my-slick-slider">
-     <div><img class="responsive-img" src="http://7606-presscdn-0-74.pagely.netdna-cdn.com/wp-content/uploads/2016/03/Dubai-Photos-Images-Oicture-Dubai-Landmarks-800x600.jpg" alt=""></div>
-     <div><h2>dfasdf</h2></div>
-     <div><h2>dfasdf</h2></div>
-   </div> -->
-
-<!--   </div>
-</div> -->
-
-
-
+<!-- FOOTER PARTIAL -->
 <div id="footer-partial" ng-include src="'work_here/views/footerPartial.html'"></div>
 
 
 
-<script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+<!-- <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script> -->
+<!-- Angular Route -->
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.28//angular-route.min.js"></script>
 </body>
 </html>
