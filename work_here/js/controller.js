@@ -43,6 +43,21 @@ $http.get(root_url+"movie/now_playing?api_key="+userService.key+"&language=en-US
     $scope.popularTv = data;
   });
 
+// On Air TV
+  $http.get(root_url+"tv/on_the_air?api_key="+userService.key+"&language=en-US&page=1").success(function(data) {
+    $scope.onAirTv = data;
+  });
+
+// Airing Today:
+  $http.get(root_url+"tv/airing_today?api_key="+userService.key+"&language=en-US&page=1").success(function(data) {
+    $scope.onAirTodayTv = data;
+  });
+
+// Top Rated TV
+  $http.get(root_url+"tv/top_rated?api_key="+userService.key+"&language=en-US&page=1").success(function(data) {
+    $scope.topRatedTv = data;
+  });
+
 // Popular Stars:
   $http.get(root_url+"person/popular?api_key="+userService.key+"&language=en-US&page=1").success(function(data) {
     $scope.popularPeople = data;
