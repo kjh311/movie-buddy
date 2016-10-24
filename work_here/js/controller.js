@@ -2,12 +2,15 @@ var app = angular.module('myApp',['ngRoute']);
 
 
 // CONTROLLER
-app.controller('myCtrl', ['$scope', '$http', 'userService', function($scope, $http, userService) {
+app.controller('myCtrl', ['$scope', '$http', '$location', 'userService', function($scope, $http, $location, userService) {
   $scope.name = 'Kevin';
 
 var root_url = "https://api.themoviedb.org/3/";
+var base_url = "https://api.themoviedb.org/3";
 $scope.movieId = "https://api.themoviedb.org/3/movie/188927?api_key="+userService.key;
 
+$scope.winLocation = $location.path();
+  var winLocation = $location.path();
 
   $http.get(root_url+"movie/188927?api_key="+userService.key+"").success(function(data) {
     $scope.movieStuff = data;
@@ -38,6 +41,11 @@ $http.get(root_url+"movie/now_playing?api_key="+userService.key+"&language=en-US
     $scope.popularMovies = data;
   });
 
+// Movie Details
+  $http.get(base_url+winLocation+"?api_key="+userService.key+"&language=en-US&page=1").success(function(data) {
+    $scope.movieDetails = data;
+  });
+
 // Popular TV:
   $http.get(root_url+"tv/popular?api_key="+userService.key+"&language=en-US&page=1").success(function(data) {
     $scope.popularTv = data;
@@ -66,6 +74,8 @@ $http.get(root_url+"movie/now_playing?api_key="+userService.key+"&language=en-US
 // image path
   $scope.imgPath = "https://image.tmdb.org/t/p/w300_and_h450_bestv2";
 
+
+
 }]);
 
 // NG-ROUTE
@@ -78,6 +88,9 @@ app.config(['$locationProvider', '$routeProvider',
         })
         .when("/movies", {
           templateUrl : "/work_here/views/movies.html"
+        })
+        .when('/movie/:id', {
+          templateUrl  : '/work_here/views/moviePage.html'
         })
         .when("/tv", {
           templateUrl : "/work_here/views/tv.html"

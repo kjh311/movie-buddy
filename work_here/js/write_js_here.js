@@ -35,7 +35,4 @@ $('.carousel').carousel();
 
 
 
-
-
-
 });

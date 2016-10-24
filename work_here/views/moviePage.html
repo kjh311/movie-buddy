@@ -1,0 +1,26 @@
+<script>
+$('.carousel').carousel();
+</script>
+
+
+<div class="row">
+
+   <div class="col m6">
+    <img class="responsive-img" ng-src="{{imgPath}}{{movieDetails.poster_path}}">
+  </div>
+
+  <div class="col m5">
+    <h1>{{movieDetails.title}}</h1>
+    <h4>{{movieDetails.overview}}</h4>
+    <h5>Genres:</h5>
+    <ul class="movieGenres">
+      <li ng-repeat="x in movieDetails.genres">{{x.name}}</li>
+    </ul>
+  </div>
+
+
+
+</div>
+
+
+

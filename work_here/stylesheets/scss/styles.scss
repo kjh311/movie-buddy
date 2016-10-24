@@ -13,7 +13,7 @@ body{
   // background-color: red;
   text-align: center;
   background-color: black;
-  background: -webkit-radial-gradient(rgba(0,0,0,0.6), black);
+  background: -webkit-radial-gradient(rgba(0,0,0,0.5), black);
   color: white;
   font-family: 'Anton', sans-serif;
   font-size: 16px;
@@ -109,7 +109,10 @@ body{
 #movieDBText{
   margin-top: 30px;
 }
-
+.movieGenres li{
+  display: inline;
+  padding-left: 10px;
+}
 
 
 
