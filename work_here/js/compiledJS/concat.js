@@ -1,5 +1,11 @@
 var app = angular.module('myApp',['ngRoute']);
 
+// .config(function($sceDelegateProvider) {
+//    $sceDelegateProvider.resourceUrlWhitelist([
+//      'self',
+//      '*://www.youtube.com/**'
+//    ]);
+//  });
 
 // CONTROLLER
 app.controller('myCtrl', ['$scope', '$http', '$location', '$sce', 'userService', function($scope, $http, $location, $sce, userService) {
@@ -54,8 +60,9 @@ $http.get(root_url+"movie/now_playing?api_key="+userService.key+"&language=en-US
   $http.get(base_url+winLocation+"/videos?api_key="+userService.key+"&language=en-US&page=1").success(function(data) {
     $scope.movieTrailer = data;
   });
+  // alert(movieTrailer.results[0].key);
 
-  $scope.trailer = $scope.currentProjectUrl = $sce.trustAsResourceUrl("https://www.youtube.com/embed/");
+  // $scope.trailer = $scope.currentProjectUrl = $sce.trustAsResourceUrl("https://www.youtube.com/embed/"+movieTrailer.results[0].key);
 
   $scope.youtube = "https://www.youtube.com/embed/";
 
@@ -95,6 +102,9 @@ $http.get(root_url+"movie/now_playing?api_key="+userService.key+"&language=en-US
 app.config(['$locationProvider', '$routeProvider',
  function($location, $routeProvider) {
   // alert($location.path);
+
+
+
     $routeProvider
         .when('/', {
             templateUrl : "/work_here/views/home.html"
@@ -114,6 +124,13 @@ app.config(['$locationProvider', '$routeProvider',
         .otherwise({redirectTo:'/'});
 }]);
 
+// app.config(function($sceDelegateProvider) {
+//    $sceDelegateProvider.resourceUrlWhitelist([
+//      'self',
+//      '*://www.youtube.com/**'
+//    ]);
+//  });
+
 
 
 app.factory('userService', [function(){
@@ -129,25 +146,6 @@ $( document ).ready(function() {
     // alert( "ready!" );
 
 $('.carousel').carousel();
-
- // $('.your-class').slick({
- //    setting-name: setting-value
- //  });
-
-  $('.multiple-items').slick({
-  infinite: true,
-  slidesToShow: 3,
-  slidesToScroll: 3
-});
-
-   $('.my-slick-slider').slick({
-      // autoplay: true
-        dots: true,
-  infinite: true,
-  speed: 500,
-  fade: true,
-  cssEase: 'linear'
-    });
 
 
 
