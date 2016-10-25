@@ -2,7 +2,7 @@ var app = angular.module('myApp',['ngRoute']);
 
 
 // CONTROLLER
-app.controller('myCtrl', ['$scope', '$http', '$location', 'userService', function($scope, $http, $location, userService) {
+app.controller('myCtrl', ['$scope', '$http', '$location', '$sce', 'userService', function($scope, $http, $location, $sce, userService) {
   $scope.name = 'Kevin';
 
 var root_url = "https://api.themoviedb.org/3/";
@@ -45,6 +45,19 @@ $http.get(root_url+"movie/now_playing?api_key="+userService.key+"&language=en-US
   $http.get(base_url+winLocation+"?api_key="+userService.key+"&language=en-US&page=1").success(function(data) {
     $scope.movieDetails = data;
   });
+
+// Movie Trailer:
+//                 https://api.themoviedb.org/3/movie/380124/videos?api_key=567d010127834d2946cbe71933f1639b&language=en-US
+// var root_url = "https://api.themoviedb.org/3/";
+// var base_url = "https://api.themoviedb.org/3";
+
+  $http.get(base_url+winLocation+"/videos?api_key="+userService.key+"&language=en-US&page=1").success(function(data) {
+    $scope.movieTrailer = data;
+  });
+
+  $scope.trailer = $scope.currentProjectUrl = $sce.trustAsResourceUrl("https://www.youtube.com/embed/");
+
+  $scope.youtube = "https://www.youtube.com/embed/";
 
 // Popular TV:
   $http.get(root_url+"tv/popular?api_key="+userService.key+"&language=en-US&page=1").success(function(data) {
