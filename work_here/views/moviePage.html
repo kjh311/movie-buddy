@@ -3,6 +3,7 @@ $('.carousel').carousel();
 </script>
 
 
+<div class="container">
 <div class="row moviePage animated fadeIn">
 
    <div class="col m6 s12">
@@ -12,28 +13,13 @@ $('.carousel').carousel();
   <div class="col m5 s12">
     <h1>{{movieDetails.title}}</h1>
     <h5 class="movieOverviewText">{{movieDetails.overview}}</h5>
+  </br>
+    <a href="{{movieDetails.homepage}}" target="_blank">{{movieDetails.homepage}}</a>
+
     <h5>Genres:</h5>
     <ul class="movieGenres">
       <li ng-repeat="x in movieDetails.genres">{{x.name}}</li>
     </ul>
-
-      <a href="{{movieDetails.homepage}}">{{movieDetails.homepage}}</a>
-
-<!--       <table>
-        <thead>
-          <tr>
-            <th>Budget</th>
-            <th>Revenue</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>{{movieDetails.budget | currency}}</td>
-            <td>{{movieDetails.revenue | currency}}</td>
-          </tr>
-        </tbody>
-      </table> -->
-
   </div>
 
 
@@ -47,14 +33,94 @@ $('.carousel').carousel();
       src="{{trailer}}{{movieTrailer.results[0].key}}">
     </iframe> -->
 
-
-
   </div>
-
   <div>
+    </div>
+    </div>
+
+
+
+<!-- CAST -->
+    <div class="row">
+        <div class="col s12">
+      <div class="carousel">
+        <h2>Cast:</h2>
+            <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{movieCast.cast[0].profile_path}}" alt="">
+              <p class="movieCastName">{{movieCast.cast[0].name}}</p>
+              <p class="moveCastRole">{{movieCast.cast[0].character}}</p>
+            </div></a>
+            <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img movieCastImg" src="{{imgPath}}{{movieCast.cast[1].profile_path}}" alt="">
+              <p class="movieCastName">{{movieCast.cast[1].name}}</p>
+              <p class="moveCastRole">{{movieCast.cast[1].character}}</p>
+            </div></a>
+            <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{movieCast.cast[2].profile_path}}" alt="">
+              <p class="movieCastName">{{movieCast.cast[2].name}}</p>
+              <p class="moveCastRole">{{movieCast.cast[2].character}}</p>
+            </div></a>
+            <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{movieCast.cast[3].profile_path}}" alt="">
+              <p class="movieCastName">{{movieCast.cast[3].name}}</p>
+              <p class="moveCastRole">{{movieCast.cast[3].character}}</p>
+            </div></a>
+            <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{movieCast.cast[4].profile_path}}" alt="">
+              <p class="movieCastName">{{movieCast.cast[4].name}}</p>
+              <p class="moveCastRole">{{movieCast.cast[4].character}}</p>
+            </div></a>
+            <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{movieCast.cast[5].profile_path}}" alt="">
+              <p class="movieCastName">{{movieCast.cast[5].name}}</p>
+              <p class="moveCastRole">{{movieCast.cast[5].character}}</p>
+            </div></a>
+            <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{movieCast.cast[6].profile_path}}" alt="">
+              <p class="movieCastName">{{movieCast.cast[6].name}}</p>
+              <p class="moveCastRole">{{movieCast.cast[6].character}}</p>
+            </div></a>
+            <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{movieCast.cast[7].profile_path}}" alt="">
+              <p class="movieCastName">{{movieCast.cast[7].name}}</p>
+              <p class="moveCastRole">{{movieCast.cast[7].character}}</p>
+            </div></a>
+            <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{movieCast.cast[8].profile_path}}" alt="">
+              <p class="movieCastName">{{movieCast.cast[8].name}}</p>
+              <p class="moveCastRole">{{movieCast.cast[8].character}}</p>
+            </div></a>
+            <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{movieCast.cast[9].profile_path}}" alt="">
+              <p class="movieCastName">{{movieCast.cast[9].name}}</p>
+              <p class="moveCastRole">{{movieCast.cast[9].character}}</p>
+            </div></a>
+      </div>
+    </div>
+    </div>
+
+<!-- CREW -->
+<!--     <div class="row">
+        <div class="col s12">
+      <div class="carousel">
+        <h2>Crew:</h2>
+          <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{movieCast.crew[0].profile_path}}" alt="">
+            </div></a>
+      </div>
+    </div> -->
+
+<!-- REVIEWS -->
+    <div class="row">
+      <div class="col s10 offset-s1">
+          <ul>
+            <li class="movieReviewText" ng-init="limit=150" ng-repeat="x in movieReviews.results | limitTo:3">
+              {{x.content | truncate:limit}}
+              <a class="readMoreLink">Read More</a>
+            </br>
+              - {{x.author}}
+            </li>
+          </ul>
+      </div>
+    </div>
+
+
 
 
 </div>
-
+<script>
+  function hideLink(){
+    $(".readmore.Link").addClass('hidden');
+  }
+</script>
 
 

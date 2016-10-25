@@ -4,7 +4,9 @@ $( document ).ready(function() {
 
 $('.carousel').carousel();
 
-
+$('.readMoreLink').click(function(){
+    $('.readMoreLink').hide();
+});
 
 
 

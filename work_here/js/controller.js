@@ -11,6 +11,7 @@ var app = angular.module('myApp',['ngRoute']);
 app.controller('myCtrl', ['$scope', '$http', '$location', '$sce', 'userService', function($scope, $http, $location, $sce, userService) {
   $scope.name = 'Kevin';
 
+
 var root_url = "https://api.themoviedb.org/3/";
 var base_url = "https://api.themoviedb.org/3";
 $scope.movieId = "https://api.themoviedb.org/3/movie/188927?api_key="+userService.key;
@@ -50,6 +51,16 @@ $http.get(root_url+"movie/now_playing?api_key="+userService.key+"&language=en-US
 // Movie Details
   $http.get(base_url+winLocation+"?api_key="+userService.key+"&language=en-US&page=1").success(function(data) {
     $scope.movieDetails = data;
+  });
+
+//Movie Reviews
+  $http.get(base_url+winLocation+"/reviews?api_key="+userService.key+"&language=en-US&page=1").success(function(data) {
+    $scope.movieReviews = data;
+  });
+
+// Movie Cast
+  $http.get(base_url+winLocation+"/credits?api_key="+userService.key+"&language=en-US&page=1").success(function(data) {
+    $scope.movieCast = data;
   });
 
 // Movie Trailer:
@@ -131,4 +142,20 @@ app.config(['$locationProvider', '$routeProvider',
 //    ]);
 //  });
 
+app.filter('truncate', function () {
+        return function (text, length, end) {
+            if (isNaN(length))
+                length = 10;
 
+            if (end === undefined)
+                end = "...";
+
+            if (text.length <= length || text.length - end.length <= length) {
+                return text;
+            }
+            else {
+                return String(text).substring(0, length-end.length) + end;
+            }
+
+        };
+    });

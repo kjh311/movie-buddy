@@ -1,3 +1,6 @@
+$dark-grey: rgba(0,0,0,0.3);
+
+
 *{
   -webkit-user-select: none;
   -ms-user-select: none;
@@ -115,6 +118,48 @@ body{
 }
 .movieOverviewText{
   line-height: 120%;
+}
+.movieReviewText{
+  font-size: 1em;
+  padding: 20px;
+  margin-top: 20px;
+  font-family: 'Open Sans Condensed', sans-serif;
+}
+.hidden{
+  display: none;
+}
+.movieCastName{
+  top: -20px !important;
+  position: absolute;
+  color: white;
+  font-size: 1.5em;
+  left: 5px;
+  padding: 5px;
+  background-color: $dark-grey;
+}
+.moveCastRole{
+  bottom: -10px !important;
+  position: absolute;
+  color: white;
+  font-size: 1.3em;
+  background-color: $dark-grey;
+  padding: 5px;
+  right: 5px;
+}
+.movieCastImg{
+  position: absolute;
+  top: 0;
+}
+.noImage{
+  position: absolute;
+  z-index: -100;
+  top: 0 !important;
+  width: 300px;
+  height: 450px;
+}
+.carousel-item{
+  background-image: url("http://www.don-zalmrol.be/media/1440/no_image_available.png");
+  background-repeat: no-repeat;
 }
 
 
