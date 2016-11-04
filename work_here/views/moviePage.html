@@ -1,5 +1,6 @@
 <script>
 $('.carousel').carousel();
+$('.materialboxed').materialbox();
 </script>
 
 
@@ -8,7 +9,7 @@ $('.carousel').carousel();
   {{vm.message}}
 
    <div class="col m6 s12">
-    <img class="responsive-img" ng-src="{{imgPath}}{{movieDetails.poster_path}}">
+    <img class="responsive-img materialboxed z-depth-3" ng-src="{{imgPath}}{{movieDetails.poster_path}}">
   </div>
 
   <div class="col m5 s12">
@@ -28,11 +29,11 @@ $('.carousel').carousel();
   <div class="col s12">
     <p>{{winLocation}}</p>
     <p>trailer ID: {{movieTrailer.results[0].key}}</p>
-    <!-- <p>{{youtube}}{{movieTrailer.results[0].key}}</p> -->
+    <p>{{youtube}}{{movieTrailer.results[0].key}}</p>
 
-<!--     <iframe width="420" height="315"
-      src="{{trailer}}{{movieTrailer.results[0].key}}">
-    </iframe> -->
+    <iframe width="420" height="315"
+      src="{{trailerLink}}">
+    </iframe>
 
   </div>
   <div>

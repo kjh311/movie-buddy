@@ -92,6 +92,7 @@ app.controller('movieController', ['$scope', '$http', '$location', '$sce', 'user
 
 var root_url = "https://api.themoviedb.org/3/";
 var base_url = "https://api.themoviedb.org/3";
+
 $scope.movieId = "https://api.themoviedb.org/3/movie/188927?api_key="+userService.key;
 
 $scope.winLocation = $location.path();
@@ -113,18 +114,43 @@ $scope.winLocation = $location.path();
   });
 
 // Movie Trailer:
-//                 https://api.themoviedb.org/3/movie/380124/videos?api_key=567d010127834d2946cbe71933f1639b&language=en-US
-// var root_url = "https://api.themoviedb.org/3/";
-// var base_url = "https://api.themoviedb.org/3";
+
 
   $http.get(base_url+winLocation+"/videos?api_key="+userService.key+"&language=en-US&page=1").success(function(data) {
     $scope.movieTrailer = data;
+    $scope.youtube = "https://www.youtube.com/embed/";
+    // $scope.trailerLink = youtube+movieTrailer.results[0].key;
   });
   // alert(movieTrailer.results[0].key);
 
   // $scope.trailer = $scope.currentProjectUrl = $sce.trustAsResourceUrl("https://www.youtube.com/embed/"+movieTrailer.results[0].key);
 
-  $scope.youtube = "https://www.youtube.com/embed/";
+
+
+}]);
+
+
+// STAR CONTROLLER
+app.controller('starController', ['$scope', '$http', '$location', '$sce', 'userService', function($scope, $http, $location, $sce, userService) {
+
+$scope.winLocation = $location.path();
+  var winLocation = $location.path();
+
+  // $scope.location = window.location.href;
+  var value = window.location.href.substring(window.location.href.lastIndexOf('/') + 1);
+
+
+  var root_url = "https://api.themoviedb.org/3/";
+  var base_url = "https://api.themoviedb.org/3";
+// https://api.themoviedb.org/3/person/62?api_key=567d010127834d2946cbe71933f1639b&language=en-US
+
+// https://api.themoviedb.org/3/person/star/59313?api_key=567d010127834d2946cbe71933f1639b&language=en-US&page=1
+// https://api.themoviedb.org/3/person/59313?api_key=567d010127834d2946cbe71933f1639b&language=en-US
+
+  $http.get(root_url+"person/"+value+"?api_key="+userService.key+"&language=en-US&page=1").success(function(data) {
+    $scope.starDetails = data;
+  });
+
 }]);
 
 // NG-ROUTE
@@ -136,7 +162,8 @@ app.config(['$locationProvider', '$routeProvider',
 
     $routeProvider
         .when('/', {
-            templateUrl : "/work_here/views/home.html"
+            templateUrl : "/work_here/views/home.html",
+            controller: 'myCtrl'
         })
         .when("/movies", {
           templateUrl : "/work_here/views/movies.html"
@@ -150,6 +177,10 @@ app.config(['$locationProvider', '$routeProvider',
         })
         .when("/stars", {
           templateUrl : "/work_here/views/stars.html"
+        })
+        .when('/star/:id', {
+          templateUrl  : '/work_here/views/starPage.html',
+          controller: 'starController'
         })
         .otherwise({redirectTo:'/'});
 }]);

@@ -4,10 +4,11 @@ $( document ).ready(function() {
 
 $('.carousel').carousel();
 
-$('.readMoreLink').click(function(){
-    $('.readMoreLink').hide();
-});
+// $('.readMoreLink').click(function(){
+//     $('.readMoreLink').hide();
+// });
 
+$('.materialboxed').materialbox();
 
 
 

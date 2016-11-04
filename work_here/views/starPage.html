@@ -1,0 +1,31 @@
+<script>
+$('.carousel').carousel();
+$('.materialboxed').materialbox();
+</script>
+
+<div class="container">
+  <div class="row starPage animated fadeIn">
+
+
+   <div class="col s12 m6">
+    <img class="responsive-img materialboxed z-depth-3" ng-src="{{imgPath}}{{starDetails.profile_path}}">
+  </div>
+
+
+  <div class="col m6 s12">
+    <h1>{{starDetails.name}}</h1>
+    <h5 >{{starDetails.biography}}</h5>
+  </br>
+    <h5><a href="{{movieDetails.homepage}}" target="_blank">{{movieDetails.homepage}}</a></h5>
+  </br>
+  <h5>Birthday: {{starDetails.birthday | date}}</h5>
+  <h5>Place of birth: {{starDetails.place_of_birth | date}}</h5>
+ </div>
+
+
+
+
+
+
+</div>
+</div>
