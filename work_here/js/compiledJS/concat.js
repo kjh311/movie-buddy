@@ -9,6 +9,7 @@ var app = angular.module('myApp',['ngRoute']);
 
 
 
+
 // CONTROLLER
 app.controller('myCtrl', ['$scope', '$http', '$location', '$sce', 'userService', function($scope, $http, $location, $sce, userService) {
   $scope.name = 'Kevin';
@@ -51,34 +52,7 @@ $http.get(root_url+"movie/now_playing?api_key="+userService.key+"&language=en-US
     $scope.popularMovies = data;
   });
 
-// Movie Details
-  $http.get(base_url+winLocation+"?api_key="+userService.key+"&language=en-US&page=1").success(function(data) {
-    $scope.movieDetails = data;
-  });
 
-//Movie Reviews
-  $http.get(base_url+winLocation+"/reviews?api_key="+userService.key+"&language=en-US&page=1").success(function(data) {
-    $scope.movieReviews = data;
-  });
-
-// Movie Cast
-  $http.get(base_url+winLocation+"/credits?api_key="+userService.key+"&language=en-US&page=1").success(function(data) {
-    $scope.movieCast = data;
-  });
-
-// Movie Trailer:
-//                 https://api.themoviedb.org/3/movie/380124/videos?api_key=567d010127834d2946cbe71933f1639b&language=en-US
-// var root_url = "https://api.themoviedb.org/3/";
-// var base_url = "https://api.themoviedb.org/3";
-
-  $http.get(base_url+winLocation+"/videos?api_key="+userService.key+"&language=en-US&page=1").success(function(data) {
-    $scope.movieTrailer = data;
-  });
-  // alert(movieTrailer.results[0].key);
-
-  // $scope.trailer = $scope.currentProjectUrl = $sce.trustAsResourceUrl("https://www.youtube.com/embed/"+movieTrailer.results[0].key);
-
-  $scope.youtube = "https://www.youtube.com/embed/";
 
 // Popular TV:
   $http.get(root_url+"tv/popular?api_key="+userService.key+"&language=en-US&page=1").success(function(data) {
@@ -112,6 +86,47 @@ $http.get(root_url+"movie/now_playing?api_key="+userService.key+"&language=en-US
 
 }]);
 
+// app.controller('movieController', function(){
+app.controller('movieController', ['$scope', '$http', '$location', '$sce', 'userService', function($scope, $http, $location, $sce, userService) {
+
+
+var root_url = "https://api.themoviedb.org/3/";
+var base_url = "https://api.themoviedb.org/3";
+$scope.movieId = "https://api.themoviedb.org/3/movie/188927?api_key="+userService.key;
+
+$scope.winLocation = $location.path();
+  var winLocation = $location.path();
+
+  // Movie Details
+  $http.get(base_url+winLocation+"?api_key="+userService.key+"&language=en-US&page=1").success(function(data) {
+    $scope.movieDetails = data;
+  });
+
+//Movie Reviews
+  $http.get(base_url+winLocation+"/reviews?api_key="+userService.key+"&language=en-US&page=1").success(function(data) {
+    $scope.movieReviews = data;
+  });
+
+// Movie Cast
+  $http.get(base_url+winLocation+"/credits?api_key="+userService.key+"&language=en-US&page=1").success(function(data) {
+    $scope.movieCast = data;
+  });
+
+// Movie Trailer:
+//                 https://api.themoviedb.org/3/movie/380124/videos?api_key=567d010127834d2946cbe71933f1639b&language=en-US
+// var root_url = "https://api.themoviedb.org/3/";
+// var base_url = "https://api.themoviedb.org/3";
+
+  $http.get(base_url+winLocation+"/videos?api_key="+userService.key+"&language=en-US&page=1").success(function(data) {
+    $scope.movieTrailer = data;
+  });
+  // alert(movieTrailer.results[0].key);
+
+  // $scope.trailer = $scope.currentProjectUrl = $sce.trustAsResourceUrl("https://www.youtube.com/embed/"+movieTrailer.results[0].key);
+
+  $scope.youtube = "https://www.youtube.com/embed/";
+}]);
+
 // NG-ROUTE
 app.config(['$locationProvider', '$routeProvider',
  function($location, $routeProvider) {
@@ -127,7 +142,8 @@ app.config(['$locationProvider', '$routeProvider',
           templateUrl : "/work_here/views/movies.html"
         })
         .when('/movie/:id', {
-          templateUrl  : '/work_here/views/moviePage.html'
+          templateUrl  : '/work_here/views/moviePage.html',
+          controller: 'movieController'
         })
         .when("/tv", {
           templateUrl : "/work_here/views/tv.html"
