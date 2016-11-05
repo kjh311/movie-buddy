@@ -114,19 +114,19 @@ $scope.winLocation = $location.path();
   });
 
 // Movie Trailer:
-
-
   $http.get(base_url+winLocation+"/videos?api_key="+userService.key+"&language=en-US&page=1").success(function(data) {
     $scope.movieTrailer = data;
-    $scope.youtube = "https://www.youtube.com/embed/";
-    // $scope.trailerLink = youtube+movieTrailer.results[0].key;
+    $scope.movieTrailerLink = data.results[0].key;
+    var movieTrailerLink = data.results[0].key;
+    $scope.linkYoutube = $sce.trustAsResourceUrl('http://www.youtube.com/embed/'+movieTrailerLink);
   });
   // alert(movieTrailer.results[0].key);
 
   // $scope.trailer = $scope.currentProjectUrl = $sce.trustAsResourceUrl("https://www.youtube.com/embed/"+movieTrailer.results[0].key);
 
-
-
+  $scope.getIframeSrc = function (trailerLink) {
+    return 'https://www.youtube.com/embed/' + trailerLink;
+  };
 }]);
 
 
@@ -230,6 +230,9 @@ app.config(['$locationProvider', '$routeProvider',
 //      '*://www.youtube.com/**'
 //    ]);
 //  });
+
+
+
 
 app.filter('truncate', function () {
         return function (text, length, end) {
