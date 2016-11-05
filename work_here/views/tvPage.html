@@ -13,7 +13,9 @@ $('.materialboxed').materialbox();
 
   <div class="col s12 m6">
     <h1 class="drop-shadow">{{tvDetails.name}}</h1>
-    <h5>{{tvDetails.overview}}</h5>
+    <h5 ng-init="limit=200" class="tv-overview-text">{{tvDetails.overview | truncate:limit}}
+      <a class="readMoreLink" ng-click="limit=5000">Read More</a>
+    </h5>
     <a href="{{tvDetails.homepage}}" target="_blank">{{tvDetails.homepage}}</a>
   </br>
   </br>

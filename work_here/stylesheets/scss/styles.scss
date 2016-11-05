@@ -112,6 +112,9 @@ body{
 .single-item {
     width: 40%;
 }
+.materialboxed{
+  z-index: 250;
+}
 #movies{
   color: white;
   font-size: 2em;
@@ -129,8 +132,9 @@ body{
   display: inline;
   padding-left: 10px;
 }
-.movieOverviewText{
+.movieOverviewText, .starBiography, .tv-overview-text{
   line-height: 120%;
+  font-family: 'Libre Franklin', sans-serif;
 }
 .movieReviewText{
   font-size: 1.2em;
@@ -188,6 +192,11 @@ body{
   right: 0px;
   bottom: 0px;
   position: fixed;
+}
+.slider-div{
+  text-align: center;
+  width: 300px;
+  border: 2px solid $dark-grey;
 }
 .star-credit{
   background-color: $dark-grey;

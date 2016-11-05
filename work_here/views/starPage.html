@@ -15,7 +15,8 @@ $('.materialboxed').materialbox();
 
   <div class="col s12 m6">
     <h1 class="drop-shadow">{{starDetails.name}}</h1>
-    <h5 >{{starDetails.biography}}</h5>
+    <h5 ng-init="limit=200" class="starBiography">{{starDetails.biography | truncate:limit}} <a class="readMoreLink" ng-click="limit=5000">Read More</a></h5>
+
   </br>
     <h5><a href="{{movieDetails.homepage}}" target="_blank">{{movieDetails.homepage}}</a></h5>
   </br>

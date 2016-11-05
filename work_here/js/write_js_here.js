@@ -2,7 +2,7 @@
 $( document ).ready(function() {
     // alert( "ready!" );
 
-$('.carousel').carousel();
+// $('.carousel').carousel();
 
 // $('.readMoreLink').click(function(){
 //     $('.readMoreLink').hide();
