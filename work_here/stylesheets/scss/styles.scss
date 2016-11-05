@@ -168,6 +168,14 @@ body{
   background-image: url("http://www.don-zalmrol.be/media/1440/no_image_available.png");
   background-repeat: no-repeat;
 }
+.similar-tv-vote{
+  color: white;
+  background-color: $dark-grey;
+  padding: 10px;
+  right: 0px;
+  bottom: 0px;
+  position: fixed;
+}
 .star-credit{
   background-color: $dark-grey;
   color: white;
