@@ -1,0 +1,140 @@
+<!-- <h1>TV PAGE!</h1> -->
+<script>
+$('.carousel').carousel();
+$('.materialboxed').materialbox();
+</script>
+
+<div class="container">
+<div class="row">
+  <div class="col s12 m6">
+
+      <img class="responsive-img materialboxed z-depth-3" ng-src="{{imgPath}}{{tvDetails.poster_path}}">
+  </div>
+
+  <div class="col s12 m6">
+    <h1 class="drop-shadow">{{tvDetails.name}}</h1>
+    <h5>{{tvDetails.overview}}</h5>
+    <a href="{{tvDetails.homepage}}" target="_blank">{{tvDetails.homepage}}</a>
+  </br>
+  <h5 class="drop-shadow">Genres:</h5>
+  <ul class="tvGenres">
+      <li class="tv-genres" ng-repeat="x in tvDetails.genres">{{x.name}}</li>
+    </ul>
+
+  </div>
+</div>
+
+ <div class="row">
+  <div class="col s12">
+    <div class="carousel">
+      <h1 class="drop-shadow">CAST:</h1>
+        <a class="carousel-item" href=""><div class="waves-effect row">
+          <h5 class="tv-credit-name">{{tvCredits.cast[0].name}}</h5>
+        <img class="responsive-img" src="{{imgPath}}{{tvCredits.cast[0].profile_path}}" alt="">
+        <h5 class="tv-credit-character">{{tvCredits.cast[0].character}}</h5>
+      </div></a>
+      <a class="carousel-item" href=""><div class="waves-effect row">
+          <h5 class="tv-credit-name">{{tvCredits.cast[1].name}}</h5>
+        <img class="responsive-img" src="{{imgPath}}{{tvCredits.cast[1].profile_path}}" alt="">
+        <h5 class="tv-credit-character">{{tvCredits.cast[1].character}}</h5>
+      </div></a>
+      <a class="carousel-item" href=""><div class="waves-effect row">
+          <h5 class="tv-credit-name">{{tvCredits.cast[2].name}}</h5>
+        <img class="responsive-img" src="{{imgPath}}{{tvCredits.cast[2].profile_path}}" alt="">
+        <h5 class="tv-credit-character">{{tvCredits.cast[2].character}}</h5>
+      </div></a>
+      <a class="carousel-item" href=""><div class="waves-effect row">
+          <h5 class="tv-credit-name">{{tvCredits.cast[3].name}}</h5>
+        <img class="responsive-img" src="{{imgPath}}{{tvCredits.cast[3].profile_path}}" alt="">
+        <h5 class="tv-credit-character">{{tvCredits.cast[3].character}}</h5>
+      </div></a>
+      <a class="carousel-item" href=""><div class="waves-effect row">
+          <h5 class="tv-credit-name">{{tvCredits.cast[4].name}}</h5>
+        <img class="responsive-img" src="{{imgPath}}{{tvCredits.cast[4].profile_path}}" alt="">
+        <h5 class="tv-credit-character">{{tvCredits.cast[4].character}}</h5>
+      </div></a>
+      <a class="carousel-item" href=""><div class="waves-effect row">
+          <h5 class="tv-credit-name">{{tvCredits.cast[5].name}}</h5>
+        <img class="responsive-img" src="{{imgPath}}{{tvCredits.cast[5].profile_path}}" alt="">
+        <h5 class="tv-credit-character">{{tvCredits.cast[5].character}}</h5>
+      </div></a>
+      <a class="carousel-item" href=""><div class="waves-effect row">
+          <h5 class="tv-credit-name">{{tvCredits.cast[6].name}}</h5>
+        <img class="responsive-img" src="{{imgPath}}{{tvCredits.cast[6].profile_path}}" alt="">
+        <h5 class="tv-credit-character">{{tvCredits.cast[6].character}}</h5>
+      </div></a>
+      <a class="carousel-item" href=""><div class="waves-effect row">
+          <h5 class="tv-credit-name">{{tvCredits.cast[7].name}}</h5>
+        <img class="responsive-img" src="{{imgPath}}{{tvCredits.cast[7].profile_path}}" alt="">
+        <h5 class="tv-credit-character">{{tvCredits.cast[7].character}}</h5>
+      </div></a>
+      <a class="carousel-item" href=""><div class="waves-effect row">
+          <h5 class="tv-credit-name">{{tvCredits.cast[8].name}}</h5>
+        <img class="responsive-img" src="{{imgPath}}{{tvCredits.cast[8].profile_path}}" alt="">
+        <h5 class="tv-credit-character">{{tvCredits.cast[8].character}}</h5>
+      </div></a>
+      <a class="carousel-item" href=""><div class="waves-effect row">
+          <h5 class="tv-credit-name">{{tvCredits.cast[10].name}}</h5>
+        <img class="responsive-img" src="{{imgPath}}{{tvCredits.cast[10].profile_path}}" alt="">
+        <h5 class="tv-credit-character">{{tvCredits.cast[10].character}}</h5>
+      </div></a>
+    </div>
+  </div>
+  </div>
+
+
+<!-- SIMILAR SHOWS -->
+<div class="row">
+  <div class="col s12">
+    <div class="carousel">
+        <h1 class="drop-shadow">SIMILAR SHOWS:</h1>
+        <a class="carousel-item" href=""><div class="waves-effect row">
+          <h5 class="tv-credit-name">{{tvSimilar.results[0].name}}</h5>
+        <img class="responsive-img" src="{{imgPath}}{{tvSimilar.results[0].poster_path}}" alt="">
+      </div></a>
+      <a class="carousel-item" href=""><div class="waves-effect row">
+          <h5 class="tv-credit-name">{{tvSimilar.results[1].name}}</h5>
+        <img class="responsive-img" src="{{imgPath}}{{tvSimilar.results[1].poster_path}}" alt="">
+      </div></a>
+      <a class="carousel-item" href=""><div class="waves-effect row">
+          <h5 class="tv-credit-name">{{tvSimilar.results[2].name}}</h5>
+        <img class="responsive-img" src="{{imgPath}}{{tvSimilar.results[2].poster_path}}" alt="">
+      </div></a>
+      <a class="carousel-item" href=""><div class="waves-effect row">
+          <h5 class="tv-credit-name">{{tvSimilar.results[3].name}}</h5>
+        <img class="responsive-img" src="{{imgPath}}{{tvSimilar.results[3].poster_path}}" alt="">
+      </div></a>
+      <a class="carousel-item" href=""><div class="waves-effect row">
+          <h5 class="tv-credit-name">{{tvSimilar.results[4].name}}</h5>
+        <img class="responsive-img" src="{{imgPath}}{{tvSimilar.results[4].poster_path}}" alt="">
+      </div></a>
+      <a class="carousel-item" href=""><div class="waves-effect row">
+          <h5 class="tv-credit-name">{{tvSimilar.results[5].name}}</h5>
+        <img class="responsive-img" src="{{imgPath}}{{tvSimilar.results[5].poster_path}}" alt="">
+      </div></a>
+      <a class="carousel-item" href=""><div class="waves-effect row">
+          <h5 class="tv-credit-name">{{tvSimilar.results[6].name}}</h5>
+        <img class="responsive-img" src="{{imgPath}}{{tvSimilar.results[6].poster_path}}" alt="">
+      </div></a>
+      <a class="carousel-item" href=""><div class="waves-effect row">
+          <h5 class="tv-credit-name">{{tvSimilar.results[7].name}}</h5>
+        <img class="responsive-img" src="{{imgPath}}{{tvSimilar.results[7].poster_path}}" alt="">
+      </div></a>
+      <a class="carousel-item" href=""><div class="waves-effect row">
+          <h5 class="tv-credit-name">{{tvSimilar.results[8].name}}</h5>
+        <img class="responsive-img" src="{{imgPath}}{{tvSimilar.results[8].poster_path}}" alt="">
+      </div></a>
+      <a class="carousel-item" href=""><div class="waves-effect row">
+          <h5 class="tv-credit-name">{{tvSimilar.results[9].name}}</h5>
+        <img class="responsive-img" src="{{imgPath}}{{tvSimilar.results[9].poster_path}}" alt="">
+      </div></a>
+
+    </div>
+  </div>
+</div>
+
+
+</div>
+
+
+<!-- {{tvDetails.name}} -->

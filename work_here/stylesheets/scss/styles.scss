@@ -6,6 +6,9 @@ $dark-grey: rgba(0,0,0,0.3);
   -ms-user-select: none;
   -moz-user-select: none;
 }
+a:hover{
+  color: red;
+}
 .brand-logo, .drop-shadow{
   text-shadow: 3px 3px 3px black;
 }
@@ -172,6 +175,26 @@ body{
   right: 0px;
   position: fixed;
   padding: 10px;
+}
+.tv-credit-name{
+  background-color: $dark-grey;
+  color: white;
+  top: -10px !important;
+  left: 0px;
+  position: fixed;
+  padding: 10px;
+}
+.tv-credit-character{
+  background-color: $dark-grey;
+  color: white;
+  bottom: 0px !important;
+  right: 0px;
+  position: fixed;
+  padding: 10px;
+}
+.tv-genres{
+  display: inline;
+  padding-left: 20px;
 }
 .star-credit-pic{
   position: absolute;

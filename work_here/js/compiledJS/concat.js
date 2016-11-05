@@ -10,7 +10,7 @@ var app = angular.module('myApp',['ngRoute']);
 
 
 
-// CONTROLLER
+// MY CONTROLLER
 app.controller('myCtrl', ['$scope', '$http', '$location', '$sce', 'userService', function($scope, $http, $location, $sce, userService) {
   $scope.name = 'Kevin';
 
@@ -133,35 +133,60 @@ $scope.winLocation = $location.path();
 // STAR CONTROLLER
 app.controller('starController', ['$scope', '$http', '$location', '$sce', 'userService', function($scope, $http, $location, $sce, userService) {
 
-$scope.winLocation = $location.path();
+  $scope.winLocation = $location.path();
   var winLocation = $location.path();
 
-  // $scope.location = window.location.href;
+// GET END OF URL:
   var value = window.location.href.substring(window.location.href.lastIndexOf('/') + 1);
-
 
   var root_url = "https://api.themoviedb.org/3/";
   var base_url = "https://api.themoviedb.org/3";
-// https://api.themoviedb.org/3/person/62?api_key=567d010127834d2946cbe71933f1639b&language=en-US
 
-// https://api.themoviedb.org/3/person/star/59313?api_key=567d010127834d2946cbe71933f1639b&language=en-US&page=1
-// https://api.themoviedb.org/3/person/59313?api_key=567d010127834d2946cbe71933f1639b&language=en-US
-
+// DETAILS
   $http.get(root_url+"person/"+value+"?api_key="+userService.key+"&language=en-US&page=1").success(function(data) {
     $scope.starDetails = data;
   });
 
-
+// PHOTOS
   $http.get(root_url+"person/"+value+"/images?api_key="+userService.key+"&language=en-US&page=1").success(function(data) {
     $scope.starPhotos = data;
   });
 
+// CREDITS
   $http.get(root_url+"person/"+value+"/combined_credits?api_key="+userService.key+"&language=en-US&page=1").success(function(data) {
     $scope.starCredits = data;
   });
+}]);
 
+// TV CONTROLLER
+app.controller('tvController', ['$scope', '$http', '$location', '$sce', 'userService', function($scope, $http, $location, $sce, userService) {
+
+  $scope.winLocation = $location.path();
+  var winLocation = $location.path();
+
+// GET END OF URL:
+  var value = window.location.href.substring(window.location.href.lastIndexOf('/') + 1);
+
+  var root_url = "https://api.themoviedb.org/3/";
+  var base_url = "https://api.themoviedb.org/3";
+
+// Details
+  $http.get(root_url+"tv/"+value+"?api_key="+userService.key+"&language=en-US&page=1").success(function(data) {
+    $scope.tvDetails = data;
+  });
+
+// Tv-credits
+  $http.get(root_url+"tv/"+value+"/credits?api_key="+userService.key+"&language=en-US&page=1").success(function(data) {
+    $scope.tvCredits = data;
+  });
+
+// Similar Recomendations
+  $http.get(root_url+"tv/"+value+"/similar?api_key="+userService.key+"&language=en-US&page=1").success(function(data) {
+    $scope.tvSimilar = data;
+  });
 
 }]);
+
 
 // NG-ROUTE
 app.config(['$locationProvider', '$routeProvider',
@@ -184,6 +209,10 @@ app.config(['$locationProvider', '$routeProvider',
         })
         .when("/tv", {
           templateUrl : "/work_here/views/tv.html"
+        })
+        .when('/tv/:id', {
+          templateUrl  : '/work_here/views/tvPage.html',
+          controller: 'tvController'
         })
         .when("/stars", {
           templateUrl : "/work_here/views/stars.html"
