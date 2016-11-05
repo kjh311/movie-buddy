@@ -6,6 +6,9 @@ $dark-grey: rgba(0,0,0,0.3);
   -ms-user-select: none;
   -moz-user-select: none;
 }
+.brand-logo, .drop-shadow{
+  text-shadow: 3px 3px 3px black;
+}
 .logo{
   width: 50px;
   margin-top: 5px;

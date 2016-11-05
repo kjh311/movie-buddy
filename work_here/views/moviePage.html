@@ -13,12 +13,12 @@ $('.materialboxed').materialbox();
   </div>
 
   <div class="col m5 s12">
-    <h1>{{movieDetails.title}}</h1>
+    <h1 class="drop-shadow">{{movieDetails.title}}</h1>
     <h5 class="movieOverviewText">{{movieDetails.overview}}</h5>
   </br>
     <a href="{{movieDetails.homepage}}" target="_blank">{{movieDetails.homepage}}</a>
 
-    <h5>Genres:</h5>
+    <h5 class="drop-shadow">Genres:</h5>
     <ul class="movieGenres">
       <li ng-repeat="x in movieDetails.genres">{{x.name}}</li>
     </ul>
@@ -31,6 +31,7 @@ $('.materialboxed').materialbox();
     <p>trailer ID: {{movieTrailer.results[0].key}}</p>
     <p>{{youtube}}{{movieTrailer.results[0].key}}</p>
 
+  <h4 class="drop-shadow">Trailer:</h4>
     <iframe width="420" height="315"
       src="{{trailerLink}}">
     </iframe>
@@ -46,7 +47,7 @@ $('.materialboxed').materialbox();
     <div class="row">
         <div class="col s12">
       <div class="carousel">
-        <h2>Cast:</h2>
+        <h2 class="drop-shadow">Cast:</h2>
             <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{movieCast.cast[0].profile_path}}" alt="">
               <p class="movieCastName">{{movieCast.cast[0].name}}</p>
               <p class="moveCastRole">{{movieCast.cast[0].character}}</p>
