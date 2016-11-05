@@ -22,7 +22,8 @@ $('.materialboxed').materialbox();
       <li class="tv-genres" ng-repeat="x in tvDetails.genres">{{x.name}}</li>
   </ul>
 
-<h5>Rating: {{tvDetails.vote_average}}</h5>
+<h5 class="drop-shadow">Average Rating:</h5>
+<h3> {{tvDetails.vote_average}}</h3>
 <h5>No. of seasons: {{tvDetails.number_of_seasons}}</h5>
 <h5>No. of episodes: {{tvDetails.number_of_episodes}}</h5>
 </br>
@@ -35,9 +36,9 @@ $('.materialboxed').materialbox();
 </div>
 
   <h4 class="drop-shadow">Trailer:</h4>
-  <div class="video-container">
-    <iframe width="420" height="315"
-      src="{{trailerLink}}">
+  <div class="video-container z-depth-3">
+    <iframe
+      ng-src="{{linkYoutubeTv}}"  allowfullscreen>
     </iframe>
     </div>
 
@@ -145,11 +146,19 @@ $('.materialboxed').materialbox();
         <img class="responsive-img" src="{{imgPath}}{{tvSimilar.results[9].poster_path}}" alt="">
         <h5 class="similar-tv-vote">{{tvSimilar.results[9].vote_average}}</h5>
       </div></a>
-
     </div>
   </div>
 </div>
 
+
+<!-- Season Posters -->
+<!-- <div class="row">
+  <div class="col s12">
+    <ul class="seasons">
+      <li ng-repeat="x in tvDetails.seasons"><img src="{{imgPath}}{{x.poster_path}}" alt=""></li>
+    </ul>
+    </div>
+  </div> -->
 
 </div>
 

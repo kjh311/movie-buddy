@@ -120,13 +120,17 @@ $scope.winLocation = $location.path();
     var movieTrailerLink = data.results[0].key;
     $scope.linkYoutube = $sce.trustAsResourceUrl('http://www.youtube.com/embed/'+movieTrailerLink);
   });
-  // alert(movieTrailer.results[0].key);
 
-  // $scope.trailer = $scope.currentProjectUrl = $sce.trustAsResourceUrl("https://www.youtube.com/embed/"+movieTrailer.results[0].key);
+// Similar Movies
+  $http.get(base_url+winLocation+"/similar?api_key="+userService.key+"&language=en-US&page=1").success(function(data) {
+    $scope.movieSimilar = data;
+    });
 
-  $scope.getIframeSrc = function (trailerLink) {
-    return 'https://www.youtube.com/embed/' + trailerLink;
-  };
+// Release Date
+  $http.get(base_url+winLocation+"release_dates?api_key="+userService.key+"&language=en-US&page=1").success(function(data) {
+    $scope.movieReleaseDate = data;
+    });
+
 }]);
 
 
@@ -183,6 +187,14 @@ app.controller('tvController', ['$scope', '$http', '$location', '$sce', 'userSer
 // Similar Recomendations
   $http.get(root_url+"tv/"+value+"/similar?api_key="+userService.key+"&language=en-US&page=1").success(function(data) {
     $scope.tvSimilar = data;
+  });
+
+// TV Trailer:
+  $http.get(base_url+winLocation+"/videos?api_key="+userService.key+"&language=en-US&page=1").success(function(data) {
+    $scope.tvTrailer = data;
+    $scope.tvTrailerLink = data.results[0].key;
+    var tvTrailerLink = data.results[0].key;
+    $scope.linkYoutubeTv = $sce.trustAsResourceUrl('http://www.youtube.com/embed/'+tvTrailerLink);
   });
 
 }]);

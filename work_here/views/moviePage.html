@@ -1,41 +1,53 @@
 <script>
 $('.carousel').carousel();
 $('.materialboxed').materialbox();
+
+
 </script>
 
 
 <div class="container">
 <div class="row moviePage animated fadeIn">
-  {{vm.message}}
 
+<!-- Movie Poster -->
    <div class="col m6 s12">
     <img class="responsive-img materialboxed z-depth-3" ng-src="{{imgPath}}{{movieDetails.poster_path}}">
+    <!-- <h5>{{movieDetails.tagline}}</h5> -->
   </div>
 
+<!-- Movie Details -->
   <div class="col m5 s12">
     <h1 class="drop-shadow">{{movieDetails.title}}</h1>
     <h5 class="movieOverviewText">{{movieDetails.overview}}</h5>
   </br>
     <a href="{{movieDetails.homepage}}" target="_blank">{{movieDetails.homepage}}</a>
 
+<!-- Genres -->
     <h5 class="drop-shadow">Genres:</h5>
     <ul class="movieGenres">
       <li ng-repeat="x in movieDetails.genres">{{x.name}}</li>
     </ul>
+  </br>
+  <h5 class="drop-shadow">Average Rating:</h5>
+   <h3>{{movieDetails.vote_average}}</h3>
+</br>
+
+<!-- Release Date -->
+<!-- <h5 class="drop-shadow">Theatrical Release Date:</h5>
+<h3>{{movieReleaseDate.results[0].release_dates.release_date}}</h3> -->
+
+<!-- Production Companies -->
+<h5 class="drop-shadow">Production Companies:</h5>
+  <ul class="movieProductionCompanies">
+      <li class="movie-production-companies" ng-repeat="x in movieDetails.production_companies">{{x.name}}</li>
+  </ul>
   </div>
 
 
   </div class="row">
   <div class="col s12">
-    <p>{{winLocation}}</p>
-    <p>trailer ID: {{movieTrailer.results[0].key}}</p>
-    <p>{{youtube}}{{movieTrailer.results[0].key}}</p>
-    <h2>{{movieTrailerLink}}</h2>
-    <h2>{{linkYoutube}}</h2>
-
-
   <h4 class="drop-shadow">Trailer:</h4>
-  <div class="video-container">
+  <div class="video-container z-depth-3">
     <iframe
       ng-src="{{linkYoutube}}"  allowfullscreen>
     </iframe>
@@ -111,9 +123,9 @@ $('.materialboxed').materialbox();
     <div class="row">
       <div class="col s10 offset-s1">
           <ul>
-            <li class="movieReviewText" ng-init="limit=150" ng-repeat="x in movieReviews.results | limitTo:3">
+            <li  ng-model="review" class="movieReviewText" ng-init="limit=150" ng-repeat="x in movieReviews.results | limitTo:3">
               {{x.content | truncate:limit}}
-              <a class="readMoreLink">Read More</a>
+              <div class="readMore"><a class="readMoreLink" ng-click="limit=5000" onClick="hideFunction()">Read More</a></div>
             </br>
               - {{x.author}}
             </li>
@@ -122,13 +134,62 @@ $('.materialboxed').materialbox();
     </div>
 
 
+<!-- SIMILAR Movies -->
+<div class="row">
+  <div class="col s12">
+    <div class="carousel">
+        <h3 class="drop-shadow">SIMILAR MOVIES:</h3>
+        <a class="carousel-item" href=""><div class="waves-effect row">
+        <img class="responsive-img" src="{{imgPath}}{{movieSimilar.results[0].poster_path}}" alt="">
+        <h5 class="similar-movie-vote">{{movieSimilar.results[0].vote_average}}</h5>
+      </div></a>
+      <a class="carousel-item" href=""><div class="waves-effect row">
+        <img class="responsive-img" src="{{imgPath}}{{movieSimilar.results[1].poster_path}}" alt="">
+        <h5 class="similar-movie-vote">{{movieSimilar.results[1].vote_average}}</h5>
+      </div></a>
+      <a class="carousel-item" href=""><div class="waves-effect row">
+        <img class="responsive-img" src="{{imgPath}}{{movieSimilar.results[2].poster_path}}" alt="">
+        <h5 class="similar-movie-vote">{{movieSimilar.results[2].vote_average}}</h5>
+      </div></a>
+      <a class="carousel-item" href=""><div class="waves-effect row">
+        <img class="responsive-img" src="{{imgPath}}{{movieSimilar.results[3].poster_path}}" alt="">
+        <h5 class="similar-movie-vote">{{movieSimilar.results[3].vote_average}}</h5>
+      </div></a>
+      <a class="carousel-item" href=""><div class="waves-effect row">
+        <img class="responsive-img" src="{{imgPath}}{{movieSimilar.results[4].poster_path}}" alt="">
+        <h5 class="similar-movie-vote">{{movieSimilar.results[4].vote_average}}</h5>
+      </div></a>
+      <a class="carousel-item" href=""><div class="waves-effect row">
+        <img class="responsive-img" src="{{imgPath}}{{movieSimilar.results[5].poster_path}}" alt="">
+        <h5 class="similar-movie-vote">{{movieSimilar.results[5].vote_average}}</h5>
+      </div></a>
+      <a class="carousel-item" href=""><div class="waves-effect row">
+        <img class="responsive-img" src="{{imgPath}}{{movieSimilar.results[6].poster_path}}" alt="">
+        <h5 class="similar-movie-vote">{{movieSimilar.results[6].vote_average}}</h5>
+      </div></a>
+      <a class="carousel-item" href=""><div class="waves-effect row">
+        <img class="responsive-img" src="{{imgPath}}{{movieSimilar.results[7].poster_path}}" alt="">
+        <h5 class="similar-movie-vote">{{movieSimilar.results[7].vote_average}}</h5>
+      </div></a>
+      <a class="carousel-item" href=""><div class="waves-effect row">
+        <img class="responsive-img" src="{{imgPath}}{{movieSimilar.results[8].poster_path}}" alt="">
+        <h5 class="similar-movie-vote">{{movieSimilar.results[8].vote_average}}</h5>
+      </div></a>
+      <a class="carousel-item" href=""><div class="waves-effect row">
+        <img class="responsive-img" src="{{imgPath}}{{movieSimilar.results[9].poster_path}}" alt="">
+        <h5 class="similar-movie-vote">{{movieSimilar.results[9].vote_average}}</h5>
+      </div></a>
+    </div>
+  </div>
+</div>
+
 
 
 </div>
 <script>
-  function hideLink(){
-    $(".readmore.Link").addClass('hidden');
-  }
+function hideFunction(){
+  $('.readMoreLink').hide();
+}
 </script>
 
 

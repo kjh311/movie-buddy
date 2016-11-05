@@ -29,8 +29,12 @@ $('.tv-link').click(function() {
   $('.movie-link').removeClass('white');
 });
 
+// $( '.readMore' ).click(function() {
+
+//               $( '.readMoreLink' ).hide();
 
 
+//     });
 
 
 
