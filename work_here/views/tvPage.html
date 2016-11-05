@@ -6,8 +6,8 @@ $('.materialboxed').materialbox();
 
 <div class="container">
 <div class="row">
-  <div class="col s12 m6">
 
+  <div class="col s12 m6">
       <img class="responsive-img materialboxed z-depth-3" ng-src="{{imgPath}}{{tvDetails.poster_path}}">
   </div>
 
@@ -16,18 +16,35 @@ $('.materialboxed').materialbox();
     <h5>{{tvDetails.overview}}</h5>
     <a href="{{tvDetails.homepage}}" target="_blank">{{tvDetails.homepage}}</a>
   </br>
+  </br>
   <h5 class="drop-shadow">Genres:</h5>
   <ul class="tvGenres">
       <li class="tv-genres" ng-repeat="x in tvDetails.genres">{{x.name}}</li>
-    </ul>
+  </ul>
+
+<h5>Rating: {{tvDetails.vote_average}}</h5>
+<h5>No. of seasons: {{tvDetails.number_of_seasons}}</h5>
+<h5>No. of episodes: {{tvDetails.number_of_episodes}}</h5>
+</br>
+<h5 class="drop-shadow">Production Companies:</h5>
+  <ul class="tvProductionCompanies">
+      <li class="tv-production-companies" ng-repeat="x in tvDetails.production_companies">{{x.name}}</li>
+  </ul>
 
   </div>
 </div>
 
+  <h4 class="drop-shadow">Trailer:</h4>
+  <div class="video-container">
+    <iframe width="420" height="315"
+      src="{{trailerLink}}">
+    </iframe>
+    </div>
+
  <div class="row">
   <div class="col s12">
     <div class="carousel">
-      <h1 class="drop-shadow">CAST:</h1>
+      <h3 class="drop-shadow">CAST:</h3>
         <a class="carousel-item" href=""><div class="waves-effect row">
           <h5 class="tv-credit-name">{{tvCredits.cast[0].name}}</h5>
         <img class="responsive-img" src="{{imgPath}}{{tvCredits.cast[0].profile_path}}" alt="">
@@ -87,7 +104,7 @@ $('.materialboxed').materialbox();
 <div class="row">
   <div class="col s12">
     <div class="carousel">
-        <h1 class="drop-shadow">SIMILAR SHOWS:</h1>
+        <h3 class="drop-shadow">SIMILAR SHOWS:</h3>
         <a class="carousel-item" href=""><div class="waves-effect row">
           <h5 class="tv-credit-name">{{tvSimilar.results[0].name}}</h5>
         <img class="responsive-img" src="{{imgPath}}{{tvSimilar.results[0].poster_path}}" alt="">
