@@ -139,6 +139,7 @@ body{
   left: 5px;
   padding: 5px;
   background-color: $dark-grey;
+
 }
 .moveCastRole{
   bottom: -10px !important;
@@ -163,6 +164,20 @@ body{
 .carousel-item{
   background-image: url("http://www.don-zalmrol.be/media/1440/no_image_available.png");
   background-repeat: no-repeat;
+}
+.star-credit{
+  background-color: $dark-grey;
+  color: white;
+  bottom: 10px !important;
+  right: 0px;
+  position: fixed;
+  padding: 10px;
+}
+.star-credit-pic{
+  position: absolute;
+}
+.white{
+  color: white;
 }
 
 

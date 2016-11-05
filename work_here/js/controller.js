@@ -86,7 +86,7 @@ $http.get(root_url+"movie/now_playing?api_key="+userService.key+"&language=en-US
 
 }]);
 
-// app.controller('movieController', function(){
+// Movie Controller
 app.controller('movieController', ['$scope', '$http', '$location', '$sce', 'userService', function($scope, $http, $location, $sce, userService) {
 
 
@@ -150,6 +150,16 @@ $scope.winLocation = $location.path();
   $http.get(root_url+"person/"+value+"?api_key="+userService.key+"&language=en-US&page=1").success(function(data) {
     $scope.starDetails = data;
   });
+
+
+  $http.get(root_url+"person/"+value+"/images?api_key="+userService.key+"&language=en-US&page=1").success(function(data) {
+    $scope.starPhotos = data;
+  });
+
+  $http.get(root_url+"person/"+value+"/combined_credits?api_key="+userService.key+"&language=en-US&page=1").success(function(data) {
+    $scope.starCredits = data;
+  });
+
 
 }]);
 
