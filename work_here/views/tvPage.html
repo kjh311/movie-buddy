@@ -5,6 +5,7 @@ $('.materialboxed').materialbox();
 
 $('.slider').slider({full_width: false});
 
+$("html, body").animate({ scrollTop: 0 }, 0);
 
    // function slideSwitch() {
    //      var $active = $('div#slideshow IMG.active');
@@ -45,6 +46,8 @@ $('.right-half').mouseleave(function() {
   $( '.fa-chevron-right').removeClass('opacity');
 });
 
+
+
 </script>
 
 <div class="container animated fadeIn">
@@ -53,7 +56,6 @@ $('.right-half').mouseleave(function() {
     <div class="col s12 m4">
 
   <div class="tv-slide-wrapper">
-
       <!-- TV POSTER SLIDER -->
       <div class="slider tv-slider">
         <ul class="slides z-depth-3 ">
@@ -66,7 +68,6 @@ $('.right-half').mouseleave(function() {
     <!--   <li ng-repeat="x in tvDetails.seasons">
         <img src="{{imgPath}}{{x.poster_path}}" alt="">
       </li> -->
-
       <li class="star-slider-li">
         <img class="responsive-img z-depth-3 " ng-src="{{imgPath}}{{tvDetails.seasons[0].poster_path}}">
       </li>
@@ -92,13 +93,10 @@ $('.right-half').mouseleave(function() {
         <img class="responsive-img z-depth-3 " ng-src="{{imgPath}}{{tvDetails.seasons[7].poster_path}}">
       </li>
     </ul>
-
-    <div class="left-half"></div>
+<!--     <div class="left-half"></div>
     <div class="right-half"></div>
-  </div>
-
+ -->  </div>
   <i class="fa fa-chevron-left fa-2x"></i>
-
   <!-- <i class="fa fa-pause fa-2x"></i> -->
     <i class="fa fa-chevron-right fa-2x"></i>
   </div>
@@ -156,6 +154,69 @@ $('.right-half').mouseleave(function() {
 
 
 <!-- CAST -->
+<h3 class="drop-shadow">CAST:</h3>
+  <div class="tv-slide-wrapper">
+      <!-- TV POSTER SLIDER -->
+      <div class="slider tv-slider">
+        <ul class="slides z-depth-3 ">
+          <li class="star-slider-li">
+            <a href="#star/{{tvCredits.cast[0].id}}">
+            <h5 class="tv-credit-name">{{tvCredits.cast[0].name}}</h5>
+            <img class="responsive-img" src="{{imgPath}}{{tvCredits.cast[0].profile_path}}" alt="">
+            <h5 class="">{{tvCredits.cast[0].character}}</h5>
+            </a>
+          </li>
+          <li class="star-slider-li">
+            <a href="#star/{{tvCredits.cast[1].id}}">
+            <h5 class="tv-credit-name">{{tvCredits.cast[1].name}}</h5>
+            <img class="responsive-img" src="{{imgPath}}{{tvCredits.cast[1].profile_path}}" alt="">
+            <h5 class="">{{tvCredits.cast[1].character}}</h5>
+            </a>
+          </li>
+          <li class="star-slider-li">
+            <a href="#star/{{tvCredits.cast[2].id}}">
+            <h5 class="tv-credit-name">{{tvCredits.cast[2].name}}</h5>
+            <img class="responsive-img" src="{{imgPath}}{{tvCredits.cast[2].profile_path}}" alt="">
+            <h5 class="">{{tvCredits.cast[2].character}}</h5>
+            </a>
+          </li>
+          <li class="star-slider-li">
+            <a href="#star/{{tvCredits.cast[3].id}}">
+            <h5 class="tv-credit-name">{{tvCredits.cast[3].name}}</h5>
+            <img class="responsive-img" src="{{imgPath}}{{tvCredits.cast[3].profile_path}}" alt="">
+            <h5 class="">{{tvCredits.cast[3].character}}</h5>
+            </a>
+          </li>
+          <li class="star-slider-li">
+            <a href="#star/{{tvCredits.cast[4].id}}">
+            <h5 class="tv-credit-name">{{tvCredits.cast[4].name}}</h5>
+            <img class="responsive-img" src="{{imgPath}}{{tvCredits.cast[4].profile_path}}" alt="">
+            <h5 class="">{{tvCredits.cast[4].character}}</h5>
+            </a>
+          </li>
+          <li class="star-slider-li">
+            <a href="#star/{{tvCredits.cast[5].id}}">
+            <h5 class="tv-credit-name">{{tvCredits.cast[5].name}}</h5>
+            <img class="responsive-img" src="{{imgPath}}{{tvCredits.cast[5].profile_path}}" alt="">
+            <h5 class="">{{tvCredits.cast[5].character}}</h5>
+            </a>
+          </li>
+          <li class="star-slider-li">
+            <a href="#star/{{tvCredits.cast[6].id}}">
+            <h5 class="tv-credit-name">{{tvCredits.cast[6].name}}</h5>
+            <img class="responsive-img" src="{{imgPath}}{{tvCredits.cast[6].profile_path}}" alt="">
+            <h5 class="">{{tvCredits.cast[6].character}}</h5>
+            </a>
+          </li>
+    </ul>
+  </div>
+  <i class="fa fa-chevron-left fa-2x"></i>
+    <i class="fa fa-chevron-right fa-2x"></i>
+  </div>
+
+
+
+
 </div class="row section">
 <div class="col s12">
   <div class="carousel">
@@ -286,3 +347,20 @@ $('.right-half').mouseleave(function() {
 
 
 <!-- {{tvDetails.name}} -->
+
+<script>
+  function check_length(){
+  // alert($('.tv-overview-text').text().length);
+  if($('.tv-overview-text').text().length < 221){
+    $('.readMoreLink').hide();
+  }
+  // alert($('.tv-overview-text').text().length);
+  }
+  setTimeout(check_length, 500);
+
+
+$('.readMoreLink').click(function() {
+  // alert( "Handler for .click() called." );
+  $('.readMoreLink').hide();
+});
+</script>
