@@ -142,6 +142,13 @@ body{
   margin-top: 20px;
   font-family: 'Open Sans Condensed', sans-serif;
 }
+.movie-vote{
+  padding: 20px;
+  background-color: $dark-grey;
+  border: 2px solid black;
+  border-radius: 50px;
+  text-shadow: 4px 4px 4px black;
+}
 .hidden{
   display: none;
 }
@@ -193,6 +200,14 @@ body{
   bottom: 0px;
   position: fixed;
 }
+.active{
+  height: 50px;
+}
+.slides{
+  width: auto;
+   max-height: 100%;
+   border: 5px solid $dark-grey;
+}
 .slider-div{
   text-align: center;
   width: 300px;
@@ -205,6 +220,14 @@ body{
   right: 0px;
   position: fixed;
   padding: 10px;
+}
+.tagline{
+  z-index: 200px;
+}
+.cast-slider{
+  max-width: 300px;
+  margin-left: 34%;
+  // text-align: center;
 }
 .tv-credit-name{
   background-color: $dark-grey;
@@ -226,11 +249,81 @@ body{
   display: inline;
   padding-left: 20px;
 }
+.three-hundred-width{
+  max-width: 250px;
+.tv-slider{
+  max-width: 200px;
+}
+}
+.active{
+    z-index:200;
+}
+.poster-slide-bottom{
+  width: 200px;
+  height: 300px;
+  position: absolute;
+}
+.seasons{
+  // position: relative;
+}
+.season-img{
+  // position: absolute;
+}
 .star-credit-pic{
   position: absolute;
 }
+.star-pic-slider{
+  width: 200px;
+}
 .white{
   color: white;
+}
+.indicator-item{
+  visibility: hidden;
+}
+.fa-chevron-left{
+  bottom: 250px;
+  right: 150px;
+  z-index: 201;
+  position: relative;
+  opacity: 0.2;
+}
+.fa-chevron-right{
+  bottom: 250px;
+  left: 150px;
+  z-index: 201;
+  position: relative;
+  opacity: 0.2;
+}
+.fa-chevron-left:hover{
+  opacity: 1;
+  cursor: pointer;
+}
+.fa-chevron-right:hover{
+  opacity: 1;
+  cursor: pointer;
+}
+.left-half{
+  // border: 2px solid black;
+  height: 410px;
+  width: 140px;
+  position: relative;
+  bottom: 410px;
+  z-index: 201;
+  cursor: pointer;
+}
+.right-half{
+  // border: 2px solid red;
+  height: 410px;
+  width: 145px;
+  position: relative;
+  left: 140px;
+  bottom: 820px;
+  z-index: 201;
+  cursor: pointer;
+}
+.opacity{
+  opacity: 1;
 }
 
 

@@ -1,19 +1,47 @@
 <script>
 $('.carousel').carousel();
 $('.materialboxed').materialbox();
+
+$('.slider').slider({full_width: false});
 </script>
 
 <div class="container">
   <div class="row starPage animated fadeIn">
 
+<div class="col s10 m5 offset-s1">
 
-   <div class="col s12 m6">
-    <img class="responsive-img materialboxed z-depth-3" ng-src="{{imgPath}}{{starDetails.profile_path}}">
+<!-- STAR POSTER SLIDER -->
+  <div class="slider star-pic-slider">
+    <ul class="slides z-depth-3 ">
+      <li class="star-slider-li">
+        <img class="responsive-img z-depth-3 " ng-src="{{imgPath}}{{starPhotos.profiles[0].file_path}}">
+      </li>
+      <li class="star-slider-li">
+        <img class="responsive-img z-depth-3 star-pic-slider" ng-src="{{imgPath}}{{starPhotos.profiles[1].file_path}}">
+      </li>
+      <li class="star-slider-li">
+        <img class="responsive-img z-depth-3 star-pic-slider" ng-src="{{imgPath}}{{starPhotos.profiles[2].file_path}}">
+      </li>
+      <li class="star-slider-li">
+        <img class="responsive-img z-depth-3 star-pic-slider" ng-src="{{imgPath}}{{starPhotos.profiles[3].file_path}}">
+      </li>
+      <li class="star-slider-li">
+        <img class="responsive-img z-depth-3 star-pic-slider" ng-src="{{imgPath}}{{starPhotos.profiles[4].file_path}}">
+      </li>
+    </ul>
   </div>
 
 
 
-  <div class="col s12 m6">
+
+    <!-- <img class="responsive-img materialboxed z-depth-3" ng-src="{{imgPath}}{{starDetails.profile_path}}"> -->
+
+    <!-- <img class="responsive-img materialboxed z-depth-3" ng-src="{{imgPath}}{{starPhotos.profiles[2].file_path}}"> -->
+  </div>
+
+
+
+  <div class="col s12 m6 offset-m1">
     <h1 class="drop-shadow">{{starDetails.name}}</h1>
     <h5 ng-init="limit=200" class="starBiography">{{starDetails.biography | truncate:limit}} <a class="readMoreLink" ng-click="limit=5000">Read More</a></h5>
 
@@ -34,7 +62,7 @@ $('.materialboxed').materialbox();
 </div class="row">
   <div class="col s12">
     <div class="carousel">
-      <a class="carousel-item" href=""><div class="waves-effect row">
+      <a class="carousel-item " href=""><div class="waves-effect row">
          <!-- <h3 class="star-credit">{{starCredits.cast[0].character}}</h3> -->
         <img class="responsive-img" src="{{imgPath}}{{starCredits.cast[0].poster_path}}" alt="">
         <h5></h5>
