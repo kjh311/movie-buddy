@@ -1,51 +1,30 @@
-<!-- <h1>TV PAGE!</h1> -->
 <script>
 $('.carousel').carousel();
 $('.materialboxed').materialbox();
-
 $('.slider').slider({full_width: false});
-
 $("html, body").animate({ scrollTop: 0 }, 0);
 
-   // function slideSwitch() {
-   //      var $active = $('div#slideshow IMG.active');
-   //      var $next = $active.next();
-   //      $next.addClass('active animated fadeIn');
-   //      $active.removeClass('active');
-   //  }
 
-   //  $(function() {
-   //      setInterval( "slideSwitch()", 3000 );
-   //  });
-
-$('.fa-chevron-right').click(function() {
-  $('.slider').slider('next');
+$('.fa-chevron-right1').click(function() {
+  $('.slider1').slider('next');
+});
+$('.fa-chevron-left1').click(function() {
+  $('.slider1').slider('prev');
 });
 
-$('.fa-chevron-left').click(function() {
-  $('.slider').slider('prev');
+$('.fa-chevron-right2').click(function() {
+  $('.slider2').slider('next');
+});
+$('.fa-chevron-left2').click(function() {
+  $('.slider2').slider('prev');
 });
 
-$('.left-half').click(function() {
-  $('.slider').slider('prev');
+$('.fa-chevron-right3').click(function() {
+  $('.slider3').slider('next');
 });
-$('.left-half').mouseenter(function() {
-  $( '.fa-chevron-left').addClass('opacity');
+$('.fa-chevron-left3').click(function() {
+  $('.slider3').slider('prev');
 });
-$('.left-half').mouseleave(function() {
-  $( '.fa-chevron-left').removeClass('opacity');
-});
-
-$('.right-half').click(function() {
-  $('.slider').slider('prev');
-});
-$('.right-half').mouseenter(function() {
-  $( '.fa-chevron-right').addClass('opacity');
-});
-$('.right-half').mouseleave(function() {
-  $( '.fa-chevron-right').removeClass('opacity');
-});
-
 
 
 </script>
@@ -57,8 +36,8 @@ $('.right-half').mouseleave(function() {
 
   <div class="tv-slide-wrapper">
       <!-- TV POSTER SLIDER -->
-      <div class="slider tv-slider">
-        <ul class="slides z-depth-3 ">
+      <div class="slider tv-slider slider3">
+        <ul class="slides z-depth-3 slides3">
           <li class="star-slider-li">
             <img class="responsive-img z-depth-3 " ng-src="{{imgPath}}{{tvDetails.poster_path}}">
           </li>
@@ -96,9 +75,9 @@ $('.right-half').mouseleave(function() {
 <!--     <div class="left-half"></div>
     <div class="right-half"></div>
  -->  </div>
-  <i class="fa fa-chevron-left fa-2x"></i>
+  <i class="fa fa-chevron-left fa-chevron-left3 fa-2x"></i>
   <!-- <i class="fa fa-pause fa-2x"></i> -->
-    <i class="fa fa-chevron-right fa-2x"></i>
+    <i class="fa fa-chevron-right fa-chevron-right3 fa-2x"></i>
   </div>
 
 
@@ -143,80 +122,162 @@ $('.right-half').mouseleave(function() {
 
 
 <!-- TRAILER -->
+<div class="row">
 <div class="section">
   <h4 class="drop-shadow">Trailer:</h4>
   <div class="video-container z-depth-3">
-    <iframe
+    <iframe class="trailer"
     ng-src="{{linkYoutubeTv}}"  allowfullscreen>
   </iframe>
 </div>
 </div>
+</div>
+
 
 
 <!-- CAST -->
-<h3 class="drop-shadow">CAST:</h3>
-  <div class="tv-slide-wrapper">
+
+<div class="row">
+  <div class="tv-cast-wrapper col s12 m4 offset-m1">
+    <h3 class="drop-shadow">CAST:</h3>
       <!-- TV POSTER SLIDER -->
-      <div class="slider tv-slider">
-        <ul class="slides z-depth-3 ">
+      <div class="slider tv-slider slider1">
+        <ul class="slides z-depth-3 slides1">
           <li class="star-slider-li">
             <a href="#star/{{tvCredits.cast[0].id}}">
             <h5 class="tv-credit-name">{{tvCredits.cast[0].name}}</h5>
-            <img class="responsive-img" src="{{imgPath}}{{tvCredits.cast[0].profile_path}}" alt="">
+            <img class="responsive-img cast-pic" src="{{imgPath}}{{tvCredits.cast[0].profile_path}}" alt="">
             <h5 class="">{{tvCredits.cast[0].character}}</h5>
             </a>
           </li>
           <li class="star-slider-li">
             <a href="#star/{{tvCredits.cast[1].id}}">
             <h5 class="tv-credit-name">{{tvCredits.cast[1].name}}</h5>
-            <img class="responsive-img" src="{{imgPath}}{{tvCredits.cast[1].profile_path}}" alt="">
+            <img class="responsive-img cast-pic" src="{{imgPath}}{{tvCredits.cast[1].profile_path}}" alt="">
             <h5 class="">{{tvCredits.cast[1].character}}</h5>
             </a>
           </li>
           <li class="star-slider-li">
             <a href="#star/{{tvCredits.cast[2].id}}">
             <h5 class="tv-credit-name">{{tvCredits.cast[2].name}}</h5>
-            <img class="responsive-img" src="{{imgPath}}{{tvCredits.cast[2].profile_path}}" alt="">
+            <img class="responsive-img cast-pic" src="{{imgPath}}{{tvCredits.cast[2].profile_path}}" alt="">
             <h5 class="">{{tvCredits.cast[2].character}}</h5>
             </a>
           </li>
           <li class="star-slider-li">
             <a href="#star/{{tvCredits.cast[3].id}}">
             <h5 class="tv-credit-name">{{tvCredits.cast[3].name}}</h5>
-            <img class="responsive-img" src="{{imgPath}}{{tvCredits.cast[3].profile_path}}" alt="">
+            <img class="responsive-img cast-pic" src="{{imgPath}}{{tvCredits.cast[3].profile_path}}" alt="">
             <h5 class="">{{tvCredits.cast[3].character}}</h5>
             </a>
           </li>
           <li class="star-slider-li">
             <a href="#star/{{tvCredits.cast[4].id}}">
             <h5 class="tv-credit-name">{{tvCredits.cast[4].name}}</h5>
-            <img class="responsive-img" src="{{imgPath}}{{tvCredits.cast[4].profile_path}}" alt="">
+            <img class="responsive-img cast-pic" src="{{imgPath}}{{tvCredits.cast[4].profile_path}}" alt="">
             <h5 class="">{{tvCredits.cast[4].character}}</h5>
             </a>
           </li>
           <li class="star-slider-li">
             <a href="#star/{{tvCredits.cast[5].id}}">
             <h5 class="tv-credit-name">{{tvCredits.cast[5].name}}</h5>
-            <img class="responsive-img" src="{{imgPath}}{{tvCredits.cast[5].profile_path}}" alt="">
+            <img class="responsive-img cast-pic" src="{{imgPath}}{{tvCredits.cast[5].profile_path}}" alt="">
             <h5 class="">{{tvCredits.cast[5].character}}</h5>
             </a>
           </li>
           <li class="star-slider-li">
             <a href="#star/{{tvCredits.cast[6].id}}">
             <h5 class="tv-credit-name">{{tvCredits.cast[6].name}}</h5>
-            <img class="responsive-img" src="{{imgPath}}{{tvCredits.cast[6].profile_path}}" alt="">
+            <img class="responsive-img cast-pic" src="{{imgPath}}{{tvCredits.cast[6].profile_path}}" alt="">
             <h5 class="">{{tvCredits.cast[6].character}}</h5>
             </a>
           </li>
     </ul>
   </div>
-  <i class="fa fa-chevron-left fa-2x"></i>
-    <i class="fa fa-chevron-right fa-2x"></i>
+  <i class="fa fa-chevron-left fa-chevron-left1 fa-2x"></i>
+    <i class="fa fa-chevron-right fa-chevron-right1 fa-2x"></i>
   </div>
+  <!-- </div> -->
+
+<!--
+          <img class="responsive-img cast-pic" src="{{imgPath}}{{tvSimilar.results[0].poster_path}}" alt="">
+        <h5 class="similar-tv-vote">{{tvSimilar.results[0].vote_average}}</h5>
+ -->
+
+<!-- SIMILAR SHOWS -->
+  <div class="tv-cast-wrapper col s12 m4 offset-m2">
+    <h3 class="drop-shadow">Similar TV:</h3>
+      <div class="slider tv-slider slider2">
+        <ul class="slides z-depth-3 slides2">
+          <li class="star-slider-li">
+            <a href="#tv/{{tvSimilar.results[0].id}}">
+            <img class="responsive-img cast-pic" src="{{imgPath}}{{tvSimilar.results[0].poster_path}}" alt="">
+            <h5 class="similar-tv-vote">{{tvSimilar.results[0].vote_average}}</h5>
+            </a>
+          </li>
+          <li class="star-slider-li">
+            <a href="#tv/{{tvSimilar.results[1].id}}">
+            <img class="responsive-img cast-pic" src="{{imgPath}}{{tvSimilar.results[1].poster_path}}" alt="">
+            <h5 class="similar-tv-vote">{{tvSimilar.results[1].vote_average}}</h5>
+            </a>
+          </li>
+          <li class="star-slider-li">
+            <a href="#tv/{{tvSimilar.results[2].id}}">
+            <img class="responsive-img cast-pic" src="{{imgPath}}{{tvSimilar.results[2].poster_path}}" alt="">
+            <h5 class="similar-tv-vote">{{tvSimilar.results[2].vote_average}}</h5>
+            </a>
+          </li>
+          <li class="star-slider-li">
+            <a href="#tv/{{tvSimilar.results[3].id}}">
+            <img class="responsive-img cast-pic" src="{{imgPath}}{{tvSimilar.results[3].poster_path}}" alt="">
+            <h5 class="similar-tv-vote">{{tvSimilar.results[3].vote_average}}</h5>
+            </a>
+          </li>
+          <li class="star-slider-li">
+            <a href="#tv/{{tvSimilar.results[4].id}}">
+            <img class="responsive-img cast-pic" src="{{imgPath}}{{tvSimilar.results[4].poster_path}}" alt="">
+            <h5 class="similar-tv-vote">{{tvSimilar.results[4].vote_average}}</h5>
+            </a>
+          </li>
+          <li class="star-slider-li">
+            <a href="#tv/{{tvSimilar.results[5].id}}">
+            <img class="responsive-img cast-pic" src="{{imgPath}}{{tvSimilar.results[5].poster_path}}" alt="">
+            <h5 class="similar-tv-vote">{{tvSimilar.results[5].vote_average}}</h5>
+            </a>
+          </li>
+          <li class="star-slider-li">
+            <a href="#tv/{{tvSimilar.results[6].id}}">
+            <img class="responsive-img cast-pic" src="{{imgPath}}{{tvSimilar.results[6].poster_path}}" alt="">
+            <h5 class="similar-tv-vote">{{tvSimilar.results[6].vote_average}}</h5>
+            </a>
+          </li>
+          <li class="star-slider-li">
+            <a href="#tv/{{tvSimilar.results[7].id}}">
+            <img class="responsive-img cast-pic" src="{{imgPath}}{{tvSimilar.results[7].poster_path}}" alt="">
+            <h5 class="similar-tv-vote">{{tvSimilar.results[7].vote_average}}</h5>
+            </a>
+          </li>
+          <li class="star-slider-li">
+            <a href="#tv/{{tvSimilar.results[8].id}}">
+            <img class="responsive-img cast-pic" src="{{imgPath}}{{tvSimilar.results[8].poster_path}}" alt="">
+            <h5 class="similar-tv-vote">{{tvSimilar.results[8].vote_average}}</h5>
+            </a>
+          </li>
+          <li class="star-slider-li">
+            <a href="#tv/{{tvSimilar.results[9].id}}">
+            <img class="responsive-img cast-pic" src="{{imgPath}}{{tvSimilar.results[9].poster_path}}" alt="">
+            <h5 class="similar-tv-vote">{{tvSimilar.results[9].vote_average}}</h5>
+            </a>
+          </li>
+    </ul>
+  </div>
+  <i class="fa fa-chevron-left fa-chevron-left2 fa-2x"></i>
+    <i class="fa fa-chevron-right fa-chevron-right2 fa-2x"></i>
+  </div>
+<!-- SIMILAR SHOWS -->
 
 
-
-
+<!--
 </div class="row section">
 <div class="col s12">
   <div class="carousel">
@@ -274,11 +335,11 @@ $('.right-half').mouseleave(function() {
   </div>
 </div>
 </div>
-
+ -->
 
 <!-- SIMILAR SHOWS -->
-<div class="row section">
-  <div class="col s12">
+<!-- <div class=" section">
+  <div class="col s12 m6">
     <div class="carousel">
       <h3 class="drop-shadow">SIMILAR SHOWS:</h3>
       <a class="carousel-item" href=""><div class="waves-effect row">
@@ -323,7 +384,7 @@ $('.right-half').mouseleave(function() {
       </div></a>
     </div>
   </div>
-</div>
+</div> -->
 
 
 <!-- Season Posters -->
@@ -345,7 +406,7 @@ $('.right-half').mouseleave(function() {
     </ul>
 </div> -->
 
-
+</div>
 <!-- {{tvDetails.name}} -->
 
 <script>
