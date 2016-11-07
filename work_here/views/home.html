@@ -1,247 +1,314 @@
 <script>
 $('.carousel').carousel();
 $("html, body").animate({ scrollTop: 0 }, 0);
+$('.slider').slider({full_width: false});
 </script>
 
 <!-- Main Page -->
 <div class="main animated fadeIn">
-  <!-- <div ng-include src="'work_here/views/partials/popularMovies.html'"></div> -->
 
 
 
   <div class="row">
-    <div class="col s12">
-      <div class="carousel">
-  <!-- Popular Movies -->
-        <h4 class="drop-shadow">Popular Movies:</h4>
-        <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{popularMovies.results[0].poster_path}}" alt="">
-          <h5 class="vote">{{popularMovies.results[0].vote_average}}</h5>
-        </div></a>
-        <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{popularMovies.results[1].poster_path}}" alt="">
-          <h5 class="vote">{{popularMovies.results[1].vote_average}}</h5>
-        </div></a>
-        <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{popularMovies.results[2].poster_path}}" alt="">
-          <h5 class="vote">{{popularMovies.results[2].vote_average}}</h5>
-        </div></a>
-        <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{popularMovies.results[3].poster_path}}" alt="">
-          <h5 class="vote">{{popularMovies.results[3].vote_average}}</h5>
-        </div></a>
-        <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{popularMovies.results[4].poster_path}}" alt="">
-          <h5 class="vote">{{popularMovies.results[4].vote_average}}</h5>
-        </div></a>
-        <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{popularMovies.results[5].poster_path}}" alt="">
-          <h5 class="vote">{{popularMovies.results[5].vote_average}}</h5>
-        </div></a>
-        <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{popularMovies.results[6].poster_path}}" alt="">
-          <h5 class="vote">{{popularMovies.results[6].vote_average}}</h5>
-        </div></a>
-        <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{popularMovies.results[7].poster_path}}" alt="">
-          <h5 class="vote">{{popularMovies.results[7].vote_average}}</h5>
-        </div></a>
-        <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{popularMovies.results[8].poster_path}}" alt="">
-          <h5 class="vote">{{popularMovies.results[8].vote_average}}</h5>
-        </div></a>
-        <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{popularMovies.results[9].poster_path}}" alt="">
-          <h5 class="vote">{{popularMovies.results[9].vote_average}}</h5>
-        </div></a>
-        <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{popularMovies.results[10].poster_path}}" alt="">
-          <h5 class="vote">{{popularMovies.results[10].vote_average}}</h5>
-        </div></a>
-        <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{popularMovies.results[11].poster_path}}" alt="">
-          <h5 class="vote">{{popularMovies.results[11].vote_average}}</h5>
-        </div></a>
-        <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{popularMovies.results[12].poster_path}}" alt="">
-          <h5 class="vote">{{popularMovies.results[12].vote_average}}</h5>
-        </div></a>
-        <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{popularMovies.results[13].poster_path}}" alt="">
-          <h5 class="vote">{{popularMovies.results[13].vote_average}}</h5>
-        </div></a>
-        <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{popularMovies.results[14].poster_path}}" alt="">
-          <h5 class="vote">{{popularMovies.results[14].vote_average}}</h5>
-        </div></a>
-        <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{popularMovies.results[15].poster_path}}" alt="">
-          <h5 class="vote">{{popularMovies.results[15].vote_average}}</h5>
-        </div></a>
-        <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{popularMovies.results[16].poster_path}}" alt="">
-          <h5 class="vote">{{popularMovies.results[16].vote_average}}</h5>
-        </div></a>
-        <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{popularMovies.results[17].poster_path}}" alt="">
-          <h5 class="vote">{{popularMovies.results[17].vote_average}}</h5>
-        </div></a>
-        <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{popularMovies.results[18].poster_path}}" alt="">
-          <h5 class="vote">{{popularMovies.results[18].vote_average}}</h5>
-        </div></a>
-        <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{popularMovies.results[19].poster_path}}" alt="">
-          <h5 class="vote">{{popularMovies.results[19].vote_average}}</h5>
-        </div></a>
-      </div>
-    </div>
-  </div>
-</br>
-<!-- <HR> -->
-</br>
+    <!-- <div class="col s12"> -->
 
+  <!-- Popular Movies Slider -->
+  <div class="tv-cast-wrapper col s12 m12 l4 offset-l2 offset-m4 offset-s1">
+    <h4 class="drop-shadow">Popular Movies:</h4>
+    <div class="slider tv-slider slider1">
+      <ul class="slides z-depth-3 slides1">
+        <li>
+          <a href="#movie/{{popularMovies.results[0].id}}">
+            <img class="responsive-img" src="{{imgPath}}{{popularMovies.results[0].poster_path}}" alt="">
+            <h5 class="similar-tv-vote">{{popularMovies.results[0].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#movie/{{popularMovies.results[1].id}}">
+            <img class="responsive-img" src="{{imgPath}}{{popularMovies.results[1].poster_path}}" alt="">
+            <h5 class="similar-tv-vote">{{popularMovies.results[1].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#movie/{{popularMovies.results[2].id}}">
+            <img class="responsive-img" src="{{imgPath}}{{popularMovies.results[2].poster_path}}" alt="">
+            <h5 class="similar-tv-vote">{{popularMovies.results[2].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#movie/{{popularMovies.results[3].id}}">
+            <img class="responsive-img" src="{{imgPath}}{{popularMovies.results[3].poster_path}}" alt="">
+            <h5 class="similar-tv-vote">{{popularMovies.results[3].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#movie/{{popularMovies.results[4].id}}">
+            <img class="responsive-img" src="{{imgPath}}{{popularMovies.results[4].poster_path}}" alt="">
+            <h5 class="similar-tv-vote">{{popularMovies.results[4].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#movie/{{popularMovies.results[5].id}}">
+            <img class="responsive-img" src="{{imgPath}}{{popularMovies.results[5].poster_path}}" alt="">
+            <h5 class="similar-tv-vote">{{popularMovies.results[5].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#movie/{{popularMovies.results[6].id}}">
+            <img class="responsive-img" src="{{imgPath}}{{popularMovies.results[6].poster_path}}" alt="">
+            <h5 class="similar-tv-vote">{{popularMovies.results[6].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#movie/{{popularMovies.results[7].id}}">
+            <img class="responsive-img" src="{{imgPath}}{{popularMovies.results[7].poster_path}}" alt="">
+            <h5 class="similar-tv-vote">{{popularMovies.results[7].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#movie/{{popularMovies.results[8].id}}">
+            <img class="responsive-img" src="{{imgPath}}{{popularMovies.results[8].poster_path}}" alt="">
+            <h5 class="similar-tv-vote">{{popularMovies.results[8].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#movie/{{popularMovies.results[9].id}}">
+            <img class="responsive-img" src="{{imgPath}}{{popularMovies.results[9].poster_path}}" alt="">
+            <h5 class="similar-tv-vote">{{popularMovies.results[9].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#movie/{{popularMovies.results[10].id}}">
+            <img class="responsive-img" src="{{imgPath}}{{popularMovies.results[10].poster_path}}" alt="">
+            <h5 class="similar-tv-vote">{{popularMovies.results[10].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#movie/{{popularMovies.results[11].id}}">
+            <img class="responsive-img" src="{{imgPath}}{{popularMovies.results[11].poster_path}}" alt="">
+            <h5 class="similar-tv-vote">{{popularMovies.results[11].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#movie/{{popularMovies.results[12].id}}">
+            <img class="responsive-img" src="{{imgPath}}{{popularMovies.results[12].poster_path}}" alt="">
+            <h5 class="similar-tv-vote">{{popularMovies.results[12].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#movie/{{popularMovies.results[13].id}}">
+            <img class="responsive-img" src="{{imgPath}}{{popularMovies.results[13].poster_path}}" alt="">
+            <h5 class="similar-tv-vote">{{popularMovies.results[13].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#movie/{{popularMovies.results[14].id}}">
+            <img class="responsive-img" src="{{imgPath}}{{popularMovies.results[14].poster_path}}" alt="">
+            <h5 class="similar-tv-vote">{{popularMovies.results[14].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#movie/{{popularMovies.results[15].id}}">
+            <img class="responsive-img" src="{{imgPath}}{{popularMovies.results[15].poster_path}}" alt="">
+            <h5 class="similar-tv-vote">{{popularMovies.results[15].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#movie/{{popularMovies.results[16].id}}">
+            <img class="responsive-img" src="{{imgPath}}{{popularMovies.results[16].poster_path}}" alt="">
+            <h5 class="similar-tv-vote">{{popularMovies.results[16].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#movie/{{popularMovies.results[17].id}}">
+            <img class="responsive-img" src="{{imgPath}}{{popularMovies.results[17].poster_path}}" alt="">
+            <h5 class="similar-tv-vote">{{popularMovies.results[17].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#movie/{{popularMovies.results[18].id}}">
+            <img class="responsive-img" src="{{imgPath}}{{popularMovies.results[18].poster_path}}" alt="">
+            <h5 class="similar-tv-vote">{{popularMovies.results[18].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#movie/{{popularMovies.results[19].id}}">
+            <img class="responsive-img" src="{{imgPath}}{{popularMovies.results[19].poster_path}}" alt="">
+            <h5 class="similar-tv-vote">{{popularMovies.results[19].vote_average}}</h5>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <i class="fa fa-chevron-left fa-chevron-left1 fa-2x"></i>
+    <i class="fa fa-chevron-right fa-chevron-right1 fa-2x"></i>
+  </div>
 
 
 
 <!-- Popular TV -->
-<div class="row">
-  <div class="col s12">
-    <div class="carousel">
-      <h4 class="drop-shadow">Popular TV:</h4>
-      <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{popularTv.results[0].poster_path}}" alt="">
-        <h5 class="vote">{{popularTv.results[0].vote_average}}</h5>
-      </div></a>
-      <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{popularTv.results[1].poster_path}}" alt="">
-        <h5 class="vote">{{popularTv.results[1].vote_average}}</h5>
-      </div></a>
-      <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{popularTv.results[2].poster_path}}" alt="">
-        <h5 class="vote">{{popularTv.results[2].vote_average}}</h5>
-      </div></a>
-      <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{popularTv.results[3].poster_path}}" alt="">
-        <h5 class="vote">{{popularTv.results[3].vote_average}}</h5>
-      </div></a>
-      <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{popularTv.results[4].poster_path}}" alt="">
-        <h5 class="vote">{{popularTv.results[4].vote_average}}</h5>
-      </div></a>
-      <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{popularTv.results[5].poster_path}}" alt="">
-        <h5 class="vote">{{popularTv.results[5].vote_average}}</h5>
-      </div></a>
-      <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{popularTv.results[6].poster_path}}" alt="">
-        <h5 class="vote">{{popularTv.results[6].vote_average}}</h5>
-      </div></a>
-      <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{popularTv.results[7].poster_path}}" alt="">
-        <h5 class="vote">{{popularTv.results[7].vote_average}}</h5>
-      </div></a>
-      <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{popularTv.results[8].poster_path}}" alt="">
-        <h5 class="vote">{{popularTv.results[8].vote_average}}</h5>
-      </div></a>
-      <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{popularTv.results[9].poster_path}}" alt="">
-        <h5 class="vote">{{popularTv.results[9].vote_average}}</h5>
-      </div></a>
-      <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{popularTv.results[10].poster_path}}" alt="">
-        <h5 class="vote">{{popularTv.results[10].vote_average}}</h5>
-      </div></a>
-      <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{popularTv.results[11].poster_path}}" alt="">
-        <h5 class="vote">{{popularTv.results[11].vote_average}}</h5>
-      </div></a>
-      <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{popularTv.results[12].poster_path}}" alt="">
-        <h5 class="vote">{{popularTv.results[12].vote_average}}</h5>
-      </div></a>
-      <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{popularTv.results[13].poster_path}}" alt="">
-        <h5 class="vote">{{popularTv.results[13].vote_average}}</h5>
-      </div></a>
-      <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{popularTv.results[14].poster_path}}" alt="">
-        <h5 class="vote">{{popularTv.results[14].vote_average}}</h5>
-      </div></a>
-      <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{popularTv.results[15].poster_path}}" alt="">
-        <h5 class="vote">{{popularTv.results[15].vote_average}}</h5>
-      </div></a>
-      <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{popularTv.results[16].poster_path}}" alt="">
-        <h5 class="vote">{{popularTv.results[16].vote_average}}</h5>
-      </div></a>
-      <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{popularTv.results[17].poster_path}}" alt="">
-        <h5 class="vote">{{popularTv.results[17].vote_average}}</h5>
-      </div></a>
-      <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{popularTv.results[18].poster_path}}" alt="">
-        <h5 class="vote">{{popularTv.results[18].vote_average}}</h5>
-      </div></a>
-      <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{popularTv.results[19].poster_path}}" alt="">
-        <h5 class="vote">{{popularTv.results[19].vote_average}}</h5>
-      </div></a>
+<!-- Popular Movies Slider -->
+  <div class="tv-cast-wrapper col s12 m12 l4 offset-l2 offset-m4 offset-s1">
+    <h4 class="drop-shadow">Popular TV:</h4>
+    <div class="slider tv-slider slider2">
+      <ul class="slides z-depth-3 slides2">
+        <li>
+          <a href="#tv/{{popularTv.results[0].id}}">
+            <img class="responsive-img" src="{{imgPath}}{{popularTv.results[0].poster_path}}" alt="">
+            <h5 class="vote">{{popularTv.results[0].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#tv/{{popularTv.results[1].id}}">
+            <img class="responsive-img" src="{{imgPath}}{{popularTv.results[1].poster_path}}" alt="">
+            <h5 class="vote">{{popularTv.results[1].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#tv/{{popularTv.results[2].id}}">
+            <img class="responsive-img" src="{{imgPath}}{{popularTv.results[2].poster_path}}" alt="">
+            <h5 class="vote">{{popularTv.results[2].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#tv/{{popularTv.results[3].id}}">
+            <img class="responsive-img" src="{{imgPath}}{{popularTv.results[3].poster_path}}" alt="">
+            <h5 class="vote">{{popularTv.results[3].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#tv/{{popularTv.results[4].id}}">
+            <img class="responsive-img" src="{{imgPath}}{{popularTv.results[4].poster_path}}" alt="">
+            <h5 class="vote">{{popularTv.results[4].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#tv/{{popularTv.results[5].id}}">
+            <img class="responsive-img" src="{{imgPath}}{{popularTv.results[5].poster_path}}" alt="">
+            <h5 class="vote">{{popularTv.results[5].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#tv/{{popularTv.results[6].id}}">
+            <img class="responsive-img" src="{{imgPath}}{{popularTv.results[6].poster_path}}" alt="">
+            <h5 class="vote">{{popularTv.results[6].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#tv/{{popularTv.results[7].id}}">
+            <img class="responsive-img" src="{{imgPath}}{{popularTv.results[7].poster_path}}" alt="">
+            <h5 class="vote">{{popularTv.results[7].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#tv/{{popularTv.results[8].id}}">
+            <img class="responsive-img" src="{{imgPath}}{{popularTv.results[8].poster_path}}" alt="">
+            <h5 class="vote">{{popularTv.results[8].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#tv/{{popularTv.results[9].id}}">
+            <img class="responsive-img" src="{{imgPath}}{{popularTv.results[9].poster_path}}" alt="">
+            <h5 class="vote">{{popularTv.results[9].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#tv/{{popularTv.results[10].id}}">
+            <img class="responsive-img" src="{{imgPath}}{{popularTv.results[10].poster_path}}" alt="">
+            <h5 class="vote">{{popularTv.results[10].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#tv/{{popularTv.results[11].id}}">
+            <img class="responsive-img" src="{{imgPath}}{{popularTv.results[11].poster_path}}" alt="">
+            <h5 class="vote">{{popularTv.results[11].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#tv/{{popularTv.results[12].id}}">
+            <img class="responsive-img" src="{{imgPath}}{{popularTv.results[12].poster_path}}" alt="">
+            <h5 class="vote">{{popularTv.results[12].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#tv/{{popularTv.results[13].id}}">
+            <img class="responsive-img" src="{{imgPath}}{{popularTv.results[13].poster_path}}" alt="">
+            <h5 class="vote">{{popularTv.results[13].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#tv/{{popularTv.results[14].id}}">
+            <img class="responsive-img" src="{{imgPath}}{{popularTv.results[14].poster_path}}" alt="">
+            <h5 class="vote">{{popularTv.results[14].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#tv/{{popularTv.results[15].id}}">
+            <img class="responsive-img" src="{{imgPath}}{{popularTv.results[15].poster_path}}" alt="">
+            <h5 class="vote">{{popularTv.results[15].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#tv/{{popularTv.results[16].id}}">
+            <img class="responsive-img" src="{{imgPath}}{{popularTv.results[16].poster_path}}" alt="">
+            <h5 class="vote">{{popularTv.results[16].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#tv/{{popularTv.results[17].id}}">
+            <img class="responsive-img" src="{{imgPath}}{{popularTv.results[17].poster_path}}" alt="">
+            <h5 class="vote">{{popularTv.results[17].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#tv/{{popularTv.results[18].id}}">
+            <img class="responsive-img" src="{{imgPath}}{{popularTv.results[18].poster_path}}" alt="">
+            <h5 class="vote">{{popularTv.results[18].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#tv/{{popularTv.results[19].id}}">
+            <img class="responsive-img" src="{{imgPath}}{{popularTv.results[19].poster_path}}" alt="">
+            <h5 class="vote">{{popularTv.results[19].vote_average}}</h5>
+          </a>
+        </li>
+      </ul>
     </div>
+    <i class="fa fa-chevron-left fa-chevron-left2 fa-2x"></i>
+    <i class="fa fa-chevron-right fa-chevron-right2 fa-2x"></i>
   </div>
-</div>
-</br>
-<!-- <HR> -->
-</br>
+  </div>
+  </div>
 
-<!-- Popular Stars -->
+
+<!-- Popular Stars Slider -->
 <div class="row">
-  <div class="col s12">
-    <div class="carousel">
-      <h4 class="drop-shadow">Popular Stars:</h4>
-      <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{popularPeople.results[0].profile_path}}" alt="">
-        <!-- <h5 class="vote">{{popularPeople.results[0].popularity | number: '1'}}</h5> -->
-        <div class="col s12 title-background"><h5 class="title">{{popularPeople.results[0].name}}</h5></div>
-      </div></a>
-      <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{popularPeople.results[1].profile_path}}" alt="">
-        <!-- <h5 class="vote">{{popularPeople.results[1].popularity | number: '1'}}</h5> -->
-        <div class="col s12 title-background"><h5 class="title">{{popularPeople.results[1].name}}</h5></div>
-      </div></a>
-      <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{popularPeople.results[2].profile_path}}" alt="">
-        <!-- <h5 class="vote">{{popularPeople.results[2].popularity | number: '1'}}</h5> -->
-        <div class="col s12 title-background"><h5 class="title">{{popularPeople.results[2].name}}</h5></div>
-      </div></a>
-      <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{popularPeople.results[3].profile_path}}" alt="">
-        <!-- <h5 class="vote">{{popularPeople.results[3].popularity | number: '1'}}</h5> -->
-        <div class="col s12 title-background"><h5 class="title">{{popularPeople.results[3].name}}</h5></div>
-      </div></a>
-      <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{popularPeople.results[4].profile_path}}" alt="">
-        <!-- <h5 class="vote">{{popularPeople.results[4].popularity | number: '1'}}</h5> -->
-        <div class="col s12 title-background"><h5 class="title">{{popularPeople.results[4].name}}</h5></div>
-      </div></a>
-      <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{popularPeople.results[5].profile_path}}" alt="">
-        <!-- <h5 class="vote">{{popularPeople.results[5].popularity | number: '1'}}</h5> -->
-        <div class="col s12 title-background"><h5 class="title">{{popularPeople.results[5].name}}</h5></div>
-      </div></a>
-      <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{popularPeople.results[6].profile_path}}" alt="">
-        <!-- <h5 class="vote">{{popularPeople.results[6].popularity | number: '1'}}</h5> -->
-        <div class="col s12 title-background"><h5 class="title">{{popularPeople.results[6].name}}</h5></div>
-      </div></a>
+  <div class="tv-cast-wrapper col s12 m12 l4 offset-l2 offset-m4 offset-s1">
+    <h4 class="drop-shadow">Popular TV:</h4>
+    <div class="slider tv-slider slider3">
+      <ul class="slides z-depth-3 slides3">
+        <li>
+          <a href="#star/{{popularPeople.results[0].id}}">
+            <img class="responsive-img" src="{{imgPath}}{{popularPeople.results[0].profile_path}}" alt="">
+            <h5 class="title">{{popularPeople.results[0].name}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#star/{{popularPeople.results[1].id}}">
+            <img class="responsive-img" src="{{imgPath}}{{popularPeople.results[1].profile_path}}" alt="">
+            <h5 class="title">{{popularPeople.results[1].name}}</h5>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <i class="fa fa-chevron-left fa-chevron-left3 fa-2x"></i>
+    <i class="fa fa-chevron-right fa-chevron-right3 fa-2x"></i>
+  </div>
+  </div>
+  </div>
 
-      <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{popularPeople.results[7].profile_path}}" alt="">
-        <!-- <h5 class="vote">{{popularPeople.results[7].popularity | number: '1'}}</h5> -->
-        <div class="col s12 title-background"><h5 class="title">{{popularPeople.results[7].name}}</h5></div>
-      </div></a>
-      <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{popularPeople.results[8].profile_path}}" alt="">
-        <!-- <h5 class="vote">{{popularPeople.results[8].popularity | number: '1'}}</h5> -->
-        <div class="col s12 title-background"><h5 class="title">{{popularPeople.results[8].name}}</h5></div>
-      </div></a>
-      <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{popularPeople.results[9].profile_path}}" alt="">
-        <!-- <h5 class="vote">{{popularPeople.results[9].popularity | number: '1'}}</h5> -->
-        <div class="col s12 title-background"><h5 class="title">{{popularPeople.results[9].name}}</h5></div>
-      </div></a>
-      <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{popularPeople.results[10].profile_path}}" alt="">
-        <!-- <h5 class="vote">{{popularPeople.results[10].popularity | number: '1'}}</h5> -->
-        <div class="col s12 title-background"><h5 class="title">{{popularPeople.results[10].name}}</h5></div>
-      </div></a>
-      <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{popularPeople.results[11].profile_path}}" alt="">
-        <!-- <h5 class="vote">{{popularPeople.results[11].popularity | number: '1'}}</h5> -->
-        <div class="col s12 title-background"><h5 class="title">{{popularPeople.results[11].name}}</h5></div>
-      </div></a>
-      <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{popularPeople.results[12].profile_path}}" alt="">
-        <!-- <h5 class="vote">{{popularPeople.results[12].popularity | number: '1'}}</h5> -->
-        <div class="col s12 title-background"><h5 class="title">{{popularPeople.results[12].name}}</h5></div>
-      </div></a>
-      <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{popularPeople.results[13].profile_path}}" alt="">
-        <!-- <h5 class="vote">{{popularPeople.results[13].popularity | number: '1'}}</h5> -->
-        <div class="col s12 title-background"><h5 class="title">{{popularPeople.results[13].name}}</h5></div>
-      </div></a>
-      <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{popularPeople.results[14].profile_path}}" alt="">
-        <!-- <h5 class="vote">{{popularPeople.results[14].popularity | number: '1'}}</h5> -->
-        <div class="col s12 title-background"><h5 class="title">{{popularPeople.results[14].name}}</h5></div>
-      </div></a>
-      <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{popularPeople.results[15].profile_path}}" alt="">
-        <!-- <h5 class="vote">{{popularPeople.results[15].popularity | number: '1'}}</h5> -->
-        <div class="col s12 title-background"><h5 class="title">{{popularPeople.results[15].name}}</h5></div>
-      </div></a>
-      <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{popularPeople.results[16].profile_path}}" alt="">
-        <!-- <h5 class="vote">{{popularPeople.results[16].popularity | number: '1'}}</h5> -->
-        <div class="col s12 title-background"><h5 class="title">{{popularPeople.results[16].name}}</h5></div>
-      </div></a>
-      <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{popularPeople.results[17].profile_path}}" alt="">
-        <!-- <h5 class="vote">{{popularPeople.results[17].popularity | number: '1'}}</h5> -->
-        <div class="col s12 title-background"><h5 class="title">{{popularPeople.results[17].name}}</h5></div>
-      </div></a>
-      <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{popularPeople.results[18].profile_path}}" alt="">
-        <!-- <h5 class="vote">{{popularPeople.results[18].popularity | number: '1'}}</h5> -->
-        <div class="col s12 title-background"><h5 class="title">{{popularPeople.results[18].name}}</h5></div>
-      </div></a>
-      <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{popularPeople.results[19].profile_path}}" alt="">
-        <!-- <h5 class="vote">{{popularPeople.results[19].popularity | number: '1'}}</h5> -->
-        <div class="col s12 title-background"><h5 class="title">{{popularPeople.results[19].name}}</h5></div>
-      </div></a>
+
+
+
     </div>
   </div>
 </div>
@@ -250,5 +317,24 @@ $("html, body").animate({ scrollTop: 0 }, 0);
 </div>
 </div>
 </div>
-
+<script>
+  $('.fa-chevron-right1').click(function() {
+  $('.slider1').slider('next');
+});
+$('.fa-chevron-left1').click(function() {
+  $('.slider1').slider('prev');
+});
+$('.fa-chevron-right2').click(function() {
+  $('.slider2').slider('next');
+});
+$('.fa-chevron-left2').click(function() {
+  $('.slider2').slider('prev');
+});
+$('.fa-chevron-right3').click(function() {
+  $('.slider3').slider('next');
+});
+$('.fa-chevron-left3').click(function() {
+  $('.slider3').slider('prev');
+});
+</script>
 

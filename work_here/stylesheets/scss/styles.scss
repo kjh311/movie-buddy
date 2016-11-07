@@ -11,9 +11,13 @@ a:hover{
 }
 .brand-logo, .drop-shadow{
   text-shadow: 3px 3px 3px black;
+  text-decoration: underline;
 }
 .fa-heart{
   color: red;
+}
+.homepage-link{
+  font-size: 1.2em;
 }
 .logo{
   width: 50px;
@@ -258,8 +262,9 @@ body{
   padding: 10px;
 }
 .tv-genres{
-  display: inline;
+  display: inline-block;
   padding-left: 20px;
+  font-size: 1.2em;
 
 }
 .tvGenres{

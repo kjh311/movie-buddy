@@ -4,51 +4,42 @@ $('.materialboxed').materialbox();
 $('.slider').slider({full_width: false});
 $("html, body").animate({ scrollTop: 0 }, 0);
 
-
 $('.fa-chevron-right1').click(function() {
   $('.slider1').slider('next');
 });
 $('.fa-chevron-left1').click(function() {
   $('.slider1').slider('prev');
 });
-
 $('.fa-chevron-right2').click(function() {
   $('.slider2').slider('next');
 });
 $('.fa-chevron-left2').click(function() {
   $('.slider2').slider('prev');
 });
-
 $('.fa-chevron-right3').click(function() {
   $('.slider3').slider('next');
 });
 $('.fa-chevron-left3').click(function() {
   $('.slider3').slider('prev');
 });
-
-// $('.ytp-fullscreen-button').click(function() {
-//   alert('adsf');
-// });
-
 </script>
 
 
 
 <div class="container animated fadeIn">
 
+  <!-- Name -->
   <div class="row">
     <div class["col s12">
-       <h3 class="drop-shadow">{{tvDetails.name}}</h3>
-    </div>
-  </div>
+     <h3 class="drop-shadow">{{tvDetails.name}}</h3>
+   </div>
+ </div>
 
 
-  <div class="row">
-
-    <div class="col s12 l4">
-
-  <div class="tv-cast-wrapper section">
-      <!-- TV POSTER SLIDER -->
+ <!-- TV POSTER SLIDER -->
+ <div class="row">
+  <div class="col s12 l4">
+    <div class="tv-cast-wrapper section">
       <div class="slider tv-slider slider3">
         <ul class="slides z-depth-3 slides3">
           <li class="star-slider-li">
@@ -57,402 +48,249 @@ $('.fa-chevron-left3').click(function() {
           <li class="star-slider-li">
             <img class="responsive-img z-depth-3 " ng-src="{{imgPath}}{{tvDetails.backdrop_path}}">
           </li>
-    <!--   <li ng-repeat="x in tvDetails.seasons">
-        <img src="{{imgPath}}{{x.poster_path}}" alt="">
-      </li> -->
-      <li class="star-slider-li">
-        <img class="responsive-img z-depth-3 " ng-src="{{imgPath}}{{tvDetails.seasons[0].poster_path}}">
-      </li>
-      <li class="star-slider-li">
-        <img class="responsive-img z-depth-3 " ng-src="{{imgPath}}{{tvDetails.seasons[1].poster_path}}">
-      </li>
-      <li class="star-slider-li">
-        <img class="responsive-img z-depth-3 " ng-src="{{imgPath}}{{tvDetails.seasons[2].poster_path}}">
-      </li>
-      <li class="star-slider-li">
-        <img class="responsive-img z-depth-3 " ng-src="{{imgPath}}{{tvDetails.seasons[3].poster_path}}">
-      </li>
-      <li class="star-slider-li">
-        <img class="responsive-img z-depth-3 " ng-src="{{imgPath}}{{tvDetails.seasons[4].poster_path}}">
-      </li>
-       <li class="star-slider-li">
-        <img class="responsive-img z-depth-3 " ng-src="{{imgPath}}{{tvDetails.seasons[5].poster_path}}">
-      </li>
-       <li class="star-slider-li">
-        <img class="responsive-img z-depth-3 " ng-src="{{imgPath}}{{tvDetails.seasons[6].poster_path}}">
-      </li>
-       <li class="star-slider-li">
-        <img class="responsive-img z-depth-3 " ng-src="{{imgPath}}{{tvDetails.seasons[7].poster_path}}">
-      </li>
-    </ul>
-<!--     <div class="left-half"></div>
-    <div class="right-half"></div>
- -->  </div>
-  <i class="fa fa-chevron-left fa-chevron-left3 fa-2x"></i>
-  <!-- <i class="fa fa-pause fa-2x"></i> -->
-    <i class="fa fa-chevron-right fa-chevron-right3 fa-2x"></i>
+          <li class="star-slider-li">
+            <img class="responsive-img z-depth-3 " ng-src="{{imgPath}}{{tvDetails.seasons[0].poster_path}}">
+          </li>
+          <li class="star-slider-li">
+            <img class="responsive-img z-depth-3 " ng-src="{{imgPath}}{{tvDetails.seasons[1].poster_path}}">
+          </li>
+          <li class="star-slider-li">
+            <img class="responsive-img z-depth-3 " ng-src="{{imgPath}}{{tvDetails.seasons[2].poster_path}}">
+          </li>
+          <li class="star-slider-li">
+            <img class="responsive-img z-depth-3 " ng-src="{{imgPath}}{{tvDetails.seasons[3].poster_path}}">
+          </li>
+          <li class="star-slider-li">
+            <img class="responsive-img z-depth-3 " ng-src="{{imgPath}}{{tvDetails.seasons[4].poster_path}}">
+          </li>
+          <li class="star-slider-li">
+            <img class="responsive-img z-depth-3 " ng-src="{{imgPath}}{{tvDetails.seasons[5].poster_path}}">
+          </li>
+          <li class="star-slider-li">
+            <img class="responsive-img z-depth-3 " ng-src="{{imgPath}}{{tvDetails.seasons[6].poster_path}}">
+          </li>
+          <li class="star-slider-li">
+            <img class="responsive-img z-depth-3 " ng-src="{{imgPath}}{{tvDetails.seasons[7].poster_path}}">
+          </li>
+        </ul>
+      </div>
+      <i class="fa fa-chevron-left fa-chevron-left3 fa-2x"></i>
+      <!-- <i class="fa fa-pause fa-2x"></i> -->
+      <i class="fa fa-chevron-right fa-chevron-right3 fa-2x"></i>
+    </div>
   </div>
 
-
-
-
-  <!-- <img class="responsive-img materialboxed z-depth-3" ng-src="{{imgPath}}{{tvDetails.poster_path}}"> -->
-</div>
-
-<div class="col s12 l7 offset-l1">
-  <!-- <div class="section"> -->
-
-    <h5 ng-init="limit=200" class="tv-overview-text">{{tvDetails.overview | truncate:limit}}
+  <!-- OverView -->
+  <div class="col s12 l7 offset-l1">
+    <h5 ng-init="limit=400" class="tv-overview-text">{{tvDetails.overview | truncate:limit}}
       <a class="readMoreLink" ng-click="limit=5000">Read More</a>
     </h5>
-  <!-- </div> -->
 
-<div class="section">
-  <a href="{{tvDetails.homepage}}" target="_blank">{{tvDetails.homepage}}</a>
+    <!-- HomePage -->
+    <div class="section">
+      <a class="homepage-link" href="{{tvDetails.homepage}}" target="_blank">{{tvDetails.homepage}}</a>
+    </div>
+
+    <!-- Genres -->
+    <div class="row">
+      <div class="col s6 l6">
+        <h5 class="drop-shadow">Genres:</h5>
+        <ul class="tvGenres">
+          <li class="tv-genres" ng-repeat="x in tvDetails.genres">{{x.name}}</li>
+        </ul>
+      </div>
+
+      <!-- Rating -->
+      <div class="col s6 l6">
+        <div class="section">
+          <h5 class="drop-shadow">Average Rating:</h5>
+          <h3 class="movie-vote"> {{tvDetails.vote_average}}</h3>
+        </div>
+      </div>
+    </div>
+
+    <!-- Seasons/Episodes -->
+    <div class="row">
+      <div class="col s6 l6">
+        <!-- <div class="section"> -->
+        <h5>No. of seasons: {{tvDetails.number_of_seasons}}</h5>
+        <h5>No. of episodes: {{tvDetails.number_of_episodes}}</h5>
+        <!-- </div> -->
+      </div>
+
+      <!-- Production Companies -->
+      <div class="col s6 l6">
+        <h5 class="drop-shadow">Production Companies:</h5>
+        <ul class="tvProductionCompanies">
+          <li class="tv-production-companies" ng-repeat="x in tvDetails.production_companies">{{x.name}}</li>
+        </ul>
+      </div>
+    </div>
   </div>
-<!-- </br>
-</br> -->
-
-<div class="row">
-  <div class="col s6 l6">
-
-<!-- <div class="section"> -->
-<h5 class="drop-shadow">Genres:</h5>
-<ul class="tvGenres">
-  <li class="tv-genres" ng-repeat="x in tvDetails.genres">{{x.name}}</li>
-</ul>
-</div>
-<!-- </div> -->
-
-<div class="col s6 l6">
-<div class="section">
-  <h5 class="drop-shadow">Average Rating:</h5>
-  <h3 class="movie-vote"> {{tvDetails.vote_average}}</h3>
-</div>
-</div>
-</div>
-
-  <div class="row">
-    <div class="col s6 l6">
-<!-- <div class="section"> -->
-  <h5>No. of seasons: {{tvDetails.number_of_seasons}}</h5>
-  <h5>No. of episodes: {{tvDetails.number_of_episodes}}</h5>
-<!-- </div> -->
-</div>
-
-<div class="col s6 l6">
-<h5 class="drop-shadow">Production Companies:</h5>
-<ul class="tvProductionCompanies">
-  <li class="tv-production-companies" ng-repeat="x in tvDetails.production_companies">{{x.name}}</li>
-</ul>
-</div>
-
-  </div>
-</div>
 </div>
 
 
 <!-- TRAILER -->
 <div class="row">
-<div class="section">
-  <h4 class="drop-shadow">Trailer:</h4>
-  <div class="video-container z-depth-3">
-    <iframe class="trailer"
-    ng-src="{{linkYoutubeTv}}"  allowfullscreen>
-  </iframe>
-</div>
+  <div class="section">
+    <h4 class="drop-shadow">Trailer:</h4>
+    <div class="video-container z-depth-3">
+      <iframe class="trailer"
+      ng-src="{{linkYoutubeTv}}"  allowfullscreen>
+    </iframe>
+  </div>
 </div>
 </div>
 
 
 
 <!-- CAST -->
-
 <div class="row">
   <div class="tv-cast-wrapper col s12 m12 l4 offset-l1">
     <h3 class="drop-shadow">Cast:</h3>
-      <!-- TV POSTER SLIDER -->
-      <div class="slider tv-slider slider1">
-        <ul class="slides z-depth-3 slides1">
-          <li class="star-slider-li">
-            <a href="#star/{{tvCredits.cast[0].id}}">
+    <!-- TV POSTER SLIDER -->
+    <div class="slider tv-slider slider1">
+      <ul class="slides z-depth-3 slides1">
+        <li class="star-slider-li">
+          <a href="#star/{{tvCredits.cast[0].id}}">
             <h5 class="tv-credit-name">{{tvCredits.cast[0].name}}</h5>
             <img class="responsive-img cast-pic" src="{{imgPath}}{{tvCredits.cast[0].profile_path}}" alt="">
             <h5 class="">{{tvCredits.cast[0].character}}</h5>
-            </a>
-          </li>
-          <li class="star-slider-li">
-            <a href="#star/{{tvCredits.cast[1].id}}">
+          </a>
+        </li>
+        <li class="star-slider-li">
+          <a href="#star/{{tvCredits.cast[1].id}}">
             <h5 class="tv-credit-name">{{tvCredits.cast[1].name}}</h5>
             <img class="responsive-img cast-pic" src="{{imgPath}}{{tvCredits.cast[1].profile_path}}" alt="">
             <h5 class="">{{tvCredits.cast[1].character}}</h5>
-            </a>
-          </li>
-          <li class="star-slider-li">
-            <a href="#star/{{tvCredits.cast[2].id}}">
+          </a>
+        </li>
+        <li class="star-slider-li">
+          <a href="#star/{{tvCredits.cast[2].id}}">
             <h5 class="tv-credit-name">{{tvCredits.cast[2].name}}</h5>
             <img class="responsive-img cast-pic" src="{{imgPath}}{{tvCredits.cast[2].profile_path}}" alt="">
             <h5 class="">{{tvCredits.cast[2].character}}</h5>
-            </a>
-          </li>
-          <li class="star-slider-li">
-            <a href="#star/{{tvCredits.cast[3].id}}">
+          </a>
+        </li>
+        <li class="star-slider-li">
+          <a href="#star/{{tvCredits.cast[3].id}}">
             <h5 class="tv-credit-name">{{tvCredits.cast[3].name}}</h5>
             <img class="responsive-img cast-pic" src="{{imgPath}}{{tvCredits.cast[3].profile_path}}" alt="">
             <h5 class="">{{tvCredits.cast[3].character}}</h5>
-            </a>
-          </li>
-          <li class="star-slider-li">
-            <a href="#star/{{tvCredits.cast[4].id}}">
+          </a>
+        </li>
+        <li class="star-slider-li">
+          <a href="#star/{{tvCredits.cast[4].id}}">
             <h5 class="tv-credit-name">{{tvCredits.cast[4].name}}</h5>
             <img class="responsive-img cast-pic" src="{{imgPath}}{{tvCredits.cast[4].profile_path}}" alt="">
             <h5 class="">{{tvCredits.cast[4].character}}</h5>
-            </a>
-          </li>
-          <li class="star-slider-li">
-            <a href="#star/{{tvCredits.cast[5].id}}">
+          </a>
+        </li>
+        <li class="star-slider-li">
+          <a href="#star/{{tvCredits.cast[5].id}}">
             <h5 class="tv-credit-name">{{tvCredits.cast[5].name}}</h5>
             <img class="responsive-img cast-pic" src="{{imgPath}}{{tvCredits.cast[5].profile_path}}" alt="">
             <h5 class="">{{tvCredits.cast[5].character}}</h5>
-            </a>
-          </li>
-          <li class="star-slider-li">
-            <a href="#star/{{tvCredits.cast[6].id}}">
+          </a>
+        </li>
+        <li class="star-slider-li">
+          <a href="#star/{{tvCredits.cast[6].id}}">
             <h5 class="tv-credit-name">{{tvCredits.cast[6].name}}</h5>
             <img class="responsive-img cast-pic" src="{{imgPath}}{{tvCredits.cast[6].profile_path}}" alt="">
             <h5 class="">{{tvCredits.cast[6].character}}</h5>
-            </a>
-          </li>
-    </ul>
-  </div>
-  <i class="fa fa-chevron-left fa-chevron-left1 fa-2x"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <i class="fa fa-chevron-left fa-chevron-left1 fa-2x"></i>
     <i class="fa fa-chevron-right fa-chevron-right1 fa-2x"></i>
   </div>
-  <!-- </div> -->
 
-<!--
-          <img class="responsive-img cast-pic" src="{{imgPath}}{{tvSimilar.results[0].poster_path}}" alt="">
-        <h5 class="similar-tv-vote">{{tvSimilar.results[0].vote_average}}</h5>
- -->
 
-<!-- SIMILAR SHOWS -->
+
+  <!-- SIMILAR SHOWS -->
   <div class="tv-cast-wrapper col s12 m12 l4 offset-l2">
     <h3 class="drop-shadow">Similar TV:</h3>
-      <div class="slider tv-slider slider2">
-        <ul class="slides z-depth-3 slides2 ">
-          <li class="star-slider-li">
-            <a href="#tv/{{tvSimilar.results[0].id}}">
+    <div class="slider tv-slider slider2">
+      <ul class="slides z-depth-3 slides2 ">
+        <li class="star-slider-li">
+          <a href="#tv/{{tvSimilar.results[0].id}}">
             <img class="responsive-img cast-pic" src="{{imgPath}}{{tvSimilar.results[0].poster_path}}" alt="">
             <h5 class="similar-tv-vote">{{tvSimilar.results[0].vote_average}}</h5>
-            </a>
-          </li>
-          <li class="star-slider-li">
-            <a href="#tv/{{tvSimilar.results[1].id}}">
+          </a>
+        </li>
+        <li class="star-slider-li">
+          <a href="#tv/{{tvSimilar.results[1].id}}">
             <img class="responsive-img cast-pic" src="{{imgPath}}{{tvSimilar.results[1].poster_path}}" alt="">
             <h5 class="similar-tv-vote">{{tvSimilar.results[1].vote_average}}</h5>
-            </a>
-          </li>
-          <li class="star-slider-li">
-            <a href="#tv/{{tvSimilar.results[2].id}}">
+          </a>
+        </li>
+        <li class="star-slider-li">
+          <a href="#tv/{{tvSimilar.results[2].id}}">
             <img class="responsive-img cast-pic" src="{{imgPath}}{{tvSimilar.results[2].poster_path}}" alt="">
             <h5 class="similar-tv-vote">{{tvSimilar.results[2].vote_average}}</h5>
-            </a>
-          </li>
-          <li class="star-slider-li">
-            <a href="#tv/{{tvSimilar.results[3].id}}">
+          </a>
+        </li>
+        <li class="star-slider-li">
+          <a href="#tv/{{tvSimilar.results[3].id}}">
             <img class="responsive-img cast-pic" src="{{imgPath}}{{tvSimilar.results[3].poster_path}}" alt="">
             <h5 class="similar-tv-vote">{{tvSimilar.results[3].vote_average}}</h5>
-            </a>
-          </li>
-          <li class="star-slider-li">
-            <a href="#tv/{{tvSimilar.results[4].id}}">
+          </a>
+        </li>
+        <li class="star-slider-li">
+          <a href="#tv/{{tvSimilar.results[4].id}}">
             <img class="responsive-img cast-pic" src="{{imgPath}}{{tvSimilar.results[4].poster_path}}" alt="">
             <h5 class="similar-tv-vote">{{tvSimilar.results[4].vote_average}}</h5>
-            </a>
-          </li>
-          <li class="star-slider-li">
-            <a href="#tv/{{tvSimilar.results[5].id}}">
+          </a>
+        </li>
+        <li class="star-slider-li">
+          <a href="#tv/{{tvSimilar.results[5].id}}">
             <img class="responsive-img cast-pic" src="{{imgPath}}{{tvSimilar.results[5].poster_path}}" alt="">
             <h5 class="similar-tv-vote">{{tvSimilar.results[5].vote_average}}</h5>
-            </a>
-          </li>
-          <li class="star-slider-li">
-            <a href="#tv/{{tvSimilar.results[6].id}}">
+          </a>
+        </li>
+        <li class="star-slider-li">
+          <a href="#tv/{{tvSimilar.results[6].id}}">
             <img class="responsive-img cast-pic" src="{{imgPath}}{{tvSimilar.results[6].poster_path}}" alt="">
             <h5 class="similar-tv-vote">{{tvSimilar.results[6].vote_average}}</h5>
-            </a>
-          </li>
-          <li class="star-slider-li">
-            <a href="#tv/{{tvSimilar.results[7].id}}">
+          </a>
+        </li>
+        <li class="star-slider-li">
+          <a href="#tv/{{tvSimilar.results[7].id}}">
             <img class="responsive-img cast-pic" src="{{imgPath}}{{tvSimilar.results[7].poster_path}}" alt="">
             <h5 class="similar-tv-vote">{{tvSimilar.results[7].vote_average}}</h5>
-            </a>
-          </li>
-          <li class="star-slider-li">
-            <a href="#tv/{{tvSimilar.results[8].id}}">
+          </a>
+        </li>
+        <li class="star-slider-li">
+          <a href="#tv/{{tvSimilar.results[8].id}}">
             <img class="responsive-img cast-pic" src="{{imgPath}}{{tvSimilar.results[8].poster_path}}" alt="">
             <h5 class="similar-tv-vote">{{tvSimilar.results[8].vote_average}}</h5>
-            </a>
-          </li>
-          <li class="star-slider-li">
-            <a href="#tv/{{tvSimilar.results[9].id}}">
+          </a>
+        </li>
+        <li class="star-slider-li">
+          <a href="#tv/{{tvSimilar.results[9].id}}">
             <img class="responsive-img cast-pic" src="{{imgPath}}{{tvSimilar.results[9].poster_path}}" alt="">
             <h5 class="similar-tv-vote">{{tvSimilar.results[9].vote_average}}</h5>
-            </a>
-          </li>
-    </ul>
-  </div>
-  <i class="fa fa-chevron-left fa-chevron-left2 fa-2x"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <i class="fa fa-chevron-left fa-chevron-left2 fa-2x"></i>
     <i class="fa fa-chevron-right fa-chevron-right2 fa-2x"></i>
   </div>
-<!-- SIMILAR SHOWS -->
-
-
-<!--
-</div class="row section">
-<div class="col s12">
-  <div class="carousel">
-    <h3 class="drop-shadow">CAST:</h3>
-    <a class="carousel-item" href=""><div class="waves-effect row">
-      <h5 class="tv-credit-name">{{tvCredits.cast[0].name}}</h5>
-      <img class="responsive-img" src="{{imgPath}}{{tvCredits.cast[0].profile_path}}" alt="">
-      <h5 class="tv-credit-character">{{tvCredits.cast[0].character}}</h5>
-    </div></a>
-    <a class="carousel-item" href=""><div class="waves-effect row">
-      <h5 class="tv-credit-name">{{tvCredits.cast[1].name}}</h5>
-      <img class="responsive-img" src="{{imgPath}}{{tvCredits.cast[1].profile_path}}" alt="">
-      <h5 class="tv-credit-character">{{tvCredits.cast[1].character}}</h5>
-    </div></a>
-    <a class="carousel-item" href=""><div class="waves-effect row">
-      <h5 class="tv-credit-name">{{tvCredits.cast[2].name}}</h5>
-      <img class="responsive-img" src="{{imgPath}}{{tvCredits.cast[2].profile_path}}" alt="">
-      <h5 class="tv-credit-character">{{tvCredits.cast[2].character}}</h5>
-    </div></a>
-    <a class="carousel-item" href=""><div class="waves-effect row">
-      <h5 class="tv-credit-name">{{tvCredits.cast[3].name}}</h5>
-      <img class="responsive-img" src="{{imgPath}}{{tvCredits.cast[3].profile_path}}" alt="">
-      <h5 class="tv-credit-character">{{tvCredits.cast[3].character}}</h5>
-    </div></a>
-    <a class="carousel-item" href=""><div class="waves-effect row">
-      <h5 class="tv-credit-name">{{tvCredits.cast[4].name}}</h5>
-      <img class="responsive-img" src="{{imgPath}}{{tvCredits.cast[4].profile_path}}" alt="">
-      <h5 class="tv-credit-character">{{tvCredits.cast[4].character}}</h5>
-    </div></a>
-    <a class="carousel-item" href=""><div class="waves-effect row">
-      <h5 class="tv-credit-name">{{tvCredits.cast[5].name}}</h5>
-      <img class="responsive-img" src="{{imgPath}}{{tvCredits.cast[5].profile_path}}" alt="">
-      <h5 class="tv-credit-character">{{tvCredits.cast[5].character}}</h5>
-    </div></a>
-    <a class="carousel-item" href=""><div class="waves-effect row">
-      <h5 class="tv-credit-name">{{tvCredits.cast[6].name}}</h5>
-      <img class="responsive-img" src="{{imgPath}}{{tvCredits.cast[6].profile_path}}" alt="">
-      <h5 class="tv-credit-character">{{tvCredits.cast[6].character}}</h5>
-    </div></a>
-    <a class="carousel-item" href=""><div class="waves-effect row">
-      <h5 class="tv-credit-name">{{tvCredits.cast[7].name}}</h5>
-      <img class="responsive-img" src="{{imgPath}}{{tvCredits.cast[7].profile_path}}" alt="">
-      <h5 class="tv-credit-character">{{tvCredits.cast[7].character}}</h5>
-    </div></a>
-    <a class="carousel-item" href=""><div class="waves-effect row">
-      <h5 class="tv-credit-name">{{tvCredits.cast[8].name}}</h5>
-      <img class="responsive-img" src="{{imgPath}}{{tvCredits.cast[8].profile_path}}" alt="">
-      <h5 class="tv-credit-character">{{tvCredits.cast[8].character}}</h5>
-    </div></a>
-    <a class="carousel-item" href=""><div class="waves-effect row">
-      <h5 class="tv-credit-name">{{tvCredits.cast[10].name}}</h5>
-      <img class="responsive-img" src="{{imgPath}}{{tvCredits.cast[10].profile_path}}" alt="">
-      <h5 class="tv-credit-character">{{tvCredits.cast[10].character}}</h5>
-    </div></a>
-  </div>
 </div>
-</div>
- -->
 
-<!-- SIMILAR SHOWS -->
-<!-- <div class=" section">
-  <div class="col s12 m6">
-    <div class="carousel">
-      <h3 class="drop-shadow">SIMILAR SHOWS:</h3>
-      <a class="carousel-item" href=""><div class="waves-effect row">
-        <img class="responsive-img" src="{{imgPath}}{{tvSimilar.results[0].poster_path}}" alt="">
-        <h5 class="similar-tv-vote">{{tvSimilar.results[0].vote_average}}</h5>
-      </div></a>
-      <a class="carousel-item" href=""><div class="waves-effect row">
-        <img class="responsive-img" src="{{imgPath}}{{tvSimilar.results[1].poster_path}}" alt="">
-        <h5 class="similar-tv-vote">{{tvSimilar.results[1].vote_average}}</h5>
-      </div></a>
-      <a class="carousel-item" href=""><div class="waves-effect row">
-        <img class="responsive-img" src="{{imgPath}}{{tvSimilar.results[2].poster_path}}" alt="">
-        <h5 class="similar-tv-vote">{{tvSimilar.results[2].vote_average}}</h5>
-      </div></a>
-      <a class="carousel-item" href=""><div class="waves-effect row">
-        <img class="responsive-img" src="{{imgPath}}{{tvSimilar.results[3].poster_path}}" alt="">
-        <h5 class="similar-tv-vote">{{tvSimilar.results[3].vote_average}}</h5>
-      </div></a>
-      <a class="carousel-item" href=""><div class="waves-effect row">
-        <img class="responsive-img" src="{{imgPath}}{{tvSimilar.results[4].poster_path}}" alt="">
-        <h5 class="similar-tv-vote">{{tvSimilar.results[4].vote_average}}</h5>
-      </div></a>
-      <a class="carousel-item" href=""><div class="waves-effect row">
-        <img class="responsive-img" src="{{imgPath}}{{tvSimilar.results[5].poster_path}}" alt="">
-        <h5 class="similar-tv-vote">{{tvSimilar.results[5].vote_average}}</h5>
-      </div></a>
-      <a class="carousel-item" href=""><div class="waves-effect row">
-        <img class="responsive-img" src="{{imgPath}}{{tvSimilar.results[6].poster_path}}" alt="">
-        <h5 class="similar-tv-vote">{{tvSimilar.results[6].vote_average}}</h5>
-      </div></a>
-      <a class="carousel-item" href=""><div class="waves-effect row">
-        <img class="responsive-img" src="{{imgPath}}{{tvSimilar.results[7].poster_path}}" alt="">
-        <h5 class="similar-tv-vote">{{tvSimilar.results[7].vote_average}}</h5>
-      </div></a>
-      <a class="carousel-item" href=""><div class="waves-effect row">
-        <img class="responsive-img" src="{{imgPath}}{{tvSimilar.results[8].poster_path}}" alt="">
-        <h5 class="similar-tv-vote">{{tvSimilar.results[8].vote_average}}</h5>
-      </div></a>
-      <a class="carousel-item" href=""><div class="waves-effect row">
-        <img class="responsive-img" src="{{imgPath}}{{tvSimilar.results[9].poster_path}}" alt="">
-        <h5 class="similar-tv-vote">{{tvSimilar.results[9].vote_average}}</h5>
-      </div></a>
-    </div>
-  </div>
-</div> -->
-
-
-<!-- Season Posters -->
-<!-- <div class="row">
-  <div class="col s12">
-    <ul class="seasons">
-      <li class="season-img" ng-repeat="x in tvDetails.seasons"><img  src="{{imgPath}}{{x.poster_path}}" alt=""></li>
-    </ul>
-    </div>
-  </div>
-</div> -->
-
-
-<!-- <div id="slideshow">
-    <img ng-src="{{imgPath}}{{tvDetails.poster_path}}" class=" poster-slide-bottom first-slide" />
-    <img ng-src="{{imgPath}}{{tvDetails.backdrop_path}}" class="poster-slide-bottom" />
-    <ul>
-      <li  ng-repeat="x in tvDetails.seasons"><img class="active poster-slide-bottom" src="{{imgPath}}{{x.poster_path}}" alt=""></li>
-    </ul>
-</div> -->
-
-</div>
-<!-- {{tvDetails.name}} -->
 
 <script>
-  function check_length(){
-  // alert($('.tv-overview-text').text().length);
-  if($('.tv-overview-text').text().length < 221){
+function check_length(){
+  if($('.tv-overview-text').text().length < 421){
     $('.readMoreLink').hide();
   }
   // alert($('.tv-overview-text').text().length);
-  }
-  setTimeout(check_length, 500);
-
+}
+setTimeout(check_length, 700);
 
 $('.readMoreLink').click(function() {
-  // alert( "Handler for .click() called." );
   $('.readMoreLink').hide();
 });
 </script>

@@ -52,8 +52,6 @@ $http.get(root_url+"movie/now_playing?api_key="+userService.key+"&language=en-US
     $scope.popularMovies = data;
   });
 
-
-
 // Popular TV:
   $http.get(root_url+"tv/popular?api_key="+userService.key+"&language=en-US&page=1").success(function(data) {
     $scope.popularTv = data;
