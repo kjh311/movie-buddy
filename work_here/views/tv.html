@@ -1,219 +1,463 @@
  <script>
 $('.carousel').carousel();
 $("html, body").animate({ scrollTop: 0 }, 0);
+$('.slider').slider({full_width: false});
  </script>
 
-<!-- On Air -->
-<div class="row tvPage animated fadeIn">
-  <div class="col s12">
-    <div class="carousel">
-      <h4>TV on Air:</h4>
-      <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{onAirTv.results[0].poster_path}}" alt="">
-        <h5 class="vote">{{onAirTv.results[0].vote_average}}</h5>
-      </div></a>
-      <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{onAirTv.results[1].poster_path}}" alt="">
-        <h5 class="vote">{{onAirTv.results[1].vote_average}}</h5>
-      </div></a>
-      <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{onAirTv.results[2].poster_path}}" alt="">
-        <h5 class="vote">{{onAirTv.results[2].vote_average}}</h5>
-      </div></a>
-      <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{onAirTv.results[3].poster_path}}" alt="">
-        <h5 class="vote">{{onAirTv.results[3].vote_average}}</h5>
-      </div></a>
-      <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{onAirTv.results[4].poster_path}}" alt="">
-        <h5 class="vote">{{onAirTv.results[4].vote_average}}</h5>
-      </div></a>
-      <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{onAirTv.results[5].poster_path}}" alt="">
-        <h5 class="vote">{{onAirTv.results[5].vote_average}}</h5>
-      </div></a>
-      <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{onAirTv.results[6].poster_path}}" alt="">
-        <h5 class="vote">{{onAirTv.results[6].vote_average}}</h5>
-      </div></a>
-      <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{onAirTv.results[7].poster_path}}" alt="">
-        <h5 class="vote">{{onAirTv.results[7].vote_average}}</h5>
-      </div></a>
-      <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{onAirTv.results[8].poster_path}}" alt="">
-        <h5 class="vote">{{onAirTv.results[8].vote_average}}</h5>
-      </div></a>
-      <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{onAirTv.results[9].poster_path}}" alt="">
-        <h5 class="vote">{{onAirTv.results[9].vote_average}}</h5>
-      </div></a>
-      <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{onAirTv.results[10].poster_path}}" alt="">
-        <h5 class="vote">{{onAirTv.results[10].vote_average}}</h5>
-      </div></a>
-      <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{onAirTv.results[11].poster_path}}" alt="">
-        <h5 class="vote">{{onAirTv.results[11].vote_average}}</h5>
-      </div></a>
-      <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{onAirTv.results[12].poster_path}}" alt="">
-        <h5 class="vote">{{onAirTv.results[12].vote_average}}</h5>
-      </div></a>
-      <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{onAirTv.results[13].poster_path}}" alt="">
-        <h5 class="vote">{{onAirTv.results[13].vote_average}}</h5>
-      </div></a>
-      <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{onAirTv.results[14].poster_path}}" alt="">
-        <h5 class="vote">{{onAirTv.results[14].vote_average}}</h5>
-      </div></a>
-      <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{onAirTv.results[15].poster_path}}" alt="">
-        <h5 class="vote">{{onAirTv.results[15].vote_average}}</h5>
-      </div></a>
-      <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{onAirTv.results[16].poster_path}}" alt="">
-        <h5 class="vote">{{onAirTv.results[16].vote_average}}</h5>
-      </div></a>
-      <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{onAirTv.results[17].poster_path}}" alt="">
-        <h5 class="vote">{{onAirTv.results[17].vote_average}}</h5>
-      </div></a>
-      <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{onAirTv.results[18].poster_path}}" alt="">
-        <h5 class="vote">{{onAirTv.results[18].vote_average}}</h5>
-      </div></a>
-      <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{onAirTv.results[19].poster_path}}" alt="">
-        <h5 class="vote">{{onAirTv.results[19].vote_average}}</h5>
-      </div></a>
-    </div>
-  </div>
-</div>
-</br>
 
-<!-- On Air Today -->
+<!-- TV on Air Slider: -->
 <div class="row">
-  <div class="col s12">
-    <div class="carousel">
-      <h4>On Air Today:</h4>
-      <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{onAirTodayTv.results[0].poster_path}}" alt="">
-        <h5 class="vote">{{onAirTodayTv.results[0].vote_average}}</h5>
-      </div></a>
-      <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{onAirTodayTv.results[1].poster_path}}" alt="">
-        <h5 class="vote">{{onAirTodayTv.results[1].vote_average}}</h5>
-      </div></a>
-      <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{onAirTodayTv.results[2].poster_path}}" alt="">
-        <h5 class="vote">{{onAirTodayTv.results[2].vote_average}}</h5>
-      </div></a>
-      <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{onAirTodayTv.results[3].poster_path}}" alt="">
-        <h5 class="vote">{{onAirTodayTv.results[3].vote_average}}</h5>
-      </div></a>
-      <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{onAirTodayTv.results[4].poster_path}}" alt="">
-        <h5 class="vote">{{onAirTodayTv.results[4].vote_average}}</h5>
-      </div></a>
-      <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{onAirTodayTv.results[5].poster_path}}" alt="">
-        <h5 class="vote">{{onAirTodayTv.results[5].vote_average}}</h5>
-      </div></a>
-      <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{onAirTodayTv.results[6].poster_path}}" alt="">
-        <h5 class="vote">{{onAirTodayTv.results[6].vote_average}}</h5>
-      </div></a>
-      <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{onAirTodayTv.results[7].poster_path}}" alt="">
-        <h5 class="vote">{{onAirTodayTv.results[7].vote_average}}</h5>
-      </div></a>
-      <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{onAirTodayTv.results[8].poster_path}}" alt="">
-        <h5 class="vote">{{onAirTodayTv.results[8].vote_average}}</h5>
-      </div></a>
-      <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{onAirTodayTv.results[9].poster_path}}" alt="">
-        <h5 class="vote">{{onAirTodayTv.results[9].vote_average}}</h5>
-      </div></a>
-      <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{onAirTodayTv.results[10].poster_path}}" alt="">
-        <h5 class="vote">{{onAirTodayTv.results[10].vote_average}}</h5>
-      </div></a>
-      <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{onAirTodayTv.results[11].poster_path}}" alt="">
-        <h5 class="vote">{{onAirTodayTv.results[11].vote_average}}</h5>
-      </div></a>
-      <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{onAirTodayTv.results[12].poster_path}}" alt="">
-        <h5 class="vote">{{onAirTodayTv.results[12].vote_average}}</h5>
-      </div></a>
-      <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{onAirTodayTv.results[13].poster_path}}" alt="">
-        <h5 class="vote">{{onAirTodayTv.results[13].vote_average}}</h5>
-      </div></a>
-      <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{onAirTodayTv.results[14].poster_path}}" alt="">
-        <h5 class="vote">{{onAirTodayTv.results[14].vote_average}}</h5>
-      </div></a>
-      <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{onAirTodayTv.results[15].poster_path}}" alt="">
-        <h5 class="vote">{{onAirTodayTv.results[15].vote_average}}</h5>
-      </div></a>
-      <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{onAirTodayTv.results[16].poster_path}}" alt="">
-        <h5 class="vote">{{onAirTodayTv.results[16].vote_average}}</h5>
-      </div></a>
-      <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{onAirTodayTv.results[17].poster_path}}" alt="">
-        <h5 class="vote">{{onAirTodayTv.results[17].vote_average}}</h5>
-      </div></a>
-      <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{onAirTodayTv.results[18].poster_path}}" alt="">
-        <h5 class="vote">{{onAirTodayTv.results[18].vote_average}}</h5>
-      </div></a>
-      <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{onAirTodayTv.results[19].poster_path}}" alt="">
-        <h5 class="vote">{{onAirTodayTv.results[19].vote_average}}</h5>
-      </div></a>
+
+  <div class="tv-cast-wrapper col s12 m12 l4 offset-l2 offset-m4 offset-s1">
+    <h4 class="drop-shadow">TV on Air:</h4>
+    <div class="slider tv-slider slider1">
+      <ul class="slides z-depth-3 slides1">
+        <li>
+          <a href="#tv/{{onAirTv.results[0].id}}">
+            <img class="responsive-img  red-border" src="{{imgPath}}{{onAirTv.results[0].poster_path}}" alt="">
+            <h5 class="similar-tv-vote">{{onAirTv.results[0].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#tv/{{onAirTv.results[1].id}}">
+            <img class="responsive-img  red-border" src="{{imgPath}}{{onAirTv.results[1].poster_path}}" alt="">
+            <h5 class="similar-tv-vote">{{onAirTv.results[1].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#tv/{{onAirTv.results[2].id}}">
+            <img class="responsive-img  red-border" src="{{imgPath}}{{onAirTv.results[2].poster_path}}" alt="">
+            <h5 class="similar-tv-vote">{{onAirTv.results[2].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#tv/{{onAirTv.results[3].id}}">
+            <img class="responsive-img  red-border" src="{{imgPath}}{{onAirTv.results[3].poster_path}}" alt="">
+            <h5 class="similar-tv-vote">{{onAirTv.results[3].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#tv/{{onAirTv.results[4].id}}">
+            <img class="responsive-img  red-border" src="{{imgPath}}{{onAirTv.results[4].poster_path}}" alt="">
+            <h5 class="similar-tv-vote">{{onAirTv.results[4].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#tv/{{onAirTv.results[5].id}}">
+            <img class="responsive-img  red-border" src="{{imgPath}}{{onAirTv.results[5].poster_path}}" alt="">
+            <h5 class="similar-tv-vote">{{onAirTv.results[5].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#tv/{{onAirTv.results[6].id}}">
+            <img class="responsive-img  red-border" src="{{imgPath}}{{onAirTv.results[6].poster_path}}" alt="">
+            <h5 class="similar-tv-vote">{{onAirTv.results[6].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#tv/{{onAirTv.results[7].id}}">
+            <img class="responsive-img  red-border" src="{{imgPath}}{{onAirTv.results[7].poster_path}}" alt="">
+            <h5 class="similar-tv-vote">{{onAirTv.results[7].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#tv/{{onAirTv.results[8].id}}">
+            <img class="responsive-img  red-border" src="{{imgPath}}{{onAirTv.results[8].poster_path}}" alt="">
+            <h5 class="similar-tv-vote">{{onAirTv.results[8].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#tv/{{onAirTv.results[9].id}}">
+            <img class="responsive-img  red-border" src="{{imgPath}}{{onAirTv.results[9].poster_path}}" alt="">
+            <h5 class="similar-tv-vote">{{onAirTv.results[9].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#tv/{{onAirTv.results[10].id}}">
+            <img class="responsive-img  red-border" src="{{imgPath}}{{onAirTv.results[10].poster_path}}" alt="">
+            <h5 class="similar-tv-vote">{{onAirTv.results[10].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#tv/{{onAirTv.results[11].id}}">
+            <img class="responsive-img  red-border" src="{{imgPath}}{{onAirTv.results[11].poster_path}}" alt="">
+            <h5 class="similar-tv-vote">{{onAirTv.results[11].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#tv/{{onAirTv.results[12].id}}">
+            <img class="responsive-img  red-border" src="{{imgPath}}{{onAirTv.results[12].poster_path}}" alt="">
+            <h5 class="similar-tv-vote">{{onAirTv.results[12].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#tv/{{onAirTv.results[13].id}}">
+            <img class="responsive-img  red-border" src="{{imgPath}}{{onAirTv.results[13].poster_path}}" alt="">
+            <h5 class="similar-tv-vote">{{onAirTv.results[13].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#tv/{{onAirTv.results[14].id}}">
+            <img class="responsive-img  red-border" src="{{imgPath}}{{onAirTv.results[14].poster_path}}" alt="">
+            <h5 class="similar-tv-vote">{{onAirTv.results[14].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#tv/{{onAirTv.results[15].id}}">
+            <img class="responsive-img  red-border" src="{{imgPath}}{{onAirTv.results[15].poster_path}}" alt="">
+            <h5 class="similar-tv-vote">{{onAirTv.results[15].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#tv/{{onAirTv.results[16].id}}">
+            <img class="responsive-img  red-border" src="{{imgPath}}{{onAirTv.results[16].poster_path}}" alt="">
+            <h5 class="similar-tv-vote">{{onAirTv.results[16].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#tv/{{onAirTv.results[17].id}}">
+            <img class="responsive-img  red-border" src="{{imgPath}}{{onAirTv.results[17].poster_path}}" alt="">
+            <h5 class="similar-tv-vote">{{onAirTv.results[17].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#tv/{{onAirTv.results[18].id}}">
+            <img class="responsive-img  red-border" src="{{imgPath}}{{onAirTv.results[18].poster_path}}" alt="">
+            <h5 class="similar-tv-vote">{{onAirTv.results[18].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#tv/{{onAirTv.results[19].id}}">
+            <img class="responsive-img  red-border" src="{{imgPath}}{{onAirTv.results[19].poster_path}}" alt="">
+            <h5 class="similar-tv-vote">{{onAirTv.results[19].vote_average}}</h5>
+          </a>
+        </li>
+      </ul>
     </div>
+    <i class="fa fa-chevron-left fa-chevron-left1 fa-2x"></i>
+    <i class="fa fa-chevron-right fa-chevron-right1 fa-2x"></i>
   </div>
-</div>
-</br>
 
 
 
-<!-- Top Rated -->
+  <!--On Air TV Slider -->
+  <div class="tv-cast-wrapper col s12 m12 l4 offset-l2 offset-m4 offset-s1">
+    <h4 class="drop-shadow">On Air Today:</h4>
+    <div class="slider tv-slider slider2">
+      <ul class="slides z-depth-3 slides2">
+        <li>
+          <a href="#tv/{{onAirTodayTv.results[0].id}}">
+            <img class="responsive-img  red-border" src="{{imgPath}}{{onAirTodayTv.results[0].poster_path}}" alt="">
+            <h5 class="similar-tv-vote">{{onAirTodayTv.results[0].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#tv/{{onAirTodayTv.results[1].id}}">
+            <img class="responsive-img  red-border" src="{{imgPath}}{{onAirTodayTv.results[1].poster_path}}" alt="">
+            <h5 class="similar-tv-vote">{{onAirTodayTv.results[1].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#tv/{{onAirTodayTv.results[2].id}}">
+            <img class="responsive-img  red-border" src="{{imgPath}}{{onAirTodayTv.results[2].poster_path}}" alt="">
+            <h5 class="similar-tv-vote">{{onAirTodayTv.results[2].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#tv/{{onAirTodayTv.results[3].id}}">
+            <img class="responsive-img  red-border" src="{{imgPath}}{{onAirTodayTv.results[3].poster_path}}" alt="">
+            <h5 class="similar-tv-vote">{{onAirTodayTv.results[3].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#tv/{{onAirTodayTv.results[4].id}}">
+            <img class="responsive-img  red-border" src="{{imgPath}}{{onAirTodayTv.results[4].poster_path}}" alt="">
+            <h5 class="similar-tv-vote">{{onAirTodayTv.results[4].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#tv/{{onAirTodayTv.results[5].id}}">
+            <img class="responsive-img  red-border" src="{{imgPath}}{{onAirTodayTv.results[5].poster_path}}" alt="">
+            <h5 class="similar-tv-vote">{{onAirTodayTv.results[5].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#tv/{{onAirTodayTv.results[6].id}}">
+            <img class="responsive-img  red-border" src="{{imgPath}}{{onAirTodayTv.results[6].poster_path}}" alt="">
+            <h5 class="similar-tv-vote">{{onAirTodayTv.results[6].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#tv/{{onAirTodayTv.results[7].id}}">
+            <img class="responsive-img  red-border" src="{{imgPath}}{{onAirTodayTv.results[7].poster_path}}" alt="">
+            <h5 class="similar-tv-vote">{{onAirTodayTv.results[7].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#tv/{{onAirTodayTv.results[8].id}}">
+            <img class="responsive-img  red-border" src="{{imgPath}}{{onAirTodayTv.results[8].poster_path}}" alt="">
+            <h5 class="similar-tv-vote">{{onAirTodayTv.results[8].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#tv/{{onAirTodayTv.results[9].id}}">
+            <img class="responsive-img  red-border" src="{{imgPath}}{{onAirTodayTv.results[9].poster_path}}" alt="">
+            <h5 class="similar-tv-vote">{{onAirTodayTv.results[9].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#tv/{{onAirTodayTv.results[10].id}}">
+            <img class="responsive-img  red-border" src="{{imgPath}}{{onAirTodayTv.results[10].poster_path}}" alt="">
+            <h5 class="similar-tv-vote">{{onAirTodayTv.results[10].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#tv/{{onAirTodayTv.results[11].id}}">
+            <img class="responsive-img  red-border" src="{{imgPath}}{{onAirTodayTv.results[11].poster_path}}" alt="">
+            <h5 class="similar-tv-vote">{{onAirTodayTv.results[11].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#tv/{{onAirTodayTv.results[12].id}}">
+            <img class="responsive-img  red-border" src="{{imgPath}}{{onAirTodayTv.results[12].poster_path}}" alt="">
+            <h5 class="similar-tv-vote">{{onAirTodayTv.results[12].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#tv/{{onAirTodayTv.results[13].id}}">
+            <img class="responsive-img  red-border" src="{{imgPath}}{{onAirTodayTv.results[13].poster_path}}" alt="">
+            <h5 class="similar-tv-vote">{{onAirTodayTv.results[13].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#tv/{{onAirTodayTv.results[14].id}}">
+            <img class="responsive-img  red-border" src="{{imgPath}}{{onAirTodayTv.results[14].poster_path}}" alt="">
+            <h5 class="similar-tv-vote">{{onAirTodayTv.results[14].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#tv/{{onAirTodayTv.results[15].id}}">
+            <img class="responsive-img  red-border" src="{{imgPath}}{{onAirTodayTv.results[15].poster_path}}" alt="">
+            <h5 class="similar-tv-vote">{{onAirTodayTv.results[15].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#tv/{{onAirTodayTv.results[16].id}}">
+            <img class="responsive-img  red-border" src="{{imgPath}}{{onAirTodayTv.results[16].poster_path}}" alt="">
+            <h5 class="similar-tv-vote">{{onAirTodayTv.results[16].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#tv/{{onAirTodayTv.results[17].id}}">
+            <img class="responsive-img  red-border" src="{{imgPath}}{{onAirTodayTv.results[17].poster_path}}" alt="">
+            <h5 class="similar-tv-vote">{{onAirTodayTv.results[17].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#tv/{{onAirTodayTv.results[18].id}}">
+            <img class="responsive-img  red-border" src="{{imgPath}}{{onAirTodayTv.results[18].poster_path}}" alt="">
+            <h5 class="similar-tv-vote">{{onAirTodayTv.results[18].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#tv/{{onAirTodayTv.results[19].id}}">
+            <img class="responsive-img  red-border" src="{{imgPath}}{{onAirTodayTv.results[19].poster_path}}" alt="">
+            <h5 class="similar-tv-vote">{{onAirTodayTv.results[19].vote_average}}</h5>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <i class="fa fa-chevron-left fa-chevron-left2 fa-2x"></i>
+    <i class="fa fa-chevron-right fa-chevron-right2 fa-2x"></i>
+  </div>
+</div><!--End of row -->
+
+
+<!-- Top Rated TV Slider: -->
 <div class="row">
-  <div class="col s12">
-    <div class="carousel">
-      <h4>Top Rated TV:</h4>
-      <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{topRatedTv.results[0].poster_path}}" alt="">
-        <h5 class="vote">{{topRatedTv.results[0].vote_average}}</h5>
-      </div></a>
-      <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{topRatedTv.results[1].poster_path}}" alt="">
-        <h5 class="vote">{{topRatedTv.results[1].vote_average}}</h5>
-      </div></a>
-      <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{topRatedTv.results[2].poster_path}}" alt="">
-        <h5 class="vote">{{topRatedTv.results[2].vote_average}}</h5>
-      </div></a>
-      <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{topRatedTv.results[3].poster_path}}" alt="">
-        <h5 class="vote">{{topRatedTv.results[3].vote_average}}</h5>
-      </div></a>
-      <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{topRatedTv.results[4].poster_path}}" alt="">
-        <h5 class="vote">{{topRatedTv.results[4].vote_average}}</h5>
-      </div></a>
-      <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{topRatedTv.results[5].poster_path}}" alt="">
-        <h5 class="vote">{{topRatedTv.results[5].vote_average}}</h5>
-      </div></a>
-      <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{topRatedTv.results[6].poster_path}}" alt="">
-        <h5 class="vote">{{topRatedTv.results[6].vote_average}}</h5>
-      </div></a>
-      <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{topRatedTv.results[7].poster_path}}" alt="">
-        <h5 class="vote">{{topRatedTv.results[7].vote_average}}</h5>
-      </div></a>
-      <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{topRatedTv.results[8].poster_path}}" alt="">
-        <h5 class="vote">{{topRatedTv.results[8].vote_average}}</h5>
-      </div></a>
-      <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{topRatedTv.results[9].poster_path}}" alt="">
-        <h5 class="vote">{{topRatedTv.results[9].vote_average}}</h5>
-      </div></a>
-      <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{topRatedTv.results[10].poster_path}}" alt="">
-        <h5 class="vote">{{topRatedTv.results[10].vote_average}}</h5>
-      </div></a>
-      <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{topRatedTv.results[11].poster_path}}" alt="">
-        <h5 class="vote">{{topRatedTv.results[11].vote_average}}</h5>
-      </div></a>
-      <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{topRatedTv.results[12].poster_path}}" alt="">
-        <h5 class="vote">{{topRatedTv.results[12].vote_average}}</h5>
-      </div></a>
-      <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{topRatedTv.results[13].poster_path}}" alt="">
-        <h5 class="vote">{{topRatedTv.results[13].vote_average}}</h5>
-      </div></a>
-      <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{topRatedTv.results[14].poster_path}}" alt="">
-        <h5 class="vote">{{topRatedTv.results[14].vote_average}}</h5>
-      </div></a>
-      <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{topRatedTv.results[15].poster_path}}" alt="">
-        <h5 class="vote">{{topRatedTv.results[15].vote_average}}</h5>
-      </div></a>
-      <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{topRatedTv.results[16].poster_path}}" alt="">
-        <h5 class="vote">{{topRatedTv.results[16].vote_average}}</h5>
-      </div></a>
-      <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{topRatedTv.results[17].poster_path}}" alt="">
-        <h5 class="vote">{{topRatedTv.results[17].vote_average}}</h5>
-      </div></a>
-      <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{topRatedTv.results[18].poster_path}}" alt="">
-        <h5 class="vote">{{topRatedTv.results[18].vote_average}}</h5>
-      </div></a>
-      <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{topRatedTv.results[19].poster_path}}" alt="">
-        <h5 class="vote">{{topRatedTv.results[19].vote_average}}</h5>
-      </div></a>
+
+  <div class="tv-cast-wrapper col s12 m12 l4 offset-l2 offset-m4 offset-s1">
+    <h4 class="drop-shadow">Top Rated TV:</h4>
+    <div class="slider tv-slider slider3">
+      <ul class="slides z-depth-3 slides3">
+        <li>
+          <a href="#tv/{{topRatedTv.results[0].id}}">
+            <img class="responsive-img  red-border" src="{{imgPath}}{{topRatedTv.results[0].poster_path}}" alt="">
+            <h5 class="similar-tv-vote">{{topRatedTv.results[0].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#tv/{{topRatedTv.results[1].id}}">
+            <img class="responsive-img  red-border" src="{{imgPath}}{{topRatedTv.results[1].poster_path}}" alt="">
+            <h5 class="similar-tv-vote">{{topRatedTv.results[1].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#tv/{{topRatedTv.results[2].id}}">
+            <img class="responsive-img  red-border" src="{{imgPath}}{{topRatedTv.results[2].poster_path}}" alt="">
+            <h5 class="similar-tv-vote">{{topRatedTv.results[2].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#tv/{{topRatedTv.results[3].id}}">
+            <img class="responsive-img  red-border" src="{{imgPath}}{{topRatedTv.results[3].poster_path}}" alt="">
+            <h5 class="similar-tv-vote">{{topRatedTv.results[3].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#tv/{{topRatedTv.results[4].id}}">
+            <img class="responsive-img  red-border" src="{{imgPath}}{{topRatedTv.results[4].poster_path}}" alt="">
+            <h5 class="similar-tv-vote">{{topRatedTv.results[4].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#tv/{{topRatedTv.results[5].id}}">
+            <img class="responsive-img  red-border" src="{{imgPath}}{{topRatedTv.results[5].poster_path}}" alt="">
+            <h5 class="similar-tv-vote">{{topRatedTv.results[5].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#tv/{{topRatedTv.results[6].id}}">
+            <img class="responsive-img  red-border" src="{{imgPath}}{{topRatedTv.results[6].poster_path}}" alt="">
+            <h5 class="similar-tv-vote">{{topRatedTv.results[6].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#tv/{{topRatedTv.results[7].id}}">
+            <img class="responsive-img  red-border" src="{{imgPath}}{{topRatedTv.results[7].poster_path}}" alt="">
+            <h5 class="similar-tv-vote">{{topRatedTv.results[7].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#tv/{{topRatedTv.results[8].id}}">
+            <img class="responsive-img  red-border" src="{{imgPath}}{{topRatedTv.results[8].poster_path}}" alt="">
+            <h5 class="similar-tv-vote">{{topRatedTv.results[8].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#tv/{{topRatedTv.results[9].id}}">
+            <img class="responsive-img  red-border" src="{{imgPath}}{{topRatedTv.results[9].poster_path}}" alt="">
+            <h5 class="similar-tv-vote">{{topRatedTv.results[9].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#tv/{{topRatedTv.results[10].id}}">
+            <img class="responsive-img  red-border" src="{{imgPath}}{{topRatedTv.results[10].poster_path}}" alt="">
+            <h5 class="similar-tv-vote">{{topRatedTv.results[10].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#tv/{{topRatedTv.results[11].id}}">
+            <img class="responsive-img  red-border" src="{{imgPath}}{{topRatedTv.results[11].poster_path}}" alt="">
+            <h5 class="similar-tv-vote">{{topRatedTv.results[11].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#tv/{{topRatedTv.results[12].id}}">
+            <img class="responsive-img  red-border" src="{{imgPath}}{{topRatedTv.results[12].poster_path}}" alt="">
+            <h5 class="similar-tv-vote">{{topRatedTv.results[12].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#tv/{{topRatedTv.results[13].id}}">
+            <img class="responsive-img  red-border" src="{{imgPath}}{{topRatedTv.results[13].poster_path}}" alt="">
+            <h5 class="similar-tv-vote">{{topRatedTv.results[13].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#tv/{{topRatedTv.results[14].id}}">
+            <img class="responsive-img  red-border" src="{{imgPath}}{{topRatedTv.results[14].poster_path}}" alt="">
+            <h5 class="similar-tv-vote">{{topRatedTv.results[14].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#tv/{{topRatedTv.results[15].id}}">
+            <img class="responsive-img  red-border" src="{{imgPath}}{{topRatedTv.results[15].poster_path}}" alt="">
+            <h5 class="similar-tv-vote">{{topRatedTv.results[15].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#tv/{{topRatedTv.results[16].id}}">
+            <img class="responsive-img  red-border" src="{{imgPath}}{{topRatedTv.results[16].poster_path}}" alt="">
+            <h5 class="similar-tv-vote">{{topRatedTv.results[16].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#tv/{{topRatedTv.results[17].id}}">
+            <img class="responsive-img  red-border" src="{{imgPath}}{{topRatedTv.results[17].poster_path}}" alt="">
+            <h5 class="similar-tv-vote">{{topRatedTv.results[17].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#tv/{{topRatedTv.results[18].id}}">
+            <img class="responsive-img  red-border" src="{{imgPath}}{{topRatedTv.results[18].poster_path}}" alt="">
+            <h5 class="similar-tv-vote">{{topRatedTv.results[18].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#tv/{{topRatedTv.results[19].id}}">
+            <img class="responsive-img  red-border" src="{{imgPath}}{{topRatedTv.results[19].poster_path}}" alt="">
+            <h5 class="similar-tv-vote">{{topRatedTv.results[19].vote_average}}</h5>
+          </a>
+        </li>
+      </ul>
     </div>
+    <i class="fa fa-chevron-left fa-chevron-left3 fa-2x"></i>
+    <i class="fa fa-chevron-right fa-chevron-right3 fa-2x"></i>
   </div>
-</div>
-</br>
+
+</div><!--End of row -->
+
+
+<script>
+$('.fa-chevron-right1').click(function() {
+  $('.slider1').slider('next');
+  $('.slider1').slider('pause');
+  setTimeout(function(){
+    $('.slider1').slider('start');
+  }, 5000);
+});
+$('.fa-chevron-left1').click(function() {
+  $('.slider1').slider('prev');
+  $('.slider1').slider('pause');
+  setTimeout(function(){
+    $('.slider1').slider('start');
+  }, 5000);
+});
+$('.fa-chevron-right2').click(function() {
+  $('.slider2').slider('next');
+  $('.slider2').slider('pause');
+  setTimeout(function(){
+    $('.slider2').slider('start');
+  }, 5000);
+});
+$('.fa-chevron-left2').click(function() {
+  $('.slider2').slider('prev');
+  $('.slider2').slider('pause');
+  setTimeout(function(){
+    $('.slider2').slider('start');
+  }, 5000);
+});
+$('.fa-chevron-right3').click(function() {
+  $('.slider3').slider('next');
+  $('.slider3').slider('pause');
+  setTimeout(function(){
+    $('.slider3').slider('start');
+  }, 5000);
+});
+$('.fa-chevron-left3').click(function() {
+  $('.slider3').slider('prev');
+  $('.slider3').slider('pause');
+  setTimeout(function(){
+    $('.slider3').slider('start');
+  }, 5000);
+});
+</script>
+
+
+
+
+
 
 
 
