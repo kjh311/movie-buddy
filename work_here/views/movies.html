@@ -1,287 +1,638 @@
 <script>
 $('.carousel').carousel();
 $("html, body").animate({ scrollTop: 0 }, 0);
+$('.slider').slider({full_width: false});
 </script>
 
 
-<!-- Popular Movies -->
-  <div class="row moviesPage animated fadeIn">
-    <div class="col s12">
-      <div class="carousel">
-        <h4>Now Playing in Theaters:</h4>
-        <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{nowPlayingMovies.results[0].poster_path}}" alt="">
-          <h5 class="vote">{{nowPlayingMovies.results[0].vote_average}}</h5>
-        </div></a>
-        <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{nowPlayingMovies.results[1].poster_path}}" alt="">
-          <h5 class="vote">{{nowPlayingMovies.results[1].vote_average}}</h5>
-        </div></a>
-        <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{nowPlayingMovies.results[2].poster_path}}" alt="">
-          <h5 class="vote">{{nowPlayingMovies.results[2].vote_average}}</h5>
-        </div></a>
-        <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{nowPlayingMovies.results[3].poster_path}}" alt="">
-          <h5 class="vote">{{nowPlayingMovies.results[3].vote_average}}</h5>
-        </div></a>
-        <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{nowPlayingMovies.results[4].poster_path}}" alt="">
-          <h5 class="vote">{{nowPlayingMovies.results[4].vote_average}}</h5>
-        </div></a>
-        <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{nowPlayingMovies.results[5].poster_path}}" alt="">
-          <h5 class="vote">{{nowPlayingMovies.results[5].vote_average}}</h5>
-        </div></a>
-        <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{nowPlayingMovies.results[6].poster_path}}" alt="">
-          <h5 class="vote">{{nowPlayingMovies.results[6].vote_average}}</h5>
-        </div></a>
-        <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{nowPlayingMovies.results[7].poster_path}}" alt="">
-          <h5 class="vote">{{nowPlayingMovies.results[7].vote_average}}</h5>
-        </div></a>
-        <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{nowPlayingMovies.results[8].poster_path}}" alt="">
-          <h5 class="vote">{{nowPlayingMovies.results[8].vote_average}}</h5>
-        </div></a>
-        <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{nowPlayingMovies.results[9].poster_path}}" alt="">
-          <h5 class="vote">{{nowPlayingMovies.results[9].vote_average}}</h5>
-        </div></a>
-        <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{nowPlayingMovies.results[10].poster_path}}" alt="">
-          <h5 class="vote">{{nowPlayingMovies.results[10].vote_average}}</h5>
-        </div></a>
-        <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{nowPlayingMovies.results[11].poster_path}}" alt="">
-          <h5 class="vote">{{nowPlayingMovies.results[11].vote_average}}</h5>
-        </div></a>
-        <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{nowPlayingMovies.results[12].poster_path}}" alt="">
-          <h5 class="vote">{{nowPlayingMovies.results[12].vote_average}}</h5>
-        </div></a>
-        <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{nowPlayingMovies.results[13].poster_path}}" alt="">
-          <h5 class="vote">{{nowPlayingMovies.results[13].vote_average}}</h5>
-        </div></a>
-        <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{nowPlayingMovies.results[14].poster_path}}" alt="">
-          <h5 class="vote">{{nowPlayingMovies.results[14].vote_average}}</h5>
-        </div></a>
-        <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{nowPlayingMovies.results[15].poster_path}}" alt="">
-          <h5 class="vote">{{nowPlayingMovies.results[15].vote_average}}</h5>
-        </div></a>
-        <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{nowPlayingMovies.results[16].poster_path}}" alt="">
-          <h5 class="vote">{{nowPlayingMovies.results[16].vote_average}}</h5>
-        </div></a>
-        <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{nowPlayingMovies.results[17].poster_path}}" alt="">
-          <h5 class="vote">{{nowPlayingMovies.results[17].vote_average}}</h5>
-        </div></a>
-        <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{nowPlayingMovies.results[18].poster_path}}" alt="">
-          <h5 class="vote">{{nowPlayingMovies.results[18].vote_average}}</h5>
-        </div></a>
-        <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{nowPlayingMovies.results[19].poster_path}}" alt="">
-          <h5 class="vote">{{nowPlayingMovies.results[19].vote_average}}</h5>
-        </div></a>
-      </div>
+<div class="row">
+
+  <!-- Popular Movies Slider -->
+  <div class="tv-cast-wrapper col s12 m12 l4 offset-l2 offset-m4 offset-s1">
+    <h4 class="drop-shadow">Now Playing in Theaters:</h4>
+    <div class="slider tv-slider slider1">
+      <ul class="slides z-depth-3 slides1">
+        <li>
+          <a href="#movie/{{nowPlayingMovies.results[0].id}}">
+            <img class="responsive-img" src="{{imgPath}}{{nowPlayingMovies.results[0].poster_path}}" alt="">
+            <h5 class="similar-tv-vote">{{nowPlayingMovies.results[0].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#movie/{{nowPlayingMovies.results[1].id}}">
+            <img class="responsive-img" src="{{imgPath}}{{nowPlayingMovies.results[1].poster_path}}" alt="">
+            <h5 class="similar-tv-vote">{{nowPlayingMovies.results[1].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#movie/{{nowPlayingMovies.results[2].id}}">
+            <img class="responsive-img" src="{{imgPath}}{{nowPlayingMovies.results[2].poster_path}}" alt="">
+            <h5 class="similar-tv-vote">{{nowPlayingMovies.results[2].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#movie/{{nowPlayingMovies.results[3].id}}">
+            <img class="responsive-img" src="{{imgPath}}{{nowPlayingMovies.results[3].poster_path}}" alt="">
+            <h5 class="similar-tv-vote">{{nowPlayingMovies.results[3].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#movie/{{nowPlayingMovies.results[4].id}}">
+            <img class="responsive-img" src="{{imgPath}}{{nowPlayingMovies.results[4].poster_path}}" alt="">
+            <h5 class="similar-tv-vote">{{nowPlayingMovies.results[4].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#movie/{{nowPlayingMovies.results[5].id}}">
+            <img class="responsive-img" src="{{imgPath}}{{nowPlayingMovies.results[5].poster_path}}" alt="">
+            <h5 class="similar-tv-vote">{{nowPlayingMovies.results[5].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#movie/{{nowPlayingMovies.results[6].id}}">
+            <img class="responsive-img" src="{{imgPath}}{{nowPlayingMovies.results[6].poster_path}}" alt="">
+            <h5 class="similar-tv-vote">{{nowPlayingMovies.results[6].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#movie/{{nowPlayingMovies.results[7].id}}">
+            <img class="responsive-img" src="{{imgPath}}{{nowPlayingMovies.results[7].poster_path}}" alt="">
+            <h5 class="similar-tv-vote">{{nowPlayingMovies.results[7].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#movie/{{nowPlayingMovies.results[8].id}}">
+            <img class="responsive-img" src="{{imgPath}}{{nowPlayingMovies.results[8].poster_path}}" alt="">
+            <h5 class="similar-tv-vote">{{nowPlayingMovies.results[8].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#movie/{{nowPlayingMovies.results[9].id}}">
+            <img class="responsive-img" src="{{imgPath}}{{nowPlayingMovies.results[9].poster_path}}" alt="">
+            <h5 class="similar-tv-vote">{{nowPlayingMovies.results[9].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#movie/{{nowPlayingMovies.results[10].id}}">
+            <img class="responsive-img" src="{{imgPath}}{{nowPlayingMovies.results[10].poster_path}}" alt="">
+            <h5 class="similar-tv-vote">{{nowPlayingMovies.results[10].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#movie/{{nowPlayingMovies.results[11].id}}">
+            <img class="responsive-img" src="{{imgPath}}{{nowPlayingMovies.results[11].poster_path}}" alt="">
+            <h5 class="similar-tv-vote">{{nowPlayingMovies.results[11].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#movie/{{nowPlayingMovies.results[12].id}}">
+            <img class="responsive-img" src="{{imgPath}}{{nowPlayingMovies.results[12].poster_path}}" alt="">
+            <h5 class="similar-tv-vote">{{nowPlayingMovies.results[12].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#movie/{{nowPlayingMovies.results[13].id}}">
+            <img class="responsive-img" src="{{imgPath}}{{nowPlayingMovies.results[13].poster_path}}" alt="">
+            <h5 class="similar-tv-vote">{{nowPlayingMovies.results[13].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#movie/{{nowPlayingMovies.results[14].id}}">
+            <img class="responsive-img" src="{{imgPath}}{{nowPlayingMovies.results[14].poster_path}}" alt="">
+            <h5 class="similar-tv-vote">{{nowPlayingMovies.results[14].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#movie/{{nowPlayingMovies.results[15].id}}">
+            <img class="responsive-img" src="{{imgPath}}{{nowPlayingMovies.results[15].poster_path}}" alt="">
+            <h5 class="similar-tv-vote">{{nowPlayingMovies.results[15].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#movie/{{nowPlayingMovies.results[16].id}}">
+            <img class="responsive-img" src="{{imgPath}}{{nowPlayingMovies.results[16].poster_path}}" alt="">
+            <h5 class="similar-tv-vote">{{nowPlayingMovies.results[16].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#movie/{{nowPlayingMovies.results[17].id}}">
+            <img class="responsive-img" src="{{imgPath}}{{nowPlayingMovies.results[17].poster_path}}" alt="">
+            <h5 class="similar-tv-vote">{{nowPlayingMovies.results[17].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#movie/{{nowPlayingMovies.results[18].id}}">
+            <img class="responsive-img" src="{{imgPath}}{{nowPlayingMovies.results[18].poster_path}}" alt="">
+            <h5 class="similar-tv-vote">{{nowPlayingMovies.results[18].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#movie/{{nowPlayingMovies.results[19].id}}">
+            <img class="responsive-img" src="{{imgPath}}{{nowPlayingMovies.results[19].poster_path}}" alt="">
+            <h5 class="similar-tv-vote">{{nowPlayingMovies.results[19].vote_average}}</h5>
+          </a>
+        </li>
+      </ul>
     </div>
+    <i class="fa fa-chevron-left fa-chevron-left1 fa-2x"></i>
+    <i class="fa fa-chevron-right fa-chevron-right1 fa-2x"></i>
+  </div>
+
+
+  <!-- Coming Attractions Slider -->
+  <div class="tv-cast-wrapper col s12 m12 l4 offset-l2 offset-m4 offset-s1">
+    <h4 class="drop-shadow">Coming Soon to Theaters:</h4>
+    <div class="slider tv-slider slider2">
+      <ul class="slides z-depth-3 slides2">
+        <li>
+          <a href="#movie/{{comingMovies.results[0].id}}">
+            <img class="responsive-img" src="{{imgPath}}{{comingMovies.results[0].poster_path}}" alt="">
+            <h5 class="similar-tv-vote">{{comingMovies.results[0].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#movie/{{comingMovies.results[1].id}}">
+            <img class="responsive-img" src="{{imgPath}}{{comingMovies.results[1].poster_path}}" alt="">
+            <h5 class="similar-tv-vote">{{comingMovies.results[1].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#movie/{{comingMovies.results[2].id}}">
+            <img class="responsive-img" src="{{imgPath}}{{comingMovies.results[2].poster_path}}" alt="">
+            <h5 class="similar-tv-vote">{{comingMovies.results[2].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#movie/{{comingMovies.results[3].id}}">
+            <img class="responsive-img" src="{{imgPath}}{{comingMovies.results[3].poster_path}}" alt="">
+            <h5 class="similar-tv-vote">{{comingMovies.results[3].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#movie/{{comingMovies.results[4].id}}">
+            <img class="responsive-img" src="{{imgPath}}{{comingMovies.results[4].poster_path}}" alt="">
+            <h5 class="similar-tv-vote">{{comingMovies.results[4].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#movie/{{comingMovies.results[5].id}}">
+            <img class="responsive-img" src="{{imgPath}}{{comingMovies.results[5].poster_path}}" alt="">
+            <h5 class="similar-tv-vote">{{comingMovies.results[5].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#movie/{{comingMovies.results[6].id}}">
+            <img class="responsive-img" src="{{imgPath}}{{comingMovies.results[6].poster_path}}" alt="">
+            <h5 class="similar-tv-vote">{{comingMovies.results[6].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#movie/{{comingMovies.results[7].id}}">
+            <img class="responsive-img" src="{{imgPath}}{{comingMovies.results[7].poster_path}}" alt="">
+            <h5 class="similar-tv-vote">{{comingMovies.results[7].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#movie/{{comingMovies.results[8].id}}">
+            <img class="responsive-img" src="{{imgPath}}{{comingMovies.results[8].poster_path}}" alt="">
+            <h5 class="similar-tv-vote">{{comingMovies.results[8].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#movie/{{comingMovies.results[9].id}}">
+            <img class="responsive-img" src="{{imgPath}}{{comingMovies.results[9].poster_path}}" alt="">
+            <h5 class="similar-tv-vote">{{comingMovies.results[9].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#movie/{{comingMovies.results[10].id}}">
+            <img class="responsive-img" src="{{imgPath}}{{comingMovies.results[10].poster_path}}" alt="">
+            <h5 class="similar-tv-vote">{{comingMovies.results[10].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#movie/{{comingMovies.results[11].id}}">
+            <img class="responsive-img" src="{{imgPath}}{{comingMovies.results[11].poster_path}}" alt="">
+            <h5 class="similar-tv-vote">{{comingMovies.results[11].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#movie/{{comingMovies.results[12].id}}">
+            <img class="responsive-img" src="{{imgPath}}{{comingMovies.results[12].poster_path}}" alt="">
+            <h5 class="similar-tv-vote">{{comingMovies.results[12].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#movie/{{comingMovies.results[13].id}}">
+            <img class="responsive-img" src="{{imgPath}}{{comingMovies.results[13].poster_path}}" alt="">
+            <h5 class="similar-tv-vote">{{comingMovies.results[13].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#movie/{{comingMovies.results[14].id}}">
+            <img class="responsive-img" src="{{imgPath}}{{comingMovies.results[14].poster_path}}" alt="">
+            <h5 class="similar-tv-vote">{{comingMovies.results[14].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#movie/{{comingMovies.results[15].id}}">
+            <img class="responsive-img" src="{{imgPath}}{{comingMovies.results[15].poster_path}}" alt="">
+            <h5 class="similar-tv-vote">{{comingMovies.results[15].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#movie/{{comingMovies.results[16].id}}">
+            <img class="responsive-img" src="{{imgPath}}{{comingMovies.results[16].poster_path}}" alt="">
+            <h5 class="similar-tv-vote">{{comingMovies.results[16].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#movie/{{comingMovies.results[17].id}}">
+            <img class="responsive-img" src="{{imgPath}}{{comingMovies.results[17].poster_path}}" alt="">
+            <h5 class="similar-tv-vote">{{comingMovies.results[17].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#movie/{{comingMovies.results[18].id}}">
+            <img class="responsive-img" src="{{imgPath}}{{comingMovies.results[18].poster_path}}" alt="">
+            <h5 class="similar-tv-vote">{{comingMovies.results[18].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#movie/{{comingMovies.results[19].id}}">
+            <img class="responsive-img" src="{{imgPath}}{{comingMovies.results[19].poster_path}}" alt="">
+            <h5 class="similar-tv-vote">{{comingMovies.results[19].vote_average}}</h5>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <i class="fa fa-chevron-left fa-chevron-left2 fa-2x"></i>
+    <i class="fa fa-chevron-right fa-chevron-right2 fa-2x"></i>
+  </div>
+
+
+</div>
+<!-- end of row -->
+
+
+
+
+<!-- Top Rated Slider: -->
+<div class="row">
+
+  <!-- Coming Attractions Slider -->
+  <div class="tv-cast-wrapper col s12 m12 l4 offset-l2 offset-m4 offset-s1">
+    <h4 class="drop-shadow">Top Rated Movies:</h4>
+    <div class="slider tv-slider slider3">
+      <ul class="slides z-depth-3 slides3">
+        <li>
+          <a href="#movie/{{topMovies.results[0].id}}">
+            <img class="responsive-img" src="{{imgPath}}{{topMovies.results[0].poster_path}}" alt="">
+            <h5 class="similar-tv-vote">{{topMovies.results[0].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#movie/{{topMovies.results[1].id}}">
+            <img class="responsive-img" src="{{imgPath}}{{topMovies.results[1].poster_path}}" alt="">
+            <h5 class="similar-tv-vote">{{topMovies.results[1].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#movie/{{topMovies.results[2].id}}">
+            <img class="responsive-img" src="{{imgPath}}{{topMovies.results[2].poster_path}}" alt="">
+            <h5 class="similar-tv-vote">{{topMovies.results[2].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#movie/{{topMovies.results[3].id}}">
+            <img class="responsive-img" src="{{imgPath}}{{topMovies.results[3].poster_path}}" alt="">
+            <h5 class="similar-tv-vote">{{topMovies.results[3].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#movie/{{topMovies.results[4].id}}">
+            <img class="responsive-img" src="{{imgPath}}{{topMovies.results[4].poster_path}}" alt="">
+            <h5 class="similar-tv-vote">{{topMovies.results[4].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#movie/{{topMovies.results[5].id}}">
+            <img class="responsive-img" src="{{imgPath}}{{topMovies.results[5].poster_path}}" alt="">
+            <h5 class="similar-tv-vote">{{topMovies.results[5].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#movie/{{topMovies.results[6].id}}">
+            <img class="responsive-img" src="{{imgPath}}{{topMovies.results[6].poster_path}}" alt="">
+            <h5 class="similar-tv-vote">{{topMovies.results[6].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#movie/{{topMovies.results[7].id}}">
+            <img class="responsive-img" src="{{imgPath}}{{topMovies.results[7].poster_path}}" alt="">
+            <h5 class="similar-tv-vote">{{topMovies.results[7].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#movie/{{topMovies.results[8].id}}">
+            <img class="responsive-img" src="{{imgPath}}{{topMovies.results[8].poster_path}}" alt="">
+            <h5 class="similar-tv-vote">{{topMovies.results[8].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#movie/{{topMovies.results[9].id}}">
+            <img class="responsive-img" src="{{imgPath}}{{topMovies.results[9].poster_path}}" alt="">
+            <h5 class="similar-tv-vote">{{topMovies.results[9].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#movie/{{topMovies.results[10].id}}">
+            <img class="responsive-img" src="{{imgPath}}{{topMovies.results[10].poster_path}}" alt="">
+            <h5 class="similar-tv-vote">{{topMovies.results[10].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#movie/{{topMovies.results[11].id}}">
+            <img class="responsive-img" src="{{imgPath}}{{topMovies.results[11].poster_path}}" alt="">
+            <h5 class="similar-tv-vote">{{topMovies.results[11].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#movie/{{topMovies.results[12].id}}">
+            <img class="responsive-img" src="{{imgPath}}{{topMovies.results[12].poster_path}}" alt="">
+            <h5 class="similar-tv-vote">{{topMovies.results[12].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#movie/{{topMovies.results[13].id}}">
+            <img class="responsive-img" src="{{imgPath}}{{topMovies.results[13].poster_path}}" alt="">
+            <h5 class="similar-tv-vote">{{topMovies.results[13].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#movie/{{topMovies.results[14].id}}">
+            <img class="responsive-img" src="{{imgPath}}{{topMovies.results[14].poster_path}}" alt="">
+            <h5 class="similar-tv-vote">{{topMovies.results[14].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#movie/{{topMovies.results[15].id}}">
+            <img class="responsive-img" src="{{imgPath}}{{topMovies.results[15].poster_path}}" alt="">
+            <h5 class="similar-tv-vote">{{topMovies.results[15].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#movie/{{topMovies.results[16].id}}">
+            <img class="responsive-img" src="{{imgPath}}{{topMovies.results[16].poster_path}}" alt="">
+            <h5 class="similar-tv-vote">{{topMovies.results[16].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#movie/{{topMovies.results[17].id}}">
+            <img class="responsive-img" src="{{imgPath}}{{topMovies.results[17].poster_path}}" alt="">
+            <h5 class="similar-tv-vote">{{topMovies.results[17].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#movie/{{topMovies.results[18].id}}">
+            <img class="responsive-img" src="{{imgPath}}{{topMovies.results[18].poster_path}}" alt="">
+            <h5 class="similar-tv-vote">{{topMovies.results[18].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#movie/{{topMovies.results[19].id}}">
+            <img class="responsive-img" src="{{imgPath}}{{topMovies.results[19].poster_path}}" alt="">
+            <h5 class="similar-tv-vote">{{topMovies.results[19].vote_average}}</h5>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <i class="fa fa-chevron-left fa-chevron-left3 fa-2x"></i>
+    <i class="fa fa-chevron-right fa-chevron-right3 fa-2x"></i>
   </div>
 
 
 
-<!-- Coming Attractions: -->
-  <div class="row">
-    <div class="col s12">
-      <div class="carousel">
-        <h4>Coming Attractions:</h4>
-        <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{comingMovies.results[0].poster_path}}" alt="">
-          <h5 class="vote">{{comingMovies.results[0].vote_average}}</h5>
-        </div></a>
-        <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{comingMovies.results[1].poster_path}}" alt="">
-          <h5 class="vote">{{comingMovies.results[1].vote_average}}</h5>
-        </div></a>
-        <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{comingMovies.results[2].poster_path}}" alt="">
-          <h5 class="vote">{{comingMovies.results[2].vote_average}}</h5>
-        </div></a>
-        <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{comingMovies.results[3].poster_path}}" alt="">
-          <h5 class="vote">{{comingMovies.results[3].vote_average}}</h5>
-        </div></a>
-        <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{comingMovies.results[4].poster_path}}" alt="">
-          <h5 class="vote">{{comingMovies.results[4].vote_average}}</h5>
-        </div></a>
-        <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{comingMovies.results[5].poster_path}}" alt="">
-          <h5 class="vote">{{comingMovies.results[5].vote_average}}</h5>
-        </div></a>
-        <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{comingMovies.results[6].poster_path}}" alt="">
-          <h5 class="vote">{{comingMovies.results[6].vote_average}}</h5>
-        </div></a>
-        <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{comingMovies.results[7].poster_path}}" alt="">
-          <h5 class="vote">{{comingMovies.results[7].vote_average}}</h5>
-        </div></a>
-        <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{comingMovies.results[8].poster_path}}" alt="">
-          <h5 class="vote">{{comingMovies.results[8].vote_average}}</h5>
-        </div></a>
-        <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{comingMovies.results[9].poster_path}}" alt="">
-          <h5 class="vote">{{comingMovies.results[9].vote_average}}</h5>
-        </div></a>
-        <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{comingMovies.results[10].poster_path}}" alt="">
-          <h5 class="vote">{{comingMovies.results[10].vote_average}}</h5>
-        </div></a>
-        <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{comingMovies.results[11].poster_path}}" alt="">
-          <h5 class="vote">{{comingMovies.results[11].vote_average}}</h5>
-        </div></a>
-        <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{comingMovies.results[12].poster_path}}" alt="">
-          <h5 class="vote">{{comingMovies.results[12].vote_average}}</h5>
-        </div></a>
-        <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{comingMovies.results[13].poster_path}}" alt="">
-          <h5 class="vote">{{comingMovies.results[13].vote_average}}</h5>
-        </div></a>
-        <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{comingMovies.results[14].poster_path}}" alt="">
-          <h5 class="vote">{{comingMovies.results[14].vote_average}}</h5>
-        </div></a>
-        <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{comingMovies.results[15].poster_path}}" alt="">
-          <h5 class="vote">{{comingMovies.results[15].vote_average}}</h5>
-        </div></a>
-        <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{comingMovies.results[16].poster_path}}" alt="">
-          <h5 class="vote">{{comingMovies.results[16].vote_average}}</h5>
-        </div></a>
-        <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{comingMovies.results[17].poster_path}}" alt="">
-          <h5 class="vote">{{comingMovies.results[17].vote_average}}</h5>
-        </div></a>
-        <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{comingMovies.results[18].poster_path}}" alt="">
-          <h5 class="vote">{{comingMovies.results[18].vote_average}}</h5>
-        </div></a>
-        <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{comingMovies.results[19].poster_path}}" alt="">
-          <h5 class="vote">{{comingMovies.results[19].vote_average}}</h5>
-        </div></a>
-      </div>
+  <!--Action Movies Slider -->
+  <div class="tv-cast-wrapper col s12 m12 l4 offset-l2 offset-m4 offset-s1">
+    <h4 class="drop-shadow">Action Movies:</h4>
+    <div class="slider tv-slider slider4">
+      <ul class="slides z-depth-3 slides4">
+        <li>
+          <a href="#movie/{{actionMovies.results[0].id}}">
+            <img class="responsive-img" src="{{imgPath}}{{actionMovies.results[0].poster_path}}" alt="">
+            <h5 class="similar-tv-vote">{{actionMovies.results[0].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#movie/{{actionMovies.results[1].id}}">
+            <img class="responsive-img" src="{{imgPath}}{{actionMovies.results[1].poster_path}}" alt="">
+            <h5 class="similar-tv-vote">{{actionMovies.results[1].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#movie/{{actionMovies.results[2].id}}">
+            <img class="responsive-img" src="{{imgPath}}{{actionMovies.results[2].poster_path}}" alt="">
+            <h5 class="similar-tv-vote">{{actionMovies.results[2].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#movie/{{actionMovies.results[3].id}}">
+            <img class="responsive-img" src="{{imgPath}}{{actionMovies.results[3].poster_path}}" alt="">
+            <h5 class="similar-tv-vote">{{actionMovies.results[3].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#movie/{{actionMovies.results[4].id}}">
+            <img class="responsive-img" src="{{imgPath}}{{actionMovies.results[4].poster_path}}" alt="">
+            <h5 class="similar-tv-vote">{{actionMovies.results[4].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#movie/{{actionMovies.results[5].id}}">
+            <img class="responsive-img" src="{{imgPath}}{{actionMovies.results[5].poster_path}}" alt="">
+            <h5 class="similar-tv-vote">{{actionMovies.results[5].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#movie/{{actionMovies.results[6].id}}">
+            <img class="responsive-img" src="{{imgPath}}{{actionMovies.results[6].poster_path}}" alt="">
+            <h5 class="similar-tv-vote">{{actionMovies.results[6].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#movie/{{actionMovies.results[7].id}}">
+            <img class="responsive-img" src="{{imgPath}}{{actionMovies.results[7].poster_path}}" alt="">
+            <h5 class="similar-tv-vote">{{actionMovies.results[7].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#movie/{{actionMovies.results[8].id}}">
+            <img class="responsive-img" src="{{imgPath}}{{actionMovies.results[8].poster_path}}" alt="">
+            <h5 class="similar-tv-vote">{{actionMovies.results[8].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#movie/{{actionMovies.results[9].id}}">
+            <img class="responsive-img" src="{{imgPath}}{{actionMovies.results[9].poster_path}}" alt="">
+            <h5 class="similar-tv-vote">{{actionMovies.results[9].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#movie/{{actionMovies.results[10].id}}">
+            <img class="responsive-img" src="{{imgPath}}{{actionMovies.results[10].poster_path}}" alt="">
+            <h5 class="similar-tv-vote">{{actionMovies.results[10].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#movie/{{actionMovies.results[11].id}}">
+            <img class="responsive-img" src="{{imgPath}}{{actionMovies.results[11].poster_path}}" alt="">
+            <h5 class="similar-tv-vote">{{actionMovies.results[11].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#movie/{{actionMovies.results[12].id}}">
+            <img class="responsive-img" src="{{imgPath}}{{actionMovies.results[12].poster_path}}" alt="">
+            <h5 class="similar-tv-vote">{{actionMovies.results[12].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#movie/{{actionMovies.results[13].id}}">
+            <img class="responsive-img" src="{{imgPath}}{{actionMovies.results[13].poster_path}}" alt="">
+            <h5 class="similar-tv-vote">{{actionMovies.results[13].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#movie/{{actionMovies.results[14].id}}">
+            <img class="responsive-img" src="{{imgPath}}{{actionMovies.results[14].poster_path}}" alt="">
+            <h5 class="similar-tv-vote">{{actionMovies.results[14].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#movie/{{actionMovies.results[15].id}}">
+            <img class="responsive-img" src="{{imgPath}}{{actionMovies.results[15].poster_path}}" alt="">
+            <h5 class="similar-tv-vote">{{actionMovies.results[15].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#movie/{{actionMovies.results[16].id}}">
+            <img class="responsive-img" src="{{imgPath}}{{actionMovies.results[16].poster_path}}" alt="">
+            <h5 class="similar-tv-vote">{{actionMovies.results[16].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#movie/{{actionMovies.results[17].id}}">
+            <img class="responsive-img" src="{{imgPath}}{{actionMovies.results[17].poster_path}}" alt="">
+            <h5 class="similar-tv-vote">{{actionMovies.results[17].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#movie/{{actionMovies.results[18].id}}">
+            <img class="responsive-img" src="{{imgPath}}{{actionMovies.results[18].poster_path}}" alt="">
+            <h5 class="similar-tv-vote">{{actionMovies.results[18].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#movie/{{actionMovies.results[19].id}}">
+            <img class="responsive-img" src="{{imgPath}}{{actionMovies.results[19].poster_path}}" alt="">
+            <h5 class="similar-tv-vote">{{actionMovies.results[19].vote_average}}</h5>
+          </a>
+        </li>
+      </ul>
     </div>
+    <i class="fa fa-chevron-left fa-chevron-left4 fa-2x"></i>
+    <i class="fa fa-chevron-right fa-chevron-right4 fa-2x"></i>
   </div>
+</div><!--End of row -->
 
 
 
-<!-- Top Rated: -->
-  <div class="row">
-    <div class="col s12">
-      <div class="carousel">
-        <h4>Top Rated Movies:</h4>
-        <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{topMovies.results[0].poster_path}}" alt="">
-          <h5 class="vote">{{topMovies.results[0].vote_average}}</h5>
-        </div></a>
-        <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{topMovies.results[1].poster_path}}" alt="">
-          <h5 class="vote">{{topMovies.results[1].vote_average}}</h5>
-        </div></a>
-        <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{topMovies.results[2].poster_path}}" alt="">
-          <h5 class="vote">{{topMovies.results[2].vote_average}}</h5>
-        </div></a>
-        <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{topMovies.results[3].poster_path}}" alt="">
-          <h5 class="vote">{{topMovies.results[3].vote_average}}</h5>
-        </div></a>
-        <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{topMovies.results[4].poster_path}}" alt="">
-          <h5 class="vote">{{topMovies.results[4].vote_average}}</h5>
-        </div></a>
-        <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{topMovies.results[5].poster_path}}" alt="">
-          <h5 class="vote">{{topMovies.results[5].vote_average}}</h5>
-        </div></a>
-        <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{topMovies.results[6].poster_path}}" alt="">
-          <h5 class="vote">{{topMovies.results[6].vote_average}}</h5>
-        </div></a>
-        <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{topMovies.results[7].poster_path}}" alt="">
-          <h5 class="vote">{{topMovies.results[7].vote_average}}</h5>
-        </div></a>
-        <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{topMovies.results[8].poster_path}}" alt="">
-          <h5 class="vote">{{topMovies.results[8].vote_average}}</h5>
-        </div></a>
-        <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{topMovies.results[9].poster_path}}" alt="">
-          <h5 class="vote">{{topMovies.results[9].vote_average}}</h5>
-        </div></a>
-        <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{topMovies.results[10].poster_path}}" alt="">
-          <h5 class="vote">{{topMovies.results[10].vote_average}}</h5>
-        </div></a>
-        <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{topMovies.results[11].poster_path}}" alt="">
-          <h5 class="vote">{{topMovies.results[11].vote_average}}</h5>
-        </div></a>
-        <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{topMovies.results[12].poster_path}}" alt="">
-          <h5 class="vote">{{topMovies.results[12].vote_average}}</h5>
-        </div></a>
-        <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{topMovies.results[13].poster_path}}" alt="">
-          <h5 class="vote">{{topMovies.results[13].vote_average}}</h5>
-        </div></a>
-        <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{topMovies.results[14].poster_path}}" alt="">
-          <h5 class="vote">{{topMovies.results[14].vote_average}}</h5>
-        </div></a>
-        <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{topMovies.results[15].poster_path}}" alt="">
-          <h5 class="vote">{{topMovies.results[15].vote_average}}</h5>
-        </div></a>
-        <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{topMovies.results[16].poster_path}}" alt="">
-          <h5 class="vote">{{topMovies.results[16].vote_average}}</h5>
-        </div></a>
-        <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{topMovies.results[17].poster_path}}" alt="">
-          <h5 class="vote">{{topMovies.results[17].vote_average}}</h5>
-        </div></a>
-        <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{topMovies.results[18].poster_path}}" alt="">
-          <h5 class="vote">{{topMovies.results[18].vote_average}}</h5>
-        </div></a>
-        <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{topMovies.results[19].poster_path}}" alt="">
-          <h5 class="vote">{{topMovies.results[19].vote_average}}</h5>
-        </div></a>
-      </div>
-    </div>
-  </div>
 
 
-<!-- Action Movies -->
-  <div class="row">
-    <div class="col s12">
-      <div class="carousel">
-        <h4>Action Movies:</h4>
-        <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{actionMovies.results[0].poster_path}}" alt="">
-          <h5 class="vote">{{actionMovies.results[0].vote_average}}</h5>
-        </div></a>
-        <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{actionMovies.results[1].poster_path}}" alt="">
-          <h5 class="vote">{{actionMovies.results[1].vote_average}}</h5>
-        </div></a>
-        <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{actionMovies.results[2].poster_path}}" alt="">
-          <h5 class="vote">{{actionMovies.results[2].vote_average}}</h5>
-        </div></a>
-        <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{actionMovies.results[3].poster_path}}" alt="">
-          <h5 class="vote">{{actionMovies.results[3].vote_average}}</h5>
-        </div></a>
-        <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{actionMovies.results[4].poster_path}}" alt="">
-          <h5 class="vote">{{actionMovies.results[4].vote_average}}</h5>
-        </div></a>
-        <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{actionMovies.results[5].poster_path}}" alt="">
-          <h5 class="vote">{{actionMovies.results[5].vote_average}}</h5>
-        </div></a>
-        <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{actionMovies.results[6].poster_path}}" alt="">
-          <h5 class="vote">{{actionMovies.results[6].vote_average}}</h5>
-        </div></a>
-        <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{actionMovies.results[7].poster_path}}" alt="">
-          <h5 class="vote">{{actionMovies.results[7].vote_average}}</h5>
-        </div></a>
-        <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{actionMovies.results[8].poster_path}}" alt="">
-          <h5 class="vote">{{actionMovies.results[8].vote_average}}</h5>
-        </div></a>
-        <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{actionMovies.results[9].poster_path}}" alt="">
-          <h5 class="vote">{{actionMovies.results[9].vote_average}}</h5>
-        </div></a>
-        <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{actionMovies.results[10].poster_path}}" alt="">
-          <h5 class="vote">{{actionMovies.results[10].vote_average}}</h5>
-        </div></a>
-        <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{actionMovies.results[11].poster_path}}" alt="">
-          <h5 class="vote">{{actionMovies.results[11].vote_average}}</h5>
-        </div></a>
-        <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{actionMovies.results[12].poster_path}}" alt="">
-          <h5 class="vote">{{actionMovies.results[12].vote_average}}</h5>
-        </div></a>
-        <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{actionMovies.results[13].poster_path}}" alt="">
-          <h5 class="vote">{{actionMovies.results[13].vote_average}}</h5>
-        </div></a>
-        <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{actionMovies.results[14].poster_path}}" alt="">
-          <h5 class="vote">{{actionMovies.results[14].vote_average}}</h5>
-        </div></a>
-        <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{actionMovies.results[15].poster_path}}" alt="">
-          <h5 class="vote">{{actionMovies.results[15].vote_average}}</h5>
-        </div></a>
-        <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{actionMovies.results[16].poster_path}}" alt="">
-          <h5 class="vote">{{actionMovies.results[16].vote_average}}</h5>
-        </div></a>
-        <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{actionMovies.results[17].poster_path}}" alt="">
-          <h5 class="vote">{{actionMovies.results[17].vote_average}}</h5>
-        </div></a>
-        <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{actionMovies.results[18].poster_path}}" alt="">
-          <h5 class="vote">{{actionMovies.results[18].vote_average}}</h5>
-        </div></a>
-        <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{actionMovies.results[19].poster_path}}" alt="">
-          <h5 class="vote">{{actionMovies.results[19].vote_average}}</h5>
-        </div></a>
-      </div>
-    </div>
-  </div>
+<script>
+$('.fa-chevron-right1').click(function() {
+  $('.slider1').slider('next');
+  $('.slider1').slider('pause');
+  setTimeout(function(){
+    $('.slider1').slider('start');
+  }, 5000);
+});
+$('.fa-chevron-left1').click(function() {
+  $('.slider1').slider('prev');
+  $('.slider1').slider('pause');
+  setTimeout(function(){
+    $('.slider1').slider('start');
+  }, 5000);
+});
+$('.fa-chevron-right2').click(function() {
+  $('.slider2').slider('next');
+  $('.slider2').slider('pause');
+  setTimeout(function(){
+    $('.slider2').slider('start');
+  }, 5000);
+});
+$('.fa-chevron-left2').click(function() {
+  $('.slider2').slider('prev');
+  $('.slider2').slider('pause');
+  setTimeout(function(){
+    $('.slider2').slider('start');
+  }, 5000);
+});
+$('.fa-chevron-right3').click(function() {
+  $('.slider3').slider('next');
+  $('.slider3').slider('pause');
+  setTimeout(function(){
+    $('.slider3').slider('start');
+  }, 5000);
+});
+$('.fa-chevron-left3').click(function() {
+  $('.slider3').slider('prev');
+  $('.slider3').slider('pause');
+  setTimeout(function(){
+    $('.slider3').slider('start');
+  }, 5000);
+});
+$('.fa-chevron-right4').click(function() {
+  $('.slider4').slider('next');
+  $('.slider4').slider('pause');
+  setTimeout(function(){
+    $('.slider4').slider('start');
+  }, 5000);
+});
+$('.fa-chevron-left4').click(function() {
+  $('.slider4').slider('prev');
+  $('.slider4').slider('pause');
+  setTimeout(function(){
+    $('.slider4').slider('start');
+  }, 5000);
+});
+$('.fa-chevron-right5').click(function() {
+  $('.slider5').slider('next');
+  $('.slider5').slider('pause');
+  setTimeout(function(){
+    $('.slider5').slider('start');
+  }, 5000);
+});
+$('.fa-chevron-left5').click(function() {
+  $('.slider5').slider('prev');
+  $('.slider5').slider('pause');
+  setTimeout(function(){
+    $('.slider5').slider('start');
+  }, 5000);
+});
+$('.fa-chevron-right6').click(function() {
+  $('.slider6').slider('next');
+  $('.slider6').slider('pause');
+  setTimeout(function(){
+    $('.slider6').slider('start');
+  }, 5000);
+});
+$('.fa-chevron-left6').click(function() {
+  $('.slider6').slider('prev');
+  $('.slider6').slider('pause');
+  setTimeout(function(){
+    $('.slider6').slider('start');
+  }, 5000);
+});
+</script>
 
