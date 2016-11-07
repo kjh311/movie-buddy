@@ -42,12 +42,95 @@ $http.get(root_url+"movie/now_playing?api_key="+userService.key+"&language=en-US
     $scope.comingMovies = data;
   });
 
-// Action movieStuff
+// Action movies
   $http.get(root_url+"genre/28/movies?api_key="+userService.key+"&language=en-US&sort_by=created_at.asc").success(function(data) {
     $scope.actionMovies = data;
   });
 
+// Adventure movies
+  $http.get(root_url+"genre/12/movies?api_key="+userService.key+"&language=en-US&sort_by=created_at.asc").success(function(data) {
+    $scope.adventureMovies = data;
+  });
 
+// Animation movies
+  $http.get(root_url+"genre/16/movies?api_key="+userService.key+"&language=en-US&sort_by=created_at.asc").success(function(data) {
+    $scope.animationMovies = data;
+  });
+
+// Comedy movies
+  $http.get(root_url+"genre/35/movies?api_key="+userService.key+"&language=en-US&sort_by=created_at.asc").success(function(data) {
+    $scope.comedyMovies = data;
+  });
+
+// Crime movies
+  $http.get(root_url+"genre/80/movies?api_key="+userService.key+"&language=en-US&sort_by=created_at.asc").success(function(data) {
+    $scope.crimeMovies = data;
+  });
+
+// documentary movies
+  $http.get(root_url+"genre/99/movies?api_key="+userService.key+"&language=en-US&sort_by=created_at.asc").success(function(data) {
+    $scope.documentaryMovies = data;
+  });
+
+// drama movies
+  $http.get(root_url+"genre/18/movies?api_key="+userService.key+"&language=en-US&sort_by=created_at.asc").success(function(data) {
+    $scope.dramaMovies = data;
+  });
+
+// family movies
+  $http.get(root_url+"genre/10751/movies?api_key="+userService.key+"&language=en-US&sort_by=created_at.asc").success(function(data) {
+    $scope.familyMovies = data;
+  });
+
+// history movies
+  $http.get(root_url+"genre/36/movies?api_key="+userService.key+"&language=en-US&sort_by=created_at.asc").success(function(data) {
+    $scope.historyMovies = data;
+  });
+
+// horror movies
+  $http.get(root_url+"genre/27/movies?api_key="+userService.key+"&language=en-US&sort_by=created_at.asc").success(function(data) {
+    $scope.horrorMovies = data;
+  });
+
+// music movies
+  $http.get(root_url+"genre/10402/movies?api_key="+userService.key+"&language=en-US&sort_by=created_at.asc").success(function(data) {
+    $scope.musicMovies = data;
+  });
+
+// mystery movies
+  $http.get(root_url+"genre/9648/movies?api_key="+userService.key+"&language=en-US&sort_by=created_at.asc").success(function(data) {
+    $scope.mysteryMovies = data;
+  });
+
+// romance movies
+  $http.get(root_url+"genre/10749/movies?api_key="+userService.key+"&language=en-US&sort_by=created_at.asc").success(function(data) {
+    $scope.romanceMovies = data;
+  });
+
+// sciFi movies
+  $http.get(root_url+"genre/878/movies?api_key="+userService.key+"&language=en-US&sort_by=created_at.asc").success(function(data) {
+    $scope.sciFiMovies = data;
+  });
+
+// tv movies
+  $http.get(root_url+"genre/10770/movies?api_key="+userService.key+"&language=en-US&sort_by=created_at.asc").success(function(data) {
+    $scope.tvMovies = data;
+  });
+
+// thriller movies
+  $http.get(root_url+"genre/53/movies?api_key="+userService.key+"&language=en-US&sort_by=created_at.asc").success(function(data) {
+    $scope.thrillerMovies = data;
+  });
+
+// war movies
+  $http.get(root_url+"genre/10752/movies?api_key="+userService.key+"&language=en-US&sort_by=created_at.asc").success(function(data) {
+    $scope.warMovies = data;
+  });
+
+// western movies
+  $http.get(root_url+"genre/37/movies?api_key="+userService.key+"&language=en-US&sort_by=created_at.asc").success(function(data) {
+    $scope.westernMovies = data;
+  });
 
 // Popular Movies:
   $http.get(root_url+"movie/popular?api_key="+userService.key+"&language=en-US&page=1").success(function(data) {
