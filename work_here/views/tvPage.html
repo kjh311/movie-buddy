@@ -26,15 +26,28 @@ $('.fa-chevron-left3').click(function() {
   $('.slider3').slider('prev');
 });
 
+// $('.ytp-fullscreen-button').click(function() {
+//   alert('adsf');
+// });
 
 </script>
 
+
+
 <div class="container animated fadeIn">
+
+  <div class="row">
+    <div class["col s12">
+       <h3 class="drop-shadow">{{tvDetails.name}}</h3>
+    </div>
+  </div>
+
+
   <div class="row">
 
-    <div class="col s12 m4">
+    <div class="col s12 l4">
 
-  <div class="tv-slide-wrapper">
+  <div class="tv-cast-wrapper section">
       <!-- TV POSTER SLIDER -->
       <div class="slider tv-slider slider3">
         <ul class="slides z-depth-3 slides3">
@@ -86,37 +99,55 @@ $('.fa-chevron-left3').click(function() {
   <!-- <img class="responsive-img materialboxed z-depth-3" ng-src="{{imgPath}}{{tvDetails.poster_path}}"> -->
 </div>
 
-<div class="col s12 m7 offset-m1">
-  <div class="section">
-    <h1 class="drop-shadow">{{tvDetails.name}}</h1>
+<div class="col s12 l7 offset-l1">
+  <!-- <div class="section"> -->
+
     <h5 ng-init="limit=200" class="tv-overview-text">{{tvDetails.overview | truncate:limit}}
       <a class="readMoreLink" ng-click="limit=5000">Read More</a>
     </h5>
-  </div>
+  <!-- </div> -->
 
+<div class="section">
   <a href="{{tvDetails.homepage}}" target="_blank">{{tvDetails.homepage}}</a>
-</br>
-</br>
+  </div>
+<!-- </br>
+</br> -->
+
+<div class="row">
+  <div class="col s6 l6">
+
+<!-- <div class="section"> -->
 <h5 class="drop-shadow">Genres:</h5>
 <ul class="tvGenres">
   <li class="tv-genres" ng-repeat="x in tvDetails.genres">{{x.name}}</li>
 </ul>
+</div>
+<!-- </div> -->
 
+<div class="col s6 l6">
 <div class="section">
   <h5 class="drop-shadow">Average Rating:</h5>
   <h3 class="movie-vote"> {{tvDetails.vote_average}}</h3>
 </div>
-
-<div class="section">
-  <h5>No. of seasons: {{tvDetails.number_of_seasons}}</h5>
-  <h5>No. of episodes: {{tvDetails.number_of_episodes}}</h5>
+</div>
 </div>
 
+  <div class="row">
+    <div class="col s6 l6">
+<!-- <div class="section"> -->
+  <h5>No. of seasons: {{tvDetails.number_of_seasons}}</h5>
+  <h5>No. of episodes: {{tvDetails.number_of_episodes}}</h5>
+<!-- </div> -->
+</div>
+
+<div class="col s6 l6">
 <h5 class="drop-shadow">Production Companies:</h5>
 <ul class="tvProductionCompanies">
   <li class="tv-production-companies" ng-repeat="x in tvDetails.production_companies">{{x.name}}</li>
 </ul>
+</div>
 
+  </div>
 </div>
 </div>
 
@@ -138,8 +169,8 @@ $('.fa-chevron-left3').click(function() {
 <!-- CAST -->
 
 <div class="row">
-  <div class="tv-cast-wrapper col s12 m4 offset-m1">
-    <h3 class="drop-shadow">CAST:</h3>
+  <div class="tv-cast-wrapper col s12 m12 l4 offset-l1">
+    <h3 class="drop-shadow">Cast:</h3>
       <!-- TV POSTER SLIDER -->
       <div class="slider tv-slider slider1">
         <ul class="slides z-depth-3 slides1">
@@ -205,10 +236,10 @@ $('.fa-chevron-left3').click(function() {
  -->
 
 <!-- SIMILAR SHOWS -->
-  <div class="tv-cast-wrapper col s12 m4 offset-m2">
+  <div class="tv-cast-wrapper col s12 m12 l4 offset-l2">
     <h3 class="drop-shadow">Similar TV:</h3>
       <div class="slider tv-slider slider2">
-        <ul class="slides z-depth-3 slides2">
+        <ul class="slides z-depth-3 slides2 ">
           <li class="star-slider-li">
             <a href="#tv/{{tvSimilar.results[0].id}}">
             <img class="responsive-img cast-pic" src="{{imgPath}}{{tvSimilar.results[0].poster_path}}" alt="">

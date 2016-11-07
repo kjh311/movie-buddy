@@ -37,6 +37,9 @@ body{
 .main{
 
 }
+.tv-slide-wrapper{
+  text-align: center;
+}
 .nav-main-wrapper{
   position: fixed;
   width: 100%;
@@ -71,6 +74,7 @@ body{
 .responsive-img{
   border: 4px solid rgba(255,255,255,0.3);
   // width: 300px;
+  // background-image: url("http://www.uoduckstore.com/c.3841022/sca-dev-montblanc/img/no_image_available.jpeg");
 }
 .cast-pic{
     width: 300px;
@@ -152,9 +156,9 @@ body{
 }
 .movie-vote{
   padding: 20px;
-  background-color: $dark-grey;
-  border: 2px solid black;
-  border-radius: 50px;
+  // background-color: $dark-grey;
+  // border: 2px solid black;
+  // border-radius: 50px;
   text-shadow: 4px 4px 4px black;
 }
 .hidden{
@@ -256,6 +260,11 @@ body{
 .tv-genres{
   display: inline;
   padding-left: 20px;
+
+}
+.tvGenres{
+  max-width: 200px;
+  // padding: 40px;
 }
 .three-hundred-width{
   max-width: 250px;
@@ -291,14 +300,14 @@ body{
 }
 .fa-chevron-left{
   bottom: 250px;
-  right: 150px;
+  right: 155px;
   z-index: 201;
   position: relative;
   opacity: 0.2;
 }
 .fa-chevron-right{
   bottom: 250px;
-  left: 150px;
+  left: 155px;
   z-index: 201;
   position: relative;
   opacity: 0.2;
@@ -322,7 +331,16 @@ body{
   cursor: pointer;
 }
 iframe{
-  z-index: 250;
+  // z-index: 250;
+}
+.movie-screen{
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 200;
+  position: fixed;
+  pointer-events: none;
 }
 .right-half{
   // border: 2px solid red;
@@ -337,12 +355,17 @@ iframe{
 .opacity{
   opacity: 1;
 }
-.tv-cast-wrapper{
+.tv-cast-wrapper, .cast-pic{
   max-width: 300px;
   width: 300px;
 }
 .trailer:hover{
   border: 2px solid red;
+}
+.video-container{
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("http://memphisdrumshop.com/skin/frontend/default/mds/images/NoVideoAvailable.png");
 }
 
 
