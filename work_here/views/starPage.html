@@ -10,44 +10,69 @@ $("html, body").animate({ scrollTop: 0 }, 0);
 
 <div class="container">
   <h1 class="drop-shadow">{{starDetails.name}}</h1>
-  <div class="row starPage animated fadeIn">
+  <div class=" starPage animated fadeIn">
 
-<div class="col s10 m5 offset-s1">
+<!-- <div class="col s10 m5 offset-s1"> -->
 
 <!-- STAR POSTER SLIDER -->
-  <div class="slider star-pic-slider">
-    <ul class="slides z-depth-3 ">
-      <li class="star-slider-li">
-        <img class="responsive-img z-depth-3 " ng-src="{{imgPath}}{{starPhotos.profiles[0].file_path}}">
-      </li>
-      <li class="star-slider-li">
-        <img class="responsive-img z-depth-3 star-pic-slider" ng-src="{{imgPath}}{{starPhotos.profiles[1].file_path}}">
-      </li>
-      <li class="star-slider-li">
-        <img class="responsive-img z-depth-3 star-pic-slider" ng-src="{{imgPath}}{{starPhotos.profiles[2].file_path}}">
-      </li>
-      <li class="star-slider-li">
-        <img class="responsive-img z-depth-3 star-pic-slider" ng-src="{{imgPath}}{{starPhotos.profiles[3].file_path}}">
-      </li>
-      <li class="star-slider-li">
-        <img class="responsive-img z-depth-3 star-pic-slider" ng-src="{{imgPath}}{{starPhotos.profiles[4].file_path}}">
-      </li>
-    </ul>
+
+<div class="row">
+  <div class="tv-cast-wrapper col s12 m12 l4 offset-l1 offset-m4 offset-s1">
+    <div class="slider tv-slider slider1">
+      <ul class="slides z-depth-3 slides1">
+        <li class="star-slider-li">
+          <a href="#star/{{tvCredits.cast[0].id}}">
+            <h5 class="tv-credit-name">{{tvCredits.cast[0].name}}</h5>
+            <img class="responsive-img " src="{{imgPath}}{{starPhotos.profiles[0].file_path}}" alt="">
+            <h5 class="">{{tvCredits.cast[0].character}}</h5>
+          </a>
+        </li>
+        <li class="star-slider-li">
+          <a href="#star/{{tvCredits.cast[1].id}}">
+            <h5 class="tv-credit-name">{{tvCredits.cast[1].name}}</h5>
+            <img class="responsive-img " src="{{imgPath}}{{starPhotos.profiles[1].file_path}}" alt="">
+            <h5 class="">{{tvCredits.cast[1].character}}</h5>
+          </a>
+        </li>
+        <li class="star-slider-li">
+          <a href="#star/{{tvCredits.cast[2].id}}">
+            <h5 class="tv-credit-name">{{tvCredits.cast[2].name}}</h5>
+            <img class="responsive-img " src="{{imgPath}}{{starPhotos.profiles[2].file_path}}" alt="">
+            <h5 class="">{{tvCredits.cast[2].character}}</h5>
+          </a>
+        </li>
+        <li class="star-slider-li">
+          <a href="#star/{{tvCredits.cast[3].id}}">
+            <h5 class="tv-credit-name">{{tvCredits.cast[3].name}}</h5>
+            <img class="responsive-img " src="{{imgPath}}{{starPhotos.profiles[3].file_path}}" alt="">
+            <h5 class="">{{tvCredits.cast[3].character}}</h5>
+          </a>
+        </li>
+        <li class="star-slider-li">
+          <a href="#star/{{tvCredits.cast[4].id}}">
+            <h5 class="tv-credit-name">{{tvCredits.cast[4].name}}</h5>
+            <img class="responsive-img " src="{{imgPath}}{{starPhotos.profiles[4].file_path}}" alt="">
+            <h5 class="">{{tvCredits.cast[4].character}}</h5>
+          </a>
+        </li>
+
+      </ul>
+    </div>
+    <i class="fa fa-chevron-left fa-chevron-left1 fa-2x"></i>
+    <i class="fa fa-chevron-right fa-chevron-right1 fa-2x"></i>
   </div>
 
 
 
 
-    <!-- <img class="responsive-img materialboxed z-depth-3" ng-src="{{imgPath}}{{starDetails.profile_path}}"> -->
 
-    <!-- <img class="responsive-img materialboxed z-depth-3" ng-src="{{imgPath}}{{starPhotos.profiles[2].file_path}}"> -->
-  </div>
+  <!-- </div> -->
 
 
 
   <div class="col s12 m6 offset-m1">
 
-    <h5 ng-init="limit=200" class="starBiography">{{starDetails.biography | truncate:limit}} <a class="readMoreLink" ng-click="limit=5000">Read More</a></h5>
+    <h5 ng-init="limit=400" class="starBiography">{{starDetails.biography | truncate:limit}} <a class="readMoreLink" ng-click="limit=5000">Read More</a></h5>
 
   </br>
     <h5><a href="{{movieDetails.homepage}}" target="_blank">{{movieDetails.homepage}}</a></h5>
@@ -113,3 +138,49 @@ $("html, body").animate({ scrollTop: 0 }, 0);
 
 
 </div>
+
+
+
+
+
+<script>
+$('.fa-chevron-right1').click(function() {
+  $('.slider1').slider('next');
+  $('.slider1').slider('pause');
+  setTimeout(function(){
+    $('.slider1').slider('start');
+  }, 5000);
+});
+$('.fa-chevron-left1').click(function() {
+  $('.slider1').slider('prev');
+  $('.slider1').slider('pause');
+  setTimeout(function(){
+    $('.slider1').slider('start');
+  }, 5000);
+});
+$('.fa-chevron-right2').click(function() {
+  $('.slider2').slider('next');
+  $('.slider2').slider('pause');
+  setTimeout(function(){
+    $('.slider2').slider('start');
+  }, 5000);
+});
+$('.fa-chevron-left2').click(function() {
+  $('.slider2').slider('prev');
+  $('.slider2').slider('pause');
+  setTimeout(function(){
+    $('.slider2').slider('start');
+  }, 5000);
+});
+function check_length(){
+  if($('.starBiography').text().length < 401){
+    $('.readMoreLink').hide();
+  }
+  // alert($('.starBiography').text().length);
+}
+setTimeout(check_length, 700);
+
+$('.readMoreLink').click(function() {
+  $('.readMoreLink').hide();
+});
+</script>
