@@ -1,5 +1,5 @@
 $dark-grey: rgba(0,0,0,0.3);
-
+$white-semi-opaque: rgba(255,255,255,0.7);
 
 *{
   -webkit-user-select: none;
@@ -35,6 +35,16 @@ body{
   font-family: 'Anton', sans-serif;
   font-size: 16px;
   overflow: scroll;
+  // border-left: 3px solid black;
+  // border-right: 3px solid black;
+}
+.nav-row, .footer-wrapper{
+  border-bottom: 3px solid black;
+  border-right: 3px solid black;
+  border-top: 3px solid black;
+}
+.nav-wrapper{
+  // border: 2px solid black;
 }
 #searchBar{
   text-align: center;
@@ -105,7 +115,7 @@ body{
   bottom: 0px;
   right: 5px;
   padding: 10px;
-  color: white;
+  color: $white-semi-opaque;
   background-color: rgba(0,0,0,0.4);
 }
 .flikity{
@@ -172,7 +182,7 @@ body{
 .movieCastName{
   top: -20px !important;
   position: absolute;
-  color: white;
+  color: $white-semi-opaque;
   font-size: 1.5em;
   left: 5px;
   padding: 5px;
@@ -182,7 +192,7 @@ body{
 .moveCastRole{
   bottom: -10px !important;
   position: absolute;
-  color: white;
+  color: $white-semi-opaque;
   font-size: 1.3em;
   background-color: $dark-grey;
   padding: 5px;
@@ -235,7 +245,7 @@ body{
 }
 .star-credit{
   background-color: $dark-grey;
-  color: white;
+  color: $white-semi-opaque;
   bottom: 10px !important;
   right: 0px;
   position: fixed;
@@ -251,7 +261,7 @@ body{
 }
 .tv-credit-name{
   background-color: $dark-grey;
-  color: white;
+  color: $white-semi-opaque;
   top: -10px !important;
   left: 0px;
   position: fixed;
@@ -259,10 +269,10 @@ body{
 }
 .tv-credit-character, .similar-movie-vote{
   background-color: $dark-grey;
-  color: white;
+  color: $white-semi-opaque;
   bottom: 0px !important;
   right: 0px;
-  position: fixed;
+  position: absolute;
   padding: 10px;
 }
 .tv-genres{

@@ -186,6 +186,11 @@ $scope.winLocation = $location.path();
     $scope.movieDetails = data;
   });
 
+  //Movie Credits
+   $http.get(base_url+winLocation+"/credits?api_key="+userService.key+"&language=en-US&page=1").success(function(data) {
+    $scope.movieCredits = data;
+  });
+
 //Movie Reviews
   $http.get(base_url+winLocation+"/reviews?api_key="+userService.key+"&language=en-US&page=1").success(function(data) {
     $scope.movieReviews = data;

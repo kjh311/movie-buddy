@@ -8,8 +8,8 @@ $("html, body").animate({ scrollTop: 0 }, 0);
 </script>
 
 
-<div class="container">
-<div class="row moviePage animated fadeIn">
+<div class="container  animated fadeIn">
+<div class="row moviePage">
  <h1 class="drop-shadow">{{movieDetails.title}}</h1>
 
 
@@ -68,6 +68,14 @@ $("html, body").animate({ scrollTop: 0 }, 0);
         </ul>
       </div>
 
+
+<!-- Director/Screenwriter -->
+      <div class="col s6 l6">
+        <h5 class="drop-shadow">Directed by:</h5>
+          <a href="#star/{{movieCredits.crew[0].id}}">
+            <h5>{{movieCredits.crew[0].name}}</h5>
+          </a>
+      </div>
 
 
 
@@ -276,6 +284,7 @@ $("html, body").animate({ scrollTop: 0 }, 0);
 
 </div><!--End of row -->
 
+</div>
 </div>
 
 
