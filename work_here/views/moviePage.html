@@ -10,240 +10,104 @@ $("html, body").animate({ scrollTop: 0 }, 0);
 
 <div class="container">
 <div class="row moviePage animated fadeIn">
-
-<!-- Movie Poster -->
-   <div class="col m4 s12">
-
-
-
-
+ <h1 class="drop-shadow">{{movieDetails.title}}</h1>
 
 
 <!-- POSTER SLIDER -->
-  <div class="slider">
-    <ul class="slides z-depth-3">
-      <li  class="">
-        <img class="" ng-src="{{imgPath}}{{movieDetails.poster_path}}">
-      </li>
-      <li>
-        <img class=" " ng-src="{{imgPath}}{{movieDetails.backdrop_path}}">
-      <!--   <div class="caption left-align">
-          <h3>Left Aligned Caption</h3>
-          <h5 class="light grey-text text-lighten-3 tagline">{{movieDetails.tagline}}</h5>
-        </div> -->
-      </li>
-    </ul>
+  <div class="tv-cast-wrapper col s12 l4 offset-l1 offset-m4 offset-s1">
+    <div class="slider tv-slider slider1">
+      <ul class="slides z-depth-3 slides1">
+        <li>
+            <img class="responsive-img" src="{{imgPath}}{{movieDetails.poster_path}}" alt="">
+        </li>
+        <li>
+            <img class="responsive-img" src="{{imgPath}}{{movieDetails.backdrop_path}}" alt="">
+        </li>
+      </ul>
+    </div>
+    <i class="fa fa-chevron-left fa-chevron-left1 fa-2x"></i>
+    <i class="fa fa-chevron-right fa-chevron-right1 fa-2x"></i>
   </div>
 
 
-
-
-
-
-
-
-   <!--  <img class="responsive-img materialboxed z-depth-3 " ng-src="{{imgPath}}{{movieDetails.poster_path}}"> -->
-    <!-- <h5>{{movieDetails.tagline}}</h5> -->
-  </div>
 
 <!-- Movie Details -->
-  <div class="col m7 s12 offset-m1">
-    <h1 class="drop-shadow">{{movieDetails.title}}</h1>
-    <h5 ng-init="limit=200" class="movieOverviewText">{{movieDetails.overview |truncate:limit}} <a class="readMoreLink" ng-click="limit=5000">Read More</a></h5>
+  <div class="col l6 s12 offset-l1">
+    <h5 ng-init="limit=400" class="movieOverviewText">{{movieDetails.overview |truncate:limit}} <a class="readMoreLink" ng-click="limit=5000">Read More</a></h5>
 
   </br>
     <a href="{{movieDetails.homepage}}" target="_blank">{{movieDetails.homepage}}</a>
 
-<!-- Genres -->
-    <h5 class="drop-shadow">Genres:</h5>
-    <ul class="movieGenres">
+    <!-- Genres -->
+    <div class="row">
+      <div class="col s6 l6">
+        <h5 class="drop-shadow">Genres:</h5>
+          <ul class="movieGenres">
       <li ng-repeat="x in movieDetails.genres">{{x.name}}</li>
     </ul>
-  </br>
-  <h5 class="drop-shadow">Average Rating:</h5>
-  <div class="vote-div">
-   <h3 class="movie-vote z-depth-3">{{movieDetails.vote_average}}</h3>
+      </div>
+
+      <!-- Rating -->
+      <div class="col s6 l6">
+        <div class="section">
+            <h5 class="drop-shadow">Average Rating:</h5>
+             <h3 class="movie-vote">{{movieDetails.vote_average}}</h3>
+
+          <!-- <h3 class="movie-vote"> {{tvDetails.vote_average}}</h3> -->
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+
+        <!-- Production Companies -->
+      <div class="col s6 l6">
+        <h5 class="drop-shadow">Production Companies:</h5>
+          <ul class="movieProductionCompanies">
+      <li class="movie-production-companies" ng-repeat="x in movieDetails.production_companies">{{x.name}}</li>
+        </ul>
+      </div>
+
+
+
+
+
+    </div>
   </div>
-</br>
+</div>
+
+
+<!-- TRAILER -->
+<div class="row">
+  <div class="section">
+    <h4 class="drop-shadow">Trailer:</h4>
+    <div class="video-container z-depth-3">
+      <iframe class="trailer"
+      ng-src="{{linkYoutube}}"  allowfullscreen>
+    </iframe>
+  </div>
+</div>
+</div>
+
+
+
+
 
 <!-- Release Date -->
 <!-- <h5 class="drop-shadow">Theatrical Release Date:</h5>
 <h3>{{movieReleaseDate.results[0].release_dates.release_date}}</h3> -->
 
-<!-- Production Companies -->
-<h5 class="drop-shadow">Production Companies:</h5>
-  <ul class="movieProductionCompanies">
-      <li class="movie-production-companies" ng-repeat="x in movieDetails.production_companies">{{x.name}}</li>
-  </ul>
-  </div>
-
-
-  </div class="row">
-  <div class="col s12">
-  <h4 class="drop-shadow">Trailer:</h4>
-  <div class="video-container z-depth-3">
-    <iframe
-      ng-src="{{linkYoutube}}"  allowfullscreen>
-    </iframe>
-    </div>
-
-  </div>
-  <div>
-   <!--  </div>
-    </div> -->
-
-
-</div class="row ">
-  <div class="col s12 ">
-<h2 class="drop-shadow">CAST:</h2>
-<!-- CAST SLIDER -->
-  <div class="slider cast-slider ">
-    <ul class="slides z-depth-3 ">
-
-     <!--  <li ng-repeat="x in movieCast">
-          {{x.cast[0].id}}
-      </li> -->
-      <li class="cast-pic">
-        <a href="#star/{{movieCast.cast[0].id}}">
-        <img class="responsive-img " src="{{imgPath}}{{movieCast.cast[0].profile_path}}" alt="">
-        <p class="movieCastName">{{movieCast.cast[0].name}}</p>
-        <p class="moveCastRole">{{movieCast.cast[0].character}}</p>
-        </a>
-      </li>
-      <li>
-         <a href="#star/{{movieCast.cast[1].id}}">
-        <img class="responsive-img " src="{{imgPath}}{{movieCast.cast[1].profile_path}}" alt="">
-        <p class="movieCastName">{{movieCast.cast[1].name}}</p>
-        <p class="moveCastRole">{{movieCast.cast[1].character}}</p>
-        </a>
-      </li>
-      <li>
-         <a href="#star/{{movieCast.cast[2].id}}">
-        <img class="responsive-img " src="{{imgPath}}{{movieCast.cast[2].profile_path}}" alt="">
-        <p class="movieCastName">{{movieCast.cast[2].name}}</p>
-        <p class="moveCastRole">{{movieCast.cast[2].character}}</p>
-        </a>
-      </li>
-      <li>
-         <a href="#star/{{movieCast.cast[3].id}}">
-        <img class="responsive-img " src="{{imgPath}}{{movieCast.cast[3].profile_path}}" alt="">
-        <p class="movieCastName">{{movieCast.cast[3].name}}</p>
-        <p class="moveCastRole">{{movieCast.cast[3].character}}</p>
-        </a>
-      </li>
-      <li>
-         <a href="#star/{{movieCast.cast[4].id}}">
-        <img class="responsive-img " src="{{imgPath}}{{movieCast.cast[4].profile_path}}" alt="">
-        <p class="movieCastName">{{movieCast.cast[4].name}}</p>
-        <p class="moveCastRole">{{movieCast.cast[4].character}}</p>
-        </a>
-      </li>
-      <li>
-         <a href="#star/{{movieCast.cast[5].id}}">
-        <img class="responsive-img " src="{{imgPath}}{{movieCast.cast[5].profile_path}}" alt="">
-        <p class="movieCastName">{{movieCast.cast[5].name}}</p>
-        <p class="moveCastRole">{{movieCast.cast[5].character}}</p>
-        </a>
-      </li>
-      <li>
-         <a href="#star/{{movieCast.cast[6].id}}">
-        <img class="responsive-img " src="{{imgPath}}{{movieCast.cast[6].profile_path}}" alt="">
-        <p class="movieCastName">{{movieCast.cast[6].name}}</p>
-        <p class="moveCastRole">{{movieCast.cast[6].character}}</p>
-        </a>
-      </li>
-      <li>
-         <a href="#star/{{movieCast.cast[7].id}}">
-        <img class="responsive-img " src="{{imgPath}}{{movieCast.cast[7].profile_path}}" alt="">
-        <p class="movieCastName">{{movieCast.cast[7].name}}</p>
-        <p class="moveCastRole">{{movieCast.cast[7].character}}</p>
-        </a>
-      </li>
-      <li>
-         <a href="#star/{{movieCast.cast[8].id}}">
-        <img class="responsive-img " src="{{imgPath}}{{movieCast.cast[8].profile_path}}" alt="">
-        <p class="movieCastName">{{movieCast.cast[8].name}}</p>
-        <p class="moveCastRole">{{movieCast.cast[8].character}}</p>
-        </a>
-      </li>
-      <li>
-         <a href="#star/{{movieCast.cast[9].id}}">
-        <img class="responsive-img " src="{{imgPath}}{{movieCast.cast[9].profile_path}}" alt="">
-        <p class="movieCastName">{{movieCast.cast[9].name}}</p>
-        <p class="moveCastRole">{{movieCast.cast[9].character}}</p>
-        </a>
-      </li>
-    </ul>
-  </div>
- </div>
 </div>
 
 
- <!-- CAST -->
-    </div class="row">
-        <div class="col s12">
-      <div class="carousel">
-        <h2 class="drop-shadow">Cast:</h2>
-            <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{movieCast.cast[0].profile_path}}" alt="">
-              <p class="movieCastName">{{movieCast.cast[0].name}}</p>
-              <p class="moveCastRole">{{movieCast.cast[0].character}}</p>
-            </div></a>
-            <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img movieCastImg" src="{{imgPath}}{{movieCast.cast[1].profile_path}}" alt="">
-              <p class="movieCastName">{{movieCast.cast[1].name}}</p>
-              <p class="moveCastRole">{{movieCast.cast[1].character}}</p>
-            </div></a>
-            <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{movieCast.cast[2].profile_path}}" alt="">
-              <p class="movieCastName">{{movieCast.cast[2].name}}</p>
-              <p class="moveCastRole">{{movieCast.cast[2].character}}</p>
-            </div></a>
-            <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{movieCast.cast[3].profile_path}}" alt="">
-              <p class="movieCastName">{{movieCast.cast[3].name}}</p>
-              <p class="moveCastRole">{{movieCast.cast[3].character}}</p>
-            </div></a>
-            <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{movieCast.cast[4].profile_path}}" alt="">
-              <p class="movieCastName">{{movieCast.cast[4].name}}</p>
-              <p class="moveCastRole">{{movieCast.cast[4].character}}</p>
-            </div></a>
-            <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{movieCast.cast[5].profile_path}}" alt="">
-              <p class="movieCastName">{{movieCast.cast[5].name}}</p>
-              <p class="moveCastRole">{{movieCast.cast[5].character}}</p>
-            </div></a>
-            <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{movieCast.cast[6].profile_path}}" alt="">
-              <p class="movieCastName">{{movieCast.cast[6].name}}</p>
-              <p class="moveCastRole">{{movieCast.cast[6].character}}</p>
-            </div></a>
-            <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{movieCast.cast[7].profile_path}}" alt="">
-              <p class="movieCastName">{{movieCast.cast[7].name}}</p>
-              <p class="moveCastRole">{{movieCast.cast[7].character}}</p>
-            </div></a>
-            <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{movieCast.cast[8].profile_path}}" alt="">
-              <p class="movieCastName">{{movieCast.cast[8].name}}</p>
-              <p class="moveCastRole">{{movieCast.cast[8].character}}</p>
-            </div></a>
-            <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{movieCast.cast[9].profile_path}}" alt="">
-              <p class="movieCastName">{{movieCast.cast[9].name}}</p>
-              <p class="moveCastRole">{{movieCast.cast[9].character}}</p>
-            </div></a>
-      </div>
-    </div>
-    </div>
 
-<!-- CREW -->
-<!--     <div class="row">
-        <div class="col s12">
-      <div class="carousel">
-        <h2>Crew:</h2>
-          <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{movieCast.crew[0].profile_path}}" alt="">
-            </div></a>
-      </div>
-    </div> -->
 
 <!-- REVIEWS -->
     <div class="row">
       <div class="col s10 offset-s1">
           <ul>
             <li  ng-model="review" class="movieReviewText" ng-init="limit=150" ng-repeat="x in movieReviews.results | limitTo:3">
-              <p>{{x.content | truncate:limit}}<a class="readMoreLink" ng-click="limit=5000" onClick="hideFunction()"> Read More</a></p>
+              <p>{{x.content | truncate:limit}}<a class="readMoreLink-reviewss" ng-click="limit=5000" onClick="hideFunction()"> Read More</a></p>
             <!-- </br> -->
               - {{x.author}}
             </li>
@@ -252,64 +116,226 @@ $("html, body").animate({ scrollTop: 0 }, 0);
     </div>
 
 
-<!-- SIMILAR Movies -->
+
+
+<!-- Cast Slider -->
 <div class="row">
-  <div class="col s12">
-    <div class="carousel">
-        <h3 class="drop-shadow">SIMILAR MOVIES:</h3>
-        <a class="carousel-item" href="#movie/{{popularMovies.results[12].id}}"><div class="waves-effect row">
-        <img class="responsive-img" src="{{imgPath}}{{movieSimilar.results[0].poster_path}}" alt="">
-        <h5 class="similar-movie-vote">{{movieSimilar.results[0].vote_average}}</h5>
-      </div></a>
-      <a class="carousel-item" href=""><div class="waves-effect row">
-        <img class="responsive-img" src="{{imgPath}}{{movieSimilar.results[1].poster_path}}" alt="">
-        <h5 class="similar-movie-vote">{{movieSimilar.results[1].vote_average}}</h5>
-      </div></a>
-      <a class="carousel-item" href=""><div class="waves-effect row">
-        <img class="responsive-img" src="{{imgPath}}{{movieSimilar.results[2].poster_path}}" alt="">
-        <h5 class="similar-movie-vote">{{movieSimilar.results[2].vote_average}}</h5>
-      </div></a>
-      <a class="carousel-item" href=""><div class="waves-effect row">
-        <img class="responsive-img" src="{{imgPath}}{{movieSimilar.results[3].poster_path}}" alt="">
-        <h5 class="similar-movie-vote">{{movieSimilar.results[3].vote_average}}</h5>
-      </div></a>
-      <a class="carousel-item" href=""><div class="waves-effect row">
-        <img class="responsive-img" src="{{imgPath}}{{movieSimilar.results[4].poster_path}}" alt="">
-        <h5 class="similar-movie-vote">{{movieSimilar.results[4].vote_average}}</h5>
-      </div></a>
-      <a class="carousel-item" href=""><div class="waves-effect row">
-        <img class="responsive-img" src="{{imgPath}}{{movieSimilar.results[5].poster_path}}" alt="">
-        <h5 class="similar-movie-vote">{{movieSimilar.results[5].vote_average}}</h5>
-      </div></a>
-      <a class="carousel-item" href=""><div class="waves-effect row">
-        <img class="responsive-img" src="{{imgPath}}{{movieSimilar.results[6].poster_path}}" alt="">
-        <h5 class="similar-movie-vote">{{movieSimilar.results[6].vote_average}}</h5>
-      </div></a>
-      <a class="carousel-item" href=""><div class="waves-effect row">
-        <img class="responsive-img" src="{{imgPath}}{{movieSimilar.results[7].poster_path}}" alt="">
-        <h5 class="similar-movie-vote">{{movieSimilar.results[7].vote_average}}</h5>
-      </div></a>
-      <a class="carousel-item" href=""><div class="waves-effect row">
-        <img class="responsive-img" src="{{imgPath}}{{movieSimilar.results[8].poster_path}}" alt="">
-        <h5 class="similar-movie-vote">{{movieSimilar.results[8].vote_average}}</h5>
-      </div></a>
-      <a class="carousel-item" href=""><div class="waves-effect row">
-        <img class="responsive-img" src="{{imgPath}}{{movieSimilar.results[9].poster_path}}" alt="">
-        <h5 class="similar-movie-vote">{{movieSimilar.results[9].vote_average}}</h5>
-      </div></a>
+
+  <div class="tv-cast-wrapper col s12 m12 l4 offset-l2 offset-m4 offset-s1">
+    <h4 class="drop-shadow">Cast:</h4>
+    <div class="slider tv-slider slider2">
+      <ul class="slides z-depth-3 slides2">
+        <li>
+          <a href="#star/{{movieCast.cast[0].id}}">
+            <img class="responsive-img  red-border" src="{{imgPath}}{{movieCast.cast[0].profile_path}}" alt="">
+            <p class="movieCastName">{{movieCast.cast[0].name}}</p>
+              <p class="moveCastRole">{{movieCast.cast[0].character}}</p>
+          </a>
+        </li>
+        <li>
+          <a href="#star/{{movieCast.cast[1].id}}">
+            <img class="responsive-img  red-border" src="{{imgPath}}{{movieCast.cast[1].profile_path}}" alt="">
+            <p class="movieCastName">{{movieCast.cast[1].name}}</p>
+              <p class="moveCastRole">{{movieCast.cast[1].character}}</p>
+          </a>
+        </li>
+        <li>
+          <a href="#star/{{movieCast.cast[2].id}}">
+            <img class="responsive-img  red-border" src="{{imgPath}}{{movieCast.cast[2].profile_path}}" alt="">
+            <p class="movieCastName">{{movieCast.cast[2].name}}</p>
+              <p class="moveCastRole">{{movieCast.cast[2].character}}</p>
+          </a>
+        </li>
+        <li>
+          <a href="#star/{{movieCast.cast[3].id}}">
+            <img class="responsive-img  red-border" src="{{imgPath}}{{movieCast.cast[3].profile_path}}" alt="">
+            <p class="movieCastName">{{movieCast.cast[3].name}}</p>
+              <p class="moveCastRole">{{movieCast.cast[3].character}}</p>
+          </a>
+        </li>
+        <li>
+          <a href="#star/{{movieCast.cast[4].id}}">
+            <img class="responsive-img  red-border" src="{{imgPath}}{{movieCast.cast[4].profile_path}}" alt="">
+            <p class="movieCastName">{{movieCast.cast[4].name}}</p>
+              <p class="moveCastRole">{{movieCast.cast[4].character}}</p>
+          </a>
+        </li>
+        <li>
+          <a href="#star/{{movieCast.cast[5].id}}">
+            <img class="responsive-img  red-border" src="{{imgPath}}{{movieCast.cast[5].profile_path}}" alt="">
+            <p class="movieCastName">{{movieCast.cast[5].name}}</p>
+              <p class="moveCastRole">{{movieCast.cast[5].character}}</p>
+          </a>
+        </li>
+        <li>
+          <a href="#star/{{movieCast.cast[6].id}}">
+            <img class="responsive-img  red-border" src="{{imgPath}}{{movieCast.cast[6].profile_path}}" alt="">
+            <p class="movieCastName">{{movieCast.cast[6].name}}</p>
+              <p class="moveCastRole">{{movieCast.cast[6].character}}</p>
+          </a>
+        </li>
+        <li>
+          <a href="#star/{{movieCast.cast[7].id}}">
+            <img class="responsive-img  red-border" src="{{imgPath}}{{movieCast.cast[7].profile_path}}" alt="">
+            <p class="movieCastName">{{movieCast.cast[7].name}}</p>
+              <p class="moveCastRole">{{movieCast.cast[7].character}}</p>
+          </a>
+        </li>
+        <li>
+          <a href="#star/{{movieCast.cast[8].id}}">
+            <img class="responsive-img  red-border" src="{{imgPath}}{{movieCast.cast[8].profile_path}}" alt="">
+            <p class="movieCastName">{{movieCast.cast[8].name}}</p>
+              <p class="moveCastRole">{{movieCast.cast[8].character}}</p>
+          </a>
+        </li>
+        <li>
+          <a href="#star/{{movieCast.cast[9].id}}">
+            <img class="responsive-img  red-border" src="{{imgPath}}{{movieCast.cast[9].profile_path}}" alt="">
+            <p class="movieCastName">{{movieCast.cast[9].name}}</p>
+              <p class="moveCastRole">{{movieCast.cast[9].character}}</p>
+          </a>
+        </li>
+
+      </ul>
     </div>
+    <i class="fa fa-chevron-left fa-chevron-left2 fa-2x"></i>
+    <i class="fa fa-chevron-right fa-chevron-right2 fa-2x"></i>
   </div>
+
+
+<!-- Similar Movies -->
+    <div class="tv-cast-wrapper col s12 m12 l4 offset-l2 offset-m4 offset-s1">
+    <h4 class="drop-shadow">Similar Movies:</h4>
+    <div class="slider tv-slider slider3">
+      <ul class="slides z-depth-3 slides3">
+        <li>
+          <a href="#movie/{{movieSimilar.results[0].id}}">
+            <img class="responsive-img  red-border" src="{{imgPath}}{{movieSimilar.results[0].poster_path}}" alt="">
+            <h5 class="similar-movie-vote">{{movieSimilar.results[0].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#movie/{{movieSimilar.results[1].id}}">
+            <img class="responsive-img  red-border" src="{{imgPath}}{{movieSimilar.results[1].poster_path}}" alt="">
+            <h5 class="similar-movie-vote">{{movieSimilar.results[1].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#movie/{{movieSimilar.results[2].id}}">
+            <img class="responsive-img  red-border" src="{{imgPath}}{{movieSimilar.results[2].poster_path}}" alt="">
+            <h5 class="similar-movie-vote">{{movieSimilar.results[2].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#movie/{{movieSimilar.results[3].id}}">
+            <img class="responsive-img  red-border" src="{{imgPath}}{{movieSimilar.results[3].poster_path}}" alt="">
+            <h5 class="similar-movie-vote">{{movieSimilar.results[3].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#movie/{{movieSimilar.results[4].id}}">
+            <img class="responsive-img  red-border" src="{{imgPath}}{{movieSimilar.results[4].poster_path}}" alt="">
+            <h5 class="similar-movie-vote">{{movieSimilar.results[4].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#movie/{{movieSimilar.results[5].id}}">
+            <img class="responsive-img  red-border" src="{{imgPath}}{{movieSimilar.results[5].poster_path}}" alt="">
+            <h5 class="similar-movie-vote">{{movieSimilar.results[5].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#movie/{{movieSimilar.results[6].id}}">
+            <img class="responsive-img  red-border" src="{{imgPath}}{{movieSimilar.results[6].poster_path}}" alt="">
+            <h5 class="similar-movie-vote">{{movieSimilar.results[6].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#movie/{{movieSimilar.results[7].id}}">
+            <img class="responsive-img  red-border" src="{{imgPath}}{{movieSimilar.results[7].poster_path}}" alt="">
+            <h5 class="similar-movie-vote">{{movieSimilar.results[7].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#movie/{{movieSimilar.results[8].id}}">
+            <img class="responsive-img  red-border" src="{{imgPath}}{{movieSimilar.results[8].poster_path}}" alt="">
+            <h5 class="similar-movie-vote">{{movieSimilar.results[8].vote_average}}</h5>
+          </a>
+        </li>
+        <li>
+          <a href="#movie/{{movieSimilar.results[9].id}}">
+            <img class="responsive-img  red-border" src="{{imgPath}}{{movieSimilar.results[9].poster_path}}" alt="">
+            <h5 class="similar-movie-vote">{{movieSimilar.results[9].vote_average}}</h5>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <i class="fa fa-chevron-left fa-chevron-left3 fa-2x"></i>
+    <i class="fa fa-chevron-right fa-chevron-right3 fa-2x"></i>
+  </div>
+
+</div><!--End of row -->
+
 </div>
 
 
 
 
-
-</div>
 <script>
-// function hideFunction(){
-//   $('.readMoreLink').hide();
-// }
+$('.fa-chevron-right1').click(function() {
+  $('.slider1').slider('next');
+  $('.slider1').slider('pause');
+  setTimeout(function(){
+    $('.slider1').slider('start');
+  }, 5000);
+});
+$('.fa-chevron-left1').click(function() {
+  $('.slider1').slider('prev');
+  $('.slider1').slider('pause');
+  setTimeout(function(){
+    $('.slider1').slider('start');
+  }, 5000);
+});
+$('.fa-chevron-right2').click(function() {
+  $('.slider2').slider('next');
+  $('.slider2').slider('pause');
+  setTimeout(function(){
+    $('.slider2').slider('start');
+  }, 5000);
+});
+$('.fa-chevron-left2').click(function() {
+  $('.slider2').slider('prev');
+  $('.slider2').slider('pause');
+  setTimeout(function(){
+    $('.slider2').slider('start');
+  }, 5000);
+});
+$('.fa-chevron-right3').click(function() {
+  $('.slider3').slider('next');
+  $('.slider3').slider('pause');
+  setTimeout(function(){
+    $('.slider3').slider('start');
+  }, 5000);
+});
+$('.fa-chevron-left3').click(function() {
+  $('.slider3').slider('prev');
+  $('.slider3').slider('pause');
+  setTimeout(function(){
+    $('.slider3').slider('start');
+  }, 5000);
+});
+
+function check_length(){
+  if($('.movieOverviewText').text().length < 400  ){
+    $('.readMoreLink').hide();
+  }
+  // alert($('.movieOverviewText').text().length);
+}
+setTimeout(check_length, 700);
+
+$('.readMoreLink').click(function() {
+  $('.readMoreLink').hide();
+});
 </script>
 
 
