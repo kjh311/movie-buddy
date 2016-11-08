@@ -36,51 +36,53 @@ $("html, body").animate({ scrollTop: 0 }, 0);
     <h5 ng-init="limit=400" class="movieOverviewText">{{movieDetails.overview |truncate:limit}} <a class="readMoreLink" ng-click="limit=5000">Read More</a></h5>
 
   </br>
-    <a href="{{movieDetails.homepage}}" target="_blank">{{movieDetails.homepage}}</a>
+    <h5><a href="{{movieDetails.homepage}}" target="_blank">{{movieDetails.homepage}}</a></h5>
 
-    <!-- Genres -->
+
+  </div>
+</div><!-- end of row -->
+
     <div class="row">
-      <div class="col s6 l6">
-        <h5 class="drop-shadow">Genres:</h5>
-          <ul class="movieGenres">
-      <li ng-repeat="x in movieDetails.genres">{{x.name}}</li>
-    </ul>
+
+
+     <!-- Rating -->
+      <div class="col s12 m3 l3">
+        <div class="section">
+          <h5 class="drop-shadow">Average Rating:</h5>
+          <h3 class="movie-vote">{{movieDetails.vote_average}}</h3>
+          </div>
       </div>
 
-      <!-- Rating -->
-      <div class="col s6 l6">
+  <!-- Genres -->
+      <div class="col s12 m3 l3">
         <div class="section">
-            <h5 class="drop-shadow">Average Rating:</h5>
-             <h3 class="movie-vote">{{movieDetails.vote_average}}</h3>
+        <h5 class="drop-shadow">Genres:</h5>
+        <ul class="movieGenres">
+      <li class="movie-genres-name" ng-repeat="x in movieDetails.genres">{{x.name}}</li>
+      </ul>
         </div>
       </div>
-    </div>
 
-    <div class="row">
+    <!-- Directed By -->
+      <div class="col s12 m3 l3">
+        <div class="section">
+        <h5 class="drop-shadow">Directed by:</h5>
+        <a href="#star/{{movieCredits.crew[0].id}}">
+          <h5>{{movieCredits.crew[0].name}}</h5>
+        </a>
+        </div>
+      </div>
 
-        <!-- Production Companies -->
-      <div class="col s6 l6">
+      <!-- Production Companies -->
+      <div class="col s12 m3 l3">
+        <div class="section">
         <h5 class="drop-shadow">Production Companies:</h5>
-          <ul class="movieProductionCompanies">
+        <ul class="movieProductionCompanies">
       <li class="movie-production-companies" ng-repeat="x in movieDetails.production_companies">{{x.name}}</li>
         </ul>
-      </div>
-
-
-<!-- Director/Screenwriter -->
-      <div class="col s6 l6">
-        <h5 class="drop-shadow">Directed by:</h5>
-          <a href="#star/{{movieCredits.crew[0].id}}">
-            <h5>{{movieCredits.crew[0].name}}</h5>
-          </a>
-      </div>
-
-
-
-
-    </div>
   </div>
-</div>
+  </div>
+  </div><!-- end of row -->
 
 
 <!-- TRAILER -->

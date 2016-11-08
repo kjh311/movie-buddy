@@ -66,7 +66,7 @@ $("html, body").animate({ scrollTop: 0 }, 0);
 
     <!-- HomePage -->
     <div class="section">
-      <a class="homepage-link" href="{{tvDetails.homepage}}" target="_blank">{{tvDetails.homepage}}</a>
+      <h5><a class="homepage-link" href="{{tvDetails.homepage}}" target="_blank">{{tvDetails.homepage}}</a></h5>
     </div>
 
     </div>
@@ -80,8 +80,10 @@ $("html, body").animate({ scrollTop: 0 }, 0);
 
      <!-- Rating -->
       <div class="col s12 m3 l3">
+        <div class="section">
           <h5 class="drop-shadow">Average Rating:</h5>
           <h3 class="movie-vote"> {{tvDetails.vote_average}}</h3>
+          </div>
       </div>
 
   <!-- Genres -->
@@ -89,7 +91,8 @@ $("html, body").animate({ scrollTop: 0 }, 0);
         <div class="section">
         <h5 class="drop-shadow">Genres:</h5>
         <ul class="tvGenres">
-          <li class="tv-genres" ng-repeat="x in tvDetails.genres">{{x.name}}</li>
+          <li class="tv-genres " ng-repeat="x in tvDetails.genres">{{x.name}}</li>
+        </br>
         </ul>
         </div>
       </div>

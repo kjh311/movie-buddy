@@ -89,7 +89,7 @@ body{
    text-shadow: 2px 2px 2px black;
 }
 .categories li{
-  display: inline;
+  // display: inline;
   padding-left: 0px;
   padding-right: 0px;
 }
@@ -180,7 +180,7 @@ body{
   margin-top: 30px;
 }
 .movieGenres li{
-  display: inline;
+  // display: inline;
   padding-left: 10px;
 }
 .movieOverviewText, .starBiography, .tv-overview-text{
@@ -242,6 +242,11 @@ body{
 }
 .readMoreLink{
   cursor: pointer;
+}
+.movie-genres-name{
+  word-wrap: break-word;
+// white-space: pre-line;
+  display: block;
 }
 .similar-tv-vote{
   color: rgba(255,255,255,0.7);
