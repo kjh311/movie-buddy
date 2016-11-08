@@ -130,55 +130,56 @@ $("html, body").animate({ scrollTop: 0 }, 0);
 
 
 <!-- CAST -->
-<div class="row">
-  <div class="tv-cast-wrapper col s12 m12 l4 offset-l1">
-    <h3 class="drop-shadow">Cast:</h3>
-    <!-- TV POSTER SLIDER -->
+  <div class="row">
+
+
+  <div class="tv-cast-wrapper col s12 m12 l4 offset-l1 offset-m4 offset-s1">
+    <h4 class="drop-shadow">Cast:</h4>
     <div class="slider tv-slider slider1">
       <ul class="slides z-depth-3 slides1">
-        <li class="star-slider-li">
+        <li>
           <a href="#star/{{tvCredits.cast[0].id}}">
             <h5 class="tv-credit-name">{{tvCredits.cast[0].name}}</h5>
             <img class="responsive-img cast-pic" src="{{imgPath}}{{tvCredits.cast[0].profile_path}}" alt="">
             <h5 class="">{{tvCredits.cast[0].character}}</h5>
           </a>
         </li>
-        <li class="star-slider-li">
+        <li>
           <a href="#star/{{tvCredits.cast[1].id}}">
             <h5 class="tv-credit-name">{{tvCredits.cast[1].name}}</h5>
             <img class="responsive-img cast-pic" src="{{imgPath}}{{tvCredits.cast[1].profile_path}}" alt="">
             <h5 class="">{{tvCredits.cast[1].character}}</h5>
           </a>
         </li>
-        <li class="star-slider-li">
+        <li>
           <a href="#star/{{tvCredits.cast[2].id}}">
             <h5 class="tv-credit-name">{{tvCredits.cast[2].name}}</h5>
             <img class="responsive-img cast-pic" src="{{imgPath}}{{tvCredits.cast[2].profile_path}}" alt="">
             <h5 class="">{{tvCredits.cast[2].character}}</h5>
           </a>
         </li>
-        <li class="star-slider-li">
+        <li>
           <a href="#star/{{tvCredits.cast[3].id}}">
             <h5 class="tv-credit-name">{{tvCredits.cast[3].name}}</h5>
             <img class="responsive-img cast-pic" src="{{imgPath}}{{tvCredits.cast[3].profile_path}}" alt="">
             <h5 class="">{{tvCredits.cast[3].character}}</h5>
           </a>
         </li>
-        <li class="star-slider-li">
+        <li>
           <a href="#star/{{tvCredits.cast[4].id}}">
             <h5 class="tv-credit-name">{{tvCredits.cast[4].name}}</h5>
             <img class="responsive-img cast-pic" src="{{imgPath}}{{tvCredits.cast[4].profile_path}}" alt="">
             <h5 class="">{{tvCredits.cast[4].character}}</h5>
           </a>
         </li>
-        <li class="star-slider-li">
+        <li>
           <a href="#star/{{tvCredits.cast[5].id}}">
             <h5 class="tv-credit-name">{{tvCredits.cast[5].name}}</h5>
             <img class="responsive-img cast-pic" src="{{imgPath}}{{tvCredits.cast[5].profile_path}}" alt="">
             <h5 class="">{{tvCredits.cast[5].character}}</h5>
           </a>
         </li>
-        <li class="star-slider-li">
+        <li>
           <a href="#star/{{tvCredits.cast[6].id}}">
             <h5 class="tv-credit-name">{{tvCredits.cast[6].name}}</h5>
             <img class="responsive-img cast-pic" src="{{imgPath}}{{tvCredits.cast[6].profile_path}}" alt="">
@@ -193,66 +194,66 @@ $("html, body").animate({ scrollTop: 0 }, 0);
 
 
 
-  <!-- SIMILAR SHOWS -->
-  <div class="tv-cast-wrapper col s12 m12 l4 offset-l2">
-    <h3 class="drop-shadow">Similar TV:</h3>
+<!-- Similar Shows -->
+  <div class="tv-cast-wrapper col s12 m12 l4 offset-l2 offset-m4 offset-s1">
+    <h4 class="drop-shadow">Similar TV:</h4>
     <div class="slider tv-slider slider2">
-      <ul class="slides z-depth-3 slides2 ">
-        <li class="star-slider-li">
+      <ul class="slides z-depth-3 slides2">
+        <li>
           <a href="#tv/{{tvSimilar.results[0].id}}">
             <img class="responsive-img cast-pic" src="{{imgPath}}{{tvSimilar.results[0].poster_path}}" alt="">
             <h5 class="similar-tv-vote">{{tvSimilar.results[0].vote_average}}</h5>
           </a>
         </li>
-        <li class="star-slider-li">
+        <li>
           <a href="#tv/{{tvSimilar.results[1].id}}">
             <img class="responsive-img cast-pic" src="{{imgPath}}{{tvSimilar.results[1].poster_path}}" alt="">
             <h5 class="similar-tv-vote">{{tvSimilar.results[1].vote_average}}</h5>
           </a>
         </li>
-        <li class="star-slider-li">
+        <li>
           <a href="#tv/{{tvSimilar.results[2].id}}">
             <img class="responsive-img cast-pic" src="{{imgPath}}{{tvSimilar.results[2].poster_path}}" alt="">
             <h5 class="similar-tv-vote">{{tvSimilar.results[2].vote_average}}</h5>
           </a>
         </li>
-        <li class="star-slider-li">
+        <li>
           <a href="#tv/{{tvSimilar.results[3].id}}">
             <img class="responsive-img cast-pic" src="{{imgPath}}{{tvSimilar.results[3].poster_path}}" alt="">
             <h5 class="similar-tv-vote">{{tvSimilar.results[3].vote_average}}</h5>
           </a>
         </li>
-        <li class="star-slider-li">
+        <li>
           <a href="#tv/{{tvSimilar.results[4].id}}">
             <img class="responsive-img cast-pic" src="{{imgPath}}{{tvSimilar.results[4].poster_path}}" alt="">
             <h5 class="similar-tv-vote">{{tvSimilar.results[4].vote_average}}</h5>
           </a>
         </li>
-        <li class="star-slider-li">
+        <li>
           <a href="#tv/{{tvSimilar.results[5].id}}">
             <img class="responsive-img cast-pic" src="{{imgPath}}{{tvSimilar.results[5].poster_path}}" alt="">
             <h5 class="similar-tv-vote">{{tvSimilar.results[5].vote_average}}</h5>
           </a>
         </li>
-        <li class="star-slider-li">
+        <li>
           <a href="#tv/{{tvSimilar.results[6].id}}">
             <img class="responsive-img cast-pic" src="{{imgPath}}{{tvSimilar.results[6].poster_path}}" alt="">
             <h5 class="similar-tv-vote">{{tvSimilar.results[6].vote_average}}</h5>
           </a>
         </li>
-        <li class="star-slider-li">
+        <li>
           <a href="#tv/{{tvSimilar.results[7].id}}">
             <img class="responsive-img cast-pic" src="{{imgPath}}{{tvSimilar.results[7].poster_path}}" alt="">
             <h5 class="similar-tv-vote">{{tvSimilar.results[7].vote_average}}</h5>
           </a>
         </li>
-        <li class="star-slider-li">
+        <li>
           <a href="#tv/{{tvSimilar.results[8].id}}">
             <img class="responsive-img cast-pic" src="{{imgPath}}{{tvSimilar.results[8].poster_path}}" alt="">
             <h5 class="similar-tv-vote">{{tvSimilar.results[8].vote_average}}</h5>
           </a>
         </li>
-        <li class="star-slider-li">
+        <li>
           <a href="#tv/{{tvSimilar.results[9].id}}">
             <img class="responsive-img cast-pic" src="{{imgPath}}{{tvSimilar.results[9].poster_path}}" alt="">
             <h5 class="similar-tv-vote">{{tvSimilar.results[9].vote_average}}</h5>
@@ -263,7 +264,9 @@ $("html, body").animate({ scrollTop: 0 }, 0);
     <i class="fa fa-chevron-left fa-chevron-left2 fa-2x"></i>
     <i class="fa fa-chevron-right fa-chevron-right2 fa-2x"></i>
   </div>
-</div>
+  </div>
+  </div>
+
 
 
 <script>
