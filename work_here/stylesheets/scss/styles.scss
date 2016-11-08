@@ -14,6 +14,7 @@ a:hover{
 .brand-logo, .drop-shadow{
   text-shadow: 3px 3px 3px black;
   text-decoration: underline;
+  line-height: 1.3;
 }
 .brand-logo:hover{
   color: red;
@@ -81,7 +82,7 @@ body{
 .nav-main-wrapper{
   position: fixed;
   width: 100%;
-  z-index: 100;
+  z-index: 50;
   // border: 2px solid black;
 }
 .nav-link{
@@ -305,7 +306,7 @@ body{
 
 }
 .tvGenres{
-  max-width: 200px;
+  // max-width: 200px;
   // padding: 40px;
 }
 .three-hundred-width{
@@ -373,7 +374,7 @@ body{
   cursor: pointer;
 }
 iframe{
-  // z-index: 250;
+  z-index: 250;
 }
 .movie-screen{
   top: 0;

@@ -63,87 +63,113 @@ $("html, body").animate({ scrollTop: 0 }, 0);
   </div>
 
 
-
-
-
-  <!-- </div> -->
-
-
-
-  <div class="col s12 m6 offset-m1">
-
+  <div class="col s12 l6 offset-l1">
     <h5 ng-init="limit=400" class="starBiography">{{starDetails.biography | truncate:limit}} <a class="readMoreLink" ng-click="limit=5000">Read More</a></h5>
-
-  </br>
-    <h5><a href="{{movieDetails.homepage}}" target="_blank">{{movieDetails.homepage}}</a></h5>
-  </br>
-  <h5>Birthday: {{starDetails.birthday | date}}</h5>
-  <h5>Place of birth: {{starDetails.place_of_birth | date}}</h5>
+</br>
+<a href="{{starDetails.homepage}}"><h5>{{starDetails.homepage}}</h5></a>
  </div>
-</div>
 
-</br>
-</br>
+ </div>
+
 
 
 <!-- CREDITS: -->
-<h3 class"drop-shadow">Credits:</h3>
-</div class="row">
-  <div class="col s12">
-    <div class="carousel">
-      <a class="carousel-item " href=""><div class="waves-effect row">
-         <!-- <h3 class="star-credit">{{starCredits.cast[0].character}}</h3> -->
-        <img class="responsive-img" src="{{imgPath}}{{starCredits.cast[0].poster_path}}" alt="">
-        <h5></h5>
-      </div></a>
-      <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{starCredits.cast[1].poster_path}}" alt="">
-      </div></a>
-      <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{starCredits.cast[2].poster_path}}" alt="">
-      </div></a>
-      <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{starCredits.cast[3].poster_path}}" alt="">
-      </div></a>
-      <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{starCredits.cast[4].poster_path}}" alt="">
-      </div></a>
-      <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{starCredits.cast[5].poster_path}}" alt="">
-      </div></a>
-      <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{starCredits.cast[6].poster_path}}" alt="">
-      </div></a>
-      <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{starCredits.cast[7].poster_path}}" alt="">
-      </div></a>
-      <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{starCredits.cast[8].poster_path}}" alt="">
-      </div></a>
-      <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{starCredits.cast[9].poster_path}}" alt="">
-      </div></a>
-      <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{starCredits.cast[10].poster_path}}" alt="">
-      </div></a>
+
+<div class="row">
+
+  <div class="tv-cast-wrapper col s12 m12 l4 offset-l1 offset-m4 offset-s1">
+    <h4 class="drop-shadow">Credits:</h4>
+    <div class="slider tv-slider slider2">
+      <ul class="slides z-depth-3 slides2">
+        <li>
+          <a href="#movie/{{starCredits.cast[0].id}}">
+            <img class="responsive-img red-border" src="{{imgPath}}{{starCredits.cast[0].poster_path}}" alt="">
+            <h3 class="movie-vote">{{movieDetails.vote_average}}</h3>
+          </a>
+        </li>
+        <li>
+          <a href="#movie/{{starCredits.cast[1].id}}">
+            <img class="responsive-img red-border" src="{{imgPath}}{{starCredits.cast[1].poster_path}}" alt="">
+            <h3 class="movie-vote">{{movieDetails.vote_average}}</h3>
+          </a>
+        </li>
+        <li>
+          <a href="#movie/{{starCredits.cast[2].id}}">
+            <img class="responsive-img red-border" src="{{imgPath}}{{starCredits.cast[2].poster_path}}" alt="">
+            <h3 class="movie-vote">{{movieDetails.vote_average}}</h3>
+          </a>
+        </li>
+        <li>
+          <a href="#movie/{{starCredits.cast[3].id}}">
+            <img class="responsive-img red-border" src="{{imgPath}}{{starCredits.cast[3].poster_path}}" alt="">
+            <h3 class="movie-vote">{{movieDetails.vote_average}}</h3>
+          </a>
+        </li>
+        <li>
+          <a href="#movie/{{starCredits.cast[4].id}}">
+            <img class="responsive-img red-border" src="{{imgPath}}{{starCredits.cast[4].poster_path}}" alt="">
+            <h3 class="movie-vote">{{movieDetails.vote_average}}</h3>
+          </a>
+        </li>
+        <li>
+          <a href="#movie/{{starCredits.cast[5].id}}">
+            <img class="responsive-img red-border" src="{{imgPath}}{{starCredits.cast[5].poster_path}}" alt="">
+            <h3 class="movie-vote">{{movieDetails.vote_average}}</h3>
+          </a>
+        </li>
+        <li>
+          <a href="#movie/{{starCredits.cast[6].id}}">
+            <img class="responsive-img red-border" src="{{imgPath}}{{starCredits.cast[6].poster_path}}" alt="">
+            <h3 class="movie-vote">{{movieDetails.vote_average}}</h3>
+          </a>
+        </li>
+        <li>
+          <a href="#movie/{{starCredits.cast[7].id}}">
+            <img class="responsive-img red-border" src="{{imgPath}}{{starCredits.cast[7].poster_path}}" alt="">
+            <h3 class="movie-vote">{{movieDetails.vote_average}}</h3>
+          </a>
+        </li>
+        <li>
+          <a href="#movie/{{starCredits.cast[8].id}}">
+            <img class="responsive-img red-border" src="{{imgPath}}{{starCredits.cast[8].poster_path}}" alt="">
+            <h3 class="movie-vote">{{movieDetails.vote_average}}</h3>
+          </a>
+        </li>
+        <li>
+          <a href="#movie/{{starCredits.cast[9].id}}">
+            <img class="responsive-img red-border" src="{{imgPath}}{{starCredits.cast[9].poster_path}}" alt="">
+            <h3 class="movie-vote">{{movieDetails.vote_average}}</h3>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <i class="fa fa-chevron-left fa-chevron-left2 fa-2x"></i>
+    <i class="fa fa-chevron-right fa-chevron-right2 fa-2x"></i>
+  </div>
+
+   <div class="col s12 l3">
+    <h5 class="drop-shadow">Birthday:</h5>
+    <h5>{{starDetails.birthday | date}}</h5>
+  </div>
+
+   <div class="col s12 l3">
+    <h5 class="drop-shadow">Place of Birth:</h5>
+    <h5>{{starDetails.place_of_birth}}</h5>
+  </div>
 
   </div>
-</div>
-</div>
 
 
-<!-- <div class="row">
-  <div class="col s12">
-<div class="carousel">
-  <a class="carousel-item" href=""><div class="waves-effect row"><img class="responsive-img" src="{{imgPath}}{{starPhotos.profiles[1].file_path}}" alt="">
-            </div></a>
-   </div>
-  </div> -->
-
-
-
-</div>
+  </div>
 
 
 
 
 </div>
-
-
-
-
+</div>
 
 <script>
+// slider controls
 $('.fa-chevron-right1').click(function() {
   $('.slider1').slider('next');
   $('.slider1').slider('pause');
@@ -172,6 +198,7 @@ $('.fa-chevron-left2').click(function() {
     $('.slider2').slider('start');
   }, 5000);
 });
+
 function check_length(){
   if($('.starBiography').text().length < 401){
     $('.readMoreLink').hide();

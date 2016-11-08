@@ -11,56 +11,52 @@ $("html, body").animate({ scrollTop: 0 }, 0);
 <div class="container animated fadeIn">
 
   <!-- Name -->
-  <div class="row">
-    <div class["col s12">
      <h3 class="drop-shadow">{{tvDetails.name}}</h3>
-   </div>
- </div>
 
 
  <!-- TV POSTER SLIDER -->
- <div class="row">
-  <div class="col s12 l4">
-    <div class="tv-cast-wrapper section">
-      <div class="slider tv-slider slider3">
-        <ul class="slides z-depth-3 slides3">
-          <li class="star-slider-li">
-            <img class="responsive-img z-depth-3 " ng-src="{{imgPath}}{{tvDetails.poster_path}}">
-          </li>
-          <li class="star-slider-li">
-            <img class="responsive-img z-depth-3 " ng-src="{{imgPath}}{{tvDetails.backdrop_path}}">
-          </li>
-          <li class="star-slider-li">
-            <img class="responsive-img z-depth-3 " ng-src="{{imgPath}}{{tvDetails.seasons[0].poster_path}}">
-          </li>
-          <li class="star-slider-li">
-            <img class="responsive-img z-depth-3 " ng-src="{{imgPath}}{{tvDetails.seasons[1].poster_path}}">
-          </li>
-          <li class="star-slider-li">
-            <img class="responsive-img z-depth-3 " ng-src="{{imgPath}}{{tvDetails.seasons[2].poster_path}}">
-          </li>
-          <li class="star-slider-li">
-            <img class="responsive-img z-depth-3 " ng-src="{{imgPath}}{{tvDetails.seasons[3].poster_path}}">
-          </li>
-          <li class="star-slider-li">
-            <img class="responsive-img z-depth-3 " ng-src="{{imgPath}}{{tvDetails.seasons[4].poster_path}}">
-          </li>
-          <li class="star-slider-li">
-            <img class="responsive-img z-depth-3 " ng-src="{{imgPath}}{{tvDetails.seasons[5].poster_path}}">
-          </li>
-          <li class="star-slider-li">
-            <img class="responsive-img z-depth-3 " ng-src="{{imgPath}}{{tvDetails.seasons[6].poster_path}}">
-          </li>
-          <li class="star-slider-li">
-            <img class="responsive-img z-depth-3 " ng-src="{{imgPath}}{{tvDetails.seasons[7].poster_path}}">
-          </li>
-        </ul>
-      </div>
-      <i class="fa fa-chevron-left fa-chevron-left3 fa-2x"></i>
-      <!-- <i class="fa fa-pause fa-2x"></i> -->
-      <i class="fa fa-chevron-right fa-chevron-right3 fa-2x"></i>
+<div class="row">
+  <div class="tv-cast-wrapper col s12 m12 l4  offset-m4 offset-s1">
+    <div class="slider tv-slider slider3">
+      <ul class="slides z-depth-3 slides3">
+        <li>
+            <img class="responsive-img" src="{{imgPath}}{{tvDetails.poster_path}}" alt="">
+        </li>
+        <li>
+            <img class="responsive-img" src="{{imgPath}}{{tvDetails.backdrop_path}}" alt="">
+        </li>
+        <li>
+            <img class="responsive-img" ng-src="{{imgPath}}{{tvDetails.seasons[0].poster_path}}">
+        </li>
+        <li>
+            <img class="responsive-img" ng-src="{{imgPath}}{{tvDetails.seasons[1].poster_path}}">
+        </li>
+        <li>
+            <img class="responsive-img" ng-src="{{imgPath}}{{tvDetails.seasons[2].poster_path}}">
+        </li>
+        <li>
+            <img class="responsive-img" ng-src="{{imgPath}}{{tvDetails.seasons[3].poster_path}}">
+        </li>
+        <li>
+            <img class="responsive-img" ng-src="{{imgPath}}{{tvDetails.seasons[4].poster_path}}">
+        </li>
+        <li>
+            <img class="responsive-img" ng-src="{{imgPath}}{{tvDetails.seasons[5].poster_path}}">
+        </li>
+        <li>
+            <img class="responsive-img" ng-src="{{imgPath}}{{tvDetails.seasons[6].poster_path}}">
+        </li>
+        <li>
+            <img class="responsive-img" ng-src="{{imgPath}}{{tvDetails.seasons[7].poster_path}}">
+        </li>
+      </ul>
     </div>
+    <i class="fa fa-chevron-left fa-chevron-left3 fa-2x"></i>
+    <i class="fa fa-chevron-right fa-chevron-right3 fa-2x"></i>
   </div>
+
+
+
 
   <!-- OverView -->
   <div class="col s12 l7 offset-l1">
@@ -73,43 +69,50 @@ $("html, body").animate({ scrollTop: 0 }, 0);
       <a class="homepage-link" href="{{tvDetails.homepage}}" target="_blank">{{tvDetails.homepage}}</a>
     </div>
 
-    <!-- Genres -->
+    </div>
+  </br>
+
+
+</div><!-- end of row -->
+
     <div class="row">
-      <div class="col s6 l6">
+
+
+     <!-- Rating -->
+      <div class="col s12 m3 l3">
+          <h5 class="drop-shadow">Average Rating:</h5>
+          <h3 class="movie-vote"> {{tvDetails.vote_average}}</h3>
+      </div>
+
+  <!-- Genres -->
+      <div class="col s12 m3 l3">
+        <div class="section">
         <h5 class="drop-shadow">Genres:</h5>
         <ul class="tvGenres">
           <li class="tv-genres" ng-repeat="x in tvDetails.genres">{{x.name}}</li>
         </ul>
-      </div>
-
-      <!-- Rating -->
-      <div class="col s6 l6">
-        <div class="section">
-          <h5 class="drop-shadow">Average Rating:</h5>
-          <h3 class="movie-vote"> {{tvDetails.vote_average}}</h3>
         </div>
       </div>
-    </div>
 
     <!-- Seasons/Episodes -->
-    <div class="row">
-      <div class="col s6 l6">
+      <div class="col s12 m3 l3">
+        <div class="section">
         <!-- <div class="section"> -->
-        <h5>No. of seasons: {{tvDetails.number_of_seasons}}</h5>
-        <h5>No. of episodes: {{tvDetails.number_of_episodes}}</h5>
-        <!-- </div> -->
+        <h5 class="drop-shadow">No. of seasons:</h5> <h5>{{tvDetails.number_of_seasons}}</h5>
+        <h5 class="drop-shadow">No. of episodes:</h5> <h5>{{tvDetails.number_of_episodes}}</h5>
+        </div>
       </div>
 
       <!-- Production Companies -->
-      <div class="col s6 l6">
+      <div class="col s12 m3 l3">
+        <div class="section">
         <h5 class="drop-shadow">Production Companies:</h5>
         <ul class="tvProductionCompanies">
-          <li class="tv-production-companies" ng-repeat="x in tvDetails.production_companies">{{x.name}}</li>
+          <li class="tv-production-companies" ng-repeat="x in tvDetails.production_companies"><p>{{x.name}}</p></li>
         </ul>
-      </div>
-    </div>
   </div>
-</div>
+  </div>
+  </div><!-- end of row -->
 
 
 <!-- TRAILER -->
@@ -319,4 +322,6 @@ setTimeout(check_length, 700);
 $('.readMoreLink').click(function() {
   $('.readMoreLink').hide();
 });
+
+
 </script>

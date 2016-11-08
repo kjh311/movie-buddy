@@ -248,6 +248,12 @@ app.controller('starController', ['$scope', '$http', '$location', '$sce', 'userS
   $http.get(root_url+"person/"+value+"/combined_credits?api_key="+userService.key+"&language=en-US&page=1").success(function(data) {
     $scope.starCredits = data;
   });
+
+  // Movie Details
+  $http.get(base_url+winLocation+"?api_key="+userService.key+"&language=en-US&page=1").success(function(data) {
+    $scope.movieDetails = data;
+  });
+
 }]);
 
 // TV CONTROLLER
