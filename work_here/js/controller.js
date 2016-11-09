@@ -329,7 +329,6 @@ app.config(['$locationProvider', '$routeProvider',
         })
         .otherwise({redirectTo:'/'});
 }]);
-
 // app.config(function($sceDelegateProvider) {
 //    $sceDelegateProvider.resourceUrlWhitelist([
 //      'self',
