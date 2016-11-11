@@ -5,6 +5,23 @@ $('.materialboxed').materialbox();
 $('.slider').slider({full_width: false});
 
 $("html, body").animate({ scrollTop: 0 }, 0);
+
+// if ($("#productInfoGrid img").length == 0) {
+//     $("#productInfoGrid").hide();
+// }
+// if ( $(".movieSimilar0").has("img") ) {
+//     $('.slides3').hide();
+// }
+
+// $("img").error(function(){
+//         $(this).hide();
+// });
+
+// movieSimilar0
+
+
+
+
 </script>
 
 
@@ -23,6 +40,8 @@ $("html, body").animate({ scrollTop: 0 }, 0);
         <li>
             <img class="responsive-img" src="{{imgPath}}{{movieDetails.backdrop_path}}" alt="">
         </li>
+        <!-- No Image -->
+        <img class="no-images" src="images/no-images.png">
       </ul>
     </div>
     <i class="fa fa-chevron-left fa-chevron-left1 fa-2x"></i>
@@ -203,7 +222,8 @@ $("html, body").animate({ scrollTop: 0 }, 0);
               <p class="moveCastRole">{{movieCast.cast[9].character}}</p>
           </a>
         </li>
-
+  <!-- No Image -->
+        <img class="no-images" src="images/no-images.png">
       </ul>
     </div>
     <i class="fa fa-chevron-left fa-chevron-left2 fa-2x"></i>
@@ -215,73 +235,75 @@ $("html, body").animate({ scrollTop: 0 }, 0);
     <div class="tv-cast-wrapper col s12 m12 l4 offset-l2 offset-m4 offset-s1">
     <h4 class="drop-shadow">Similar Movies:</h4>
     <div class="slider tv-slider slider3">
-      <ul class="slides z-depth-3 slides3">
+      <ul class="slides z-depth-3 slides3" >
         <li>
           <a href="#movie/{{movieSimilar.results[0].id}}">
-            <img class="responsive-img  red-border" src="{{imgPath}}{{movieSimilar.results[0].poster_path}}" alt="">
+            <img class="responsive-img red-border movieSimilar0" src="{{imgPath}}{{movieSimilar.results[0].poster_path}}">
             <h5 class="similar-movie-vote">{{movieSimilar.results[0].vote_average}}</h5>
           </a>
         </li>
         <li>
           <a href="#movie/{{movieSimilar.results[1].id}}">
-            <img class="responsive-img  red-border" src="{{imgPath}}{{movieSimilar.results[1].poster_path}}" alt="">
+            <img class="responsive-img red-border movieSimilar0" src="{{imgPath}}{{movieSimilar.results[1].poster_path}}">
             <h5 class="similar-movie-vote">{{movieSimilar.results[1].vote_average}}</h5>
           </a>
         </li>
         <li>
           <a href="#movie/{{movieSimilar.results[2].id}}">
-            <img class="responsive-img  red-border" src="{{imgPath}}{{movieSimilar.results[2].poster_path}}" alt="">
+            <img class="responsive-img red-border movieSimilar0" src="{{imgPath}}{{movieSimilar.results[2].poster_path}}">
             <h5 class="similar-movie-vote">{{movieSimilar.results[2].vote_average}}</h5>
           </a>
         </li>
         <li>
           <a href="#movie/{{movieSimilar.results[3].id}}">
-            <img class="responsive-img  red-border" src="{{imgPath}}{{movieSimilar.results[3].poster_path}}" alt="">
+            <img class="responsive-img red-border movieSimilar0" src="{{imgPath}}{{movieSimilar.results[3].poster_path}}">
             <h5 class="similar-movie-vote">{{movieSimilar.results[3].vote_average}}</h5>
           </a>
         </li>
         <li>
           <a href="#movie/{{movieSimilar.results[4].id}}">
-            <img class="responsive-img  red-border" src="{{imgPath}}{{movieSimilar.results[4].poster_path}}" alt="">
+            <img class="responsive-img red-border movieSimilar0" src="{{imgPath}}{{movieSimilar.results[4].poster_path}}">
             <h5 class="similar-movie-vote">{{movieSimilar.results[4].vote_average}}</h5>
           </a>
         </li>
         <li>
           <a href="#movie/{{movieSimilar.results[5].id}}">
-            <img class="responsive-img  red-border" src="{{imgPath}}{{movieSimilar.results[5].poster_path}}" alt="">
+            <img class="responsive-img red-border movieSimilar0" src="{{imgPath}}{{movieSimilar.results[5].poster_path}}">
             <h5 class="similar-movie-vote">{{movieSimilar.results[5].vote_average}}</h5>
           </a>
         </li>
         <li>
           <a href="#movie/{{movieSimilar.results[6].id}}">
-            <img class="responsive-img  red-border" src="{{imgPath}}{{movieSimilar.results[6].poster_path}}" alt="">
+            <img class="responsive-img red-border movieSimilar0" src="{{imgPath}}{{movieSimilar.results[6].poster_path}}">
             <h5 class="similar-movie-vote">{{movieSimilar.results[6].vote_average}}</h5>
           </a>
         </li>
         <li>
-          <a href="#movie/{{movieSimilar.results[7].id}}">
-            <img class="responsive-img  red-border" src="{{imgPath}}{{movieSimilar.results[7].poster_path}}" alt="">
-            <h5 class="similar-movie-vote">{{movieSimilar.results[7].vote_average}}</h5>
-          </a>
-        </li>
-        <li>
-          <a href="#movie/{{movieSimilar.results[8].id}}">
-            <img class="responsive-img  red-border" src="{{imgPath}}{{movieSimilar.results[8].poster_path}}" alt="">
-            <h5 class="similar-movie-vote">{{movieSimilar.results[8].vote_average}}</h5>
+          <a href="#movie/{{movieSimilar.results[9].id}}">
+            <img class="responsive-img red-border movieSimilar0" src="{{imgPath}}{{movieSimilar.results[9].poster_path}}">
+            <h5 class="similar-movie-vote">{{movieSimilar.results[9].vote_average}}</h5>
           </a>
         </li>
         <li>
           <a href="#movie/{{movieSimilar.results[9].id}}">
-            <img class="responsive-img  red-border" src="{{imgPath}}{{movieSimilar.results[9].poster_path}}" alt="">
+            <img class="responsive-img red-border movieSimilar0" src="{{imgPath}}{{movieSimilar.results[9].poster_path}}">
             <h5 class="similar-movie-vote">{{movieSimilar.results[9].vote_average}}</h5>
           </a>
         </li>
+        <li>
+          <a href="#movie/{{movieSimilar.results[9].id}}">
+            <img class="responsive-img red-border movieSimilar0" src="{{imgPath}}{{movieSimilar.results[9].poster_path}}">
+            <h5 class="similar-movie-vote">{{movieSimilar.results[9].vote_average}}</h5>
+          </a>
+        </li>
+        <!-- No Image -->
+        <img class="no-images" src="images/no-images.png">
       </ul>
     </div>
     <i class="fa fa-chevron-left fa-chevron-left3 fa-2x"></i>
     <i class="fa fa-chevron-right fa-chevron-right3 fa-2x"></i>
   </div>
-
+ <!-- <img src="images/no-images.png" alt=""> -->
 </div><!--End of row -->
 
 </div>
@@ -345,6 +367,12 @@ setTimeout(check_length, 700);
 $('.readMoreLink').click(function() {
   $('.readMoreLink').hide();
 });
+
+
+
+if($('.movieSimilar0').val !== ""){
+  // alert('asdf');
+}
 </script>
 
 

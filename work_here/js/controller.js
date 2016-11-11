@@ -1,4 +1,4 @@
-var app = angular.module('myApp',['ngRoute']);
+var app = angular.module('myApp',['ngRoute', 'angular-err-src']);
 
 // .config(function($sceDelegateProvider) {
 //    $sceDelegateProvider.resourceUrlWhitelist([
@@ -6,6 +6,7 @@ var app = angular.module('myApp',['ngRoute']);
 //      '*://www.youtube.com/**'
 //    ]);
 //  });
+
 
 
 
@@ -213,6 +214,17 @@ $scope.winLocation = $location.path();
   $http.get(base_url+winLocation+"/similar?api_key="+userService.key+"&language=en-US&page=1").success(function(data) {
     $scope.movieSimilar = data;
     });
+
+// $http.get(base_url+winLocation+"/similar?api_key="+userService.key+"&language=en-US&page=1")
+//     .success(function (data){
+//         $scope.movieSimilar = data;
+//     })
+//     .error:function (xhr, ajaxOptions, thrownError){
+//     if(xhr.status==404) {
+//         alert(thrownError);
+//     }
+// }
+
 
 // Release Date
   $http.get(base_url+winLocation+"release_dates?api_key="+userService.key+"&language=en-US&page=1").success(function(data) {

@@ -113,7 +113,7 @@ body{
 .responsive-img{
   border: 4px solid rgba(255,255,255,0.3);
   // width: 300px;
-  // background-image: url("http://www.uoduckstore.com/c.3841022/sca-dev-montblanc/img/no_image_available.jpeg");
+  background-image: url("http://www.clker.com/cliparts/q/L/P/Y/t/6/no-image-available-md.png");
 }
 .cast-pic{
     width: 300px;
@@ -234,7 +234,7 @@ body{
   height: 450px;
 }
 .carousel-item{
-  background-image: url("http://www.don-zalmrol.be/media/1440/no_image_available.png");
+  // background-image: url("http://www.don-zalmrol.be/media/1440/no_image_available.png");
   background-repeat: no-repeat;
 }
 .no-opacity{
@@ -415,6 +415,9 @@ iframe{
   background-size: cover;
   background-image: url("http://memphisdrumshop.com/skin/frontend/default/mds/images/NoVideoAvailable.png");
 }
-
+.no-images{
+  height: 100%;
+  width: 100%;
+}
 
 

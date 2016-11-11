@@ -10,6 +10,7 @@ var app = angular.module('myApp',['ngRoute']);
 
 
 
+
 // MY CONTROLLER
 app.controller('myCtrl', ['$scope', '$http', '$location', '$sce', 'userService', function($scope, $http, $location, $sce, userService) {
   $scope.name = 'Kevin';
@@ -214,6 +215,17 @@ $scope.winLocation = $location.path();
     $scope.movieSimilar = data;
     });
 
+// $http.get(base_url+winLocation+"/similar?api_key="+userService.key+"&language=en-US&page=1")
+//     .success(function (data){
+//         $scope.movieSimilar = data;
+//     })
+//     .error:function (xhr, ajaxOptions, thrownError){
+//     if(xhr.status==404) {
+//         alert(thrownError);
+//     }
+// }
+
+
 // Release Date
   $http.get(base_url+winLocation+"release_dates?api_key="+userService.key+"&language=en-US&page=1").success(function(data) {
     $scope.movieReleaseDate = data;
@@ -410,8 +422,13 @@ $('.specific-link').click(function() {
   $('.tv-link').removeClass('white');
 });
 
+// // if ( !$("#productInfoGrid").has("img") ) {
+//     $(this).hide();
+// }
 
-
+// if ( $(".similar-movie-li-1 img").find('img').length == 0);​
+//     $('.slides3').hide();
+// }
 
 
 });

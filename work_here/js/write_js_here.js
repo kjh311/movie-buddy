@@ -43,8 +43,13 @@ $('.specific-link').click(function() {
   $('.tv-link').removeClass('white');
 });
 
+// // if ( !$("#productInfoGrid").has("img") ) {
+//     $(this).hide();
+// }
 
-
+// if ( $(".similar-movie-li-1 img").find('img').length == 0);​
+//     $('.slides3').hide();
+// }
 
 
 });
