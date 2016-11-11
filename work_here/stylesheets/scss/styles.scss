@@ -420,6 +420,14 @@ iframe{
   width: 300px;
 
 }
+.social-icons-nav{
+  right: 0;
+  position: fixed;
+  top: -14px;
+}
+.social-nav-icon:hover{
+  background-color: rgba(0,0,0,0) !important;
+}
 .movie1{
   @include centerer;
 }
