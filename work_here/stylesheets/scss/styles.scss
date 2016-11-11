@@ -2,6 +2,7 @@ $dark-grey: rgba(0,0,0,0.3);
 $white-semi-opaque: rgba(255,255,255,0.7);
 $light-blue: #90caf9;
 $dark-blue: #283593;
+$clear: rgba(0,0,0,0);
 
 @mixin centerer {
   position: absolute;
@@ -25,6 +26,9 @@ a:hover{
 }
 .brand-logo:hover{
   color: red;
+}
+.container{
+  margin-top: -20px !important;
 }
 .fa-heart{
   color: red;
@@ -70,7 +74,7 @@ body{
   background: rgba(255,0,0,0.4);
 }
 .nav-row, .footer-wrapper{
-  border-bottom: 3px solid black;
+  // border-bottom: 3px solid black;
   border-right: 3px solid black;
   border-top: 3px solid black;
 }
@@ -420,15 +424,23 @@ iframe{
   width: 300px;
 
 }
+
 .social-icons-nav{
   right: 0;
   position: fixed;
   top: -14px;
 }
+.mobile-links{
+  font-size: 1.5em !important;
+  padding-top: 20px;
+}
 #twitter-widget-0, #twitter-widget-1 {
   float: none;
   width: 90% !important;
   // height: 250px !important;
+}
+#sidenav-overlay{
+  display: none;
 }
 .social-nav-icon:hover{
   background-color: rgba(0,0,0,0) !important;
@@ -452,5 +464,23 @@ iframe{
 .tv-credit-name{
   display: none;
 }
+#searchBar2{
+  background-color: $dark-blue;
+  height: 40px;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1.2em;
+  border-bottom: 4px solid black;
+}
+.mobile-nav-icon{
+  display: inline;
+}
+
+// @media (max-width: 600px) {
+// .container{
+//   margin-top: -80px !important;
+// }
+// }
+
 
 
