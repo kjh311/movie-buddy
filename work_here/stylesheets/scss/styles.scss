@@ -3,6 +3,13 @@ $white-semi-opaque: rgba(255,255,255,0.7);
 $light-blue: #90caf9;
 $dark-blue: #283593;
 
+@mixin centerer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 *{
   -webkit-user-select: none;
   -ms-user-select: none;
@@ -13,7 +20,7 @@ a:hover{
 }
 .brand-logo, .drop-shadow{
   text-shadow: 3px 3px 3px black;
-  text-decoration: underline;
+  // text-decoration: underline;
   line-height: 1.3;
 }
 .brand-logo:hover{
@@ -403,9 +410,18 @@ iframe{
 .opacity{
   opacity: 1;
 }
+.relative{
+  position: relative;
+}
 .tv-cast-wrapper, .cast-pic{
   max-width: 300px;
+  margin: auto;
+  position: relative;
   width: 300px;
+
+}
+.movie1{
+  @include centerer;
 }
 .trailer:hover{
   border: 2px solid red;
@@ -418,6 +434,10 @@ iframe{
 .no-images{
   height: 100%;
   width: 100%;
+  opacity: 0.3;
+}
+.tv-credit-name{
+  display: none;
 }
 
 
