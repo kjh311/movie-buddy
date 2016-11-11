@@ -304,6 +304,16 @@ body{
   color: $white-semi-opaque;
   top: -10px !important;
   left: 0px;
+  z-index: 200;
+  position: fixed;
+  padding: 10px;
+}
+.cast-character{
+  background-color: $dark-grey;
+  color: $white-semi-opaque;
+  bottom: -10px !important;
+  right: 0px;
+  z-index: 200;
   position: fixed;
   padding: 10px;
 }
@@ -462,7 +472,7 @@ iframe{
   opacity: 0.3;
 }
 .tv-credit-name{
-  display: none;
+  // display: none;
 }
 #searchBar2{
   background-color: $dark-blue;
@@ -475,6 +485,13 @@ iframe{
 .mobile-nav-icon{
   display: inline;
 }
+#twitter-widget-holder{
+  // max-height:400px;
+  margin-top: 10px;
+  padding:20px;
+  background: $light-blue;
+  border-radius:23px;
+  box-shadow:20px 20px 10px rgba(0,0,0,.4); }
 
 // @media (max-width: 600px) {
 // .container{
