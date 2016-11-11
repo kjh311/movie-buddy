@@ -339,6 +339,9 @@ app.config(['$locationProvider', '$routeProvider',
           templateUrl  : '/work_here/views/starPage.html',
           controller: 'starController'
         })
+        .when('/news', {
+          templateUrl  : '/work_here/views/news.html'
+        })
         .otherwise({redirectTo:'/'});
 }]);
 // app.config(function($sceDelegateProvider) {

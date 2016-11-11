@@ -1,4 +1,4 @@
-var app = angular.module('myApp',['ngRoute', 'angular-err-src']);
+var app = angular.module('myApp',['ngRoute']);
 
 // .config(function($sceDelegateProvider) {
 //    $sceDelegateProvider.resourceUrlWhitelist([
@@ -338,6 +338,9 @@ app.config(['$locationProvider', '$routeProvider',
         .when('/star/:id', {
           templateUrl  : '/work_here/views/starPage.html',
           controller: 'starController'
+        })
+        .when('/news', {
+          templateUrl  : '/work_here/views/news.html'
         })
         .otherwise({redirectTo:'/'});
 }]);
