@@ -81,7 +81,7 @@ $("html, body").animate({ scrollTop: 0 }, 0);
   <div class="tv-cast-wrapper col s12 m12 l4 offset-l1 offset-m4 offset-s1">
     <h4 class="drop-shadow">Credits:</h4>
     <div class="slider tv-slider slider2">
-      <ul class="slides z-depth-3 slides2">
+      <ul class="slides z-depth-3 slides2 starCredit">
         <li>
           <a href="#movie/{{starCredits.cast[0].id}}">
             <img class="responsive-img red-border" src="{{imgPath}}{{starCredits.cast[0].poster_path}}" alt="">
@@ -213,5 +213,11 @@ setTimeout(check_length, 700);
 
 $('.readMoreLink').click(function() {
   $('.readMoreLink').hide();
+});
+
+
+$('.starCredit').click(function(){
+  $('.star-link').removeClass('white');
+  $('.movie-link').addClass('white');
 });
 </script>

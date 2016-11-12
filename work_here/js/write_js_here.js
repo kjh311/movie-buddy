@@ -40,12 +40,7 @@ $('.news-link').click(function() {
 });
 
 
-$('.specific-link').click(function() {
-  $('.star-link').removeClass('white');
-  $('.movie-link').removeClass('white');
-  $('.tv-link').removeClass('white');
-  $('.news-link').removeClass('white');
-});
+
 
 
 

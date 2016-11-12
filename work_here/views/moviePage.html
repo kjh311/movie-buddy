@@ -32,10 +32,10 @@ $("html, body").animate({ scrollTop: 0 }, 0);
 
 <!-- POSTER SLIDER -->
   <div class="tv-cast-wrapper col s12 l4 offset-l1 offset-m4 offset-s1">
-    <div class="slider tv-slider slider1">
-      <ul class="slides z-depth-3 slides1">
+    <div class="slider tv-slider slider1 ">
+      <ul class="slides z-depth-3 slides1 ">
         <li>
-            <img class="responsive-img" src="{{imgPath}}{{movieDetails.poster_path}}" alt="">
+            <img class="responsive-img " src="{{imgPath}}{{movieDetails.poster_path}}" alt="">
         </li>
         <li>
             <img class="responsive-img" src="{{imgPath}}{{movieDetails.backdrop_path}}" alt="">
@@ -151,7 +151,7 @@ $("html, body").animate({ scrollTop: 0 }, 0);
   <div class="tv-cast-wrapper col s12 m12 l4 offset-l2 offset-m4 offset-s1">
     <h4 class="drop-shadow">Cast:</h4>
     <div class="slider tv-slider slider2">
-      <ul class="slides z-depth-3 slides2">
+      <ul class="slides z-depth-3 slides2 movieCast">
         <li>
           <a href="#star/{{movieCast.cast[0].id}}">
             <img class="responsive-img  red-border" src="{{imgPath}}{{movieCast.cast[0].profile_path}}" alt="">
@@ -373,6 +373,12 @@ $('.readMoreLink').click(function() {
 if($('.movieSimilar0').val !== ""){
   // alert('asdf');
 }
+
+
+$('.movieCast').click(function(){
+  $('.star-link').addClass('white');
+  $('.movie-link').removeClass('white');
+});
 </script>
 
 

@@ -93,8 +93,11 @@ body{
 .nav-main-wrapper{
   position: fixed;
   width: 100%;
-  z-index: 50;
+  z-index: 10;
   // border: 2px solid black;
+}
+.nav-bottom{
+  border-bottom: 3px solid black;
 }
 .nav-link{
    text-shadow: 2px 2px 2px black;
@@ -183,9 +186,16 @@ body{
   z-index: 200;
 }
 #movieDBlogo{
-  height: 30px;
+  // height: 30px;
+  // position: absolute;
+  // right: 0;
+  margin-top: 20px;
+  margin-left: 20px;
   padding-right: 20px;
   // margin-top: 10px;
+}
+.footer-copyright{
+  // padding-top: 40px;
 }
 #movieDBText{
   margin-top: 30px;
@@ -308,6 +318,9 @@ body{
   position: fixed;
   padding: 10px;
 }
+.materialboxed{
+  z-index: 200;
+}
 .cast-character{
   background-color: $dark-grey;
   color: $white-semi-opaque;
@@ -400,7 +413,7 @@ body{
   cursor: pointer;
 }
 iframe{
-  z-index: 250;
+  // z-index: 200 !important;
 }
 .movie-screen{
   top: 0;
@@ -443,6 +456,10 @@ iframe{
 .mobile-links{
   font-size: 1.5em !important;
   padding-top: 20px;
+  color: $light-blue;
+}
+.fa-bars{
+  visibility: hidden;
 }
 #twitter-widget-0, #twitter-widget-1 {
   float: none;
@@ -487,17 +504,26 @@ iframe{
 }
 #twitter-widget-holder{
   // max-height:400px;
-  margin-top: 10px;
+  margin-top: -30px;
   padding:20px;
-  background: $light-blue;
+  // background: $light-blue;
   border-radius:23px;
-  box-shadow:20px 20px 10px rgba(0,0,0,.4); }
+  // border: 4px solid white;
+  // box-shadow:20px 20px 10px rgba(0,0,0,.4);
+}
 
-// @media (max-width: 600px) {
+
+@media (max-width: 600px) {
 // .container{
 //   margin-top: -80px !important;
 // }
-// }
+#twitter-widget-0, #twitter-widget-1{
+  width: 100% !important;
+}
+.fa-bars{
+  visibility: visible;
+}
+}
 
 
 
