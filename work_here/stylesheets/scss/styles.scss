@@ -26,6 +26,7 @@ a:hover{
   color: red;
   transition:all 0.4s ease;
 }
+
 th, td{
   color: black;
   // padding-left: 20px;
@@ -128,12 +129,13 @@ body{
   position: relative;
   right: 20%;
   border-radius: 20px;
-  // border: 5px solid black;
-  transition:all 0.6s ease;
+  transition:all 0.3s ease;
 }
 .results-pic:hover{
-  // border: 5px solid red;
-  transition:all 0.6s ease;
+  transition:all 0.3s ease;
+  -webkit-box-shadow: 0px 0px 10px 10px rgba(255,0,0,0.88);
+  -moz-box-shadow: 0px 0px 10px 10px rgba(255,0,0,0.88);
+  box-shadow: 0px 0px 10px 10px rgba(255,0,0,0.88);
 }
 .submit{
   right: 0;
@@ -350,6 +352,9 @@ body{
 .readMoreLink{
   cursor: pointer;
 }
+.hidden{
+  visibility: hidden;
+}
 .movie-genres-name, .movie-production-companies{
   word-wrap: break-word;
   font-size: 1.3em;
@@ -369,7 +374,7 @@ body{
   position: absolute;
 }
 .red-border{
-  border: 4px solid black;
+  border: 4px solid $white-semi-opaque;
   transition:all 0.3s ease;
 }
 .red-border:hover{
@@ -601,6 +606,9 @@ iframe{
 }
 .mobile-nav-icon{
   display: inline;
+}
+.air-date{
+  font-family: .5em !important;
 }
 #twitter-widget-holder{
   // max-height:400px;

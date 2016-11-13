@@ -174,9 +174,9 @@ $http.get(root_url+"movie/now_playing?api_key="+userService.key+"&language=en-US
 
 
 $scope.doSearch = function(){
-
   $('.search-results-div').show();
-  // $('.search-results-div').addClass('animated bounceInDown');
+  $('.search-results-div').animate({ scrollTop: 0 }, "fast");
+  $('.search-results-div').addClass('animated fadeIn');
 
 $scope.search = $('#searchBar').val();
 var search = $('#searchBar').val();
@@ -184,6 +184,7 @@ $http.get(root_url+"search/multi?api_key="+userService.key+"&language=en-US&quer
     $scope.searchResults = data;
     console.log(searchResults);
   });
+// $('#searchBar').val("");
 // alert(search);
 }
 

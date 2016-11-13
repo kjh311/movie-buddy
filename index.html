@@ -60,16 +60,10 @@
 <!--   <link rel="stylesheet" href="https://unpkg.com/flickity@2.0/dist/flickity.css" media="screen">
   <script src="https://unpkg.com/flickity@2.0/dist/flickity.pkgd.min.js"></script>
 -->
-<!-- Search Accordion -->
-<script>
-if ($(".movie-img-search img[src=='']").click(function()){
-          alert('got me');
-        }
-        </script>
 </head>
 <base href="/">
 
-<body  ng-controller="myCtrl" ng-click="closeSearch()" >
+<body  ng-controller="myCtrl" id="myCtrl" ng-click="closeSearch()" >
 
 
 
@@ -156,7 +150,7 @@ if ($(".movie-img-search img[src=='']").click(function()){
         <div class="col s5 hide-on-med-and-up search-bar-div">
           <input class="searchBar" ng-model="search" type="text" placeholder="Search">
         </div>
-        <input class="submit" type="submit" value="Submit" onclick="searchResults()">
+        <!-- <input class="submit hidden" type="submit" value="Submit"> -->
       </form>
     </ul>
   </div>
@@ -168,27 +162,30 @@ if ($(".movie-img-search img[src=='']").click(function()){
 
 </div>
 
-<div class="row">
+<div class="row ">
 
 
 
 <!-- SEARCH RESULTS -->
 <div class="search-results-div">
 
-<table class="centered ">
+<table class="centered">
             <tbody>
 
-        <span >
+        <span class="search-table ">
           <!-- Movie Results -->
-          <tr ng-repeat="x in searchResults.results  | limitTo:5">
+          <tr ng-repeat="x in searchResults.results">
             <td class="movie-title-search">
-              <a class="search-result-name" href="#{{x.media_type}}/{{x.id}}">
-                <p >{{x.title}}{{x.name}}</p>
+              <a href="#{{x.media_type}}/{{x.id}}">
+                <p  class="search-result-name">{{x.title}}{{x.name}}</p>
+                <p class="air-date">{{x.first_air_date | date}}</p>
+                <p class="air-date">{{x.release_date | date}}</p>
               </a>
             </td>
             <td class="movie-img-search"><a  class="search-result-pic" href="#{{x.media_type}}/{{x.id}}">
               <img class="z-depth-2 results-pic" ng-src="{{imgPath}}{{x.profile_path}}">
               <img class="z-depth-2 results-pic" ng-src="{{imgPath}}{{x.poster_path}}" >
+
 
             </a>
           </td>
@@ -245,5 +242,36 @@ if ($(".movie-img-search img[src=='']").click(function()){
   </footer>
 </div>
 </body>
+<script>
+
+// SEARCH LOGIC
+
+   //setup before functions
+var typingTimer;                //timer identifier
+var doneTypingInterval = 500;  //time in ms (5 seconds)
+
+//on keyup, start the countdown
+$('#searchBar').keyup(function(){
+    clearTimeout(typingTimer);
+    if ($('#searchBar').val()) {
+        typingTimer = setTimeout(doneTyping, doneTypingInterval);
+    }
+});
+
+//user is "finished typing," do something
+function doneTyping () {
+    // alert('done typing');
+angular.element('#myCtrl').scope().doSearch();
+angular.element('#myCtrl').scope().$apply()
+doSearch();
+}
+$('.search-results-div').hide();
+
+
+
+
+
+
+</script>
 
 </html>
