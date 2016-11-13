@@ -26,6 +26,11 @@ a:hover{
   color: red;
   transition:all 0.4s ease;
 }
+th, td{
+  color: black;
+  // padding-left: 20px;
+  // position: absolute;
+}
 .brand-logo, .drop-shadow{
   text-shadow: 3px 3px 3px black;
   // text-decoration: underline;
@@ -119,13 +124,15 @@ body{
    margin-top: -4px !important;
 }
 .results-pic{
-  width: 50px;
+  width: 70px;
+  position: relative;
+  right: 20%;
   border-radius: 20px;
-  border: 5px solid black;
+  // border: 5px solid black;
   transition:all 0.6s ease;
 }
 .results-pic:hover{
-  border: 5px solid red;
+  // border: 5px solid red;
   transition:all 0.6s ease;
 }
 .submit{
@@ -133,6 +140,7 @@ body{
   position: absolute;
 }
 .search-result-name{
+  font-size: 1.5em;
   // position: absolute;
   // float: left;
   // padding-left: 20px;
@@ -141,9 +149,17 @@ body{
   border: 2px solid black;
   position: relative;
   margin-top: -25px;
+  z-index: 10;
+  max-height: 500px;
+  overflow: auto;
+  overflow-x: hidden;
   background-color: white;
   -webkit-transition:all 5s ease;
 }
+ /* icon prefix focus color */
+   .input-field .prefix.active {
+     color: #000;
+   }
 .categories li{
   // display: inline;
   padding-left: 0px;
@@ -185,18 +201,18 @@ body{
 
   background-image: url("http://www.clker.com/cliparts/q/L/P/Y/t/6/no-image-available-md.png");
 }
-.slider{
-  -webkit-transform: scale(1);
-  -ms-transform: scale(1);
-  transform: scale(1);
-  transition:all 0.6s ease;
-}
-.slider:hover{
-  -webkit-transform: scale(1.2);
-  -ms-transform: scale(1.2);
-  transform: scale(1.2);
-  transition:all 0.6s ease;
-}
+// .slider{
+//   -webkit-transform: scale(1);
+//   -ms-transform: scale(1);
+//   transform: scale(1);
+//   transition:all 0.6s ease;
+// }
+// .slider:hover{
+//   -webkit-transform: scale(1.2);
+//   -ms-transform: scale(1.2);
+//   transform: scale(1.2);
+//   transition:all 0.6s ease;
+// }
 
 .cast-pic{
     width: 300px;

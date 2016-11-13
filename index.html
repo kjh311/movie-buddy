@@ -61,11 +61,15 @@
   <script src="https://unpkg.com/flickity@2.0/dist/flickity.pkgd.min.js"></script>
 -->
 <!-- Search Accordion -->
-<script>$('.collapsible').collapsible();</script>
+<script>
+if ($(".movie-img-search img[src=='']").click(function()){
+          alert('got me');
+        }
+        </script>
 </head>
 <base href="/">
 
-<body  ng-controller="myCtrl">
+<body  ng-controller="myCtrl" ng-click="closeSearch()" >
 
 
 
@@ -80,41 +84,7 @@
           <a href="#/" class="brand-logo center">Movie Buddy!</a>
           <div >
 
-            <!-- Mobile Nav -->
-<!-- <ul id="slide-out" class="side-nav">
-      <li><a href="#!">First Sidebar Link</a></li>
-      <li><a href="#!">Second Sidebar Link</a></li>
-      <li class="no-padding">
-        <ul class="collapsible collapsible-accordion">
-          <li>
-            <a class="collapsible-header">Dropdown<i class="material-icons">arrow_drop_down</i></a>
-            <div class="collapsible-body">
-              <ul>
-                <li><a href="#!">First</a></li>
-                <li><a href="#!">Second</a></li>
-                <li><a href="#!">Third</a></li>
-                <li><a href="#!">Fourth</a></li>
-              </ul>
-            </div>
-          </li>
-        </ul>
-      </li>
-    </ul>
-    <ul class="right hide-on-med-and-down">
-      <li><a href="#!">First Sidebar Link</a></li>
-      <li><a href="#!">Second Sidebar Link</a></li>
-      <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Dropdown<i class="material-icons right">arrow_drop_down</i></a></li>
-      <ul id='dropdown1' class='dropdown-content'>
-        <li><a href="#!">First</a></li>
-        <li><a href="#!">Second</a></li>
-        <li><a href="#!">Third</a></li>
-        <li><a href="#!">Fourth</a></li>
-      </ul>
-    </ul>
-    <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a> -->
-
-
-    <!-- Mobile Drop Down -->
+<!-- Mobile Drop Down -->
     <ul id="slide-out" class="side-nav hide-on-med-only">
 
       <li><a class="waves-effect mobile-links" href="#movies">Movies</a></li>
@@ -123,29 +93,26 @@
       <li><a class="waves-effect mobile-links" href="#news">News</a></li>
 
       <li>
-        <!-- Facebook -->
+  <!-- Facebook -->
         <a href="http://www.facebook.com/sharer.php?u=https://kjh311.github.io/movie-buddy/" target="_blank"><p><i class="fa fa-facebook fa-2x  mobile-nav-icon"></i></p></a>
       </li>
-      <li>             <!-- Twitter -->
+      <li>
+   <!-- Twitter -->
         <a href="https://twitter.com/share?url=https://kjh311.github.io/movie-buddy/&amp;text=Movie%20Buddy" target="_blank">
           <p><i class="fa fa-twitter fa-2x mobile-nav-icon"></i></p>
         </a>
       </li>
       <li>
-        <!-- Google+ -->
+<!-- Google+ -->
         <a href="https://plus.google.com/share?url=https://kjh311.github.io/movie-buddy/" target="_blank">
           <p class=""><i class="fa fa-google fa-2x mobile-nav-icon"></i></p></a>
-
-
         </li>
-
       </ul>
       <a href="#" data-activates="slide-out" class="button-collapse"><i class="fa fa-bars fa-2x"></i></a>
 
 
-
+<!-- Social Icons -->
       <ul class="social-icons-nav hide-on-small-and-down">
-
         <li>
           <!-- Facebook -->
           <a href="http://www.facebook.com/sharer.php?u=https://kjh311.github.io/movie-buddy/" target="_blank"><p><i class="fa fa-facebook fa-2x  social-nav-icon"></i></p></a>
@@ -159,10 +126,7 @@
           <!-- Google+ -->
           <a href="https://plus.google.com/share?url=https://kjh311.github.io/movie-buddy/" target="_blank">
             <p class=""><i class="fa fa-google fa-2x social-nav-icon"></i></p></a>
-
-
           </li>
-
         </ul>
 
       </div>
@@ -181,15 +145,8 @@
         <a href="#stars" class="star-link nav-link"><div class="col s2"><li>STARS</li></div></a>
         <a href="#news" class="news-link nav-link"><div class="col s2"><li>NEWS</li></div></a>
 
-        <!-- Search -->
+<!-- Search -->
         <div class="col s4 hide-on-small-only">
-
-<!--       <form  role="search" ng-submit="vm.doSearch()">
-        <div class="form-group">
-          <input id="search-bar" ng-model="vm.query" type="text" class="form-control" placeholder="Search for a Brewery" autofocus>
-          <h3><input type="submit" id="searchBtn" class="btn searchSubmit btn-info"></h3>
-        </div>
-      </form> -->
 
 
       <form  role="search" ng-submit="doSearch()">
@@ -200,7 +157,6 @@
           <input class="searchBar" ng-model="search" type="text" placeholder="Search">
         </div>
         <input class="submit" type="submit" value="Submit" onclick="searchResults()">
-        <!-- </div> -->
       </form>
     </ul>
   </div>
@@ -213,19 +169,44 @@
 </div>
 
 <div class="row">
+
+
+
 <!-- SEARCH RESULTS -->
 <div class="search-results-div">
-  <ul ng-repeat="x in searchResults.results  | limitTo:5">
-    <li>
-      <a class="search-result-name" href="#star/{{x.id}}"><p>{{x.name}}</p><img class="z-depth-2 results-pic" src="{{imgPath}}{{x.profile_path}}" alt=""></a>
-      <a class="search-result-name" href="#movie/{{x.id}}"><p>{{x.title}}</p><img class="z-depth-2 results-pic" src="{{imgPath}}{{x.poster_path}}" alt=""></a>
-      <!-- <p>{{x.media_type}}</p> -->
 
-    </li>
-  </ul>
-<!-- <p>{{searchResults.results[1].name}}</p>
-  <p>{{searchResults.results[0].title}}</p> -->
-  <!-- <img class="movie-screen" src="images/movie-screen2.png" alt=""> -->
+<table class="centered ">
+            <tbody>
+
+        <span >
+          <!-- Movie Results -->
+          <tr ng-repeat="x in searchResults.results  | limitTo:5">
+            <td class="movie-title-search">
+              <a class="search-result-name" href="#{{x.media_type}}/{{x.id}}">
+                <p >{{x.title}}{{x.name}}</p>
+              </a>
+            </td>
+            <td class="movie-img-search"><a  class="search-result-pic" href="#{{x.media_type}}/{{x.id}}">
+              <img class="z-depth-2 results-pic" ng-src="{{imgPath}}{{x.profile_path}}">
+              <img class="z-depth-2 results-pic" ng-src="{{imgPath}}{{x.poster_path}}" >
+
+            </a>
+          </td>
+          </tr>
+
+
+        </span>
+
+
+
+<!--           <tr ng-repeat="x in searchResults.results  | limitTo:5">
+            <td><a class="search-result-name" href="#movie/{{x.id}}"><p>{{x.title}}</p></a></td>
+            <td><a class="search-result-pic" href="#movie/{{x.id}}"><img class="z-depth-2 results-pic" src="{{imgPath}}{{x.poster_path}}" alt=""></a></td>
+            <td><p>{{x.media_type}}</p></td>
+          </tr> -->
+        </tbody>
+</table>
+
 </div>
 </div>
 
@@ -264,4 +245,5 @@
   </footer>
 </div>
 </body>
+
 </html>

@@ -171,19 +171,13 @@ $http.get(root_url+"movie/now_playing?api_key="+userService.key+"&language=en-US
 // image path
   $scope.imgPath = "https://image.tmdb.org/t/p/w300_and_h450_bestv2";
 
-// Search
-  // $http.get(root_url+"search/multi?api_key="+userService.key+"&language=en-US&query=tom%20cruise").success(function(data) {
-  //   $scope.searchResults = data;
-  //   console.log(searchResults);
-  // });
 
 
 $scope.doSearch = function(){
-  // $http.get('api/search?key=' + beerKey + '&q=' + vm.query).then(function(res){
-  //   console.log(res.data);
-  //   vm.breweries = res;
-  //   $location.path('/searchresults');
-  // });
+
+  $('.search-results-div').show();
+  // $('.search-results-div').addClass('animated bounceInDown');
+
 $scope.search = $('#searchBar').val();
 var search = $('#searchBar').val();
 $http.get(root_url+"search/multi?api_key="+userService.key+"&language=en-US&query="+$scope.search).success(function(data) {
@@ -193,6 +187,13 @@ $http.get(root_url+"search/multi?api_key="+userService.key+"&language=en-US&quer
 // alert(search);
 }
 
+// close search results div
+$scope.closeSearch = function(){
+  // alert('closed');
+
+  $('.search-results-div').hide();
+  // $('.search-results-div').addClass('animated bounceOutUp');
+}
 
 }]);
 
@@ -372,7 +373,7 @@ app.config(['$locationProvider', '$routeProvider',
         .when("/stars", {
           templateUrl : "/work_here/views/stars.html"
         })
-        .when('/star/:id', {
+        .when('/person/:id', {
           templateUrl  : '/work_here/views/starPage.html',
           controller: 'starController'
         })

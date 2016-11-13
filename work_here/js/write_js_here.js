@@ -74,6 +74,7 @@ function doneTyping () {
 
 // doSearch();
 }
+$('.search-results-div').hide();
 
 
 });
