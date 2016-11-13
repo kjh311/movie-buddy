@@ -4,6 +4,8 @@ $light-blue: #90caf9;
 $dark-blue: #283593;
 $clear: rgba(0,0,0,0);
 
+
+
 @mixin centerer {
   position: absolute;
   top: 50%;
@@ -16,13 +18,21 @@ $clear: rgba(0,0,0,0);
   -ms-user-select: none;
   -moz-user-select: none;
 }
+a{
+animation-name: color_change;
+  animation-duration: 1s;
+    color: $light-blue;
+}
 a:hover{
   color: red;
+  animation-name: color_change;
+  animation-duration: 1s;
 }
 .brand-logo, .drop-shadow{
   text-shadow: 3px 3px 3px black;
   // text-decoration: underline;
   line-height: 1.3;
+  margin-top: 10px;
 }
 .brand-logo:hover{
   color: red;
@@ -42,6 +52,12 @@ a:hover{
   float: left !important;
   // text-shadow: 10px 5px 5px black;
 }
+.logo2{
+  position: absolute;
+  right: 10px;
+  width: 45px;
+  top: 5px;
+}
 body{
   // background-color: lightblue;
   // background-color: red;
@@ -52,6 +68,7 @@ body{
   font-family: 'Anton', sans-serif;
   font-size: 16px;
   overflow-y: scroll;
+  overflow-x: hidden;
   // border-left: 3px solid black;
   // border-right: 3px solid black;
 }
@@ -81,7 +98,7 @@ body{
 .nav-wrapper{
   // border: 2px solid black;
 }
-#searchBar{
+.searchBar{
   text-align: center;
 }
 .main{
@@ -99,17 +116,35 @@ body{
 .nav-bottom{
   border-bottom: 3px solid black;
 }
-.nav-link{
+.nav-link li{
    text-shadow: 2px 2px 2px black;
+   margin-top: -4px !important;
+}
+.submit{
+  right: 0;
+  position: absolute;
 }
 .categories li{
   // display: inline;
   padding-left: 0px;
   padding-right: 0px;
 }
-#searchBar{
+#searchBar, .searchBar{
   background-color: rgba(0,0,0,0.3);
-  margin-top: -40px !important;
+  top: 65px;
+  height: 50px;
+  right: 0px !important;
+  width: 37%;
+  border-left: 2px solid black;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: 'Libre Franklin', sans-serif;
+  position: absolute;
+  font-size: .7em;
+}
+.search-bar-div{
+  // margin-top: -40px !important;
+  ;
 }
 .dark-blue{
   max-height: 50px;
@@ -205,12 +240,13 @@ body{
   padding-left: 10px;
 }
 .movieOverviewText, .starBiography, .tv-overview-text{
-  line-height: 120%;
+  line-height: 150%;
+  font-size: 1.6em;
   font-family: 'Libre Franklin', sans-serif;
 }
 .movieReviewText{
-  font-size: 1.2em;
-  padding: 20px;
+  font-size: 1.6em;
+  // padding: 20px;
   margin-top: 20px;
   font-family: 'Open Sans Condensed', sans-serif;
 }
@@ -264,10 +300,15 @@ body{
 .readMoreLink{
   cursor: pointer;
 }
-.movie-genres-name{
+.movie-genres-name, .movie-production-companies{
   word-wrap: break-word;
+  font-size: 1.3em;
 // white-space: pre-line;
   display: block;
+}
+.movie-homepage{
+  font-size: .8em !important;
+  max-width: 250px;
 }
 .similar-tv-vote{
   color: rgba(255,255,255,0.7);
@@ -341,8 +382,10 @@ body{
 .tv-genres{
   display: inline-block;
   padding-left: 20px;
+  font-size: 1.4em;
+}
+.tv-production-companies{
   font-size: 1.2em;
-
 }
 .tvGenres{
   // max-width: 200px;
@@ -456,7 +499,8 @@ iframe{
 .mobile-links{
   font-size: 1.5em !important;
   padding-top: 20px;
-  color: $light-blue;
+  // margin-top: -5px !important;
+  // color: $light-blue;
 }
 .fa-bars{
   visibility: hidden;
@@ -496,7 +540,8 @@ iframe{
   height: 40px;
   text-align: center;
   text-transform: uppercase;
-  font-size: 1.2em;
+  font-size: .8em;
+  font-family: 'Libre Franklin', sans-serif;
   border-bottom: 4px solid black;
 }
 .mobile-nav-icon{
@@ -523,6 +568,7 @@ iframe{
 .fa-bars{
   visibility: visible;
 }
+
 }
 
 

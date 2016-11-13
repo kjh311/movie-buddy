@@ -53,4 +53,27 @@ $('.news-link').click(function() {
   );
 
 
+
+// SEARCH LOGIC
+
+   //setup before functions
+var typingTimer;                //timer identifier
+var doneTypingInterval = 1500;  //time in ms (5 seconds)
+
+//on keyup, start the countdown
+$('#searchBar').keyup(function(){
+    clearTimeout(typingTimer);
+    if ($('#searchBar').val()) {
+        typingTimer = setTimeout(doneTyping, doneTypingInterval);
+    }
+});
+
+//user is "finished typing," do something
+function doneTyping () {
+    // alert('done typing');
+
+// doSearch();
+}
+
+
 });

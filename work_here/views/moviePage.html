@@ -23,6 +23,7 @@ $("html, body").animate({ scrollTop: 0 }, 0);
 
 
 </script>
+<!-- <div class="content">Content will show when myBoolean is true</div> -->
 
 
 <div class="container  animated fadeIn">
@@ -55,7 +56,7 @@ $("html, body").animate({ scrollTop: 0 }, 0);
     <h5 ng-init="limit=400" class="movieOverviewText">{{movieDetails.overview |truncate:limit}} <a class="readMoreLink" ng-click="limit=5000">Read More</a></h5>
 
   </br>
-    <h5><a href="{{movieDetails.homepage}}" target="_blank">{{movieDetails.homepage}}</a></h5>
+    <h5><a class="movie-homepage" href="{{movieDetails.homepage}}" target="_blank">{{movieDetails.homepage}}</a></h5>
 
 
   </div>
@@ -379,6 +380,25 @@ $('.movieCast').click(function(){
   $('.star-link').addClass('white');
   $('.movie-link').removeClass('white');
 });
+
+// checkToggle = function(){
+  // var a = 1;
+  // var myBoolean;
+  //     if(a > 0){
+  //       // alert('works');
+  //        myBoolean === true;
+  //     }
+
+  // if(myBoolean === true){
+  //   $('.content').show();
+  // }else if (myBoolean !== true{
+  //   $('.content').hide();
+  // }
+   // return $scope.myBoolean;
+ // };
+
+
+// checkToggle();
 </script>
 
 

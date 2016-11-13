@@ -171,6 +171,27 @@ $http.get(root_url+"movie/now_playing?api_key="+userService.key+"&language=en-US
 // image path
   $scope.imgPath = "https://image.tmdb.org/t/p/w300_and_h450_bestv2";
 
+// Search
+  // $http.get(root_url+"search/multi?api_key="+userService.key+"&language=en-US&query=tom%20cruise").success(function(data) {
+  //   $scope.searchResults = data;
+  //   console.log(searchResults);
+  // });
+
+
+$scope.doSearch = function(){
+  // $http.get('api/search?key=' + beerKey + '&q=' + vm.query).then(function(res){
+  //   console.log(res.data);
+  //   vm.breweries = res;
+  //   $location.path('/searchresults');
+  // });
+$scope.search = $('#searchBar').val();
+var search = $('#searchBar').val();
+$http.get(root_url+"search/multi?api_key="+userService.key+"&language=en-US&query="+$scope.search).success(function(data) {
+    $scope.searchResults = data;
+    console.log(searchResults);
+  });
+// alert(search);
+}
 
 
 }]);
@@ -186,6 +207,8 @@ $scope.movieId = "https://api.themoviedb.org/3/movie/188927?api_key="+userServic
 
 $scope.winLocation = $location.path();
   var winLocation = $location.path();
+
+
 
   // Movie Details
   $http.get(base_url+winLocation+"?api_key="+userService.key+"&language=en-US&page=1").success(function(data) {
@@ -206,6 +229,16 @@ $scope.winLocation = $location.path();
   $http.get(base_url+winLocation+"/credits?api_key="+userService.key+"&language=en-US&page=1").success(function(data) {
     $scope.movieCast = data;
   });
+
+// Check Director
+// $scope.checkToggle = function(){
+//   var a = 1;
+//       if(a > 0){
+//         // alert('works');
+//         $scope.myBoolean === false;
+//       }
+//    return $scope.myBoolean;
+//  };
 
 // Movie Trailer:
   $http.get(base_url+winLocation+"/videos?api_key="+userService.key+"&language=en-US&page=1").success(function(data) {
@@ -307,7 +340,6 @@ app.controller('tvController', ['$scope', '$http', '$location', '$sce', 'userSer
     var tvTrailerLink = data.results[0].key;
     $scope.linkYoutubeTv = $sce.trustAsResourceUrl('http://www.youtube.com/embed/'+tvTrailerLink);
   });
-
 }]);
 
 
