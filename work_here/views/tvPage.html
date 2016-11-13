@@ -105,6 +105,8 @@ $("html, body").animate({ scrollTop: 0 }, 0);
         <!-- <div class="section"> -->
         <h5 class="drop-shadow">No. of seasons:</h5> <h5>{{tvDetails.number_of_seasons}}</h5>
         <h5 class="drop-shadow">No. of episodes:</h5> <h5>{{tvDetails.number_of_episodes}}</h5>
+        <h5 class="drop-shadow">Air Date:</h5>
+        <p class="tv-air-date">{{tvDetails.first_air_date | date}}</p>
         </div>
       </div>
 

@@ -90,6 +90,12 @@ $("html, body").animate({ scrollTop: 0 }, 0);
         <a href="#person/{{movieCredits.crew[0].id}}">
           <h5>{{movieCredits.crew[0].name}}</h5>
         </a>
+
+<!-- Release Date -->
+        <h5 class="drop-shadow">Theatrical Release Date:</h5>
+      <h3 class="movie-release-date">{{movieDetails.release_date | date}}</h3>
+
+
         </div>
       </div>
 
@@ -119,12 +125,6 @@ $("html, body").animate({ scrollTop: 0 }, 0);
 
 
 
-
-
-<!-- Release Date -->
-<!-- <h5 class="drop-shadow">Theatrical Release Date:</h5>
-<h3>{{movieReleaseDate.results[0].release_dates.release_date}}</h3> -->
-
 </div>
 
 
@@ -134,11 +134,20 @@ $("html, body").animate({ scrollTop: 0 }, 0);
     <div class="row">
       <div class="col s10 offset-s1">
           <ul>
-            <li  ng-model="review" class="movieReviewText" ng-init="limit=150" ng-repeat="x in movieReviews.results | limitTo:3">
-              <p>{{x.content | truncate:limit}}<a class="readMoreLink-reviewss" ng-click="limit=5000" onClick="hideFunction()"> Read More</a></p>
-            <!-- </br> -->
-              - {{x.author}}
+            <li ng-model="review" class="movieReviewText" ng-init="limit=150">
+              <p class="movie-review-content1 movie-content-review">{{movieReviews.results[0].content | truncate:limit}}<a class="readMoreLink-reviews1" ng-click="limit=5000" onClick="hideFunction()"> Read More</a></p>
+               {{x.author}}
             </li>
+            <li ng-model="review" class="movieReviewText" ng-init="limit=150">
+              <p class="movie-review-content2 movie-content-review">{{movieReviews.results[1].content | truncate:limit}}<a class="readMoreLink-reviews2" ng-click="limit=5000" onClick="hideFunction()"> Read More</a></p>
+               {{x.author}}
+            </li>
+            <li ng-model="review" class="movieReviewText" ng-init="limit=150">
+              <p class="movie-review-content3 movie-content-review">{{movieReviews.results[2].content | truncate:limit}}<a class="readMoreLink-reviews3" ng-click="limit=5000" onClick="hideFunction()"> Read More</a></p>
+               {{x.author}}
+            </li>
+
+
           </ul>
       </div>
     </div>
@@ -361,12 +370,38 @@ function check_length(){
   if($('.movieOverviewText').text().length < 400  ){
     $('.readMoreLink').hide();
   }
+
+  if($('.movie-review-content1').text().length < 150  ){
+    $('.readMoreLink-reviews1').hide();
+  }
+
+   if($('.movie-review-content2').text().length < 150  ){
+    $('.readMoreLink-reviews2').hide();
+  }
+
+   if($('.movie-review-content3').text().length < 150  ){
+    $('.readMoreLink-reviews3').hide();
+  }
   // alert($('.movieOverviewText').text().length);
 }
 setTimeout(check_length, 700);
 
+
+
 $('.readMoreLink').click(function() {
   $('.readMoreLink').hide();
+});
+
+$('.readMoreLink-reviews1').click(function() {
+  $('.readMoreLink-reviews1').hide();
+});
+
+$('.readMoreLink-reviews2').click(function() {
+  $('.readMoreLink-reviews2').hide();
+});
+
+$('.readMoreLink-reviews3').click(function() {
+  $('.readMoreLink-reviews3').hide();
 });
 
 
