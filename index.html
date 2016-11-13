@@ -218,10 +218,22 @@
 </br>
 
 
-<!-- <div id="div1"></div> -->
-<p>{{searchResults.results[0].name}}</p>
-  <!-- <img class="movie-screen" src="images/movie-screen2.png" alt=""> -->
+<div class="search-results-div">
+  <ul ng-repeat="x in searchResults.results">
+    <li>
+      <a href="#star/{{x.id}}"><p>{{x.name}}</p></a>
+      <a href="#movie/{{x.id}}"><p>{{x.title}}</p></a>
+      <!-- <p>{{x.media_type}}</p> -->
+    </li>
+  </ul>
 
+
+<!-- <p>{{searchResults.results[1].name}}</p>
+<p>{{searchResults.results[0].title}}</p> -->
+<img src="{{imgPath}}{{searchResults.results[0].poster_path}}" alt="">
+<img src="{{imgPath}}{{searchResults.results[0].profile_path}}" alt="">
+  <!-- <img class="movie-screen" src="images/movie-screen2.png" alt=""> -->
+</div>
 
 
 <!-- <a class="specific-link" href="#movie/{{popularMovies.results[5].id}}" >specific movie</a>
