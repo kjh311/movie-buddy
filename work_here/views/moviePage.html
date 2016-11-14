@@ -92,9 +92,10 @@ $("html, body").animate({ scrollTop: 0 }, 0);
         </a>
 
 <!-- Release Date -->
+<div class="section">
         <h5 class="drop-shadow">Theatrical Release Date:</h5>
       <h3 class="movie-release-date">{{movieDetails.release_date | date}}</h3>
-
+</div>
 
         </div>
       </div>
@@ -134,17 +135,17 @@ $("html, body").animate({ scrollTop: 0 }, 0);
     <div class="row">
       <div class="col s10 offset-s1">
           <ul>
-            <li ng-model="review" class="movieReviewText" ng-init="limit=150">
+            <li ng-model="review" class="movieReviewText" ng-init="limit=400">
               <p class="movie-review-content1 movie-content-review">{{movieReviews.results[0].content | truncate:limit}}<a class="readMoreLink-reviews1" ng-click="limit=5000" onClick="hideFunction()"> Read More</a></p>
-               {{x.author}}
+               {{movieReviews.results[0].author}}
             </li>
-            <li ng-model="review" class="movieReviewText" ng-init="limit=150">
+            <li ng-model="review" class="movieReviewText" ng-init="limit=400">
               <p class="movie-review-content2 movie-content-review">{{movieReviews.results[1].content | truncate:limit}}<a class="readMoreLink-reviews2" ng-click="limit=5000" onClick="hideFunction()"> Read More</a></p>
-               {{x.author}}
+               {{movieReviews.results[1].author}}
             </li>
-            <li ng-model="review" class="movieReviewText" ng-init="limit=150">
+            <li ng-model="review" class="movieReviewText" ng-init="limit=400">
               <p class="movie-review-content3 movie-content-review">{{movieReviews.results[2].content | truncate:limit}}<a class="readMoreLink-reviews3" ng-click="limit=5000" onClick="hideFunction()"> Read More</a></p>
-               {{x.author}}
+               {{movieReviews.results[2].author}}
             </li>
 
 
@@ -365,6 +366,20 @@ $('.fa-chevron-left3').click(function() {
     $('.slider3').slider('start');
   }, 5000);
 });
+
+
+
+
+    // if($scope.movieCredits.cast[0].department === "Directing"){
+    //   alert('asdf');
+    // }
+
+// angular.element('#myCtrl').scope().movieCredits.cast[0].department;
+// angular.element('#myCtrl').scope().$apply()
+
+// if(movieCredits.cast[0].department === "Directing"){
+//       alert('asdf');
+//     }
 
 function check_length(){
   if($('.movieOverviewText').text().length < 400  ){

@@ -220,6 +220,7 @@ $scope.winLocation = $location.path();
   //Movie Credits
    $http.get(base_url+winLocation+"/credits?api_key="+userService.key+"&language=en-US&page=1").success(function(data) {
     $scope.movieCredits = data;
+
   });
 
 //Movie Reviews
