@@ -1,6 +1,8 @@
 #Creating a Movie Review Website.
 
 ![site](images/site.png)
+![news](images/news.png)
+![mobile](images/mobile.png)
 
 
 
