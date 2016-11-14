@@ -1,21 +1,10 @@
 var app = angular.module('myApp',['ngRoute']);
 
-// .config(function($sceDelegateProvider) {
-//    $sceDelegateProvider.resourceUrlWhitelist([
-//      'self',
-//      '*://www.youtube.com/**'
-//    ]);
-//  });
-
-
-
 
 
 // MY CONTROLLER
 app.controller('myCtrl', ['$scope', '$http', '$location', '$sce', 'userService', function($scope, $http, $location, $sce, userService) {
   $scope.name = 'Kevin';
-
-
 
 var root_url = "https://api.themoviedb.org/3/";
 var base_url = "https://api.themoviedb.org/3";
@@ -172,7 +161,7 @@ $http.get(root_url+"movie/now_playing?api_key="+userService.key+"&language=en-US
   $scope.imgPath = "https://image.tmdb.org/t/p/w300_and_h450_bestv2";
 
 
-
+// SEARCH
 $scope.doSearch = function(){
   $('.search-results-div').show();
   $('.search-results-div').animate({ scrollTop: 0 }, "fast");
@@ -184,23 +173,17 @@ $http.get(root_url+"search/multi?api_key="+userService.key+"&language=en-US&quer
     $scope.searchResults = data;
     console.log(searchResults);
   });
-// $('#searchBar').val("");
-// alert(search);
 }
 
 // close search results div
 $scope.closeSearch = function(){
-  // alert('closed');
-
   $('.search-results-div').hide();
   // $('.search-results-div').addClass('animated bounceOutUp');
 }
-
 }]);
 
 // Movie Controller
 app.controller('movieController', ['$scope', '$http', '$location', '$sce', 'userService', function($scope, $http, $location, $sce, userService) {
-
 
 var root_url = "https://api.themoviedb.org/3/";
 var base_url = "https://api.themoviedb.org/3";
@@ -209,8 +192,6 @@ $scope.movieId = "https://api.themoviedb.org/3/movie/188927?api_key="+userServic
 
 $scope.winLocation = $location.path();
   var winLocation = $location.path();
-
-
 
   // Movie Details
   $http.get(base_url+winLocation+"?api_key="+userService.key+"&language=en-US&page=1").success(function(data) {
@@ -256,17 +237,6 @@ $scope.winLocation = $location.path();
     $scope.movieSimilar = data;
     });
 
-// $http.get(base_url+winLocation+"/similar?api_key="+userService.key+"&language=en-US&page=1")
-//     .success(function (data){
-//         $scope.movieSimilar = data;
-//     })
-//     .error:function (xhr, ajaxOptions, thrownError){
-//     if(xhr.status==404) {
-//         alert(thrownError);
-//     }
-// }
-
-
 // Release Date
   $http.get(base_url+winLocation+"release_dates?api_key="+userService.key+"&language=en-US&page=1").success(function(data) {
     $scope.movieReleaseDate = data;
@@ -306,7 +276,6 @@ app.controller('starController', ['$scope', '$http', '$location', '$sce', 'userS
   $http.get(base_url+winLocation+"?api_key="+userService.key+"&language=en-US&page=1").success(function(data) {
     $scope.movieDetails = data;
   });
-
 }]);
 
 // TV CONTROLLER
@@ -317,7 +286,6 @@ app.controller('tvController', ['$scope', '$http', '$location', '$sce', 'userSer
 
 // GET END OF URL:
   var value = window.location.href.substring(window.location.href.lastIndexOf('/') + 1);
-
   var root_url = "https://api.themoviedb.org/3/";
   var base_url = "https://api.themoviedb.org/3";
 
@@ -349,9 +317,6 @@ app.controller('tvController', ['$scope', '$http', '$location', '$sce', 'userSer
 // NG-ROUTE
 app.config(['$locationProvider', '$routeProvider',
  function($location, $routeProvider) {
-  // alert($location.path);
-
-
 
     $routeProvider
         .when('/', {
@@ -384,16 +349,8 @@ app.config(['$locationProvider', '$routeProvider',
         })
         .otherwise({redirectTo:'/'});
 }]);
-// app.config(function($sceDelegateProvider) {
-//    $sceDelegateProvider.resourceUrlWhitelist([
-//      'self',
-//      '*://www.youtube.com/**'
-//    ]);
-//  });
 
-
-
-
+// LIMIT TEXT LENGTH FILTER
 app.filter('truncate', function () {
         return function (text, length, end) {
             if (isNaN(length))
@@ -408,7 +365,6 @@ app.filter('truncate', function () {
             else {
                 return String(text).substring(0, length-end.length) + end;
             }
-
         };
     });
 

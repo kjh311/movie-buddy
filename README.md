@@ -1,11 +1,14 @@
 #Creating a Movie Review Website.
 
+![site](images/site.png)
+
 
 
 #USES:
 
 * Angular
 * MaterializeJS
+* Movie Database API
 * Gulp
 * Browser-Sync
 * Gulp-Clean-Css

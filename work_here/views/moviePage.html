@@ -5,43 +5,25 @@ $('.materialboxed').materialbox();
 $('.slider').slider({full_width: false});
 
 $("html, body").animate({ scrollTop: 0 }, 0);
-
-// if ($("#productInfoGrid img").length == 0) {
-//     $("#productInfoGrid").hide();
-// }
-// if ( $(".movieSimilar0").has("img") ) {
-//     $('.slides3').hide();
-// }
-
-// $("img").error(function(){
-//         $(this).hide();
-// });
-
-// movieSimilar0
-
-
-
-
 </script>
-<!-- <div class="content">Content will show when myBoolean is true</div> -->
 
 
 <div class="container  animated fadeIn">
-<div class="row moviePage">
- <h1 class="drop-shadow">{{movieDetails.title}}</h1>
+  <div class="row moviePage">
+   <h1 class="drop-shadow">{{movieDetails.title}}</h1>
 
 
 <!-- POSTER SLIDER -->
-  <div class="tv-cast-wrapper col s12 l4 offset-l1 offset-m4 offset-s1">
+   <div class="tv-cast-wrapper col s12 l4 offset-l1 offset-m4 offset-s1">
     <div class="slider tv-slider slider1 ">
       <ul class="slides z-depth-3 slides1 ">
         <li>
-            <img class="responsive-img " src="{{imgPath}}{{movieDetails.poster_path}}" alt="">
+          <img class="responsive-img " src="{{imgPath}}{{movieDetails.poster_path}}" alt="">
         </li>
         <li>
-            <img class="responsive-img" src="{{imgPath}}{{movieDetails.backdrop_path}}" alt="">
+          <img class="responsive-img" src="{{imgPath}}{{movieDetails.backdrop_path}}" alt="">
         </li>
-        <!-- No Image -->
+      <!-- No Image -->
         <img class="no-images" src="images/no-images.png">
       </ul>
     </div>
@@ -54,62 +36,58 @@ $("html, body").animate({ scrollTop: 0 }, 0);
 <!-- Movie Details -->
   <div class="col l6 s12 offset-l1">
     <h5 ng-init="limit=400" class="movieOverviewText">{{movieDetails.overview |truncate:limit}} <a class="readMoreLink" ng-click="limit=5000">Read More</a></h5>
-
   </br>
-    <h5><a class="movie-homepage" href="{{movieDetails.homepage}}" target="_blank">{{movieDetails.homepage}}</a></h5>
-
-
-  </div>
+  <h5><a class="movie-homepage" href="{{movieDetails.homepage}}" target="_blank">{{movieDetails.homepage}}</a></h5>
+</div>
 </div><!-- end of row -->
 
-    <div class="row">
+<div class="row">
 
-
-     <!-- Rating -->
-      <div class="col s12 m3 l3">
-        <div class="section">
-          <h5 class="drop-shadow">Average Rating:</h5>
-          <h3 class="movie-vote">{{movieDetails.vote_average}}</h3>
-          </div>
-      </div>
-
-  <!-- Genres -->
-      <div class="col s12 m3 l3">
-        <div class="section">
-        <h5 class="drop-shadow">Genres:</h5>
-        <ul class="movieGenres">
-      <li class="movie-genres-name" ng-repeat="x in movieDetails.genres">{{x.name}}</li>
-      </ul>
-        </div>
-      </div>
-
-    <!-- Directed By -->
-      <div class="col s12 m3 l3">
-        <div class="section">
-        <h5 class="drop-shadow">Directed by:</h5>
-        <a href="#person/{{movieCredits.crew[0].id}}">
-          <h5>{{movieCredits.crew[0].name}}</h5>
-        </a>
-
-<!-- Release Date -->
-<div class="section">
-        <h5 class="drop-shadow">Theatrical Release Date:</h5>
-      <h3 class="movie-release-date">{{movieDetails.release_date | date}}</h3>
+<!-- Rating -->
+ <div class="col s12 m3 l3">
+  <div class="section">
+    <h5 class="drop-shadow">Average Rating:</h5>
+    <h3 class="movie-vote">{{movieDetails.vote_average}}</h3>
+  </div>
 </div>
 
-        </div>
-      </div>
+<!-- Genres -->
+<div class="col s12 m3 l3">
+  <div class="section">
+    <h5 class="drop-shadow">Genres:</h5>
+    <ul class="movieGenres">
+      <li class="movie-genres-name" ng-repeat="x in movieDetails.genres">{{x.name}}</li>
+    </ul>
+  </div>
+</div>
 
-      <!-- Production Companies -->
-      <div class="col s12 m3 l3">
-        <div class="section">
-        <h5 class="drop-shadow">Production Companies:</h5>
-        <ul class="movieProductionCompanies">
+<!-- Directed By -->
+<div class="col s12 m3 l3">
+  <div class="section">
+    <h5 class="drop-shadow">Directed by:</h5>
+    <a href="#person/{{movieCredits.crew[0].id}}">
+      <h5>{{movieCredits.crew[0].name}}</h5>
+    </a>
+
+<!-- Release Date -->
+    <div class="section">
+      <h5 class="drop-shadow">Theatrical Release Date:</h5>
+      <h3 class="movie-release-date">{{movieDetails.release_date | date}}</h3>
+    </div>
+
+  </div>
+</div>
+
+<!-- Production Companies -->
+<div class="col s12 m3 l3">
+  <div class="section">
+    <h5 class="drop-shadow">Production Companies:</h5>
+    <ul class="movieProductionCompanies">
       <li class="movie-production-companies" ng-repeat="x in movieDetails.production_companies">{{x.name}}</li>
-        </ul>
+    </ul>
   </div>
-  </div>
-  </div><!-- end of row -->
+</div>
+</div><!-- end of row -->
 
 
 <!-- TRAILER -->
@@ -123,42 +101,34 @@ $("html, body").animate({ scrollTop: 0 }, 0);
   </div>
 </div>
 </div>
-
-
-
 </div>
 
 
 
 
 <!-- REVIEWS -->
-    <div class="row">
-      <div class="col s10 offset-s1">
-          <ul>
-            <li ng-model="review" class="movieReviewText" ng-init="limit=400">
-              <p class="movie-review-content1 movie-content-review">{{movieReviews.results[0].content | truncate:limit}}<a class="readMoreLink-reviews1" ng-click="limit=5000" onClick="hideFunction()"> Read More</a></p>
-               {{movieReviews.results[0].author}}
-            </li>
-            <li ng-model="review" class="movieReviewText" ng-init="limit=400">
-              <p class="movie-review-content2 movie-content-review">{{movieReviews.results[1].content | truncate:limit}}<a class="readMoreLink-reviews2" ng-click="limit=5000" onClick="hideFunction()"> Read More</a></p>
-               {{movieReviews.results[1].author}}
-            </li>
-            <li ng-model="review" class="movieReviewText" ng-init="limit=400">
-              <p class="movie-review-content3 movie-content-review">{{movieReviews.results[2].content | truncate:limit}}<a class="readMoreLink-reviews3" ng-click="limit=5000" onClick="hideFunction()"> Read More</a></p>
-               {{movieReviews.results[2].author}}
-            </li>
-
-
-          </ul>
-      </div>
-    </div>
-
-
+<div class="row">
+  <div class="col s10 offset-s1">
+    <ul>
+      <li ng-model="review" class="movieReviewText" ng-init="limit=400">
+        <p class="movie-review-content1 movie-content-review">{{movieReviews.results[0].content | truncate:limit}}<a class="readMoreLink-reviews1" ng-click="limit=5000" onClick="hideFunction()"> Read More</a></p>
+        {{movieReviews.results[0].author}}
+      </li>
+      <li ng-model="review" class="movieReviewText" ng-init="limit=400">
+        <p class="movie-review-content2 movie-content-review">{{movieReviews.results[1].content | truncate:limit}}<a class="readMoreLink-reviews2" ng-click="limit=5000" onClick="hideFunction()"> Read More</a></p>
+        {{movieReviews.results[1].author}}
+      </li>
+      <li ng-model="review" class="movieReviewText" ng-init="limit=400">
+        <p class="movie-review-content3 movie-content-review">{{movieReviews.results[2].content | truncate:limit}}<a class="readMoreLink-reviews3" ng-click="limit=5000" onClick="hideFunction()"> Read More</a></p>
+        {{movieReviews.results[2].author}}
+      </li>
+    </ul>
+  </div>
+</div>
 
 
 <!-- Cast Slider -->
 <div class="row">
-
   <div class="tv-cast-wrapper col s12 m12 l4 offset-l2 offset-m4 offset-s1">
     <h4 class="drop-shadow">Cast:</h4>
     <div class="slider tv-slider slider2">
@@ -167,73 +137,73 @@ $("html, body").animate({ scrollTop: 0 }, 0);
           <a href="#person/{{movieCast.cast[0].id}}">
             <img class="responsive-img  red-border" src="{{imgPath}}{{movieCast.cast[0].profile_path}}" alt="">
             <p class="movieCastName">{{movieCast.cast[0].name}}</p>
-              <p class="moveCastRole">{{movieCast.cast[0].character}}</p>
+            <p class="moveCastRole">{{movieCast.cast[0].character}}</p>
           </a>
         </li>
         <li>
           <a href="#person/{{movieCast.cast[1].id}}">
             <img class="responsive-img  red-border" src="{{imgPath}}{{movieCast.cast[1].profile_path}}" alt="">
             <p class="movieCastName">{{movieCast.cast[1].name}}</p>
-              <p class="moveCastRole">{{movieCast.cast[1].character}}</p>
+            <p class="moveCastRole">{{movieCast.cast[1].character}}</p>
           </a>
         </li>
         <li>
           <a href="#person/{{movieCast.cast[2].id}}">
             <img class="responsive-img  red-border" src="{{imgPath}}{{movieCast.cast[2].profile_path}}" alt="">
             <p class="movieCastName">{{movieCast.cast[2].name}}</p>
-              <p class="moveCastRole">{{movieCast.cast[2].character}}</p>
+            <p class="moveCastRole">{{movieCast.cast[2].character}}</p>
           </a>
         </li>
         <li>
           <a href="#person/{{movieCast.cast[3].id}}">
             <img class="responsive-img  red-border" src="{{imgPath}}{{movieCast.cast[3].profile_path}}" alt="">
             <p class="movieCastName">{{movieCast.cast[3].name}}</p>
-              <p class="moveCastRole">{{movieCast.cast[3].character}}</p>
+            <p class="moveCastRole">{{movieCast.cast[3].character}}</p>
           </a>
         </li>
         <li>
           <a href="#person/{{movieCast.cast[4].id}}">
             <img class="responsive-img  red-border" src="{{imgPath}}{{movieCast.cast[4].profile_path}}" alt="">
             <p class="movieCastName">{{movieCast.cast[4].name}}</p>
-              <p class="moveCastRole">{{movieCast.cast[4].character}}</p>
+            <p class="moveCastRole">{{movieCast.cast[4].character}}</p>
           </a>
         </li>
         <li>
           <a href="#person/{{movieCast.cast[5].id}}">
             <img class="responsive-img  red-border" src="{{imgPath}}{{movieCast.cast[5].profile_path}}" alt="">
             <p class="movieCastName">{{movieCast.cast[5].name}}</p>
-              <p class="moveCastRole">{{movieCast.cast[5].character}}</p>
+            <p class="moveCastRole">{{movieCast.cast[5].character}}</p>
           </a>
         </li>
         <li>
           <a href="#person/{{movieCast.cast[6].id}}">
             <img class="responsive-img  red-border" src="{{imgPath}}{{movieCast.cast[6].profile_path}}" alt="">
             <p class="movieCastName">{{movieCast.cast[6].name}}</p>
-              <p class="moveCastRole">{{movieCast.cast[6].character}}</p>
+            <p class="moveCastRole">{{movieCast.cast[6].character}}</p>
           </a>
         </li>
         <li>
           <a href="#person/{{movieCast.cast[7].id}}">
             <img class="responsive-img  red-border" src="{{imgPath}}{{movieCast.cast[7].profile_path}}" alt="">
             <p class="movieCastName">{{movieCast.cast[7].name}}</p>
-              <p class="moveCastRole">{{movieCast.cast[7].character}}</p>
+            <p class="moveCastRole">{{movieCast.cast[7].character}}</p>
           </a>
         </li>
         <li>
           <a href="#person/{{movieCast.cast[8].id}}">
             <img class="responsive-img  red-border" src="{{imgPath}}{{movieCast.cast[8].profile_path}}" alt="">
             <p class="movieCastName">{{movieCast.cast[8].name}}</p>
-              <p class="moveCastRole">{{movieCast.cast[8].character}}</p>
+            <p class="moveCastRole">{{movieCast.cast[8].character}}</p>
           </a>
         </li>
         <li>
           <a href="#person/{{movieCast.cast[9].id}}">
             <img class="responsive-img  red-border" src="{{imgPath}}{{movieCast.cast[9].profile_path}}" alt="">
             <p class="movieCastName">{{movieCast.cast[9].name}}</p>
-              <p class="moveCastRole">{{movieCast.cast[9].character}}</p>
+            <p class="moveCastRole">{{movieCast.cast[9].character}}</p>
           </a>
         </li>
-  <!-- No Image -->
+        <!-- No Image -->
         <img class="no-images" src="images/no-images.png">
       </ul>
     </div>
@@ -243,7 +213,7 @@ $("html, body").animate({ scrollTop: 0 }, 0);
 
 
 <!-- Similar Movies -->
-    <div class="tv-cast-wrapper col s12 m12 l4 offset-l2 offset-m4 offset-s1">
+  <div class="tv-cast-wrapper col s12 m12 l4 offset-l2 offset-m4 offset-s1">
     <h4 class="drop-shadow">Similar Movies:</h4>
     <div class="slider tv-slider slider3">
       <ul class="slides z-depth-3 slides3" >
@@ -314,13 +284,9 @@ $("html, body").animate({ scrollTop: 0 }, 0);
     <i class="fa fa-chevron-left fa-chevron-left3 fa-2x"></i>
     <i class="fa fa-chevron-right fa-chevron-right3 fa-2x"></i>
   </div>
- <!-- <img src="images/no-images.png" alt=""> -->
 </div><!--End of row -->
-
 </div>
 </div>
-
-
 
 
 <script>
@@ -367,20 +333,6 @@ $('.fa-chevron-left3').click(function() {
   }, 5000);
 });
 
-
-
-
-    // if($scope.movieCredits.cast[0].department === "Directing"){
-    //   alert('asdf');
-    // }
-
-// angular.element('#myCtrl').scope().movieCredits.cast[0].department;
-// angular.element('#myCtrl').scope().$apply()
-
-// if(movieCredits.cast[0].department === "Directing"){
-//       alert('asdf');
-//     }
-
 function check_length(){
   if($('.movieOverviewText').text().length < 400  ){
     $('.readMoreLink').hide();
@@ -390,17 +342,16 @@ function check_length(){
     $('.readMoreLink-reviews1').hide();
   }
 
-   if($('.movie-review-content2').text().length < 150  ){
+  if($('.movie-review-content2').text().length < 150  ){
     $('.readMoreLink-reviews2').hide();
   }
 
-   if($('.movie-review-content3').text().length < 150  ){
+  if($('.movie-review-content3').text().length < 150  ){
     $('.readMoreLink-reviews3').hide();
   }
   // alert($('.movieOverviewText').text().length);
 }
 setTimeout(check_length, 700);
-
 
 
 $('.readMoreLink').click(function() {
@@ -420,35 +371,10 @@ $('.readMoreLink-reviews3').click(function() {
 });
 
 
-
-if($('.movieSimilar0').val !== ""){
-  // alert('asdf');
-}
-
-
 $('.movieCast').click(function(){
   $('.star-link').addClass('white');
   $('.movie-link').removeClass('white');
 });
-
-// checkToggle = function(){
-  // var a = 1;
-  // var myBoolean;
-  //     if(a > 0){
-  //       // alert('works');
-  //        myBoolean === true;
-  //     }
-
-  // if(myBoolean === true){
-  //   $('.content').show();
-  // }else if (myBoolean !== true{
-  //   $('.content').hide();
-  // }
-   // return $scope.myBoolean;
- // };
-
-
-// checkToggle();
 </script>
 
 

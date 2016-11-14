@@ -5,149 +5,134 @@ $('.materialboxed').materialbox();
 $('.slider').slider({full_width: false});
 
 $("html, body").animate({ scrollTop: 0 }, 0);
-
 </script>
 
 <div class="container">
   <h1 class="drop-shadow">{{starDetails.name}}</h1>
   <div class=" starPage animated fadeIn">
 
-<!-- <div class="col s10 m5 offset-s1"> -->
 
 <!-- STAR POSTER SLIDER -->
+    <div class="row">
+      <div class="tv-cast-wrapper col s12 m12 l4 offset-l1 offset-m4 offset-s1">
+        <div class="slider tv-slider slider1">
+          <ul class="slides z-depth-3 slides1">
+            <li class="star-slider-li">
+              <img class="responsive-img " src="{{imgPath}}{{starPhotos.profiles[0].file_path}}" alt="">
+            </li>
+            <li class="star-slider-li">
+              <img class="responsive-img " src="{{imgPath}}{{starPhotos.profiles[1].file_path}}" alt="">
+            </li>
+            <li class="star-slider-li">
+              <img class="responsive-img " src="{{imgPath}}{{starPhotos.profiles[2].file_path}}" alt="">
+            </li>
+            <li class="star-slider-li">
+              <img class="responsive-img " src="{{imgPath}}{{starPhotos.profiles[3].file_path}}" alt="">
+            </li>
+            <li class="star-slider-li">
+              <img class="responsive-img " src="{{imgPath}}{{starPhotos.profiles[4].file_path}}" alt="">
+            </li>
+      <!-- No Image -->
+            <img class="no-images" src="images/no-images.png">
+          </ul>
+        </div>
+        <i class="fa fa-chevron-left fa-chevron-left1 fa-2x"></i>
+        <i class="fa fa-chevron-right fa-chevron-right1 fa-2x"></i>
+      </div>
 
-<div class="row">
-  <div class="tv-cast-wrapper col s12 m12 l4 offset-l1 offset-m4 offset-s1">
-    <div class="slider tv-slider slider1">
-      <ul class="slides z-depth-3 slides1">
-        <li class="star-slider-li">
-            <img class="responsive-img " src="{{imgPath}}{{starPhotos.profiles[0].file_path}}" alt="">
-        </li>
-        <li class="star-slider-li">
-            <img class="responsive-img " src="{{imgPath}}{{starPhotos.profiles[1].file_path}}" alt="">
-        </li>
-        <li class="star-slider-li">
-            <img class="responsive-img " src="{{imgPath}}{{starPhotos.profiles[2].file_path}}" alt="">
-        </li>
-        <li class="star-slider-li">
-            <img class="responsive-img " src="{{imgPath}}{{starPhotos.profiles[3].file_path}}" alt="">
-        </li>
-        <li class="star-slider-li">
-            <img class="responsive-img " src="{{imgPath}}{{starPhotos.profiles[4].file_path}}" alt="">
-        </li>
-  <!-- No Image -->
-        <img class="no-images" src="images/no-images.png">
-      </ul>
+
+      <div class="col s12 l6 offset-l1">
+        <h5 ng-init="limit=400" class="starBiography">{{starDetails.biography | truncate:limit}} <a class="readMoreLink" ng-click="limit=5000">Read More</a></h5>
+      </br>
+      <a href="{{starDetails.homepage}}"><h5>{{starDetails.homepage}}</h5></a>
     </div>
-    <i class="fa fa-chevron-left fa-chevron-left1 fa-2x"></i>
-    <i class="fa fa-chevron-right fa-chevron-right1 fa-2x"></i>
   </div>
 
 
-  <div class="col s12 l6 offset-l1">
-    <h5 ng-init="limit=400" class="starBiography">{{starDetails.biography | truncate:limit}} <a class="readMoreLink" ng-click="limit=5000">Read More</a></h5>
-</br>
-<a href="{{starDetails.homepage}}"><h5>{{starDetails.homepage}}</h5></a>
- </div>
 
- </div>
-
-
-
-<!-- CREDITS: -->
-
-<div class="row">
-
-  <div class="tv-cast-wrapper col s12 m12 l4 offset-l1 offset-m4 offset-s1">
-    <h4 class="drop-shadow">Credits:</h4>
-    <div class="slider tv-slider slider2">
-      <ul class="slides z-depth-3 slides2 starCredit">
-        <li>
-          <a href="#movie/{{starCredits.cast[0].id}}">
-            <img class="responsive-img red-border" src="{{imgPath}}{{starCredits.cast[0].poster_path}}" alt="">
-            <h3 class="movie-vote">{{movieDetails.vote_average}}</h3>
-          </a>
-        </li>
-        <li>
-          <a href="#movie/{{starCredits.cast[1].id}}">
-            <img class="responsive-img red-border" src="{{imgPath}}{{starCredits.cast[1].poster_path}}" alt="">
-            <h3 class="movie-vote">{{movieDetails.vote_average}}</h3>
-          </a>
-        </li>
-        <li>
-          <a href="#movie/{{starCredits.cast[2].id}}">
-            <img class="responsive-img red-border" src="{{imgPath}}{{starCredits.cast[2].poster_path}}" alt="">
-            <h3 class="movie-vote">{{movieDetails.vote_average}}</h3>
-          </a>
-        </li>
-        <li>
-          <a href="#movie/{{starCredits.cast[3].id}}">
-            <img class="responsive-img red-border" src="{{imgPath}}{{starCredits.cast[3].poster_path}}" alt="">
-            <h3 class="movie-vote">{{movieDetails.vote_average}}</h3>
-          </a>
-        </li>
-        <li>
-          <a href="#movie/{{starCredits.cast[4].id}}">
-            <img class="responsive-img red-border" src="{{imgPath}}{{starCredits.cast[4].poster_path}}" alt="">
-            <h3 class="movie-vote">{{movieDetails.vote_average}}</h3>
-          </a>
-        </li>
-        <li>
-          <a href="#movie/{{starCredits.cast[5].id}}">
-            <img class="responsive-img red-border" src="{{imgPath}}{{starCredits.cast[5].poster_path}}" alt="">
-            <h3 class="movie-vote">{{movieDetails.vote_average}}</h3>
-          </a>
-        </li>
-        <li>
-          <a href="#movie/{{starCredits.cast[6].id}}">
-            <img class="responsive-img red-border" src="{{imgPath}}{{starCredits.cast[6].poster_path}}" alt="">
-            <h3 class="movie-vote">{{movieDetails.vote_average}}</h3>
-          </a>
-        </li>
-        <li>
-          <a href="#movie/{{starCredits.cast[7].id}}">
-            <img class="responsive-img red-border" src="{{imgPath}}{{starCredits.cast[7].poster_path}}" alt="">
-            <h3 class="movie-vote">{{movieDetails.vote_average}}</h3>
-          </a>
-        </li>
-        <li>
-          <a href="#movie/{{starCredits.cast[8].id}}">
-            <img class="responsive-img red-border" src="{{imgPath}}{{starCredits.cast[8].poster_path}}" alt="">
-            <h3 class="movie-vote">{{movieDetails.vote_average}}</h3>
-          </a>
-        </li>
-        <li>
-          <a href="#movie/{{starCredits.cast[9].id}}">
-            <img class="responsive-img red-border" src="{{imgPath}}{{starCredits.cast[9].poster_path}}" alt="">
-            <h3 class="movie-vote">{{movieDetails.vote_average}}</h3>
-          </a>
-        </li>
-        <!-- No Image -->
-        <img class="no-images" src="images/no-images.png">
-      </ul>
+  <!-- CREDITS: -->
+  <div class="row">
+    <div class="tv-cast-wrapper col s12 m12 l4 offset-l1 offset-m4 offset-s1">
+      <h4 class="drop-shadow">Credits:</h4>
+      <div class="slider tv-slider slider2">
+        <ul class="slides z-depth-3 slides2 starCredit">
+          <li>
+            <a href="#movie/{{starCredits.cast[0].id}}">
+              <img class="responsive-img red-border" src="{{imgPath}}{{starCredits.cast[0].poster_path}}" alt="">
+              <h3 class="movie-vote">{{movieDetails.vote_average}}</h3>
+            </a>
+          </li>
+          <li>
+            <a href="#movie/{{starCredits.cast[1].id}}">
+              <img class="responsive-img red-border" src="{{imgPath}}{{starCredits.cast[1].poster_path}}" alt="">
+              <h3 class="movie-vote">{{movieDetails.vote_average}}</h3>
+            </a>
+          </li>
+          <li>
+            <a href="#movie/{{starCredits.cast[2].id}}">
+              <img class="responsive-img red-border" src="{{imgPath}}{{starCredits.cast[2].poster_path}}" alt="">
+              <h3 class="movie-vote">{{movieDetails.vote_average}}</h3>
+            </a>
+          </li>
+          <li>
+            <a href="#movie/{{starCredits.cast[3].id}}">
+              <img class="responsive-img red-border" src="{{imgPath}}{{starCredits.cast[3].poster_path}}" alt="">
+              <h3 class="movie-vote">{{movieDetails.vote_average}}</h3>
+            </a>
+          </li>
+          <li>
+            <a href="#movie/{{starCredits.cast[4].id}}">
+              <img class="responsive-img red-border" src="{{imgPath}}{{starCredits.cast[4].poster_path}}" alt="">
+              <h3 class="movie-vote">{{movieDetails.vote_average}}</h3>
+            </a>
+          </li>
+          <li>
+            <a href="#movie/{{starCredits.cast[5].id}}">
+              <img class="responsive-img red-border" src="{{imgPath}}{{starCredits.cast[5].poster_path}}" alt="">
+              <h3 class="movie-vote">{{movieDetails.vote_average}}</h3>
+            </a>
+          </li>
+          <li>
+            <a href="#movie/{{starCredits.cast[6].id}}">
+              <img class="responsive-img red-border" src="{{imgPath}}{{starCredits.cast[6].poster_path}}" alt="">
+              <h3 class="movie-vote">{{movieDetails.vote_average}}</h3>
+            </a>
+          </li>
+          <li>
+            <a href="#movie/{{starCredits.cast[7].id}}">
+              <img class="responsive-img red-border" src="{{imgPath}}{{starCredits.cast[7].poster_path}}" alt="">
+              <h3 class="movie-vote">{{movieDetails.vote_average}}</h3>
+            </a>
+          </li>
+          <li>
+            <a href="#movie/{{starCredits.cast[8].id}}">
+              <img class="responsive-img red-border" src="{{imgPath}}{{starCredits.cast[8].poster_path}}" alt="">
+              <h3 class="movie-vote">{{movieDetails.vote_average}}</h3>
+            </a>
+          </li>
+          <li>
+            <a href="#movie/{{starCredits.cast[9].id}}">
+              <img class="responsive-img red-border" src="{{imgPath}}{{starCredits.cast[9].poster_path}}" alt="">
+              <h3 class="movie-vote">{{movieDetails.vote_average}}</h3>
+            </a>
+          </li>
+          <!-- No Image -->
+          <img class="no-images" src="images/no-images.png">
+        </ul>
+      </div>
+      <i class="fa fa-chevron-left fa-chevron-left2 fa-2x"></i>
+      <i class="fa fa-chevron-right fa-chevron-right2 fa-2x"></i>
     </div>
-    <i class="fa fa-chevron-left fa-chevron-left2 fa-2x"></i>
-    <i class="fa fa-chevron-right fa-chevron-right2 fa-2x"></i>
+    <div class="col s12 l3">
+      <h5 class="drop-shadow">Birthday:</h5>
+      <h5>{{starDetails.birthday | date}}</h5>
+    </div>
+    <div class="col s12 l3">
+      <h5 class="drop-shadow">Place of Birth:</h5>
+      <h5>{{starDetails.place_of_birth}}</h5>
+    </div>
   </div>
-
-   <div class="col s12 l3">
-    <h5 class="drop-shadow">Birthday:</h5>
-    <h5>{{starDetails.birthday | date}}</h5>
-  </div>
-
-   <div class="col s12 l3">
-    <h5 class="drop-shadow">Place of Birth:</h5>
-    <h5>{{starDetails.place_of_birth}}</h5>
-  </div>
-
-  </div>
-
-
-  </div>
-
-
-
-
+</div>
 </div>
 </div>
 

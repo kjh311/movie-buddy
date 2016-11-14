@@ -6,68 +6,44 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Movie Buddy</title>
   <link rel="stylesheet" href="public/css/styles.css">
-
-  <!-- GOOGLE FONTS: -->
+<!-- GOOGLE FONTS: -->
   <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Libre+Franklin" rel="stylesheet">
-
-  <!-- Facebook: -->
+<!-- Facebook: -->
   <meta property="og:description" content="Visit Movie Buddy!" />
   <meta property="og:image" content="images/new-logo.png" />
   <meta property="og:url" content="https://kjh311.github.io/movie-buddy/" />
-
-  <!-- TWITTER: -->
+<!-- TWITTER: -->
   <!-- https://dev.twitter.com/cards/types/summary -->
-  <meta name="twitter:description" content="Testing Social Media Sharing!" />
+  <meta name="twitter:description" content="Watch trailers, get reviews, and latest movie news!" />
   <meta name="twitter:image" content="images/new-logo.png" />
   <meta name="twitter:card" content="summary" />
-  <!-- <meta name="twitter:site" content="@craftbeer-zilla" /> -->
   <meta name="twitter:title" content="Visit Movie Buddy!!" />
-
-  <!-- JQUERY: -->
+<!-- JQUERY: -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <!-- ANGULAR: -->
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
-  <!-- Angular Route -->
+<!-- Angular Route -->
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.28//angular-route.min.js"></script>
-  <!-- FINALIZED JS FILE: -->
+<!-- FINALIZED JS FILE: -->
   <script type="text/Javascript" src="app.js"></script>
-
-
-<!-- BOOTSTRAP:
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>-->
-
-  <!-- Animate.css -->
+<!-- Animate.css -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css">
-
-  <!-- Font-Awesome -->
+<!-- Font-Awesome -->
   <link rel="stylesheet" href="https://opensource.keycdn.com/fontawesome/4.6.3/font-awesome.min.css" >
-
-  <!-- Materialize -->
+<!-- Materialize -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
-
-  <!-- Browser Tab Icon: -->
+<!-- Browser Tab Icon: -->
   <link rel="icon" href="images/logo2.png">
 
-  <!-- Slick Carousel -->
-  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
-
-  <!-- Flikity Carousel -->
-<!--   <link rel="stylesheet" href="https://unpkg.com/flickity@2.0/dist/flickity.css" media="screen">
-  <script src="https://unpkg.com/flickity@2.0/dist/flickity.pkgd.min.js"></script>
--->
 </head>
 <base href="/">
 
 <body  ng-controller="myCtrl" id="myCtrl" ng-click="closeSearch()" >
 
-
-
-  <!-- NAV -->
+<!-- NAV -->
   <div class="nav-main-wrapper">
    <nav>
     <div class="nav-wrapper #90caf9 blue lighten-3 ">
@@ -77,148 +53,121 @@
           <a href="#/"><img class="logo2 hide-on-med-and-up" src="images/logo2.png" alt=""></a>
           <a href="#/" class="brand-logo center">Movie Buddy!</a>
 
-          <!-- Photoshop Logo: -->
+<!-- Photoshop Logo: -->
           <!-- <img class="new-logo-pic" src="images/new-logo.png" alt=""> -->
           <div >
 
-<!-- Mobile Drop Down -->
-    <ul id="slide-out" class="side-nav hide-on-med-only">
+  <!-- Mobile Drop Down -->
+            <ul id="slide-out" class="side-nav hide-on-med-only">
+              <li><a class="waves-effect mobile-links" href="#movies">Movies</a></li>
+              <li><a class="waves-effect mobile-links" href="#tv">TV Shows</a></li>
+              <li><a class="waves-effect mobile-links" href="#stars">Stars</a></li>
+              <li><a class="waves-effect mobile-links" href="#news">News</a></li>
+      <!-- Facebook -->
+              <li>
+                <a href="http://www.facebook.com/sharer.php?u=https://kjh311.github.io/movie-buddy/" target="_blank"><p><i class="fa fa-facebook fa-2x  mobile-nav-icon"></i></p></a>
+              </li>
+              <li>
+       <!-- Twitter -->
+               <a href="https://twitter.com/share?url=https://kjh311.github.io/movie-buddy/&amp;text=Movie%20Buddy" target="_blank">
+                <p><i class="fa fa-twitter fa-2x mobile-nav-icon"></i></p>
+              </a>
+            </li>
+            <li>
+      <!-- Google+ -->
+              <a href="https://plus.google.com/share?url=https://kjh311.github.io/movie-buddy/" target="_blank">
+                <p class=""><i class="fa fa-google fa-2x mobile-nav-icon"></i></p></a>
+              </li>
+            </ul>
+            <a href="#" data-activates="slide-out" class="button-collapse"><i class="fa fa-bars fa-2x"></i></a>
 
-      <li><a class="waves-effect mobile-links" href="#movies">Movies</a></li>
-      <li><a class="waves-effect mobile-links" href="#tv">TV Shows</a></li>
-      <li><a class="waves-effect mobile-links" href="#stars">Stars</a></li>
-      <li><a class="waves-effect mobile-links" href="#news">News</a></li>
-
-      <li>
-  <!-- Facebook -->
-        <a href="http://www.facebook.com/sharer.php?u=https://kjh311.github.io/movie-buddy/" target="_blank"><p><i class="fa fa-facebook fa-2x  mobile-nav-icon"></i></p></a>
-      </li>
-      <li>
-   <!-- Twitter -->
-        <a href="https://twitter.com/share?url=https://kjh311.github.io/movie-buddy/&amp;text=Movie%20Buddy" target="_blank">
-          <p><i class="fa fa-twitter fa-2x mobile-nav-icon"></i></p>
-        </a>
-      </li>
-      <li>
-<!-- Google+ -->
-        <a href="https://plus.google.com/share?url=https://kjh311.github.io/movie-buddy/" target="_blank">
-          <p class=""><i class="fa fa-google fa-2x mobile-nav-icon"></i></p></a>
-        </li>
-      </ul>
-      <a href="#" data-activates="slide-out" class="button-collapse"><i class="fa fa-bars fa-2x"></i></a>
-
-
-<!-- Social Icons -->
-      <ul class="social-icons-nav hide-on-small-and-down">
-        <li>
-          <!-- Facebook -->
-          <a href="http://www.facebook.com/sharer.php?u=https://kjh311.github.io/movie-buddy/" target="_blank"><p><i class="fa fa-facebook fa-2x  social-nav-icon"></i></p></a>
-        </li>
-        <li>             <!-- Twitter -->
-          <a href="https://twitter.com/share?url=https://kjh311.github.io/movie-buddy/&amp;text=Movie%20Buddy" target="_blank">
-            <p><i class="fa fa-twitter fa-2x social-nav-icon"></i></p>
-          </a>
-        </li>
-        <li>
-    <!-- Google+ -->
-          <a href="https://plus.google.com/share?url=https://kjh311.github.io/movie-buddy/" target="_blank">
-            <p class=""><i class="fa fa-google fa-2x social-nav-icon"></i></p></a>
-          </li>
-        </ul>
+    <!-- Social Icons -->
+            <ul class="social-icons-nav hide-on-small-and-down">
+              <li>
+        <!-- Facebook -->
+                <a href="http://www.facebook.com/sharer.php?u=https://kjh311.github.io/movie-buddy/" target="_blank"><p><i class="fa fa-facebook fa-2x  social-nav-icon"></i></p></a>
+              </li>
+              <li>
+        <!-- Twitter -->
+                <a href="https://twitter.com/share?url=https://kjh311.github.io/movie-buddy/&amp;text=Movie%20Buddy" target="_blank">
+                  <p><i class="fa fa-twitter fa-2x social-nav-icon"></i></p>
+                </a>
+              </li>
+              <li>
+        <!-- Google+ -->
+                <a href="https://plus.google.com/share?url=https://kjh311.github.io/movie-buddy/" target="_blank">
+                  <p class=""><i class="fa fa-google fa-2x social-nav-icon"></i></p></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-</div>
-</nav>
+    </nav>
 
 
 <!-- NAV LINKS -->
-<div class="row nav-row ">
-  <div class="col s12 #283593 indigo darken-3 dark-blue z-depth-3 nav-bottom">
-    <div class="row hide-on-small-and-down">
-      <ul class="categories">
-        <a href="#movies" class="movie-link nav-link"><div class="col s2"><li >MOVIES</li></div></a>
-        <a  href="#tv" class="tv-link nav-link"><div class="col s2"><li >TV-SHOWS</li></div></a>
-        <a href="#stars" class="star-link nav-link"><div class="col s2"><li>STARS</li></div></a>
-        <a href="#news" class="news-link nav-link"><div class="col s2"><li>NEWS</li></div></a>
+    <div class="row nav-row ">
+      <div class="col s12 #283593 indigo darken-3 dark-blue z-depth-3 nav-bottom">
+        <div class="row hide-on-small-and-down">
+          <ul class="categories">
+            <a href="#movies" class="movie-link nav-link"><div class="col s2"><li >MOVIES</li></div></a>
+            <a  href="#tv" class="tv-link nav-link"><div class="col s2"><li >TV-SHOWS</li></div></a>
+            <a href="#stars" class="star-link nav-link"><div class="col s2"><li>STARS</li></div></a>
+            <a href="#news" class="news-link nav-link"><div class="col s2"><li>NEWS</li></div></a>
 
-<!-- Search -->
-        <div class="col s4 hide-on-small-only">
+    <!-- Search -->
+            <div class="col s4 hide-on-small-only">
 
-
-      <form  role="search" ng-submit="doSearch()">
-        <div class="form-group left-align">
-          <input id="searchBar" ng-model="search" type="text" placeholder="Search Movies, TV-Shows, or Actors">
+              <form  role="search" ng-submit="doSearch()">
+                <div class="form-group left-align">
+                  <input id="searchBar" ng-model="search" type="text" placeholder="Search Movies, TV-Shows, or Actors">
+                </div>
+                <input class="submit hidden" type="submit" value="Submit">
+              </form>
+            </ul>
+          </div>
         </div>
-        <input class="submit hidden" type="submit" value="Submit">
-      </form>
-    </ul>
-  </div>
-</div>
 
 
-<!-- Mobile Search -->
-      <form  role="search" ng-submit="doSearch()">
-        <div class="form-group">
-          <input id="searchBar2" class=" hide-on-med-and-up z-depth-3" ng-model="search" type="text" placeholder="Search Movies, TV-Shows, or Actors">
-        </div>
-      <!--   <div class="col s5 hide-on-med-and-up search-bar-div">
-          <input class="searchBar" ng-model="search" type="text" placeholder="Search">
-        </div> -->
-        <!-- <input class="submit hidden" type="submit" value="Submit"> -->
-      </form>
-
-<!-- <input id="searchBar2" class=" hide-on-med-and-up z-depth-3" type="text" placeholder="Search here for Movies, TV-Shows, or Actors"> -->
-
-</div>
-
-<div class="row ">
+  <!-- Mobile Search -->
+        <form  role="search" ng-submit="doSearch()">
+          <div class="form-group">
+            <input id="searchBar2" class=" hide-on-med-and-up z-depth-3" ng-model="search" type="text" placeholder="Search Movies, TV-Shows, or Actors">
+          </div>
+        </form>
+      </div>
 
 
+      <div class="row ">
 
-<!-- SEARCH RESULTS -->
-<div class="search-results-div">
+    <!-- SEARCH RESULTS -->
+        <div class="search-results-div">
 
-<table class="centered">
+          <table class="centered">
             <tbody>
-
-        <span class="search-table ">
-          <!-- Movie Results -->
-          <tr ng-repeat="x in searchResults.results">
-            <td class="movie-title-search">
-              <a href="#{{x.media_type}}/{{x.id}}">
-                <p  class="search-result-name">{{x.title}}{{x.name}}</p>
-                <p class="air-date">{{x.first_air_date | date}}</p>
-                <p class="air-date">{{x.release_date | date}}</p>
-              </a>
-            </td>
-            <td class="movie-img-search"><a  class="search-result-pic" href="#{{x.media_type}}/{{x.id}}">
-              <img class="z-depth-2 results-pic" ng-src="{{imgPath}}{{x.profile_path}}">
-              <img class="z-depth-2 results-pic" ng-src="{{imgPath}}{{x.poster_path}}" >
-
-
-            </a>
-          </td>
-          </tr>
-
-
-        </span>
-
-
-
-<!--           <tr ng-repeat="x in searchResults.results  | limitTo:5">
-            <td><a class="search-result-name" href="#movie/{{x.id}}"><p>{{x.title}}</p></a></td>
-            <td><a class="search-result-pic" href="#movie/{{x.id}}"><img class="z-depth-2 results-pic" src="{{imgPath}}{{x.poster_path}}" alt=""></a></td>
-            <td><p>{{x.media_type}}</p></td>
-          </tr> -->
-        </tbody>
-</table>
-
-</div>
-</div>
-
-</div>
-
+              <span class="search-table ">
+        <!-- Results -->
+                <tr ng-repeat="x in searchResults.results">
+                  <td class="movie-title-search">
+                    <a href="#{{x.media_type}}/{{x.id}}">
+                      <p  class="search-result-name">{{x.title}}{{x.name}}</p>
+                      <p class="air-date">{{x.first_air_date | date}}</p>
+                      <p class="air-date">{{x.release_date | date}}</p>
+                    </a>
+                  </td>
+                  <td class="movie-img-search"><a  class="search-result-pic" href="#{{x.media_type}}/{{x.id}}">
+                    <img class="z-depth-2 results-pic" ng-src="{{imgPath}}{{x.profile_path}}">
+                    <img class="z-depth-2 results-pic" ng-src="{{imgPath}}{{x.poster_path}}" >
+                  </a>
+                </td>
+              </tr>
+            </span>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
 </br>
 </br>
 </br>
@@ -229,9 +178,10 @@
 
 
 
-
+<!-- NG-VIEW -->
 <div ng-view></div>
 
+<!-- FOOTER -->
 <div clas="footer-wrapper">
   <footer class="page-footer card-panel #1a237e indigo darken-4">
     <div class="container">
@@ -251,44 +201,38 @@
     </div>
   </footer>
 </div>
+
 </body>
+
+
 <script>
-
-
 // SEARCH LOGIC
    //setup before functions
 var typingTimer;                //timer identifier
 var doneTypingInterval = 500;  //time in ms (5 seconds)
 
-//on keyup, start the countdown
+//KEYUP Searchbar, start the countdown
 $('#searchBar').keyup(function(){
-    clearTimeout(typingTimer);
-    if ($('#searchBar').val()) {
-        typingTimer = setTimeout(doneTyping, doneTypingInterval);
-    }
+  clearTimeout(typingTimer);
+  if ($('#searchBar').val()) {
+    typingTimer = setTimeout(doneTyping, doneTypingInterval);
+  }
 });
 
 $('#searchBar2').keyup(function(){
-    clearTimeout(typingTimer);
-    if ($('#searchBar2').val()) {
-        typingTimer = setTimeout(doneTyping, doneTypingInterval);
-    }
+  clearTimeout(typingTimer);
+  if ($('#searchBar2').val()) {
+    typingTimer = setTimeout(doneTyping, doneTypingInterval);
+  }
 });
 
 //user is "finished typing," do something
 function doneTyping () {
-    // alert('done typing');
-angular.element('#myCtrl').scope().doSearch();
-angular.element('#myCtrl').scope().$apply()
-doSearch();
+  angular.element('#myCtrl').scope().doSearch();
+  angular.element('#myCtrl').scope().$apply()
+  doSearch();
 }
 $('.search-results-div').hide();
-
-
-
-
-
-
 </script>
 
 </html>
