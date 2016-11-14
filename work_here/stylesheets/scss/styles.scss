@@ -4,6 +4,11 @@ $light-blue: #90caf9;
 $dark-blue: #283593;
 $clear: rgba(0,0,0,0);
 
+@mixin backgroundGradient{
+  background: -webkit-radial-gradient(rgba(0,0,0,0.5), black);
+  background: -moz-radial-gradient(rgba(0,0,0,0.5), black);
+  background: radial-gradient(rgba(0,0,0,0.5), black);
+}
 
 @mixin centerer {
   position: absolute;
@@ -36,7 +41,7 @@ a:hover{
 body{
   text-align: center;
   background-color: black;
-  background: -webkit-radial-gradient(rgba(0,0,0,0.5), black);
+  @include backgroundGradient;
   color: white;
   font-family: 'Anton', sans-serif;
   font-size: 16px;
@@ -492,7 +497,7 @@ th, td{
   border-radius:23px;
 }
 .video-container{
-  z-index: 200 !important;
+  // z-index: 200 !important;
   position: fixed;
   background-repeat: no-repeat;
   background-size: cover;
