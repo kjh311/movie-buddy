@@ -320,8 +320,8 @@ app.config(['$locationProvider', '$routeProvider',
 
     $routeProvider
         .when('/', {
-            templateUrl : "/work_here/views/home.html",
-            controller: 'myCtrl'
+          templateUrl : "movie-buddy/work_here/views/home.html",
+          controller: 'myCtrl'
         })
         .when("/movies", {
           templateUrl : "/work_here/views/movies.html"
@@ -378,16 +378,8 @@ app.factory('userService', [function(){
 
 // JQUERY WORKS!
 $( document ).ready(function() {
-    // alert( "ready!" );
 
-// $('.carousel').carousel();
-
-// $('.readMoreLink').click(function(){
-//     $('.readMoreLink').hide();
-// });
-
-$('.materialboxed').materialbox();
-
+// $('.materialboxed').materialbox();
 
 $('.movie-link').click(function() {
   $('.movie-link').addClass('white');
@@ -417,19 +409,10 @@ $('.news-link').click(function() {
   $('.movie-link').removeClass('white');
 });
 
-
-
-
-
-
-   $('.button-collapse').sideNav({
-      menuWidth: 300, // Default is 240
-      edge: 'left', // Choose the horizontal origin
-      closeOnClick: true, // Closes side-nav on <a> clicks, useful for Angular/Meteor
-      draggable: true // Choose whether you can drag to open on touch screens
-    }
-  );
-
-
-
+$('.button-collapse').sideNav({
+  menuWidth: 300, // Default is 240
+  edge: 'left', // Choose the horizontal origin
+  closeOnClick: true, // Closes side-nav on <a> clicks, useful for Angular/Meteor
+  draggable: true // Choose whether you can drag to open on touch screens
+});
 });
