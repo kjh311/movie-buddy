@@ -320,7 +320,7 @@ app.config(['$locationProvider', '$routeProvider',
 
     $routeProvider
         .when('/', {
-          templateUrl : "movie-buddy/work_here/views/home.html",
+          templateUrl : "/work_here/views/home.html",
           controller: 'myCtrl'
         })
         .when("/movies", {
