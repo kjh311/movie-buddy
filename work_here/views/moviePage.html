@@ -112,16 +112,16 @@ $("html, body").animate({ scrollTop: 0 }, 0);
 <div class="row">
   <div class="col s10 offset-s1">
     <ul>
-      <li ng-model="review" class="movieReviewText" ng-init="limit=400">
-        <p class="movie-review-content1 movie-content-review">{{movieReviews.results[0].content | truncate:limit}}<a class="readMoreLink-reviews1" ng-click="limit=5000" onClick="hideFunction()"> Read More</a></p>
+      <li ng-model="review" class="movieReviewText" ng-init="limit1=150">
+        <p class="movie-review-content1 movie-content-review">{{movieReviews.results[0].content | truncate:limit1}}<a class="readMoreLink-reviews1" ng-click="limit1=5000" onClick="hideFunction()"> Read More</a></p>
         {{movieReviews.results[0].author}}
       </li>
-      <li ng-model="review" class="movieReviewText" ng-init="limit=400">
-        <p class="movie-review-content2 movie-content-review">{{movieReviews.results[1].content | truncate:limit}}<a class="readMoreLink-reviews2" ng-click="limit=5000" onClick="hideFunction()"> Read More</a></p>
+      <li ng-model="review" class="movieReviewText" ng-init="limit2=150">
+        <p class="movie-review-content2 movie-content-review">{{movieReviews.results[1].content | truncate:limit2}}<a class="readMoreLink-reviews2" ng-click="limit2=5000" onClick="hideFunction()"> Read More</a></p>
         {{movieReviews.results[1].author}}
       </li>
-      <li ng-model="review" class="movieReviewText" ng-init="limit=400">
-        <p class="movie-review-content3 movie-content-review">{{movieReviews.results[2].content | truncate:limit}}<a class="readMoreLink-reviews3" ng-click="limit=5000" onClick="hideFunction()"> Read More</a></p>
+      <li ng-model="review" class="movieReviewText" ng-init="limit3=150">
+        <p class="movie-review-content3 movie-content-review">{{movieReviews.results[2].content | truncate:limit3}}<a class="readMoreLink-reviews3" ng-click="limit3=5000" onClick="hideFunction()"> Read More</a></p>
         {{movieReviews.results[2].author}}
       </li>
     </ul>
