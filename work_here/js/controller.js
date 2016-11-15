@@ -330,36 +330,35 @@ app.config(['$locationProvider', '$routeProvider',
 
     $routeProvider
         .when('/', {
-          templateUrl : "movie-buddy/work_here/views/home.html",
+          templateUrl : "/work_here/views/home.html",
           controller: 'myCtrl'
         })
         .when("/movies", {
-          templateUrl : "movie-buddy/work_here/views/movies.html"
+          templateUrl : "/work_here/views/movies.html"
         })
         .when('/movie/:id', {
-          templateUrl  : 'movie-buddy/work_here/views/moviePage.html',
+          templateUrl  : '/work_here/views/moviePage.html',
           controller: 'movieController'
         })
         .when("/tv", {
-          templateUrl : "movie-buddy/work_here/views/tv.html"
+          templateUrl : "/work_here/views/tv.html"
         })
         .when('/tv/:id', {
-          templateUrl  : 'movie-buddy/work_here/views/tvPage.html',
+          templateUrl  : '/work_here/views/tvPage.html',
           controller: 'tvController'
         })
         .when("/stars", {
-          templateUrl : "movie-buddy/work_here/views/stars.html"
+          templateUrl : "/work_here/views/stars.html"
         })
         .when('/person/:id', {
-          templateUrl  : 'movie-buddy/work_here/views/starPage.html',
+          templateUrl  : '/work_here/views/starPage.html',
           controller: 'starController'
         })
         .when('/news', {
-          templateUrl  : 'movie-buddy/work_here/views/news.html'
+          templateUrl  : '/work_here/views/news.html'
         })
-        .otherwise({redirectTo:'movie-buddy/'});
+        .otherwise({redirectTo:'/'});
 }]);
-
 
 
 
