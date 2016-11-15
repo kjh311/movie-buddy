@@ -136,6 +136,7 @@ body{
 }
 .homepage-link{
   font-size: 1.2em;
+  word-wrap: break-word;
 }
 .indicator-item{
   visibility: hidden;
@@ -189,6 +190,7 @@ body{
   line-height: 150%;
   font-size: 1.6em;
   font-family: 'Libre Franklin', sans-serif;
+  margin-top: -15px;
 }
 .movieReviewText{
   font-size: 1.6em;
@@ -331,6 +333,7 @@ body{
   width: 70px;
   position: absolute;
   right: 20%;
+  margin-top: -3%;
   border-radius: 20px;
   transition:all 0.3s ease;
 }
@@ -485,6 +488,9 @@ body{
 .tv-slide-wrapper{
   text-align: center;
 }
+.table-row, .movie-title-search, .movie-img-search{
+  padding-bottom: 50px;
+}
 th, td{
   color: black;
 }
@@ -591,11 +597,17 @@ th, td{
  right: 0px !important;
 }
 
+
 }
 
 
 
 @media (max-width: 600px) {
+
+.results-pic{
+  right: 5%;
+  margin-top: -10%;
+}
 
 .fa-bars{
   visibility: visible;
@@ -609,6 +621,9 @@ th, td{
 }
 #twitter-widget-0, #twitter-widget-1{
   width: 100% !important;
+}
+.star-name, .tv-name, .movie-name{
+  font-size: 2.5em;
 }
 
 }

@@ -8,12 +8,12 @@ $("html, body").animate({ scrollTop: 0 }, 0);
 <div class="container animated fadeIn">
 
 <!-- Name -->
-  <h3 class="drop-shadow">{{tvDetails.name}}</h3>
+  <h3 class="drop-shadow tv-name">{{tvDetails.name}}</h3>
 
 
   <!-- TV POSTER SLIDER -->
   <div class="row">
-    <div class="tv-cast-wrapper col s12 m12 l4  offset-m4 offset-s1">
+    <div class="tv-cast-wrapper col s12 m12 l4  offset-m4 offset-s1 hide-on-med-and-down">
       <div class="slider tv-slider slider3">
         <ul class="slides z-depth-3 slides3">
           <li>
@@ -53,6 +53,50 @@ $("html, body").animate({ scrollTop: 0 }, 0);
       <i class="fa fa-chevron-left fa-chevron-left3 fa-2x"></i>
       <i class="fa fa-chevron-right fa-chevron-right3 fa-2x"></i>
     </div>
+
+
+       <div class="tv-cast-wrapper hide-on-large-only">
+      <div class="slider tv-slider slider3">
+        <ul class="slides z-depth-3 slides3">
+          <li>
+            <img class="responsive-img" src="{{imgPath}}{{tvDetails.poster_path}}" alt="">
+          </li>
+          <li>
+            <img class="responsive-img" src="{{imgPath}}{{tvDetails.backdrop_path}}" alt="">
+          </li>
+          <li>
+            <img class="responsive-img" ng-src="{{imgPath}}{{tvDetails.seasons[0].poster_path}}">
+          </li>
+          <li>
+            <img class="responsive-img" ng-src="{{imgPath}}{{tvDetails.seasons[1].poster_path}}">
+          </li>
+          <li>
+            <img class="responsive-img" ng-src="{{imgPath}}{{tvDetails.seasons[2].poster_path}}">
+          </li>
+          <li>
+            <img class="responsive-img" ng-src="{{imgPath}}{{tvDetails.seasons[3].poster_path}}">
+          </li>
+          <li>
+            <img class="responsive-img" ng-src="{{imgPath}}{{tvDetails.seasons[4].poster_path}}">
+          </li>
+          <li>
+            <img class="responsive-img" ng-src="{{imgPath}}{{tvDetails.seasons[5].poster_path}}">
+          </li>
+          <li>
+            <img class="responsive-img" ng-src="{{imgPath}}{{tvDetails.seasons[6].poster_path}}">
+          </li>
+          <li>
+            <img class="responsive-img" ng-src="{{imgPath}}{{tvDetails.seasons[7].poster_path}}">
+          </li>
+          <!-- No Image -->
+          <img class="no-images" src="images/no-images.png">
+        </ul>
+      </div>
+      <i class="fa fa-chevron-left fa-chevron-left3 fa-2x"></i>
+      <i class="fa fa-chevron-right fa-chevron-right3 fa-2x"></i>
+    </div>
+
+
 
  <!-- OverView -->
     <div class="col s12 l7 offset-l1">
@@ -127,7 +171,7 @@ $("html, body").animate({ scrollTop: 0 }, 0);
 
 <!-- CAST -->
 <div class="row">
-  <div class="tv-cast-wrapper col s12 m12 l4 offset-l1 offset-m4 offset-s1">
+  <div class="tv-cast-wrapper movie-similar-wrapper movie-similar-wrapper1">
     <h4 class="drop-shadow">Cast:</h4>
     <div class="slider tv-slider slider1">
       <ul class="slides z-depth-3 slides1 tv-credit">
@@ -191,7 +235,7 @@ $("html, body").animate({ scrollTop: 0 }, 0);
 
 
   <!-- Similar Shows -->
-  <div class="tv-cast-wrapper col s12 m12 l4 offset-l2 offset-m4 offset-s1">
+  <div class="tv-cast-wrapper movie-similar-wrapper movie-similar-wrapper2">
     <h4 class="drop-shadow">Similar TV:</h4>
     <div class="slider tv-slider slider2">
       <ul class="slides z-depth-3 slides2">

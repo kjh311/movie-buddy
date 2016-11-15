@@ -157,6 +157,16 @@ $http.get(root_url+"movie/now_playing?api_key="+userService.key+"&language=en-US
     $scope.popularPeople2 = data;
   });
 
+// Popular Stars Page 3:
+  $http.get(root_url+"person/popular?api_key="+userService.key+"&language=en-US&page=3").success(function(data) {
+    $scope.popularPeople3 = data;
+  });
+
+// Popular Stars Page 4:
+  $http.get(root_url+"person/popular?api_key="+userService.key+"&language=en-US&page=4").success(function(data) {
+    $scope.popularPeople4 = data;
+  });
+
 // image path
   $scope.imgPath = "https://image.tmdb.org/t/p/w300_and_h450_bestv2";
 
