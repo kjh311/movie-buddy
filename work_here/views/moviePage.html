@@ -84,6 +84,12 @@ $("html, body").animate({ scrollTop: 0 }, 0);
     <h5 class="drop-shadow">Average Rating:</h5>
     <h3 class="movie-vote">{{movieDetails.vote_average}}</h3>
   </div>
+
+  <!-- Release Date -->
+    <div class="section">
+      <h5 class="drop-shadow">Theatrical Release Date:</h5>
+      <h3 class="movie-release-date">{{movieDetails.release_date | date}}</h3>
+    </div>
 </div>
 
 <!-- Genres -->
@@ -99,16 +105,25 @@ $("html, body").animate({ scrollTop: 0 }, 0);
 <!-- Directed By -->
 <div class="col s12 m3 l3">
   <div class="section">
-    <h5 class="drop-shadow">Directed by:</h5>
+    <h5 class="drop-shadow">{{movieCredits.crew[0].job}}:</h5>
     <a href="#person/{{movieCredits.crew[0].id}}">
       <h5>{{movieCredits.crew[0].name}}</h5>
     </a>
-
-<!-- Release Date -->
-    <div class="section">
-      <h5 class="drop-shadow">Theatrical Release Date:</h5>
-      <h3 class="movie-release-date">{{movieDetails.release_date | date}}</h3>
     </div>
+
+<div class="section">
+    <h5 class="drop-shadow">{{movieCredits.crew[1].job}}:</h5>
+    <a href="#person/{{movieCredits.crew[1].id}}">
+      <h5>{{movieCredits.crew[1].name}}</h5>
+    </a>
+    </div>
+
+<div class="section">
+    <h5 class="drop-shadow">{{movieCredits.crew[2].job}}:</h5>
+    <a href="#person/{{movieCredits.crew[2].id}}">
+      <h5>{{movieCredits.crew[2].name}}</h5>
+    </a>
+
 
   </div>
 </div>
