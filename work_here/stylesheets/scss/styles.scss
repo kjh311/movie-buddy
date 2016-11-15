@@ -41,7 +41,13 @@ a:hover{
 body{
   text-align: center;
   background-color: black;
-  @include backgroundGradient;
+  // @include backgroundGradient;
+  // background-image: url('http://cdn.pcwallart.com/images/blue-purple-gradient-wallpaper-4.jpg');
+  // background-image: url('http://cdn.pcwallart.com/images/dark-pattern-backgrounds-wallpaper-1.jpg');
+  background-image: url('/images/blue-gradient2.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
   color: white;
   font-family: 'Anton', sans-serif;
   font-size: 16px;
@@ -234,7 +240,7 @@ body{
 .mobile-nav-icon{
   display: inline;
 }
-.nav-row, .footer-wrapper{
+.nav-row, .footer-wrapper, footer{
   border-right: 3px solid black;
   border-top: 3px solid black;
 }
@@ -273,6 +279,14 @@ body{
 }
 .opacity{
   opacity: 1;
+}
+// .parallax-container {
+//   height: 1000px;
+//    position:fixed;
+//   width: 100%;
+// }
+.parallax{
+
 }
 .poster-slide-bottom{
   width: 200px;
