@@ -362,6 +362,7 @@ app.config(['$locationProvider', '$routeProvider',
 
 
 
+
 // LIMIT TEXT LENGTH FILTER
 app.filter('truncate', function () {
         return function (text, length, end) {
