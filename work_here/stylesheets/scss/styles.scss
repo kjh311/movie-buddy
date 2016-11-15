@@ -109,16 +109,16 @@ body{
 .fa-chevron-left{
   bottom: 250px;
   right: 155px;
-  z-index: 201;
+  // z-index: 201;
   position: relative;
-  opacity: 0.2;
+  opacity: 0.4;
 }
 .fa-chevron-right{
   bottom: 250px;
   left: 155px;
-  z-index: 201;
+  // z-index: 201;
   position: relative;
-  opacity: 0.2;
+  opacity: 0.4;
 }
 .fa-chevron-left:hover{
   opacity: 1;
@@ -303,10 +303,10 @@ body{
   display: inline-block;
 }
 .movie-similar-wrapper1{
- left: -100px !important;
+ left: -10% !important;
 }
 .movie-similar-wrapper2{
- right: -100px !important;
+ right: -10% !important;
 }
 .poster-li{
   max-width: 300px;
@@ -594,6 +594,7 @@ th, td{
 }
 
 
+
 @media (max-width: 900px) {
 
 .movie-similar-wrapper{
@@ -605,7 +606,6 @@ th, td{
 .movie-similar-wrapper2{
  right: 0px !important;
 }
-
 
 }
 
