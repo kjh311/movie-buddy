@@ -5,6 +5,21 @@ $('.materialboxed').materialbox();
 $('.slider').slider({full_width: false});
 
 $("html, body").animate({ scrollTop: 0 }, 0);
+
+// function imgError(image) {
+//     image.onerror = "";
+//     $('.parent').remove();
+//     $('this').remove();
+//     // return true;
+// }
+// $("img[src='']").parent("li").addClass("hide");
+
+// $( ".movie-backdrop-image" )
+//   .error(function() {
+//     $('.parent').remove();
+//     alert('no img');
+//   })
+
 </script>
 
 
@@ -16,14 +31,32 @@ $("html, body").animate({ scrollTop: 0 }, 0);
 
 
 <!-- POSTER SLIDER -->
-   <div class="tv-cast-wrapper col s12 l4 offset-l1 offset-m4 offset-s1">
+   <div class="tv-cast-wrapper col s12 l4 offset-l1 offset-m4 offset-s1 hide-on-med-and-down">
     <div class="slider tv-slider slider1 ">
       <ul class="slides z-depth-3 slides1 ">
         <li>
-          <img class="responsive-img " src="{{imgPath}}{{movieDetails.poster_path}}" alt="">
+          <img class="responsive-img movie-poster-image" src="{{imgPath}}{{movieDetails.poster_path}}" alt="">
         </li>
+        <li class="parent">
+          <img class="responsive-img movie-backdrop-image" src="{{imgPath}}{{movieDetails.backdrop_path}}">
+        </li>
+      <!-- No Image -->
+        <img class="no-images" src="images/no-images.png">
+      </ul>
+    </div>
+    <i class="fa fa-chevron-left fa-chevron-left1 fa-2x"></i>
+    <i class="fa fa-chevron-right fa-chevron-right1 fa-2x"></i>
+  </div>
+
+<!-- Mobile -->
+     <div class="tv-cast-wrapper hide-on-large-only">
+    <div class="slider tv-slider slider1 ">
+      <ul class="slides z-depth-3 slides1 ">
         <li>
-          <img class="responsive-img" src="{{imgPath}}{{movieDetails.backdrop_path}}" alt="">
+          <img class="responsive-img movie-poster-image" src="{{imgPath}}{{movieDetails.poster_path}}" alt="">
+        </li>
+        <li class="parent">
+          <img class="responsive-img movie-backdrop-image" src="{{imgPath}}{{movieDetails.backdrop_path}}">
         </li>
       <!-- No Image -->
         <img class="no-images" src="images/no-images.png">
@@ -130,8 +163,8 @@ $("html, body").animate({ scrollTop: 0 }, 0);
 
 
 <!-- Cast Slider -->
-<div class="row">
-  <div class="tv-cast-wrapper col s12 m12 l4 offset-l2 offset-m4 offset-s1">
+<!-- <div class="row"> -->
+  <div class="tv-cast-wrapper movie-similar-wrapper movie-similar-wrapper1">
     <h4 class="drop-shadow">Cast:</h4>
     <div class="slider tv-slider slider2">
       <ul class="slides z-depth-3 slides2 movieCast">
@@ -215,7 +248,7 @@ $("html, body").animate({ scrollTop: 0 }, 0);
 
 
 <!-- Similar Movies -->
-  <div class="tv-cast-wrapper col s12 m12 l4 offset-l2 offset-m4 offset-s1">
+  <div class="tv-cast-wrapper movie-similar-wrapper movie-similar-wrapper2">
     <h4 class="drop-shadow">Similar Movies:</h4>
     <div class="slider tv-slider slider3">
       <ul class="slides z-depth-3 slides3" >
@@ -288,7 +321,7 @@ $("html, body").animate({ scrollTop: 0 }, 0);
   </div>
 </div><!--End of row -->
 </div>
-</div>
+<!-- </div> -->
 
 
 <script>
@@ -377,6 +410,8 @@ $('.movieCast').click(function(){
   $('.star-link').addClass('white');
   $('.movie-link').removeClass('white');
 });
+
+
 </script>
 
 

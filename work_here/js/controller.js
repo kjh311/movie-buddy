@@ -350,6 +350,8 @@ app.config(['$locationProvider', '$routeProvider',
         .otherwise({redirectTo:'/'});
 }]);
 
+
+
 // LIMIT TEXT LENGTH FILTER
 app.filter('truncate', function () {
         return function (text, length, end) {

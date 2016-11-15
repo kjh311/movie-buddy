@@ -288,6 +288,19 @@ body{
 .parallax{
 
 }
+.movie-similar-wrapper{
+  display: inline-block;
+}
+.movie-similar-wrapper1{
+ left: -100px !important;
+}
+.movie-similar-wrapper2{
+ right: -100px !important;
+}
+.poster-li{
+  max-width: 300px;
+  display: inline-block !important;
+}
 .poster-slide-bottom{
   width: 200px;
   height: 300px;
@@ -566,6 +579,19 @@ th, td{
 }
 
 
+@media (max-width: 900px) {
+
+.movie-similar-wrapper{
+  display: block;
+}
+.movie-similar-wrapper1{
+ left: 0px !important;
+}
+.movie-similar-wrapper2{
+ right: 0px !important;
+}
+
+}
 
 
 
