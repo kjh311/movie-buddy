@@ -316,10 +316,19 @@ body{
 }
 .results-pic{
   width: 70px;
-  position: relative;
+  position: absolute;
   right: 20%;
   border-radius: 20px;
   transition:all 0.3s ease;
+}
+.results-pic1{
+  z-index: 3;
+}
+.results-pic2{
+  z-index: 2;
+}
+.results-pic3{
+  z-index: 1;
 }
 .results-pic:hover{
   transition:all 0.3s ease;
@@ -339,6 +348,10 @@ body{
 }
 .search-result-name{
   font-size: 1.5em;
+}
+.search-results-wrap{
+  margin-bottom: 150px;
+  position: relative;
 }
 .search-results-div{
   border: 2px solid black;
