@@ -18,7 +18,7 @@ $scope.winLocation = $location.path();
   });
 
 // Latest movies
-$http.get(root_url+"movie/now_playing?api_key="+userService.key+"&language=en-US&page=1").success(function(data) {
+  $http.get(root_url+"movie/now_playing?api_key="+userService.key+"&language=en-US&page=1").success(function(data) {
     $scope.nowPlayingMovies = data;
   });
 
@@ -211,7 +211,6 @@ $scope.winLocation = $location.path();
   //Movie Credits
    $http.get(base_url+winLocation+"/credits?api_key="+userService.key+"&language=en-US&page=1").success(function(data) {
     $scope.movieCredits = data;
-
   });
 
 //Movie Reviews
@@ -224,22 +223,12 @@ $scope.winLocation = $location.path();
     $scope.movieCast = data;
   });
 
-// Check Director
-// $scope.checkToggle = function(){
-//   var a = 1;
-//       if(a > 0){
-//         // alert('works');
-//         $scope.myBoolean === false;
-//       }
-//    return $scope.myBoolean;
-//  };
-
 // Movie Trailer:
   $http.get(base_url+winLocation+"/videos?api_key="+userService.key+"&language=en-US&page=1").success(function(data) {
     $scope.movieTrailer = data;
     $scope.movieTrailerLink = data.results[0].key;
     var movieTrailerLink = data.results[0].key;
-    $scope.linkYoutube = $sce.trustAsResourceUrl('http://www.youtube.com/embed/'+movieTrailerLink);
+    $scope.linkYoutube = $sce.trustAsResourceUrl('https://youtu.be/'+movieTrailerLink);
   });
 
 // Similar Movies
@@ -319,9 +308,10 @@ app.controller('tvController', ['$scope', '$http', '$location', '$sce', 'userSer
     $scope.tvTrailer = data;
     $scope.tvTrailerLink = data.results[0].key;
     var tvTrailerLink = data.results[0].key;
-    $scope.linkYoutubeTv = $sce.trustAsResourceUrl('http://www.youtube.com/embed/'+tvTrailerLink);
+    $scope.linkYoutubeTv = $sce.trustAsResourceUrl('https://youtu.be/'+tvTrailerLink);
   });
 }]);
+
 
 
 // NG-ROUTE

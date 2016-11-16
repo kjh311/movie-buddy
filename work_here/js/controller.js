@@ -313,6 +313,7 @@ app.controller('tvController', ['$scope', '$http', '$location', '$sce', 'userSer
 }]);
 
 
+
 // NG-ROUTE
 app.config(['$locationProvider', '$routeProvider',
  function($location, $routeProvider) {
