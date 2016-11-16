@@ -53,9 +53,9 @@
     <div class="nav-wrapper #90caf9 blue lighten-3 ">
       <div class="row ">
         <div class="col s12 nav-div">
-          <a href="#/"><img class="logo hide-on-small-and-down" src="movie-buddy/images/logo2.png" onerror="this.style.display='none'" alt=""></a>
-          <a href="#/"><img class="logo2 hide-on-med-and-up" src="movie-buddy/images/logo2.png" onerror="this.style.display='none'" alt=""></a>
-          <a href="#/" class="brand-logo center">Movie Buddy!</a>
+          <a href="movie-buddy/#/"><img class="logo hide-on-small-and-down" src="movie-buddy/images/logo2.png" onerror="this.style.display='none'" alt=""></a>
+          <a href="movie-buddy/#/"><img class="logo2 hide-on-med-and-up" src="movie-buddy/images/logo2.png" onerror="this.style.display='none'" alt=""></a>
+          <a href="movie-buddy/#/" class="brand-logo center">Movie Buddy!</a>
 
 <!-- Photoshop Logo: -->
           <!-- <img class="new-logo-pic" src="images/new-logo.png" alt=""> -->
@@ -63,11 +63,11 @@
 
   <!-- Mobile Drop Down -->
             <ul id="slide-out" class="side-nav hide-on-med-only">
-              <li><a class="waves-effect mobile-links mobile-links1" href="#/"><i class="fa phone-icon fa-home" aria-hidden="true"></i>Home</a></li>
-              <li><a class="waves-effect mobile-links " href="#movies"><i class="fa phone-icon fa-film" aria-hidden="true"></i>Movies</a></li>
-              <li><a class="waves-effect mobile-links" href="#tv"><i class="fa phone-icon fa-television" aria-hidden="true"></i>TV Shows</a></li>
-              <li><a class="waves-effect mobile-links" href="#stars"><i class="fa phone-icon fa-star" aria-hidden="true"></i>Stars</a></li>
-              <li><a class="waves-effect mobile-links" href="#news"><i class="fa phone-icon fa-newspaper-o" aria-hidden="true"></i>News</a></li>
+              <li><a class="waves-effect mobile-links mobile-links1" href="movie-buddy/#/"><i class="fa phone-icon fa-home" aria-hidden="true"></i>Home</a></li>
+              <li><a class="waves-effect mobile-links " href="movie-buddy/#movies"><i class="fa phone-icon fa-film" aria-hidden="true"></i>Movies</a></li>
+              <li><a class="waves-effect mobile-links" href="movie-buddy/#tv"><i class="fa phone-icon fa-television" aria-hidden="true"></i>TV Shows</a></li>
+              <li><a class="waves-effect mobile-links" href="movie-buddy/#stars"><i class="fa phone-icon fa-star" aria-hidden="true"></i>Stars</a></li>
+              <li><a class="waves-effect mobile-links" href="movie-buddy/#news"><i class="fa phone-icon fa-newspaper-o" aria-hidden="true"></i>News</a></li>
       <!-- Facebook -->
               <li><a class="waves-effect mobile-links" href="http://www.facebook.com/sharer.php?u=https://kjh311.github.io/movie-buddy/" target="_blank"><i class="fa phone-icon fa-facebook  mobile-nav-icon"></i>Facebook</a></li>
        <!-- Twitter -->
@@ -78,7 +78,7 @@
                 <i class="fa phone-icon fa-google"></i>Google+</a>
               </li>
             </ul>
-            <a href="#" data-activates="slide-out" class="button-collapse"><i class="fa fa-bars fa-2x"></i></a>
+            <a href="movie-buddy/#" data-activates="slide-out" class="button-collapse"><i class="fa fa-bars fa-2x"></i></a>
 
     <!-- Social Icons -->
             <ul class="social-icons-nav hide-on-small-and-down">
@@ -110,10 +110,10 @@
       <div class="col s12 #283593 indigo darken-3 dark-blue z-depth-3 nav-bottom">
         <div class="row hide-on-small-and-down">
           <ul class="categories">
-            <a href="#movies" class="movie-link nav-link"><div class="col s2"><li >MOVIES</li></div></a>
-            <a  href="#tv" class="tv-link nav-link"><div class="col s2"><li >TV-SHOWS</li></div></a>
-            <a href="#stars" class="star-link nav-link"><div class="col s2"><li>STARS</li></div></a>
-            <a href="#news" class="news-link nav-link"><div class="col s2"><li>NEWS</li></div></a>
+            <a href="movie-buddy/#movies" class="movie-link nav-link"><div class="col s2"><li >MOVIES</li></div></a>
+            <a  href="movie-buddy/#tv" class="tv-link nav-link"><div class="col s2"><li >TV-SHOWS</li></div></a>
+            <a href="movie-buddy/#stars" class="star-link nav-link"><div class="col s2"><li>STARS</li></div></a>
+            <a href="movie-buddy/#news" class="news-link nav-link"><div class="col s2"><li>NEWS</li></div></a>
 
     <!-- Search -->
             <div class="col s4 hide-on-small-only">
@@ -149,13 +149,13 @@
         <!-- Results -->
                 <tr class="table-row" ng-repeat="x in searchResults.results">
                   <td class="movie-title-search">
-                    <a href="#{{x.media_type}}/{{x.id}}">
+                    <a href="movie-buddy/#{{x.media_type}}/{{x.id}}">
                       <p  class="search-result-name">{{x.title}}{{x.name}}</p>
                       <p class="air-date">{{x.first_air_date | date}}</p>
                       <p class="air-date">{{x.release_date | date}}</p>
                     </a>
                   </td>
-                  <td class="movie-img-search"><a  class="search-result-pic" href="#{{x.media_type}}/{{x.id}}">
+                  <td class="movie-img-search"><a  class="search-result-pic" href="movie-buddy/#{{x.media_type}}/{{x.id}}">
                     <img class="z-depth-2 results-pic results-pic1" ng-src="{{imgPath}}{{x.profile_path}}" onerror="this.style.display='none'">
                     <img class="z-depth-2 results-pic results-pic2" ng-src="{{imgPath}}{{x.poster_path}}"  onerror="this.style.display='none'">
                     <img class="z-depth-2 results-pic results-pic3" ng-src="images/no-images.png" >
