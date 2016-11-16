@@ -53,6 +53,7 @@ body{
   font-size: 16px;
   overflow-y: scroll;
   overflow-x: hidden;
+  max-width: 100%;
 }
 .brand-logo, .drop-shadow{
   text-shadow: 3px 3px 3px black;
@@ -130,6 +131,10 @@ body{
 }
 .fa-heart{
   color: red;
+}
+footer{
+  // top: 40px !important;
+  // position: relative;
 }
 .hidden{
   visibility: hidden;
@@ -243,7 +248,7 @@ body{
   display: inline;
 }
 .nav-row, .footer-wrapper, footer{
-  border-right: 3px solid black;
+  // border-right: 3px solid black;
   border-top: 3px solid black;
 }
 .nav-main-wrapper{
