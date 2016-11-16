@@ -328,6 +328,7 @@ app.controller('tvController', ['$scope', '$http', '$location', '$sce', 'userSer
 app.config(['$locationProvider', '$routeProvider',
  function($location, $routeProvider) {
 
+
     $routeProvider
         .when('/', {
           templateUrl : "movie-buddy/work_here/views/home.html",
