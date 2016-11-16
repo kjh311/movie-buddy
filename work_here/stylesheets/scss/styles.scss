@@ -2,6 +2,7 @@ $dark-grey: rgba(0,0,0,0.3);
 $white-semi-opaque: rgba(255,255,255,0.7);
 $light-blue: #90caf9;
 $dark-blue: #283593;
+$input-blue: #1c2567;
 $clear: rgba(0,0,0,0);
 
 @mixin backgroundGradient{
@@ -38,13 +39,21 @@ a:hover{
   height: 50px;
   z-index:200;
 }
+.background-pic{
+  position: fixed;
+  z-index: -1;
+  left: 0;
+  top: 0;
+  width: 2000px;
+  height: 300vh;
+}
 body{
   text-align: center;
   background-color: black;
   // @include backgroundGradient;
   // background-image: url('http://cdn.pcwallart.com/images/blue-purple-gradient-wallpaper-4.jpg');
   // background-image: url('http://cdn.pcwallart.com/images/dark-pattern-backgrounds-wallpaper-1.jpg');
-  background-image: url('/images/blue-gradient2.jpg');
+  // background-image: url('/images/blue-gradient2.jpg');
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
@@ -107,6 +116,9 @@ body{
 .fa-bars{
   visibility: hidden;
 }
+.fa-bars:hover, .button-collapse:hover{
+  color: white !important;
+}
 .fa-chevron-left{
   bottom: 250px;
   right: 155px;
@@ -145,6 +157,16 @@ footer{
 }
 .indicator-item{
   visibility: hidden;
+}
+// input:-webkit-autofill {
+//     -webkit-box-shadow: 0 0 0 1000px $input-blue inset !important;
+// }
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    -webkit-transition-delay: 9999s;
+    -webkit-transition: color 9999s ease-out, background-color 9999s ease-out;
 }
 .logo{
   width: 50px;
