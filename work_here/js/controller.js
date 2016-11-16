@@ -313,7 +313,6 @@ app.controller('tvController', ['$scope', '$http', '$location', '$sce', 'userSer
     $scope.tvSimilar = data;
   });
 
-
 // TV Trailer:
   $http.get(base_url+winLocation+"/videos?api_key="+userService.key+"&language=en-US&page=1").success(function(data) {
     $scope.tvTrailer = data;
