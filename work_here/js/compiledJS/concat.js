@@ -329,6 +329,7 @@ app.config(['$locationProvider', '$routeProvider',
  function($location, $routeProvider) {
 
 
+
     $routeProvider
         .when('/', {
           templateUrl : "/work_here/views/home.html",
