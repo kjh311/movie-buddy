@@ -211,7 +211,6 @@ $scope.winLocation = $location.path();
   //Movie Credits
    $http.get(base_url+winLocation+"/credits?api_key="+userService.key+"&language=en-US&page=1").success(function(data) {
     $scope.movieCredits = data;
-
   });
 
 //Movie Reviews
@@ -239,7 +238,7 @@ $scope.winLocation = $location.path();
     $scope.movieTrailer = data;
     $scope.movieTrailerLink = data.results[0].key;
     var movieTrailerLink = data.results[0].key;
-    $scope.linkYoutube = $sce.trustAsResourceUrl('http://www.youtube.com/embed/'+movieTrailerLink);
+    $scope.linkYoutube = $sce.trustAsResourceUrl('https://www.youtube.com/embed/'+movieTrailerLink);
   });
 
 // Similar Movies
