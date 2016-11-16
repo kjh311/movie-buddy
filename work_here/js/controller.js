@@ -18,7 +18,7 @@ $scope.winLocation = $location.path();
   });
 
 // Latest movies
-$http.get(root_url+"movie/now_playing?api_key="+userService.key+"&language=en-US&page=1").success(function(data) {
+  $http.get(root_url+"movie/now_playing?api_key="+userService.key+"&language=en-US&page=1").success(function(data) {
     $scope.nowPlayingMovies = data;
   });
 
@@ -222,16 +222,6 @@ $scope.winLocation = $location.path();
   $http.get(base_url+winLocation+"/credits?api_key="+userService.key+"&language=en-US&page=1").success(function(data) {
     $scope.movieCast = data;
   });
-
-// Check Director
-// $scope.checkToggle = function(){
-//   var a = 1;
-//       if(a > 0){
-//         // alert('works');
-//         $scope.myBoolean === false;
-//       }
-//    return $scope.myBoolean;
-//  };
 
 // Movie Trailer:
   $http.get(base_url+winLocation+"/videos?api_key="+userService.key+"&language=en-US&page=1").success(function(data) {
