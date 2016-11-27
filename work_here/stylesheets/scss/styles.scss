@@ -321,11 +321,10 @@ input:-webkit-autofill:active {
   color: $light-blue !important;
 }
 .mobile-links1{
-  // margin-top: 50px;
+  margin-top: 50px;
 }
 .mobile-links{
-  // margin
-  // margin-top: 20px !important;
+  margin-top: 20px !important;
 }
 .movie-similar-wrapper{
   display: inline-block;
@@ -447,6 +446,9 @@ input:-webkit-autofill:active {
 }
 #sidenav-overlay{
   display: none;
+}
+.side-nav a{
+  height: 30px;
 }
 .similar-tv-vote{
   color: rgba(255,255,255,0.7);
