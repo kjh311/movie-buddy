@@ -115,6 +115,7 @@ body{
 }
 .drag-target{
   z-index: 1 !important;
+  width: 10% !important;
 }
 .fa-bars{
   // visibility: hidden;
@@ -324,10 +325,10 @@ input:-webkit-autofill:active {
   color: $light-blue !important;
 }
 .mobile-links1{
-  margin-top: 50px;
+  // margin-top: 50px;
 }
 .mobile-links{
-  // margin-top: 20px !important;
+  margin-top: 30px !important;
 }
 .movie-similar-wrapper{
   display: inline-block;
