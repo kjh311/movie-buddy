@@ -151,7 +151,7 @@ footer{
 .hidden{
   visibility: hidden;
 }
-.homepage-link{
+.homepage-link, .movie-homepage{
   font-size: 1.2em;
   word-wrap: break-word;
 }
@@ -256,8 +256,8 @@ input:-webkit-autofill:active {
   display: block;
 }
 .movie-homepage{
-  font-size: .8em !important;
-  max-width: 250px;
+  // font-size: .8em !important;
+  // max-width: 250px;
 }
 .mobile-links{
   font-size: 1.5em !important;
