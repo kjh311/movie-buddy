@@ -395,23 +395,6 @@ app.factory('userService', [function(){
 // JQUERY WORKS!
 $( document ).ready(function() {
 
-// $('.materialboxed').materialbox();
-
-$('.movie-link').click(function() {
-
-});
-
-$('.star-link').click(function() {
-
-});
-
-$('.tv-link').click(function() {
-
-});
-
-$('.news-link').click(function() {
-
-});
 
 $('.button-collapse').sideNav({
   menuWidth: 300, // Default is 240
