@@ -4,7 +4,7 @@
 ![news](images/news.png)
 ![mobile](images/mobile.png)
 
-
+TRELLO:[trello]https://trello.com/b/jdYoH6Fb/movie-buddy
 
 #USES:
 
@@ -25,4 +25,4 @@
 * Gulp-Rename
 * Gulp-Concat
 * Gulp-Imagemin
-* Bootstrap
+
