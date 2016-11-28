@@ -150,7 +150,7 @@
                 <tr class="table-row" ng-repeat="x in searchResults.results">
                   <td class="movie-title-search">
                     <a href="movie-buddy/#{{x.media_type}}/{{x.id}}">
-                      <p  class="search-result-name">{{x.title}}{{x.name}}</p>
+                      <p class="search-result-name">{{x.title}}{{x.name}}</p>
                       <p class="air-date">{{x.first_air_date | date}}</p>
                       <p class="air-date">{{x.release_date | date}}</p>
                     </a>
@@ -240,10 +240,16 @@ $('.search-results-div').hide();
   var apiKey = '<%= process.env.KEY %>';
 
 
-$('.movie-title-search').click(function() {
+$('.search-result-name').click(function() {
   $('#searchBar').val('');
   $('#searchBar2').val('');
 });
+
+$('.movie-img-search').click(function() {
+  $('#searchBar').val('');
+  $('#searchBar2').val('');
+});
+
 </script>
 
 </html>
