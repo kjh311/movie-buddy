@@ -44,7 +44,7 @@ a:hover{
   z-index: -1;
   left: 0;
   top: 0;
-  width: 2000px;
+  width: 3000px;
   height: 300vh;
 }
 body{
@@ -63,6 +63,7 @@ body{
   overflow-y: scroll;
   overflow-x: hidden;
   width: 100%;
+  // background-size: 80px 60px;
 }
 .brand-logo, .drop-shadow{
   text-shadow: 3px 3px 3px black;
@@ -686,9 +687,9 @@ background-size: cover;
 }
 
 @media (max-width: 361px) {
-.cast-slider, .slider-div{
-  max-width: 270px;
-}
+// .cast-slider, .slider-div{
+//   max-width: 270px;
+// }
 .fa-chevron-left{
   bottom: 20px;
   right: 50px;
