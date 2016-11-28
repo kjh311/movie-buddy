@@ -238,6 +238,12 @@ function doneTyping () {
 $('.search-results-div').hide();
 
   var apiKey = '<%= process.env.KEY %>';
+
+
+$('a').click(function() {
+  $('#searchBar').val('');
+  $('#searchBar2').val('');
+});
 </script>
 
 </html>
