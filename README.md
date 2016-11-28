@@ -4,7 +4,7 @@
 ![news](images/news.png)
 ![mobile](images/mobile.png)
 
-TRELLO:[trello]https://trello.com/b/jdYoH6Fb/movie-buddy
+TRELLO: https://trello.com/b/jdYoH6Fb/movie-buddy
 
 #USES:
 
