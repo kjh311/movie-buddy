@@ -71,7 +71,7 @@ $("html, body").animate({ scrollTop: 0 }, 0);
       <div class="col s12 l6 offset-l1">
         <h5 ng-init="limit=400" class="starBiography">{{starDetails.biography | truncate:limit}} <a class="readMoreLink" ng-click="limit=5000">Read More</a></h5>
       </br>
-      <a href="{{starDetails.homepage}}"><h5>{{starDetails.homepage}}</h5></a>
+      <a class="star-homepage" href="{{starDetails.homepage}}"><h5>{{starDetails.homepage}}</h5></a>
     </div>
   </div>
 
