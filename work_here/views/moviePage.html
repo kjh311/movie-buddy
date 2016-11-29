@@ -13,28 +13,9 @@ $("html, body").animate({ scrollTop: 0 }, 0);
 
 
 // trailer fullscreen
-  function changeHandler(e) {
-   // Mode has changed.
-}
+$('iframe').on('EnterFullScreen', function() {
+  alert('full screen mode entered!');
 
-document.addEventListener("fullscreenchange", changeHandler, false);
-document.addEventListener("webkitfullscreenchange", changeHandler, false);
-document.addEventListener("mozfullscreenchange", changeHandler, false);
-
-$(document).on('fullscreenchange mozfullscreenchange webkitfullscreenchange msfullscreenchange', function() {
-    if (document.fullScreen || document.mozFullScreen || document.webkitIsFullScreen || document.msFullscreenElement)
-    {
-        $(document).trigger('enterFullScreen');
-    }
-    else
-    {
-        $(document).trigger('leaveFullScreen');
-    }
-});
-
-$(document).on('enterFullScreen', function(){
-    // Do stuff
-    alert('fullscreen');
 });
 
 </script>
