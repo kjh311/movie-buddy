@@ -593,12 +593,12 @@ th, td{
 }
 #twitter-widget-0, #twitter-widget-1 {
   float: none;
-  width: 100vw !important;
+  width: 100% !important;
   max-width: 1200px !important;
   height: 110vh !important;
 }
 .tweets iframe {
-    width: 100%;
+    // width: 100%;
 }
 #twitter-widget-holder{
   // max-height:400px;
