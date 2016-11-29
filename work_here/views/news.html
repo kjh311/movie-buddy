@@ -31,4 +31,17 @@ twttr.widgets.load()
 // FB.XFBML.parse()
 
 
+    $(window).load(function () {
+        function changeWidget() {
+            var twFrame = $('iframe#twitter-widget-0');
+            if (twFrame.length > 0) {
+                twFrame.contents()
+                .find('head').append('<link href="http://www.w3schools.com/css/mystyle.css" rel="stylesheet" type="text/css" media="all" />');
+            } else {
+                setTimeout(changeWidget, 1500);
+            }
+        }
+        changeWidget();
+    });
+
 </script>
