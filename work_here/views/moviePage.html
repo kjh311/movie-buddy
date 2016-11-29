@@ -374,25 +374,10 @@ $('.fa-chevron-left3').click(function() {
   }, 5000);
 });
 
-function check_length(){
-  if($('.movieOverviewText').text().length < 400  ){
-    $('.readMoreLink').hide();
-  }
+// function check_length(){
 
-  if($('.movie-review-content1').text().length < 150  ){
-    $('.readMoreLink-reviews1').hide();
-  }
-
-  if($('.movie-review-content2').text().length < 150  ){
-    $('.readMoreLink-reviews2').hide();
-  }
-
-  if($('.movie-review-content3').text().length < 150  ){
-    $('.readMoreLink-reviews3').hide();
-  }
-  // alert($('.movieOverviewText').text().length);
-}
-setTimeout(check_length, 1500);
+// }
+// setTimeout(check_length, 1500);
 
 
 $('.readMoreLink').click(function() {
@@ -416,7 +401,28 @@ $('.readMoreLink-reviews3').click(function() {
 //   alert('works');
 // });
 
+$( document ).ready(function() {
+  if($('.movieOverviewText').text().length < 400  ){
+    $('.readMoreLink').hide();
+  }
 
+  if($('.movie-review-content1').text().length < 150  ){
+    $('.readMoreLink-reviews1').hide();
+  }
+
+  if($('.movie-review-content2').text().length < 150  ){
+    $('.readMoreLink-reviews2').hide();
+  }
+
+  if($('.movie-review-content3').text().length < 150  ){
+    $('.readMoreLink-reviews3').hide();
+  }
+
+
+
+});
 </script>
+
+
 
 
