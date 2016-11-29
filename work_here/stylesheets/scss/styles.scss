@@ -74,6 +74,10 @@ body{
 .brand-logo:hover{
   color: red;
 }
+.button-collapse{
+  float: right !important;
+}
+
 .carousel{
   height: 160px;
   width: 100%;
@@ -180,7 +184,7 @@ input:-webkit-autofill:active {
 }
 .logo2{
   position: absolute;
-  right: 10px;
+  left: 10px;
   width: 45px;
   top: 5px;
 }
