@@ -585,7 +585,8 @@ th, td{
 }
 #twitter-widget-0, #twitter-widget-1 {
   float: none;
-  width: 90% !important;
+  width: 100vw !important;
+  height: 100vh !important;
 }
 #twitter-widget-holder{
   // max-height:400px;
