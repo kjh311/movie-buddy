@@ -590,6 +590,9 @@ th, td{
   max-width: 100vw !important;
   height: 110vh !important;
 }
+.tweets iframe {
+    width: 100%;
+}
 #twitter-widget-holder{
   // max-height:400px;
   // width: 120%;
