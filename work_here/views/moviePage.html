@@ -11,7 +11,35 @@ $("html, body").animate({ scrollTop: 0 }, 0);
   $('.tv-link').removeClass('white');
   $('.news-link').removeClass('white');
 
+
+// trailer fullscreen
+  function changeHandler(e) {
+   // Mode has changed.
+}
+
+document.addEventListener("fullscreenchange", changeHandler, false);
+document.addEventListener("webkitfullscreenchange", changeHandler, false);
+document.addEventListener("mozfullscreenchange", changeHandler, false);
+
+$(document).on('fullscreenchange mozfullscreenchange webkitfullscreenchange msfullscreenchange', function() {
+    if (document.fullScreen || document.mozFullScreen || document.webkitIsFullScreen || document.msFullscreenElement)
+    {
+        $(document).trigger('enterFullScreen');
+    }
+    else
+    {
+        $(document).trigger('leaveFullScreen');
+    }
+});
+
+$(document).on('enterFullScreen', function(){
+    // Do stuff
+    alert('fullscreen');
+});
+
 </script>
+
+
 
 </br>
 <div class="container  animated fadeIn movie-page-container">
