@@ -69,7 +69,7 @@ $("html, body").animate({ scrollTop: 0 }, 0);
 
 
       <div class="col s12 l6 offset-l1">
-        <h5 ng-init="limit=400" class="starBiography">{{starDetails.biography | truncate:limit}} <a class="readMoreLink" ng-click="limit=5000">Read More</a></h5>
+        <h5 ng-init="limit=350" class="starBiography">{{starDetails.biography | truncate:limit}} <a class="readMoreLink" ng-click="limit=5000">Read More</a></h5>
       </br>
       <a class="star-homepage" href="{{starDetails.homepage}}"><h5>{{starDetails.homepage}}</h5></a>
     </div>
@@ -279,7 +279,7 @@ $('.fa-chevron-left2').click(function() {
 
 
 function check_length(){
-  if($('.starBiography').text().length < 401){
+  if($('.starBiography').text().length < 351){
     $('.readMoreLink').hide();
   }
   // alert($('.starBiography').text().length);

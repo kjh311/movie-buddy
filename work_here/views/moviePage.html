@@ -61,7 +61,7 @@ $("html, body").animate({ scrollTop: 0 }, 0);
 
 <!-- Movie Details -->
   <div class="col l6 s12 offset-l1">
-    <h5 ng-init="limit=400" class="movieOverviewText">{{movieDetails.overview |truncate:limit}} <a class="readMoreLink" ng-click="limit=5000">Read More</a></h5>
+    <h5 ng-init="limit=350" class="movieOverviewText">{{movieDetails.overview |truncate:limit}} <a class="readMoreLink" ng-click="limit=5000">Read More</a></h5>
   </br>
   <h5><a class="movie-homepage" href="{{movieDetails.homepage}}" target="_blank">{{movieDetails.homepage}}</a></h5>
 </div>
@@ -375,7 +375,7 @@ $('.fa-chevron-left3').click(function() {
 });
 
 function check_length(){
-  if($('.movieOverviewText').text().length < 400  ){
+  if($('.movieOverviewText').text().length < 351  ){
     $('.readMoreLink').hide();
   }
 
