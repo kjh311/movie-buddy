@@ -12,11 +12,9 @@ $("html, body").animate({ scrollTop: 0 }, 0);
   $('.news-link').removeClass('white');
 
 
-// trailer fullscreen
-$('iframe').on('EnterFullScreen', function() {
-  alert('full screen mode entered!');
-
-});
+$(document).on('webkitfullscreenchange mozfullscreenchange fullscreenchange MSFullscreenChange', fn){
+  alert('Full screen engaged, No. 2!');
+};
 
 </script>
 
