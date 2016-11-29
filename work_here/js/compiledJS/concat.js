@@ -408,5 +408,25 @@ $('.parallax').parallax();
   $(window).scroll(function(e){
       parallax();
   });
+// $( document ).ready(function() {
 
+  if($('.movieOverviewText').text().length < 400  ){
+    $('.readMoreLink').hide();
+  }
+
+  if($('.movie-review-content1').text().length < 150  ){
+    $('.readMoreLink-reviews1').hide();
+  }
+
+  if($('.movie-review-content2').text().length < 150  ){
+    $('.readMoreLink-reviews2').hide();
+  }
+
+  if($('.movie-review-content3').text().length < 150  ){
+    $('.readMoreLink-reviews3').hide();
+  }
+
+
+
+// });
 });
