@@ -733,5 +733,18 @@ background-size: cover;
 // }
 }
 
+// Mobile Landscape
+@media screen
+  and (device-width: 420px)
+  and (device-height: 740px)
+  and (-webkit-device-pixel-ratio: 3)
+  and (orientation: landscape) {
+
+.tv-cast-wrapper{
+  height: 200px;
+  width: 150px;
+}
+}
+
 
 
