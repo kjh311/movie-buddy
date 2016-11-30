@@ -15,10 +15,10 @@ $('.slider').slider({full_width: false});
   <!-- <div class="row"> -->
 
     <!-- Coming Attractions Slider -->
-  <div class="tv-cast-wrapper movie-similar-wrapper movie-similar-wrapper2">
+  <div class="tv-cast-wrapper movie-similar-wrapper movie-similar-wrapper4">
     <h4 class="drop-shadow">Coming Soon to Theaters:</h4>
-    <div class="slider tv-slider slider2">
-      <ul class="slides z-depth-3 slides2">
+    <div class="slider tv-slider slider4">
+      <ul class="slides z-depth-3 slides4">
         <li>
           <a href="movie-buddy/#movie/{{comingMovies.results[0].id}}">
             <img class="responsive-img  red-border" src="{{imgPath}}{{comingMovies.results[0].poster_path}}" alt="">
@@ -144,8 +144,8 @@ $('.slider').slider({full_width: false});
         <img class="black" src="movie-buddy/images/black.jpg">
       </ul>
     </div>
-    <i class="fa fa-chevron-left fa-chevron-left2 fa-2x"></i>
-    <i class="fa fa-chevron-right fa-chevron-right2 fa-2x"></i>
+    <i class="fa fa-chevron-left fa-chevron-left4 fa-2x"></i>
+    <i class="fa fa-chevron-right fa-chevron-right4 fa-2x"></i>
   </div>
 
   <!-- Popular Movies Slider -->
@@ -605,6 +605,19 @@ $('.fa-chevron-left3').click(function() {
   $('.slider3').slider('pause');
     setTimeout(function(){
   $('.slider3').slider('start');
+}, 5000);
+    $('.fa-chevron-right4').click(function() {
+  $('.slider4').slider('next');
+  $('.slider4').slider('pause');
+    setTimeout(function(){
+  $('.slider4').slider('start');
+}, 5000);
+});
+$('.fa-chevron-left4').click(function() {
+  $('.slider4').slider('prev');
+  $('.slider4').slider('pause');
+    setTimeout(function(){
+  $('.slider4').slider('start');
 }, 5000);
 
 });
