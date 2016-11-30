@@ -53,7 +53,7 @@ a:hover{
   // position: absolute;
   left: 0;
   // z-index: 1;
-  top: 0;
+  top: -10px;
 }
 
 body{
@@ -321,7 +321,7 @@ input:-webkit-autofill:active {
   // z-index: 2;
   position: absolute;
   left: 0;
-  top: 0;
+  top: -10px;
 }
 .new-logo-pic{
   max-height: 50px;
