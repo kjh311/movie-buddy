@@ -97,16 +97,6 @@ body{
 .carousel-item{
   background-repeat: no-repeat;
 }
-// .cast-character{
-//   background-color: $dark-grey;
-//   color: $white-semi-opaque;
-//   bottom: -10px !important;
-//   right: 0px;
-//   z-index: 200;
-//   position: fixed;
-//   padding: 10px;
-// }
-
 .cast-pic{
     width: 300px;
   max-width: 300px;
@@ -257,7 +247,7 @@ input:-webkit-autofill:active {
   background-color: $dark-grey;
 }
 .moveCastRole, .cast-character{
-  bottom: -10px !important;
+  bottom: -5px !important;
   position: absolute;
   color: $white-semi-opaque;
   font-size: 1.3em;
