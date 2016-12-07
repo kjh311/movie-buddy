@@ -97,15 +97,15 @@ body{
 .carousel-item{
   background-repeat: no-repeat;
 }
-.cast-character{
-  background-color: $dark-grey;
-  color: $white-semi-opaque;
-  bottom: -10px !important;
-  right: 0px;
-  z-index: 200;
-  position: fixed;
-  padding: 10px;
-}
+// .cast-character{
+//   background-color: $dark-grey;
+//   color: $white-semi-opaque;
+//   bottom: -10px !important;
+//   right: 0px;
+//   z-index: 200;
+//   position: fixed;
+//   padding: 10px;
+// }
 .cast-pic{
     width: 300px;
   max-width: 300px;
@@ -255,7 +255,7 @@ input:-webkit-autofill:active {
   padding: 5px;
   background-color: $dark-grey;
 }
-.moveCastRole{
+.moveCastRole, .cast-character{
   bottom: -10px !important;
   position: absolute;
   color: $white-semi-opaque;
