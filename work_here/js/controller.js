@@ -244,6 +244,18 @@ $scope.winLocation = $location.path();
     $scope.movieReleaseDate = data;
     });
 
+  // fix active class on slider
+app.directive('contentSlider', function() {
+
+        return function(scope, element) {
+            if (scope.$last) {
+                element.addClass('active');
+            }
+        };
+    });
+// http://www.icreateproject.info/articles/angularjs-active-item-ng-repeat/
+
+
 }]);
 
 
@@ -355,16 +367,6 @@ app.config(['$locationProvider', '$routeProvider',
 }]);
 
 
-// fix active class on slider
-app.directive('contentSlider', function() {
-
-        return function(scope, element) {
-            if (scope.$last) {
-                element.addClass('active');
-            }
-        };
-    });
-// http://www.icreateproject.info/articles/angularjs-active-item-ng-repeat/
 
 
 // LIMIT TEXT LENGTH FILTER
