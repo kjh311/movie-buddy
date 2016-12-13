@@ -13,9 +13,8 @@ var app = angular.module('myApp',['ngRoute']);
 
 
 // MY CONTROLLER
-app.controller('myCtrl', ['$scope', '$http', '$location', '$sce', 'userService', 'contentSlider', function($scope, $http, $location, $sce, userService, contentSlider) {
+app.controller('myCtrl', ['$scope', '$http', '$location', '$sce', 'userService', function($scope, $http, $location, $sce, userService) {
   $scope.name = 'Kevin';
-
 
 var root_url = "https://api.themoviedb.org/3/";
 var base_url = "https://api.themoviedb.org/3";
@@ -367,14 +366,14 @@ app.config(['$locationProvider', '$routeProvider',
 
 
 // fix active class on slider
-// app.directive('contentSlider', function() {
+app.directive('contentSlider', function() {
 
-//         return function(scope, element) {
-//             if (scope.$last) {
-//                 element.addClass('active');
-//             }
-//         };
-//     });
+        return function(scope, element) {
+            if (scope.$last) {
+                element.addClass('active');
+            }
+        };
+    });
 // http://www.icreateproject.info/articles/angularjs-active-item-ng-repeat/
 
 
