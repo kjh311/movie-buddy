@@ -345,7 +345,7 @@ $("html, body").animate({ scrollTop: 0 }, 0);
 <!-- <div class="slider"> -->
   <!-- <ul class="slides"> -->
     <li ng-repeat="x in movieSimilar.results">
-      <img ng-src="x" alt="">
+      <img class="responsive-img red-border movieSimilar0" ng-src="{{imgPath}}{{x.poster_path}}" alt="">
     </li>
   <!-- </ul> -->
 <!-- </div> -->
@@ -355,7 +355,7 @@ $("html, body").animate({ scrollTop: 0 }, 0);
 <div class="slider">
   <ul class="slides">
     <li ng-repeat="x in movieSimilar.results">
-      <img ng-src="x" alt="">
+      <img class="responsive-img red-border movieSimilar0" ng-src="{{imgPath}}{{x.poster_path}}" alt="">
     </li>
   </ul>
 </div>
