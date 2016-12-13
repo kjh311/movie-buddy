@@ -77,6 +77,7 @@ $("html, body").animate({ scrollTop: 0 }, 0);
 </div>
 </div><!-- end of row -->
 
+
 <div class="row">
 
 <!-- Rating -->
@@ -340,6 +341,23 @@ $("html, body").animate({ scrollTop: 0 }, 0);
 </div><!--End of row -->
 </div>
 <!-- </div> -->
+
+<!-- <div class="slider"> -->
+  <!-- <ul class="slides"> -->
+    <li ng-repeat="x in movieSimilar.results">
+      <img ng-src="x" alt="">
+    </li>
+  <!-- </ul> -->
+<!-- </div> -->
+
+
+<div class="slider">
+  <ul class="slides">
+    <li ng-repeat="x in movieSimilar.results">
+      <img ng-src="x" alt="">
+    </li>
+  </ul>
+</div>
 
 
 <script>
