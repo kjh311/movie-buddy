@@ -1,12 +1,12 @@
-app.directive('contentSlider', function() {
+// app.directive('contentSlider', function() {
 
-        return function(scope, element) {
-            if (scope.$last) {
-                element.addClass('active');
-            }
-        };
+//         return function(scope, element) {
+//             if (scope.$last) {
+//                 element.addClass('active');
+//             }
+//         };
 
-    });
+//     });
 
 var app = angular.module('myApp',['ngRoute']);
 
