@@ -6,6 +6,7 @@ var app = angular.module('myApp',['ngRoute']);
 app.controller('myCtrl', ['$scope', '$http', '$location', '$sce', 'userService', 'contentSlider', function($scope, $http, $location, $sce, userService, contentSlider) {
   $scope.name = 'Kevin';
 
+
 var root_url = "https://api.themoviedb.org/3/";
 var base_url = "https://api.themoviedb.org/3";
 $scope.movieId = "https://api.themoviedb.org/3/movie/188927?api_key="+userService.key;
