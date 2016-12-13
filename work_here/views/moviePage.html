@@ -342,13 +342,15 @@ $("html, body").animate({ scrollTop: 0 }, 0);
   <div class="tv-cast-wrapper movie-similar-wrapper movie-similar-wrapper2">
     <h4 class="drop-shadow">Similar Movies:</h4>
 <div class="slider tv-slider slider3">
-  <ul class="slides z-depth-3 slides3" ng-repeat="x in movieSimilar.results">
-    <li >
+  <ul class="slides z-depth-3 slides3">
+    <div  ng-repeat="x in movieSimilar.results">
+    <li>
       <a href="movie-buddy/#movie/{{x.id}}">
       <img class="responsive-img red-border movieSimilar0" ng-src="{{imgPath}}{{x.poster_path}}" alt="">
       <h5 class="similar-movie-vote">{{x.vote_average}}</h5>
     </a>
     </li>
+    </div>
           <!-- No Image -->
         <img class="no-images" src="movie-buddy/images/loading1.gif">
         <img class="black" src="movie-buddy/images/black.jpg">
