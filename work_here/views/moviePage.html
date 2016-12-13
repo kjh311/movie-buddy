@@ -266,7 +266,7 @@ $("html, body").animate({ scrollTop: 0 }, 0);
 
 
 <!-- Similar Movies -->
-  <div class="tv-cast-wrapper movie-similar-wrapper movie-similar-wrapper2">
+<!--   <div class="tv-cast-wrapper movie-similar-wrapper movie-similar-wrapper2">
     <h4 class="drop-shadow">Similar Movies:</h4>
     <div class="slider tv-slider slider3">
       <ul class="slides z-depth-3 slides3" >
@@ -330,48 +330,40 @@ $("html, body").animate({ scrollTop: 0 }, 0);
             <h5 class="similar-movie-vote">{{movieSimilar.results[9].vote_average}}</h5>
           </a>
         </li>
-        <!-- No Image -->
+
         <img class="no-images" src="movie-buddy/images/loading1.gif">
         <img class="black" src="movie-buddy/images/black.jpg">
       </ul>
     </div>
     <i class="fa fa-chevron-left fa-chevron-left3 fa-2x"></i>
     <i class="fa fa-chevron-right fa-chevron-right3 fa-2x"></i>
-  </div>
+  </div> -->
+
+  <div class="tv-cast-wrapper movie-similar-wrapper movie-similar-wrapper2">
+    <h4 class="drop-shadow">Similar Movies:</h4>
+<div class="slider tv-slider slider3">
+  <ul class="slides z-depth-3 slides3">
+    <li class="repeat-li" ng-repeat="x in movieSimilar.results">
+      <img class="responsive-img red-border movieSimilar0" ng-src="{{imgPath}}{{x.poster_path}}" alt="">
+    </li>
+          <!-- No Image -->
+        <img class="no-images" src="movie-buddy/images/loading1.gif">
+        <img class="black" src="movie-buddy/images/black.jpg">
+      </ul>
+</div>
+    <i class="fa fa-chevron-left fa-chevron-left3 fa-2x"></i>
+    <i class="fa fa-chevron-right fa-chevron-right3 fa-2x"></i>
+</div>
+
+
 </div><!--End of row -->
 </div>
 <!-- </div> -->
 
 
 
-  <!-- <div class="tv-cast-wrapper movie-similar-wrapper movie-similar-wrapper2"> -->
-    <!-- <h4 class="drop-shadow">Similar Movies:</h4> -->
-<!-- <div class="slider"> -->
-  <!-- <ul class="slides"> -->
-  <!-- <ul> -->
-    <!-- <li ng-repeat="x in movieSimilar.results"> -->
-      <!-- <img class="responsive-img red-border movieSimilar0" ng-src="{{imgPath}}{{x.poster_path}}" alt=""> -->
-    <!-- </li> -->
-    <!-- </ul> -->
-  <!-- </ul> -->
-<!-- </div> -->
-<!-- </div> -->
 
 
-  <div class="tv-cast-wrapper movie-similar-wrapper movie-similar-wrapper2">
-    <h4 class="drop-shadow">Similar Movies:</h4>
-<div class="slider">
-  <ul class="slides">
-    <li class="repeat-li" ng-repeat="x in movieSimilar.results">
-      <img class="responsive-img red-border movieSimilar0" ng-src="{{imgPath}}{{x.poster_path}}" alt="">
-    </li>
-  </ul>
-</div>
-</div>
-
-<!-- <img class="responsive-img red-border movieSimilar0" ng-src="https://image.tmdb.org/t/p/w300_and_h450_bestv2/btnyGcvjMbN4MpwLE7A6J7gNV01.jpg" alt="" src="https://image.tmdb.org/t/p/w300_and_h450_bestv2/btnyGcvjMbN4MpwLE7A6J7gNV01.jpg">
-
-<img class="responsive-img red-border movieSimilar0" ng-src="https://image.tmdb.org/t/p/w300_and_h450_bestv2/btnyGcvjMbN4MpwLE7A6J7gNV01.jpg" alt="" src="https://image.tmdb.org/t/p/w300_and_h450_bestv2/btnyGcvjMbN4MpwLE7A6J7gNV01.jpg" style="background-image: url(&quot;undefined&quot;);"> -->
 
 
 <script>
