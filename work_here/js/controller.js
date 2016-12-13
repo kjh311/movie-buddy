@@ -3,7 +3,7 @@ var app = angular.module('myApp',['ngRoute']);
 
 
 // MY CONTROLLER
-app.controller('myCtrl', ['$scope', '$http', '$location', '$sce', 'userService', function($scope, $http, $location, $sce, userService) {
+app.controller('myCtrl', ['$scope', '$http', '$location', '$sce', 'userService', 'contentSlider', function($scope, $http, $location, $sce, userService, contentSlider) {
   $scope.name = 'Kevin';
 
 var root_url = "https://api.themoviedb.org/3/";

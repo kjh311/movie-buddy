@@ -1,4 +1,4 @@
-angular.module('myApp').directive('contentSlider', function() {
+app.directive('contentSlider', function() {
 
         return function(scope, element) {
             if (scope.$last) {
