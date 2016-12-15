@@ -347,9 +347,9 @@ $("html, body").animate({ scrollTop: 0 }, 0);
     <h4 class="drop-shadow">Similar Movies:</h4>
 <div class="slider tv-slider slider3">
   <ul class="slides z-depth-3 slides3">
-    <li ng-repeat="x in ::movieSimilar.results">
+    <li ng-repeat="x in movieSimilar.results">
       <a href="movie-buddy/#movie/{{x.id}}">
-      <img class="responsive-img red-border movieSimilar0" ng-src="{{imgPath}}{{::x.poster_path}}" alt="">
+      <img class="responsive-img red-border movieSimilar0" ng-src="{{imgPath}}{{x.poster_path}}" alt="">
       <h5 class="similar-movie-vote">{{x.vote_average}}</h5>
     </a>
     </li>
@@ -361,7 +361,7 @@ $("html, body").animate({ scrollTop: 0 }, 0);
     <i class="fa fa-chevron-right fa-chevron-right3 fa-2x"></i>
 </div>
 
-asdfasdfasfasdfsdfsdfgsd
+aaaaaaaa
 
 </div><!--End of row -->
 </div>
@@ -374,6 +374,10 @@ asdfasdfasfasdfsdfsdfgsd
 
 
 <script>
+console.log(scope.$parent.x.poster_path);
+console.log(scope.x.poster_path);
+
+
 $('.fa-chevron-right1').click(function() {
   $('.slider1').slider('next');
   $('.slider1').slider('pause');
