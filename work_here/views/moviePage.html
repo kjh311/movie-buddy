@@ -347,9 +347,9 @@ $("html, body").animate({ scrollTop: 0 }, 0);
     <h4 class="drop-shadow">Similar Movies:</h4>
 <div class="slider tv-slider slider3">
   <ul class="slides z-depth-3 slides3">
-    <li ng-repeat="x in movieSimilar.results" ng-init="parentIndex = $index">
+    <li ng-repeat="x in movieSimilar.results">
       <a href="movie-buddy/#movie/{{x.id}}">
-      <img class="responsive-img red-border movieSimilar0" ng-src="{{imgPath}}{{x.poster_path}}" alt="">
+      <img  ng-init="x.poster_path = $index" class="responsive-img red-border movieSimilar0" ng-src="{{imgPath}}{{x.poster_path}}" alt="">
       <h5 class="similar-movie-vote">{{x.vote_average}}</h5>
     </a>
     </li>
@@ -360,7 +360,7 @@ $("html, body").animate({ scrollTop: 0 }, 0);
     <i class="fa fa-chevron-left fa-chevron-left3 fa-2x"></i>
     <i class="fa fa-chevron-right fa-chevron-right3 fa-2x"></i>
 </div>
-blah blah blah
+new new new
 
 </div><!--End of row -->
 </div>
