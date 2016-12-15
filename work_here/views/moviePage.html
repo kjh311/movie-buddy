@@ -266,7 +266,7 @@ $("html, body").animate({ scrollTop: 0 }, 0);
 
 
 <!-- Similar Movies -->
-  <div class="tv-cast-wrapper movie-similar-wrapper movie-similar-wrapper2">
+<!--   <div class="tv-cast-wrapper movie-similar-wrapper movie-similar-wrapper2">
     <h4 class="drop-shadow">Similar Movies:</h4>
     <div class="slider tv-slider slider3">
       <ul class="slides z-depth-3 slides3" >
@@ -337,15 +337,15 @@ $("html, body").animate({ scrollTop: 0 }, 0);
     </div>
     <i class="fa fa-chevron-left fa-chevron-left3 fa-2x"></i>
     <i class="fa fa-chevron-right fa-chevron-right3 fa-2x"></i>
-  </div>
+  </div> -->
 
 
 <!-- ng-repeat -->
-<!--   <div class="tv-cast-wrapper movie-similar-wrapper movie-similar-wrapper2">
+  <div class="tv-cast-wrapper movie-similar-wrapper movie-similar-wrapper2">
     <h4 class="drop-shadow">Similar Movies:</h4>
 <div class="slider tv-slider slider3">
   <ul class="slides z-depth-3 slides3">
-    <li ng-repeat="x in movieSimilar.results" content-slider>
+    <li ng-class="{active: $first}" ng-repeat="x in movieSimilar.results" content-slider>
       <a href="movie-buddy/#movie/{{x.id}}">
       <img class="responsive-img red-border movieSimilar0" ng-src="{{imgPath}}{{x.poster_path}}" alt="">
       <h5 class="similar-movie-vote">{{x.vote_average}}</h5>
@@ -357,7 +357,8 @@ $("html, body").animate({ scrollTop: 0 }, 0);
 </div>
     <i class="fa fa-chevron-left fa-chevron-left3 fa-2x"></i>
     <i class="fa fa-chevron-right fa-chevron-right3 fa-2x"></i>
-</div> -->
+</div>
+WORDS
 
 
 </div><!--End of row -->
