@@ -348,6 +348,7 @@ $("html, body").animate({ scrollTop: 0 }, 0);
 <div class="slider tv-slider slider3">
   <ul class="slides z-depth-3 slides3">
     <li ng-repeat="x in movieSimilar.results" ng-init="xIndex = $index">
+      {{$index}}
       <a href="movie-buddy/#movie/{{x.id}}">
       <img class="responsive-img red-border movieSimilar0" ng-src="{{imgPath}}{{x.poster_path}}" alt="">
       <h5 class="similar-movie-vote">{{x.vote_average}}</h5>
@@ -360,7 +361,7 @@ $("html, body").animate({ scrollTop: 0 }, 0);
     <i class="fa fa-chevron-left fa-chevron-left3 fa-2x"></i>
     <i class="fa fa-chevron-right fa-chevron-right3 fa-2x"></i>
 </div>
-a a a a a a
+b b b b
 
 </div><!--End of row -->
 </div>
