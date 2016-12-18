@@ -370,14 +370,15 @@ app.config(['$locationProvider', '$routeProvider',
 //     });
 // http://www.icreateproject.info/articles/angularjs-active-item-ng-repeat/
 
-app.directive('myDirective', function () {
-  return {
-    scope: true,
-    transclude:false,
-    controller: function ($scope) {
-    }
-  };
-  });
+// app.directive('myDirective', function () {
+//   return {
+//     scope: true,
+//     transclude:false,
+//     controller: function ($scope) {
+//     }
+//   };
+//   });
+
 
 // LIMIT TEXT LENGTH FILTER
 app.filter('truncate', function () {
