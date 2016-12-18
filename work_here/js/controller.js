@@ -373,7 +373,7 @@ app.config(['$locationProvider', '$routeProvider',
 app.directive('myDirective', function () {
   return {
     scope: true,
-    transclude:true,
+    transclude:false,
     controller: function ($scope) {
     }
   };
