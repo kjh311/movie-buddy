@@ -201,6 +201,10 @@ app.controller('movieController', ['$scope', '$http', '$location', '$sce', 'user
 var root_url = "https://api.themoviedb.org/3/";
 var base_url = "https://api.themoviedb.org/3";
 
+$scope.activate= function(index){
+      $scope.index=index;
+  };
+
 $scope.movieId = "https://api.themoviedb.org/3/movie/188927?api_key="+userService.key;
 
 $scope.winLocation = $location.path();
@@ -366,14 +370,14 @@ app.config(['$locationProvider', '$routeProvider',
 //     });
 // http://www.icreateproject.info/articles/angularjs-active-item-ng-repeat/
 
-app.directive('myDirective', function () {
-  return {
-    scope: true,
-    transclude:true,
-    controller: function ($scope) {
-    }
-  };
-  });
+// app.directive('myDirective', function () {
+//   return {
+//     scope: true,
+//     transclude:true,
+//     controller: function ($scope) {
+//     }
+//   };
+//   });
 
 // LIMIT TEXT LENGTH FILTER
 app.filter('truncate', function () {
