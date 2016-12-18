@@ -201,9 +201,9 @@ app.controller('movieController', ['$scope', '$http', '$location', '$sce', 'user
 var root_url = "https://api.themoviedb.org/3/";
 var base_url = "https://api.themoviedb.org/3";
 
-$scope.activate= function(index){
-      $scope.index=index;
-  };
+// $scope.activate= function(index){
+//       $scope.index=index;
+//   };
 
 $scope.movieId = "https://api.themoviedb.org/3/movie/188927?api_key="+userService.key;
 
