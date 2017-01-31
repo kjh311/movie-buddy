@@ -184,6 +184,13 @@ input:-webkit-autofill:active {
 }
 .link-icon{
   max-width: 200px;
+  -webkit-transition: max-width 2s; /* Safari */
+    transition: max-width 2s;
+}
+.link-icon:hover{
+  max-size: 250px;
+  -webkit-transition: max-width 2s; /* Safari */
+    transition: max-width 2s;
 }
 .logo{
   width: 50px;
