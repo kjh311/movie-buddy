@@ -183,14 +183,14 @@ input:-webkit-autofill:active {
     -webkit-transition: color 9999s ease-out, background-color 9999s ease-out;
 }
 .link-icon{
-  max-width: 200px;
-  -webkit-transition: max-width 2s; /* Safari */
-    transition: max-width 2s;
+  width: 200px;
+  -webkit-transition: width 2s; /* Safari */
+    transition: width 2s;
 }
 .link-icon:hover{
-  max-size: 250px;
-  -webkit-transition: max-width 2s; /* Safari */
-    transition: max-width 2s;
+  width: 250px;
+  -webkit-transition: width 2s; /* Safari */
+    transition: width 2s;
 }
 .logo{
   width: 50px;
