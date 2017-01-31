@@ -185,7 +185,9 @@ input:-webkit-autofill:active {
 .link-icon{
   width: 200px;
   position: absolute;
-  box-shadow: 5px 5px 5px $dark-grey;
+  margin-left: 10px;
+  margin-right: 10px;
+  // box-shadow: 5px 5px 5px $dark-grey;
   -webkit-transition: all 0.5s ease; /* Safari */
     transition: width 0.5s;
 }
@@ -193,7 +195,7 @@ input:-webkit-autofill:active {
   width: 250px;
   top: -50%;
   left: -50%;
-  box-shadow: 10px 10px 5px $dark-grey;
+  // box-shadow: 10px 10px 5px $dark-grey;
   -webkit-transition: all 0.5s ease; /* Safari */
     transition: width 0.5s;
 }
