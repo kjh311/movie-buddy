@@ -184,13 +184,15 @@ input:-webkit-autofill:active {
 }
 .link-icon{
   width: 200px;
-  -webkit-transition: width 2s; /* Safari */
-    transition: width 2s;
+  box-shadow: 5px 5px 5px $dark-grey;
+  -webkit-transition: all 0.5s ease; /* Safari */
+    transition: width 0.5s;
 }
 .link-icon:hover{
   width: 250px;
-  -webkit-transition: width 2s; /* Safari */
-    transition: width 2s;
+  box-shadow: 10px 10px 5px $dark-grey;
+  -webkit-transition: all 0.5s ease; /* Safari */
+    transition: width 0.5s;
 }
 .logo{
   width: 50px;
