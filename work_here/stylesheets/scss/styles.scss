@@ -198,16 +198,16 @@ input:-webkit-autofill:active {
   -moz-transition: all 0.5s ease; /* Safari */
     transition: width 0.5s;
 }
-.link-icon:hover{
-  width: 220px;
-  // margin-top: 0px;
-  // transform: scale(1.1);
-  left: -50%;
-  // box-shadow: 10px 10px 5px $dark-grey;
-  -webkit-transition: all 0.5s ease; /* Safari */
-  -moz-transition: all 0.5s ease; /* Safari */
-    transition: width 0.5s;
-}
+// .link-icon:hover{
+//   // width: 220px;
+//   // margin-top: 0px;
+//   // transform: scale(1.1);
+//   left: -50%;
+//   // box-shadow: 10px 10px 5px $dark-grey;
+//   -webkit-transition: all 0.5s ease; /* Safari */
+//   -moz-transition: all 0.5s ease; /* Safari */
+//     transition: width 0.5s;
+// }
 .logo{
   width: 50px;
   margin-top: 5px;
