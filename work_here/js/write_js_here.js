@@ -1,6 +1,9 @@
 // JQUERY WORKS!
 $( document ).ready(function() {
 
+// Scroll top on reload
+  $(this).scrollTop(0);
+
 // Movie Icon hover
 $(".movie-icon-text").hover(
   function() {
