@@ -504,13 +504,8 @@ $('.slider').slider({full_width: false});
 </div>
 <script>
   $('.fa-chevron-right1').click(function() {
-  // $(".responsive-img")$( "p" ).click(function() {
-  $( "responsive-img" ).fadeOut( "fast" );
-});
-  setTimeout(function(){
   $('.slider1').slider('next');
   $('.slider1').slider('pause');
-}, 500);
   setTimeout(function(){
   $('.slider1').slider('start');
 }, 5000);
