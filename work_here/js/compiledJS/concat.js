@@ -419,11 +419,60 @@ app.factory('userService', [function(){
 // JQUERY WORKS!
 $( document ).ready(function() {
 
+// Movie Icon hover
 $(".movie-icon-text").hover(
   function() {
     $(".movie-icon").addClass( "hover" );
   }, function() {
     $(".movie-icon").removeClass( "hover" );
+  }
+);
+// TV Icon hover
+$(".tv-icon-text").hover(
+  function() {
+    $(".tv-icon").addClass( "hover" );
+  }, function() {
+    $(".tv-icon").removeClass( "hover" );
+  }
+);
+// Celebrity Icon hover
+$(".celebrity-icon-text").hover(
+  function() {
+    $(".celebrity-icon").addClass( "hover" );
+  }, function() {
+    $(".celebrity-icon").removeClass( "hover" );
+  }
+);
+// News Icon hover
+$(".news-icon-text").hover(
+  function() {
+    $(".news-icon").addClass( "hover" );
+  }, function() {
+    $(".news-icon").removeClass( "hover" );
+  }
+);
+// Facebook Icon hover
+$(".share-on-facebook").hover(
+  function() {
+    $(".facebook-icon").addClass( "hover" );
+  }, function() {
+    $(".facebook-icon").removeClass( "hover" );
+  }
+);
+// Twitter Icon hover
+$(".share-on-twitter").hover(
+  function() {
+    $(".twitter-icon").addClass( "hover" );
+  }, function() {
+    $(".twitter-icon").removeClass( "hover" );
+  }
+);
+// Google + Icon hover
+$(".share-on-google-plus").hover(
+  function() {
+    $(".google-plus-icon").addClass( "hover" );
+  }, function() {
+    $(".google-plus-icon").removeClass( "hover" );
   }
 );
 
@@ -434,9 +483,8 @@ $('.button-collapse').sideNav({
   closeOnClick: true, // Closes side-nav on <a> clicks, useful for Angular/Meteor
   draggable: true // Choose whether you can drag to open on touch screens
 });
+
 $('.parallax').parallax();
-
-
 
     function parallax(){
     var scrolled = $(window).scrollTop();
