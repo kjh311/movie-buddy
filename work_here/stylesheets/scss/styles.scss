@@ -196,8 +196,9 @@ input:-webkit-autofill:active {
     transition: width 0.5s;
 }
 .link-icon:hover{
-  width: 230px;
+  width: 220px;
   bottom: 50%;
+  margin-bottom: 0px;
   left: -50%;
   // box-shadow: 10px 10px 5px $dark-grey;
   -webkit-transition: all 0.5s ease; /* Safari */
