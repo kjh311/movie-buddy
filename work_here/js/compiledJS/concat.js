@@ -419,6 +419,14 @@ app.factory('userService', [function(){
 // JQUERY WORKS!
 $( document ).ready(function() {
 
+$(".movie-icon-text").hover(
+  function() {
+    $(".movie-icon").addClass( "hover" );
+  }, function() {
+    $(".movie-icon").removeClass( "hover" );
+  }
+);
+
 
 $('.button-collapse').sideNav({
   menuWidth: 300, // Default is 240
