@@ -193,7 +193,6 @@ input:-webkit-autofill:active {
   -moz-user-select: none;     /* Firefox all */
   -ms-user-select: none;      /* IE 10+ */
   user-select: none;
-  position: relative;
   // box-shadow: 5px 5px 5px $dark-grey;
   -webkit-transition: all 0.5s ease; /* Safari */
   -moz-transition: all 0.5s ease; /* Safari */
@@ -202,7 +201,6 @@ input:-webkit-autofill:active {
 .link-icon:hover{
   width: 220px;
   // margin-top: 0px;
-  position: relative;
   // transform: scale(1.1);
   left: -50%;
   // box-shadow: 10px 10px 5px $dark-grey;
