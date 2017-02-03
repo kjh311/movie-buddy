@@ -187,8 +187,9 @@ input:-webkit-autofill:active {
   // position: absolute;
   margin-left: 10px;
   margin-right: 10px;
+  transform: scale(1);
   // margin-top: 10px;
-  left: 0;
+  // left: 0;
    -webkit-user-select: none;  /* Chrome all / Safari all */
   -moz-user-select: none;     /* Firefox all */
   -ms-user-select: none;      /* IE 10+ */
@@ -198,16 +199,24 @@ input:-webkit-autofill:active {
   -moz-transition: all 0.5s ease; /* Safari */
     transition: width 0.5s;
 }
-// .link-icon:hover{
-//   // width: 220px;
-//   // margin-top: 0px;
-//   // transform: scale(1.1);
-//   left: -50%;
-//   // box-shadow: 10px 10px 5px $dark-grey;
-//   -webkit-transition: all 0.5s ease; /* Safari */
-//   -moz-transition: all 0.5s ease; /* Safari */
-//     transition: width 0.5s;
-// }
+.link-icon:hover{
+  // width: 220px;
+  // margin-top: 0px;
+  transform: scale(1.1);
+  // left: -50%;
+  // box-shadow: 10px 10px 5px $dark-grey;
+  -webkit-transition: all 0.5s ease; /* Safari */
+  -moz-transition: all 0.5s ease; /* Safari */
+    transition: all 0.5s;
+}
+
+// For example, if you wanted to make something smaller, you could
+// use transform: scale() instead of changing the width. If you wanted
+// to move it around, instead of messing with margins or paddings — 
+// which would need to rebuild the whole page layout for every frame — 
+// you could just use a simple transform: translateX or
+// transform: translateY.
+
 .logo{
   width: 50px;
   margin-top: 5px;
