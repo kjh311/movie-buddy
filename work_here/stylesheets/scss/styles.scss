@@ -203,7 +203,7 @@ input:-webkit-autofill:active {
 .link-icon:hover{
   // width: 220px;
   // margin-top: 0px;
-  transform: scale(1.1);
+  transform: scale(1.2);
   // left: -50%;
   // box-shadow: 10px 10px 5px $dark-grey;
   -webkit-transition: all 0.5s ease; /* Safari */
@@ -211,6 +211,7 @@ input:-webkit-autofill:active {
     transition: width 0.5s;
     transition: all 0.5s;
 }
+
 
 // For example, if you wanted to make something smaller, you could
 // use transform: scale() instead of changing the width. If you wanted
@@ -708,8 +709,11 @@ th, td{
   color: white;
 }
 
-
-
+@media (max-width: 996px) {
+.link-icon-div{
+  margin-bottom: 20px;
+}
+}
 
 @media (max-width: 900px) {
 
