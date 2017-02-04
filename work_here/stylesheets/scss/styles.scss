@@ -7,6 +7,8 @@ $dark-blue: #1b264f;    //new
 // $input-blue: #1c2567;
 $input-blue: #576ca8;
 $clear: rgba(0,0,0,0);
+$off-white: #f5f3f5;
+$off-black: #302b27;
 
 @mixin backgroundGradient{
   background: -webkit-radial-gradient(rgba(0,0,0,0.5), black);
@@ -64,7 +66,7 @@ a:hover{
 
 body{
   text-align: center;
-  background-color: black;
+  background-color: $off-black;
   // @include backgroundGradient;
   // background-image: url('http://cdn.pcwallart.com/images/blue-purple-gradient-wallpaper-4.jpg');
   // background-image: url('http://cdn.pcwallart.com/images/dark-pattern-backgrounds-wallpaper-1.jpg');
@@ -72,7 +74,7 @@ body{
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
-  color: white;
+  color: $off-white;
   font-family: 'Anton', sans-serif;
   font-size: 16px;
   overflow-y: scroll;
@@ -134,7 +136,7 @@ body{
   // visibility: hidden;
 }
 .fa-bars:hover, .button-collapse:hover{
-  color: white !important;
+  color: $off-white !important;
 }
 .fa-chevron-left{
   bottom: 250px;
@@ -188,7 +190,7 @@ input:-webkit-autofill:active {
 .instructions{
   max-width: 80%;
 }
-.link-icon-div{
+.link-icon{
   width: 200px;
   // position: absolute;
   margin-left: 10px;
@@ -206,7 +208,7 @@ input:-webkit-autofill:active {
     transition: width 0.5s;
     transition: all 0.5s;
 }
-.link-icon-div:hover{
+.link-icon:hover{
   // width: 220px;
   // margin-top: 0px;
   transform: scale(1.2);
@@ -256,7 +258,7 @@ input:-webkit-autofill:active {
   pointer-events: none;
 }
 #movies{
-  color: white;
+  color: $off-white;
   font-size: 2em;
   z-index: 200;
 }
@@ -480,7 +482,7 @@ input:-webkit-autofill:active {
   max-height: 500px;
   overflow: auto;
   overflow-x: hidden;
-  background-color: white;
+  background-color: $off-white;
   -webkit-transition:all 5s ease;
 }
 #searchBar, .searchBar{
@@ -607,13 +609,13 @@ input:-webkit-autofill:active {
   padding-bottom: 50px;
 }
 th, td{
-  color: black;
+  color: $off-black;
 }
 .title{
   bottom: 0px;
   left: 3px;
   position: absolute;
-  color: white;
+  color: $off-white;
   text-transform: uppercase;
   text-shadow: 3px 3px black;
   background-color: rgba(0,0,0,0.4);
