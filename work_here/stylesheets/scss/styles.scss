@@ -9,6 +9,7 @@ $input-blue: #576ca8;
 $clear: rgba(0,0,0,0);
 $off-white: #f5f3f5;
 $off-black: #302b27;
+$red: #af231c;
 
 @mixin backgroundGradient{
   background: -webkit-radial-gradient(rgba(0,0,0,0.5), black);
@@ -34,7 +35,7 @@ a{
   transition:all 0.4s ease;
 }
 a:hover{
-  color: red;
+  color: $red;
   transition:all 0.4s ease;
 }
 .active{
@@ -89,7 +90,7 @@ body{
   margin-top: 10px;
 }
 .brand-logo:hover{
-  color: red;
+  color: $red;
 }
 .button-collapse{
   float: right !important;
@@ -161,7 +162,7 @@ body{
   cursor: pointer;
 }
 .fa-heart{
-  color: red;
+  color: $red;
 }
 footer{
   // top: 40px !important;
