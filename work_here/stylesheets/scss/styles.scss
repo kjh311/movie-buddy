@@ -198,6 +198,7 @@ input:-webkit-autofill:active {
   -webkit-transition: all 0.5s ease; /* Safari */
   -moz-transition: all 0.5s ease; /* Safari */
     transition: width 0.5s;
+    transition: all 0.5s;
 }
 .link-icon-div:hover{
   // width: 220px;
@@ -207,6 +208,7 @@ input:-webkit-autofill:active {
   // box-shadow: 10px 10px 5px $dark-grey;
   -webkit-transition: all 0.5s ease; /* Safari */
   -moz-transition: all 0.5s ease; /* Safari */
+    transition: width 0.5s;
     transition: all 0.5s;
 }
 
