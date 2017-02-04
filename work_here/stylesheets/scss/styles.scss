@@ -185,7 +185,7 @@ input:-webkit-autofill:active {
     -webkit-transition-delay: 9999s;
     -webkit-transition: color 9999s ease-out, background-color 9999s ease-out;
 }
-.link-icon{
+.link-icon-div{
   width: 200px;
   // position: absolute;
   margin-left: 10px;
@@ -203,7 +203,7 @@ input:-webkit-autofill:active {
     transition: width 0.5s;
     transition: all 0.5s;
 }
-.link-icon:hover{
+.link-icon-div:hover{
   // width: 220px;
   // margin-top: 0px;
   transform: scale(1.2);
