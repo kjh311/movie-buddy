@@ -185,6 +185,9 @@ input:-webkit-autofill:active {
     -webkit-transition-delay: 9999s;
     -webkit-transition: color 9999s ease-out, background-color 9999s ease-out;
 }
+.instructions{
+  max-width: 80%;
+}
 .link-icon-div{
   width: 200px;
   // position: absolute;
